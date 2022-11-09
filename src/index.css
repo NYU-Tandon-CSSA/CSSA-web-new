@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.font-button{
+  font-size: 1.5rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: black;
+  display: inline-flex;
+}
+
+.homeButton-nav-link{
+  font-size: 1.5rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: white;
+  background-color: #56018D;
+  border-radius: 10px;
+  display: inline-flex;
+}
+
+.nav-link-unselected{
+  font-size: 1.5rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: black;
+  display: inline-flex;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+  color: #56018D;
+  font-size: 1.5rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  display: inline-flex;
+}
