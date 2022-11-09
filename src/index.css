@@ -14,23 +14,23 @@ code {
 
 .font-button{
   font-size: 1.5rem;
-  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: 'Ma Shan Zheng', cursive;
   color: black;
   display: inline-flex;
 }
 
 .homeButton-nav-link{
   font-size: 1.5rem;
-  font-family: 'ZCOOL KuaiLe', cursive;
-  color: white;
-  background-color: #56018D;
+  font-family: 'Ma Shan Zheng', cursive;
+  color: black;
+  /* background-color: #56018D; */
   border-radius: 10px;
   display: inline-flex;
 }
 
 .nav-link-unselected{
   font-size: 1.5rem;
-  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: 'Ma Shan Zheng', cursive;
   color: black;
   display: inline-flex;
 }
@@ -39,6 +39,6 @@ code {
   text-decoration: underline;
   color: #56018D;
   font-size: 1.5rem;
-  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: 'Ma Shan Zheng', cursive;
   display: inline-flex;
 }

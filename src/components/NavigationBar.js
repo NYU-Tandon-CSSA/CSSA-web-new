@@ -50,7 +50,7 @@ function Header() {
                 "nav-link" + (!isActive ? "-unselected" : "")
               }
             >
-              CSSA介绍
+              关于我们
             </NavLink>            
           </Button>
 
