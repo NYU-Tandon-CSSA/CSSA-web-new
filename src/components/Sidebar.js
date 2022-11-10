@@ -29,7 +29,7 @@ function Sidebar() {
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         反馈意见
       </Typography>
-      <Button variant='contained' color='primary' href='mailto:'>
+      <Button variant='contained' color='primary' href='mailto:nyutandoncssa22@gmail.com'>
         <Typography>
           留言
         </Typography>
