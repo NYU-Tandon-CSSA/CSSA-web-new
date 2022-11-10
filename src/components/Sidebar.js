@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import QR from '../images/wechat.JPG';
+import { Button } from '@material-ui/core';
 
 function Sidebar() {
   return (
@@ -26,9 +27,13 @@ function Sidebar() {
       </Link>
 
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Social
+        反馈意见
       </Typography>
-      <Typography>即将上线...</Typography>
+      <Button variant='contained' color='primary' href='mailto:'>
+        <Typography>
+          留言
+        </Typography>
+      </Button>
     </Grid>
   );
 }
