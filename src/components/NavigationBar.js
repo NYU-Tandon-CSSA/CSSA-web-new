@@ -8,16 +8,6 @@ import { NavLink } from "react-router-dom";
 function Header() { 
     return (
     <React.Fragment>
-
-      {/* <Toolbar
-        sx={{
-          borderBottom: 1,
-          borderColor: 'divider',
-          justifyContent: 'center',
-        }}
-      >
-        <img src={LogoUrl} alt="logo" height="80" width="200" />
-      </Toolbar> */}
       <Toolbar
         component="nav"
         variant="dense"
@@ -113,69 +103,6 @@ function Header() {
               联系我们
             </NavLink>            
           </Button>
-
-
-
-          {/* <Button
-            component={NavLink}
-            color="inherit"
-            variant="text"
-            to=""
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            <div className = "font-button">主页</div>
-          </Button>
-          <Button
-            component={Link}
-            color="inherit"
-            noWrap
-            variant="body2"
-            to={''}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            <div className = "font-button">CSSA介绍</div>
-          </Button>
-
-          <Button
-            component={Link}
-            color="inherit"
-            noWrap
-            variant="body2"
-            to="/activity"
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            <div className = "font-button">以往活动</div>
-          </Button>
-          <Button
-            component={Link}
-            color="inherit"
-            noWrap
-            variant="body2"
-            to={''}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            <div className = "font-button">学生服务</div>
-          </Button>
-          <Button
-            component={Link}
-            color="inherit"
-            noWrap
-            variant="body2"
-            to={''}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            <div className = "font-button">校园攻略</div>
-          </Button>
-          <Button
-            component={Link}
-            color="inherit"
-            noWrap
-            variant="body2"
-            to={''}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            <div className = "font-button">联系我们</div>
-          </Button> */}
         </div>
       </Toolbar>
     </React.Fragment>
