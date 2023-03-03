@@ -1,21 +1,32 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider, Typography } from '@material-ui/core';
 
-import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
 
 import Home from './routes/Home';
 import About from './routes/About';
 import Activity from './routes/Activity';
 import StudentService from './routes/StudentService';
+import TransparentNavBar from './components/TransparentNavBar';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+    h1: {
+      fontFamily: 'Tilt Warp, cursive',
+      fontSize: '72px',
+    },
+  },
+});
+
 
 function App() {
   return (
-    <Container maxWidth="lg">
-      <div className="App">
+    <div className="App">
+      <ThemeProvider theme={theme}>
+        <TransparentNavBar />
         <BrowserRouter>
-          <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
@@ -24,8 +35,8 @@ function App() {
           </Switch>
           <Footer />
         </BrowserRouter>
-      </div>
-    </Container>
+      </ThemeProvider>
+    </div>
   );
 }
 
