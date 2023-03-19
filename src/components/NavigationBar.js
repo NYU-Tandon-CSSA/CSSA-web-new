@@ -10,28 +10,17 @@ function Header() {
       <Toolbar
         component="nav"
         variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
+        sx={{ justifyContent: 'space-between', overflowX: 'auto', backgroundColor:'transparent'}}
       >
-        <img src={LogoUrl} alt="logo" style={{ "maxWidth": "40%" }} />
+        <a href="/" style={{ "maxWidth": "40%" }}>
+          <img src={LogoUrl} alt="logo" style={{ "maxWidth": "80%" }} urf='/About'/>
+        </a>
         <div className="" style={{
           "display": "inline - block",}}>
-          <Button className='homeButton-nav-link'>
-            <NavLink
-              style={{ textDecoration: 'none' }}
-              color="inherit"
-              variant="text"
-              to=""
-              sx={{ p: 1, flexShrink: 0 }}
-              className={isActive =>
-                "homeButton-nav-link" + (!isActive ? "-unselected" : "")
-              }
-            >
-              主页
-            </NavLink>
-          </Button>
+
           <Button>
             <NavLink
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: 'none', color:"#57068c"}}
               color="inherit"
               variant="text"
               to='/About'
@@ -46,7 +35,7 @@ function Header() {
 
           <Button>
             <NavLink
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: 'none', color:"#57068c" }}
               color="inherit"
               variant="text"
               to="/activity"
@@ -61,22 +50,7 @@ function Header() {
 
           <Button>
             <NavLink
-              style={{ textDecoration: 'none' }}
-              color="inherit"
-              variant="text"
-              to="/StudentService"
-              sx={{ p: 1, flexShrink: 0 }}
-              className={isActive =>
-                "nav-link" + (!isActive ? "-unselected" : "")
-              }
-            >
-              学生服务
-            </NavLink>
-          </Button>
-
-          <Button>
-            <NavLink
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: 'none', color:"#57068c" }}
               color="inherit"
               variant="text"
               to="/xx"
@@ -89,20 +63,6 @@ function Header() {
             </NavLink>
           </Button>
 
-          <Button>
-            <NavLink
-              style={{ textDecoration: 'none' }}
-              color="inherit"
-              variant="text"
-              to="/x"
-              sx={{ p: 1, flexShrink: 0 }}
-              className={isActive =>
-                "nav-link" + (!isActive ? "-unselected" : "")
-              }
-            >
-              联系我们
-            </NavLink>
-          </Button>
         </div>
       </Toolbar>
     </React.Fragment>

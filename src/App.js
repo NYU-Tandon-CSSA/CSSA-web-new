@@ -12,19 +12,18 @@ import StudentService from './routes/StudentService';
 
 function App() {
   return (
-    <Container maxWidth="lg">
-      <div className="App">
+    <Container style={{maxWidth:"100%"}}>
         <BrowserRouter>
           <NavigationBar />
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/activity" component={Activity}/>
-            <Route exact path="/studentservice" component={StudentService}/>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/activity" component={Activity} />
+            <Route exact path="/studentservice" component={StudentService} />
           </Switch>
           <Footer />
         </BrowserRouter>
-      </div>
+      <div className="App"></div>
     </Container>
   );
 }

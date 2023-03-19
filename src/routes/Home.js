@@ -10,8 +10,19 @@ import Sidebar from '../components/Sidebar';
 export default function Home() {
   return (
     <div>
-      <Banner />
-      <Grid container spacing={4}>
+      <div
+      style={{position: 'absolute', top: -100, right:0,zIndex:-1,width:'100%'}}
+      >
+        <img
+            src={
+              'https://cdn.pixabay.com/photo/2016/04/11/05/49/brookly-bridge-1321339_960_720.jpg'
+            }
+            style={{width:'100%'}}
+            alt={'banner'}
+          />
+      </div>
+
+      <Grid container spacing={4} style={{marginTop:"40%"}}>
         <Post
           title={'NYU Tandon CSSA 秋季招新'}
           date={'2021-12-02'}

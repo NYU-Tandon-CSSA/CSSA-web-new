@@ -8,14 +8,14 @@ function Banner() {
   return (
     <Paper
       sx={{
-        position: 'relative',
+        position: '',
         backgroundColor: 'grey.800',
         color: '#fff',
         mb: 4,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        height: '350px',
+        height: '650px',
         backgroundImage: `url(${'https://cdn.pixabay.com/photo/2016/04/11/05/49/brookly-bridge-1321339_960_720.jpg'})`,
       }}
     >
@@ -29,39 +29,6 @@ function Banner() {
           alt={'banner'}
         />
       }
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          backgroundColor: 'rgba(0,0,0,.3)',
-        }}
-      />
-      <Grid container>
-        <Grid item md={6}>
-          <Box
-            sx={{
-              position: 'relative',
-              p: { xs: 3, md: 6 },
-              pr: { md: 0 },
-            }}
-          >
-            <Typography
-              component="h1"
-              variant="h3"
-              color="inherit"
-              gutterBottom
-            >
-              NYU Tandon CSSA
-            </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              中国学生学者联合会
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
     </Paper>
   );
 }
