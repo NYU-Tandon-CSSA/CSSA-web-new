@@ -28,10 +28,10 @@ function App() {
         <TransparentNavBar />
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/activity" component={Activity}/>
-            <Route exact path="/studentservice" component={StudentService}/>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/activity" component={Activity} />
+            <Route exact path="/studentservice" component={StudentService} />
           </Switch>
           <Footer />
         </BrowserRouter>
