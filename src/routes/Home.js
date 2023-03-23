@@ -1,85 +1,186 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box } from '@material-ui/core';
+import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator, TimelineOppositeContent } from '@material-ui/lab';
+import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
+import { makeStyles } from '@material-ui/core/styles';
+import { useEffect, useState } from 'react';
+import img from '../images/bridge.png'
+import manual from '../images/manual.png'
 
-import Banner from '../components/Banner';
-import Post from '../components/Post';
-import Sidebar from '../components/Sidebar';
+const useStyles = makeStyles(() => ({
+  icon: {
+    fontSize: "4rem !important",
+    animation: '$jumpAnimation 1s linear infinite',
+    opacity: 1,
+    transition: 'opacity 0.5s ease',
+  },
+  '@keyframes jumpAnimation': {
+    '0%': {
+      transform: 'translateY(0)',
+    },
+    '50%': {
+      transform: 'translateY(-20px)',
+    },
+    '100%': {
+      transform: 'translateY(0)',
+    },
+  },
+  iconHidden: {
+    opacity: 0,
+  },
+}));
 
-export default function Home() {
+
+function Home() {
+  const classes = useStyles();
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { scrollY } = window;
+      const isVisible = scrollY < window.innerHeight / 2;
+
+      setIsVisible(isVisible);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div>
-      <div
-      style={{position: 'absolute', top: -100, right:0,zIndex:-1,width:'100%'}}
-      >
-        <img
-            src={
-              'https://cdn.pixabay.com/photo/2016/04/11/05/49/brookly-bridge-1321339_960_720.jpg'
-            }
-            style={{width:'100%'}}
-            alt={'banner'}
-          />
-      </div>
-
-      <Grid container spacing={4} style={{marginTop:"40%"}}>
-        <Post
-          title={'NYU Tandon CSSA 秋季招新'}
-          date={'2021-12-02'}
-          description={'开心的出行，路过夕阳和落叶，和秋天说再见。'}
-          imageurl={
-            'https://m.psecn.photoshelter.com/img-get2/I0000oSfkKBpUckU/sec=wdfsdfoeflwefms1440ed202108104o8l11VZSpf2RIl/fit=440'
-          }
-          url={'https://mp.weixin.qq.com/s/QfM1uMhS6BSPUjhM5UlYvw'}
-        />
-        <Post
-          title={'2020-2021年度总结 x 主席团介绍'}
-          imageurl={
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NYU_Tandon_School_of_Engineering.JPG/1200px-NYU_Tandon_School_of_Engineering.JPG'
-          }
-          date={'2021-09-12'}
-          description={'叮！请查收您的Tandon CSSA年报xE-board介绍'}
-          url={'https://mp.weixin.qq.com/s/4P2e0vdnPaBkLBfN-VryjA'}
-        />
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        {/* <div
+          style={{
+            backgroundImage: `url(${img})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100 %',
+            height: '100vh',
+            zIndex: '-1',
+          }}>
+        </div> */}
+        <div style={{ position: 'relative' }}>
+          <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh' }} />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '100%',
+              height: '40vh',
+              background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+            }}
+          ></div>
+        </div>
       </Grid>
-      <Grid container spacing={5} sx={{ mt: 3 }}>
-        <Grid
-          item
-          xs={12}
-          md={8}
-          sx={{
-            '& .markdown': {
-              py: 3,
-            },
-          }}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
         >
-          <Typography variant="h6" gutterBottom>
-            关于CSSA
-          </Typography>
-          <Divider />
-          <Typography variant="h7" gutterBottom>
-            <br />
-            “Tandon CSSA” 是NYU工程学院唯一权威的中国学生组织，
-            <br />
-            也是中国驻纽约领事馆注册的学生组织。 我们面向NYU全体中国学生，
-            <br />
-            以广大Tandon中国留学生为中心， 致力提供优质的资源与服务。
-            <br />
-            <br />
-            “我们的2020-2021” 在2020-2021这特殊的一年之中，
-            <br />
-            <br />
-            每一位同学都面临着挑战， 网课的压力，社交的匮乏。 NYU Tandon CSSA
-            我们组织了以线上活动为主的丰富学联活动，
-            <br />
-            希望无论在何地的Tandon中国学生都能 丰富生活，缓解压力，广泛交友！
-            <br />
-          </Typography>
-        </Grid>
-        <Sidebar />
+          <ArrowDownwardRoundedIcon className={`${classes.icon} ${!isVisible && classes.iconHidden}`} />
+        </Box>
       </Grid>
-      <br />
-      <br />
-    </div>
+      <Grid item xs={2}>
+      </Grid>
+      <Grid item xs={3}>
+        <Card>
+          <CardMedia
+            component="img"
+            height="400"
+            image={manual}
+            title="New Student Handbook"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="div">
+              2023 新生手册
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              了解校园、学习生活、和关于Tandon的一切
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">分享</Button>
+            <Button size="small">了解更多</Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={3}>
+        <Card>
+          <CardMedia
+            component="img"
+            height="400"
+            image={manual}
+            title="New Student Handbook"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="div">
+              2023 非诚勿扰
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              了解非诚勿扰活动
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">分享</Button>
+            <Button size="small">了解更多</Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={3}>
+        <Typography variant="h5" component="div"> 未来活动展望 </Typography>
+        <Typography variant="h5" component="div"> Upcoming Events </Typography>
+        <Timeline position="alternate">
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography variant="h6" component="div"> 非诚勿扰 </Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>April. 8th</TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent color="text.secondary">
+              -
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>敬请期待</TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent color="text.secondary">
+              敬请期待
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>-</TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent color="text.secondary">
+              -
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>敬请期待</TimelineContent>
+          </TimelineItem>
+        </Timeline>
+      </Grid>
+      <Grid item xs>
+      </Grid>
+    </Grid>
   );
 }
+
+export default Home;

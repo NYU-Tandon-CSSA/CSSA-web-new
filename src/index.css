@@ -42,3 +42,7 @@ code {
   font-family: 'Ma Shan Zheng', cursive;
   display: inline-flex;
 }
+
+.MuiPaper-elevation4 {
+  box-shadow: none;
+}
