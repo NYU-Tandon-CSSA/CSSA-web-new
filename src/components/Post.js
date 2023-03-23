@@ -15,7 +15,7 @@ function Post({ title, date, description, imageurl, url }) {
             <Typography component="h2" variant="h5">
               {title}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography variant="subtitle1" color="condary">
               {date}
             </Typography>
             <Typography variant="subtitle1" paragraph>

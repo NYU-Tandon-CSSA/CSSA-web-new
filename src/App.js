@@ -11,11 +11,27 @@ import StudentService from './routes/StudentService';
 import TransparentNavBar from './components/TransparentNavBar';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#8900e1',
+    },
+    secondary: {
+      main: '#00e1c8',
+    },
+    text: {
+      primary: '#000000',
+      secondary: '#8900e1',
+    },
+    background: {
+      default: '#ffffff',
+      paper: '#f5f5f5',
+    },
+  },
   typography: {
     fontFamily: 'Roboto, sans-serif',
     h1: {
       fontFamily: 'Tilt Warp, cursive',
-      fontSize: '64px',
+      fontSize: '4vw',
     },
   },
 });
@@ -23,8 +39,8 @@ const theme = createTheme({
 
 function App() {
   return (
-    <div className="App">
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <div className="App">
         <TransparentNavBar />
         <BrowserRouter>
           <Switch>
@@ -35,8 +51,8 @@ function App() {
           </Switch>
           <Footer />
         </BrowserRouter>
-      </ThemeProvider>
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 

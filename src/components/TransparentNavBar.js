@@ -1,13 +1,63 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { AppBar, Toolbar, makeStyles, Typography} from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { AppBar, Toolbar, makeStyles, Typography, Box } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from "@material-ui/icons/Menu";
+// import "./HeroText.css"
 
 const useStyles = makeStyles({
-    text: {
+    textShadows: {
+        '--color-primary': '#a74dbf',
+        '--color-secondary': '#bf65a3',
+        '--color-tertiary': '#d17c87',
+        '--color-quaternary': '#e0946b',
+        '--color-quinary': '#eeab52',
+        textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
+        animation: '$shadows 1.2s ease-in infinite',
         display: 'block',
         margin: '0 auto',
-        marginTop: '10px',
         textAlign: 'center',
         color: '#8900e1',
+        animationDuration: '3.0s',
+    },
+    '@keyframes shadows': {
+        '0%': {
+            textShadow: 'none',
+        },
+        '10%': {
+            transform: 'translate(-3px, -3px)',
+            textShadow: '3px 3px 0 var(--color-secondary)',
+        },
+        '20%': {
+            transform: 'translate(-6px, -6px)',
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary)',
+        },
+        '30%': {
+            transform: 'translate(-9px, -9px)',
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary)',
+        },
+        '40%': {
+            transform: 'translate(-12px, -12px)',
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
+        },
+        '50%': {
+            transform: 'translate(-12px, -12px)',
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
+        },
+        '60%': {
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
+        },
+        '70%': {
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary)',
+        },
+        '80%': {
+            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary)',
+        },
+        '90%': {
+            textShadow: `3px 3px 0 var(--color-secondary)`,
+        },
+        '100%': {
+            textShadow: 'none',
+        },
     },
     appBar: {
         transition: 'all 0.3s ease-in-out',
@@ -16,6 +66,7 @@ const useStyles = makeStyles({
     },
     appBarSolid: {
         backgroundColor: 'white',
+        boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.2)',
     },
     appBarHidden: {
         transform: 'translateY(-100%)',
@@ -23,6 +74,9 @@ const useStyles = makeStyles({
     appBarVisible: {
         transform: 'translateY(0)',
     },
+    icon: {
+        fontSize: '4vh',
+    }
 });
 
 
@@ -51,15 +105,20 @@ function TransparentNavBar(props) {
     }, [prevScrollPos]);
 
     return (
-        <AppBar
-            position="fixed" className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}
-        >
-            <Toolbar>
-                <Typography variant="h1" className={classes.text}>
-                    NYU Tandon CSSA
-                </Typography>
-            </Toolbar>
-        </AppBar>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar
+                position="fixed" className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}
+            >
+                <Toolbar>
+                    <IconButton edge="start" color="primary" aria-label="menu">
+                        <MenuIcon className={classes.icon} />
+                    </IconButton>
+                    <Typography variant="h1" className={classes.textShadows}>
+                        NYU Tandon CSSA
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+        </Box>
     );
 }
 

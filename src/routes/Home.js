@@ -4,7 +4,13 @@ import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
 import img from '../images/bridge.png'
+
+
+// Section for images of recent posts
 import manual from '../images/manual.png'
+import fcwr from '../images/fcwr.png'
+import werewolf from '../images/werewolf.png'
+
 
 const useStyles = makeStyles(() => ({
   icon: {
@@ -51,19 +57,8 @@ function Home() {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        {/* <div
-          style={{
-            backgroundImage: `url(${img})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            width: '100 %',
-            height: '100vh',
-            zIndex: '-1',
-          }}>
-        </div> */}
         <div style={{ position: 'relative' }}>
-          <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh' }} />
+          <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} />
           <div
             style={{
               position: 'absolute',
@@ -85,27 +80,29 @@ function Home() {
           <ArrowDownwardRoundedIcon className={`${classes.icon} ${!isVisible && classes.iconHidden}`} />
         </Box>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={1}>
       </Grid>
       <Grid item xs={3}>
         <Card>
           <CardMedia
             component="img"
-            height="400"
             image={manual}
             title="New Student Handbook"
           />
           <CardContent>
             <Typography gutterBottom variant="h4" component="div">
-              2023 新生手册
+              新生手册
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="textSecondary">
               了解校园、学习生活、和关于Tandon的一切
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">分享</Button>
-            <Button size="small">了解更多</Button>
+            <Button size="small" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/a55zpVmTg3yf3aLi0zNSVQ') }}>出行前</Button>
+            <Button size="small" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/aNoRUfjdUYAPZWwiBO3lEw') }}>吃喝攻略</Button>
+            <Button size="small" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/4wWcxyJl74neiGRiqsia8Q') }}>宿舍生活</Button>
+            <Button size="small" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/v6QSQVzf76bpdvmNEIBmWw') }}>选课推荐</Button>
+            <Button size="small" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q') }}>校园须知</Button>
           </CardActions>
         </Card>
       </Grid>
@@ -113,50 +110,77 @@ function Home() {
         <Card>
           <CardMedia
             component="img"
-            height="400"
-            image={manual}
-            title="New Student Handbook"
+            image={fcwr}
+            title="非诚勿扰"
           />
           <CardContent>
             <Typography gutterBottom variant="h4" component="div">
               2023 非诚勿扰
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              了解非诚勿扰活动
+            <Typography variant="body2" color="textSecondary">
+              4.8 与你赴一场春日爱恋，“非诚勿扰”温暖回归
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">分享</Button>
-            <Button size="small">了解更多</Button>
+            <Button size="large" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ')}}>了解更多</Button>
+            <Button size="large" onClick={() => {
+              navigator.clipboard.writeText('https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ');
+              alert('微信公众号贴文链接已复制到剪贴板');
+            }}>分享</Button>
+          </CardActions>
+        </Card>
+        <div style={{minHeight: "20px"}}></div>
+        <Card>
+          <CardMedia
+            component="img"
+            image={werewolf}
+            title="非诚勿扰"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="div">
+              2023 狼人杀大赛
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              还在为凑不齐一桌狼人杀苦恼？
+              还愁没有找到旗鼓相当的大佬对手？
+              还在线上狼人杀？快来一局酣畅淋漓的面杀吧！
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="large" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ')}}>了解更多</Button>
+            <Button size="large" onClick={() => {
+              navigator.clipboard.writeText('https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ');
+              alert('微信公众号贴文链接已复制到剪贴板');
+            }}>分享</Button>
           </CardActions>
         </Card>
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={4} >
         <Typography variant="h5" component="div"> 未来活动展望 </Typography>
         <Typography variant="h5" component="div"> Upcoming Events </Typography>
         <Timeline position="alternate">
           <TimelineItem>
+            <TimelineOppositeContent color="textSecondary">
+              March 26th
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent><Typography variant="h6" component="div" color='primary'> 狼人杀大赛 </Typography></TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
             <TimelineOppositeContent>
-              <Typography variant="h6" component="div"> 非诚勿扰 </Typography>
+              <Typography variant="h6" component="div" color='primary'> 非诚勿扰 </Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent>April. 8th</TimelineContent>
+            <TimelineContent>April 8th</TimelineContent>
           </TimelineItem>
           <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
-              -
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>敬请期待</TimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
+            <TimelineOppositeContent color="textSecondary">
               敬请期待
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -166,7 +190,7 @@ function Home() {
             <TimelineContent>-</TimelineContent>
           </TimelineItem>
           <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
+            <TimelineOppositeContent color="textSecondary">
               -
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -177,7 +201,7 @@ function Home() {
           </TimelineItem>
         </Timeline>
       </Grid>
-      <Grid item xs>
+      <Grid item xs={1}>
       </Grid>
     </Grid>
   );
