@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { createTheme, ThemeProvider, Typography } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 
 import Footer from './components/Footer';
 
@@ -15,7 +15,7 @@ const theme = createTheme({
     fontFamily: 'Roboto, sans-serif',
     h1: {
       fontFamily: 'Tilt Warp, cursive',
-      fontSize: '72px',
+      fontSize: '64px',
     },
   },
 });

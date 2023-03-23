@@ -1,45 +1,58 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles({
-    appBar: {
-        boxShadow: 'none',
-    },
     text: {
         display: 'block',
         margin: '0 auto',
         marginTop: '10px',
         textAlign: 'center',
         color: '#8900e1',
-    }
+    },
+    appBar: {
+        transition: 'all 0.3s ease-in-out',
+        boxShadow: 'none',
+        backgroundColor: 'transparent',
+    },
+    appBarSolid: {
+        backgroundColor: 'white',
+    },
+    appBarHidden: {
+        transform: 'translateY(-100%)',
+    },
+    appBarVisible: {
+        transform: 'translateY(0)',
+    },
 });
 
-function TransparentNavBar(props) {
-    const [opacity, setOpacity] = useState(0);
 
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        const height = window.innerHeight;
-        setOpacity(Math.min(currentScrollY / height, 1));
-    };
+function TransparentNavBar(props) {
+    const classes = useStyles();
+    const [isSolid, setIsSolid] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+
+            setIsSolid(currentScrollPos > 100);
+
+            setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
-
-    const classes = useStyles();
+    }, [prevScrollPos]);
 
     return (
         <AppBar
-            position="fixed"
-            className={classes.appBar}
-            style={{
-                backgroundColor: `rgba(255, 255, 255, ${opacity})`,
-                transition: 'background-color 0.1s ease-out',
-            }}
+            position="fixed" className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}
         >
             <Toolbar>
                 <Typography variant="h1" className={classes.text}>
