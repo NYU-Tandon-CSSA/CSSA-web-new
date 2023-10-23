@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography, Box } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton'
+import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
+
 
 const useStyles = makeStyles({
     textShadows: {
@@ -61,11 +63,11 @@ const useStyles = makeStyles({
     appBar: {
         transition: 'all 0.3s ease-in-out',
         boxShadow: 'none',
-        // backgroundColor: 'transparent',
-        backgroundColor: '#ffffff',
+        opacity: 0.75,
+        backgroundColor: '#8900e1',
     },
     appBarSolid: {
-        backgroundColor: 'white',
+        backgroundColor: '#8900e1',
         boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.2)',
     },
     appBarHidden: {
@@ -105,18 +107,26 @@ function TransparentNavBar(props) {
     }, [prevScrollPos]);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box>
             <AppBar
-                position="fixed" className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}
-            >
-                <Toolbar>
-                    <IconButton edge="start" color="primary" aria-label="menu">
-                        <MenuIcon className={classes.icon} />
-                    </IconButton>
-                    {/* <Typography variant="h1" className={classes.textShadows}> */}
-                    <Typography variant="h1" color="primary">
-                        NYU Tandon CSSA
-                    </Typography>
+                position="fixed" 
+                className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}>
+                <Toolbar sx={{ justifyContent: "space-between" }}>
+                    <Grid xs={11}>
+                        <Typography 
+                            variant="h1" 
+                            color="#ffffff"
+                            class = 'header'>
+                            NYU Tandon CSSA
+                        </Typography>
+                    </Grid>
+                    <Grid xs={1}>
+                        <IconButton 
+                            color="inherit" 
+                            aria-label="menu">
+                            <MenuIcon className={classes.icon}/>
+                        </IconButton>
+                    </Grid>
                 </Toolbar>
             </AppBar>
         </Box>
