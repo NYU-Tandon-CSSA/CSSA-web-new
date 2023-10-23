@@ -119,11 +119,11 @@ function Home() {
         
         {/* 非诚勿扰 */}
         <Grid item xs={12} md={4}>
-          {/* <Event 
+          <Event 
           eventTitle = "非诚勿扰" 
           description = "4.8 与你赴一场春日爱恋，“非诚勿扰”温暖回归" 
           image = {fcwr} 
-          url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/> */}
+          url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/>
           <Typography>sasd</Typography>
         </Grid>
 
