@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography, Box } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from "@material-ui/icons/Menu";
-// import "./HeroText.css"
 
 const useStyles = makeStyles({
     textShadows: {
@@ -62,7 +61,8 @@ const useStyles = makeStyles({
     appBar: {
         transition: 'all 0.3s ease-in-out',
         boxShadow: 'none',
-        backgroundColor: 'transparent',
+        // backgroundColor: 'transparent',
+        backgroundColor: '#ffffff',
     },
     appBarSolid: {
         backgroundColor: 'white',
@@ -113,7 +113,8 @@ function TransparentNavBar(props) {
                     <IconButton edge="start" color="primary" aria-label="menu">
                         <MenuIcon className={classes.icon} />
                     </IconButton>
-                    <Typography variant="h1" className={classes.textShadows}>
+                    {/* <Typography variant="h1" className={classes.textShadows}> */}
+                    <Typography variant="h1" color="primary">
                         NYU Tandon CSSA
                     </Typography>
                 </Toolbar>
