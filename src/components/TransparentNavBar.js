@@ -116,7 +116,7 @@ function TransparentNavBar(props) {
                         <Typography 
                             variant="h1" 
                             color="#ffffff"
-                            class = 'header'>
+                            class = 'Silkscreen'>
                             NYU Tandon CSSA
                         </Typography>
                     </Grid>
