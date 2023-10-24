@@ -175,7 +175,7 @@ function Home() {
       
       <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
         {/* 非诚勿扰 */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={3}>
           <Event 
           eventTitle = "非诚勿扰" 
           description = "4.8 与你赴一场春日爱恋，“非诚勿扰”温暖回归" 
@@ -183,12 +183,29 @@ function Home() {
           url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/>
         </Grid>
 
+        {/* 心动的声音 */}
+        <Grid item xs={12} md={3}>
+          <Event 
+          eventTitle = "2023 心动的声音" 
+          description = "来心动的声音一站歌喉吧！"
+          // image = {} 
+          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+        </Grid>
+
         {/* 狼人杀大赛 */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={3}>
           <Event 
           eventTitle = "2023 狼人杀大赛" 
           description = "还在为凑不齐一桌狼人杀苦恼? 还愁没有找到旗鼓相当的大佬对手？ 还在线上狼人杀？ 快来一局酣畅淋漓的面杀吧！"
           image = {werewolf} 
+          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+        </Grid>
+
+        <Grid item xs={12} md={3}>
+          <Event 
+          eventTitle = "2023 NYU 校友会" 
+          description = "还在为凑不齐一桌狼人杀苦恼? 还愁没有找到旗鼓相当的大佬对手？ 还在线上狼人杀？ 快来一局酣畅淋漓的面杀吧！"
+          // image = {werewolf} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
       </Grid>
