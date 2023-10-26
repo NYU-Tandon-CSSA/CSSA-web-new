@@ -13,6 +13,7 @@ import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf.png'
+import Footer from '../components/Footer';
 
 
 const useStyles = makeStyles(() => ({
