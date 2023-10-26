@@ -3,6 +3,7 @@ import { AppBar, Toolbar, makeStyles, Typography, Box } from '@material-ui/core'
 import IconButton from '@material-ui/core/IconButton'
 import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
+import Drawer from '@mui/material/Drawer';
 
 
 const useStyles = makeStyles({
@@ -129,6 +130,7 @@ function TransparentNavBar(props) {
                     </Grid>
                 </Toolbar>
             </AppBar>
+                
         </Box>
     );
 }

@@ -123,7 +123,7 @@ function Home() {
         {/* 时间线 */}
 
         <Grid item xs={6} md={6}>
-          <Typography component="div" class = 'Silkscreen' style={{fontSize: "1.5rem"}}> Upcoming Events </Typography>
+          <Typography component="div" class = 'Silkscreen' style={{fontSize: "2rem"}}> Upcoming Events </Typography>
             <Timeline position="alternate">
               <TimelineItem>
                 <TimelineOppositeContent color="textSecondary">
