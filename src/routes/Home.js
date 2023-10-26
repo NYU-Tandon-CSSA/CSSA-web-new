@@ -11,6 +11,7 @@ import Event from '../components/Event';
 // Section for images of recent posts
 import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
+import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf.png'
 
 
@@ -188,7 +189,7 @@ function Home() {
           <Event 
           eventTitle = "2023 心动的声音" 
           description = "来心动的声音一站歌喉吧！"
-          // image = {} 
+          image = {Voice} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
 
