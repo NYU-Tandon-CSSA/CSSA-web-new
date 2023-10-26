@@ -12,6 +12,7 @@ import Event from '../components/Event';
 import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
 import werewolf from '../images/werewolf.png'
+import Footer from '../components/Footer';
 
 
 const useStyles = makeStyles(() => ({
