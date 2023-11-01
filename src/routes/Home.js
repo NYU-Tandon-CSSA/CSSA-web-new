@@ -175,7 +175,26 @@ function Home() {
 
       </Grid>
       
+      
+
       <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
+
+        {/* 月份标题 */}
+        <Grid item xs={12} md={3}>
+        <Typography variant="h4" gutterBottom>
+          11月
+        </Typography>
+        </Grid>
+
+        {/* 心动的声音 */}
+          <Grid item xs={12} md={3}>
+          <Event 
+          eventTitle = "2023 心动的声音" 
+          description = "来心动的声音一站歌喉吧！"
+          image = {Voice} 
+          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+        </Grid>
+
         {/* 非诚勿扰 */}
         <Grid item xs={12} md={3}>
           <Event 
@@ -184,14 +203,15 @@ function Home() {
           image = {fcwr} 
           url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/>
         </Grid>
+      </Grid>
 
-        {/* 心动的声音 */}
+      <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
+
+        {/* 月份标题 */}
         <Grid item xs={12} md={3}>
-          <Event 
-          eventTitle = "2023 心动的声音" 
-          description = "来心动的声音一站歌喉吧！"
-          image = {Voice} 
-          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+          <Typography variant="h4" gutterBottom>
+            12月
+          </Typography>
         </Grid>
 
         {/* 狼人杀大赛 */}
@@ -202,7 +222,8 @@ function Home() {
           image = {werewolf} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
-
+      
+        {/* 校友会 */}
         <Grid item xs={12} md={3}>
           <Event 
           eventTitle = "2023 NYU 校友会" 
@@ -211,6 +232,15 @@ function Home() {
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
       </Grid>
+
+      <div style={{ margin: '20px', padding: '20px', border: '1px solid #ccc' }}>
+        <h1>{新生手册}</h1>
+        <p>{了解校园、学习生活、和关于Tandon的一切}</p>
+       <img src={post.image} alt={post.imageText} style={{ width: '100%', height: 'auto' }} />
+        <p>{post.linkText}</p>
+      </div>
+
+
     </div>
   );
 }
