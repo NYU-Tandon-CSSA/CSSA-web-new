@@ -233,13 +233,28 @@ function Home() {
         </Grid>
       </Grid>
 
-      <div style={{ margin: '20px', padding: '20px', border: '1px solid #ccc' }}>
-        <h1>{新生手册}</h1>
-        <p>{了解校园、学习生活、和关于Tandon的一切}</p>
-       <img src={post.image} alt={post.imageText} style={{ width: '100%', height: 'auto' }} />
-        <p>{post.linkText}</p>
-      </div>
-
+      <Card>
+            <CardMedia
+              component="img"
+              image={manual}
+              title="New Student Handbook"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="div">
+                新生手册
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                了解校园、学习生活、和关于Tandon的一切
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/a55zpVmTg3yf3aLi0zNSVQ') }}>出行前</Button>
+              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/aNoRUfjdUYAPZWwiBO3lEw') }}>吃喝攻略</Button>
+              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/4wWcxyJl74neiGRiqsia8Q') }}>宿舍生活</Button>
+              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/v6QSQVzf76bpdvmNEIBmWw') }}>选课推荐</Button>
+              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q') }}>校园须知</Button>
+            </CardActions>
+          </Card>
 
     </div>
   );
