@@ -16,23 +16,14 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: '新生手册',
+    color : "red",
     imgPath: manual,
   },
   {
-    label: 'Bird',
+    label: 'E-Board成员介绍',
     imgPath:
       'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
   },
 ];
 
@@ -62,7 +53,7 @@ function SwipeableTextMobileStepper() {
           display: 'flex',
           alignItems: 'center',
           height: 50,
-          pl: 2,
+          pl: 2,  
           bgcolor: 'background.default',
         }}
       >
@@ -100,8 +91,9 @@ function SwipeableTextMobileStepper() {
         nextButton={
           <Button
             size="small"
+            style={{color : "red"}}
             onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
+            disabled={activeStep === maxSteps - 1} 
           >
             Next
             {theme.direction === 'rtl' ? (
@@ -112,7 +104,7 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" style={{color : "red"}} onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (

@@ -98,7 +98,7 @@ function Home() {
       <Grid container style={{padding: "20%"}} spacing={10}>
 
         {/* 入学手册 */}
-        <Grid item xs={6}>
+        <Grid item xs={6} md={6}>
           <Stepper/>
           {/* <Card>
             <CardMedia
