@@ -95,10 +95,14 @@ function Home() {
       </Grid>
 
       {/* 入学手册 & Timeline */}
-      <Grid container style={{padding: "20%"}} spacing={10}>
+      <Grid container style={{padding: "10%"}} spacing={10}>
 
         {/* 入学手册 */}
+<<<<<<< Updated upstream
         <Grid item xs={6} md={6}>
+=======
+        <Grid item xs={12} md={6} style={{padding: "10%"}}>
+>>>>>>> Stashed changes
           <Stepper/>
           {/* <Card>
             <CardMedia
