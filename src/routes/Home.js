@@ -16,6 +16,7 @@ import werewolf from '../images/werewolf.png'
 import Footer from '../components/Footer';
 
 
+
 const useStyles = makeStyles(() => ({
   icon: {
     fontSize: "4rem !important",
@@ -79,6 +80,15 @@ function Home() {
             ></div>
           </div>
         </Grid>
+
+        {/* 首页文案 */}
+        
+        <Grid item xs={12}>
+        <Typography gutterBottom variant="h4" component="div"  align="center">
+          本学年活动一览（瞎想的文案）
+        </Typography>
+        </Grid>
+     
 
         {/* Icon */}
 
@@ -176,7 +186,7 @@ function Home() {
       </Grid>
       
       
-
+      {/* Events */}
       <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
 
         {/* 月份标题 */}
@@ -232,29 +242,29 @@ function Home() {
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
       </Grid>
+      
+      {/* 新生手册*/}
+      <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
+      <img src=""
+       alt="background" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} />
+      
+      <Grid container style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }} alignItems="center" justifyContent="center">
+        <Grid item xs={12} style={{ textAlign: 'center' }}>
+          <Typography gutterBottom variant="h4" component="div" style={{ color: 'white' }}>
+            Your Text Here
+          </Typography>
+          
+          <Button variant="contained" color="primary">
+            Button 1
+          </Button>
+          <Button variant="contained" color="secondary">
+            Button 2
+          </Button>
+        </Grid>
+      </Grid>
+    </div>
 
-      <Card>
-            <CardMedia
-              component="img"
-              image={manual}
-              title="New Student Handbook"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h4" component="div">
-                新生手册
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                了解校园、学习生活、和关于Tandon的一切
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/a55zpVmTg3yf3aLi0zNSVQ') }}>出行前</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/aNoRUfjdUYAPZWwiBO3lEw') }}>吃喝攻略</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/4wWcxyJl74neiGRiqsia8Q') }}>宿舍生活</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/v6QSQVzf76bpdvmNEIBmWw') }}>选课推荐</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q') }}>校园须知</Button>
-            </CardActions>
-          </Card>
+
 
     </div>
   );
