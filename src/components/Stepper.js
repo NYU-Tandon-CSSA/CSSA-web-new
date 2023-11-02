@@ -3,7 +3,8 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+//import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -16,12 +17,11 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: '新生手册',
-    color : "red",
+    label: <Typography variant="h5" component="div" color="primary"> 新生手册 </Typography>,
     imgPath: manual,
   },
   {
-    label: 'E-Board成员介绍',
+    label: <Typography variant="h5" component="div" color="primary"> E-Board成员介绍 </Typography>,
     imgPath:
       'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -54,7 +54,7 @@ function SwipeableTextMobileStepper() {
           alignItems: 'center',
           height: 50,
           pl: 2,  
-          bgcolor: 'background.default',
+          bgcolor: 'primary',
         }}
       >
         <Typography>{images[activeStep].label}</Typography>
@@ -91,11 +91,11 @@ function SwipeableTextMobileStepper() {
         nextButton={
           <Button
             size="small"
-            style={{color : "red"}}
+            //color="red"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1} 
           >
-            Next
+            <Typography color="primary"> Next </Typography>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowLeft />
             ) : (
@@ -104,13 +104,13 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
         backButton={
-          <Button size="small" style={{color : "red"}} onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />
             )}
-            Back
+            <Typography color="primary"> Back </Typography>
           </Button>
         }
       />
