@@ -14,6 +14,7 @@ import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf.png'
 import Footer from '../components/Footer';
+import Stepper from '../components/Stepper'
 
 
 const useStyles = makeStyles(() => ({
@@ -94,11 +95,12 @@ function Home() {
       </Grid>
 
       {/* 入学手册 & Timeline */}
-      <Grid container style={{padding: "10%"}} spacing={3}>
+      <Grid container style={{padding: "20%"}} spacing={10}>
 
         {/* 入学手册 */}
         <Grid item xs={6}>
-          <Card>
+          <Stepper/>
+          {/* <Card>
             <CardMedia
               component="img"
               image={manual}
@@ -119,7 +121,7 @@ function Home() {
               <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/v6QSQVzf76bpdvmNEIBmWw') }}>选课推荐</Button>
               <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q') }}>校园须知</Button>
             </CardActions>
-          </Card>
+          </Card> */}
         </Grid>
 
         {/* 时间线 */}
