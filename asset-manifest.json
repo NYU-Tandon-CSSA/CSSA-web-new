@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8a6d79f1.css",
+    "main.js": "/static/js/main.90c53169.js",
+    "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
+    "static/media/Voice.png": "/static/media/Voice.edfd35b020ca837924cf.png",
+    "static/media/bridge.png": "/static/media/bridge.3154143b4988be1d6bc5.png",
+    "static/media/fcwr.png": "/static/media/fcwr.7acf9c838cfc05f0470a.png",
+    "static/media/werewolf.png": "/static/media/werewolf.447288d1055e9d56ffbb.png",
+    "static/media/manual.png": "/static/media/manual.2ba66426744aa000c586.png",
+    "index.html": "/index.html",
+    "main.8a6d79f1.css.map": "/static/css/main.8a6d79f1.css.map",
+    "main.90c53169.js.map": "/static/js/main.90c53169.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a6d79f1.css",
+    "static/js/main.90c53169.js"
+  ]
+}
