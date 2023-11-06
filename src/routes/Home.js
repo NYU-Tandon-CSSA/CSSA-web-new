@@ -13,7 +13,8 @@ import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf.png'
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
+import Carousel from '../components/Carousel';
 
 
 const useStyles = makeStyles(() => ({
@@ -66,8 +67,9 @@ function Home() {
 
         <Grid item xs={12}>
           <div style={{ position: 'relative' }}>
-            <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} />
-            <div
+            {/* <img src={img} alt={`Bridge`} style={{ width: '100%', height: '100vh', pointerEvents: "none", objectFit: "cover" }} /> */}
+            <Carousel/>
+            {/* <div
               style={{
                 position: 'absolute',
                 bottom: 0,
@@ -76,20 +78,8 @@ function Home() {
                 height: '40vh',
                 background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
               }}
-            ></div>
+            ></div> */}
           </div>
-        </Grid>
-
-        {/* Icon */}
-
-        <Grid item xs={12}>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <ArrowDownwardRoundedIcon className={`${classes.icon} ${!isVisible && classes.iconHidden}`} />
-          </Box>
         </Grid>
       </Grid>
 
