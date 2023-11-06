@@ -67,27 +67,51 @@ function Home() {
 
         <Grid item xs={12}>
           <div style={{ position: 'relative' }}>
+<<<<<<< Updated upstream
             {/* <img src={img} alt={`Bridge`} style={{ width: '100%', height: '100vh', pointerEvents: "none", objectFit: "cover" }} /> */}
             <Carousel/>
             {/* <div
+=======
+            <img src={img} alt={`Bridge`} style={{ width: '100%', height: '100vh', pointerEvents: "none", objectFit: "cover" }} />
+            <div
+>>>>>>> Stashed changes
               style={{
                 position: 'absolute',
                 bottom: 0,
                 left: 0,
                 width: '100%',
                 height: '40vh',
-                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(050, 050, 050, 1))',
               }}
             ></div> */}
           </div>
         </Grid>
+<<<<<<< Updated upstream
+=======
+
+        {/* Icon */}
+
+        {/* <Grid item xs={12}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <ArrowDownwardRoundedIcon className={`${classes.icon} ${!isVisible && classes.iconHidden}`} />
+          </Box>
+        </Grid> */}
+>>>>>>> Stashed changes
       </Grid>
 
       {/* 入学手册 & Timeline */}
-      <Grid container style={{padding: "10%"}} spacing={10}>
+      <Grid container style={{padding: "10%", background:"#d4cacd"}} spacing={10}>
 
         {/* 入学手册 */}
+<<<<<<< Updated upstream
         <Grid item xs={12} md={6} style={{padding: "10%"}}>
+=======
+        <Grid item xs={12} md={6}>
+>>>>>>> Stashed changes
           <Stepper/>
           {/* <Card>
             <CardMedia
