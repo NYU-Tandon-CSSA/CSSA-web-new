@@ -13,7 +13,10 @@ import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf.png'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
+import alimni_association from '../images/alumni_association.jpg'
+import If_you_are_the_one from '../images/If_you_are_the_one.png'
+import Voice_of_NYC from '../images/Voice_of_NYC.jpg';
 
 
 const useStyles = makeStyles(() => ({
@@ -177,37 +180,42 @@ function Home() {
       
       <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
         {/* 非诚勿扰 */}
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={4}>
           <Event 
-          eventTitle = "非诚勿扰" 
-          description = "4.8 与你赴一场春日爱恋，“非诚勿扰”温暖回归" 
-          image = {fcwr} 
+          eventTitle = "非诚勿扰"
+          image = {If_you_are_the_one} 
           url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/>
         </Grid>
 
         {/* 心动的声音 */}
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={4}>
           <Event 
-          eventTitle = "2023 心动的声音" 
-          description = "来心动的声音一站歌喉吧！"
-          image = {Voice} 
+          eventTitle = "心动的声音"
+          image = {Voice_of_NYC} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
 
         {/* 狼人杀大赛 */}
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={4}>
           <Event 
-          eventTitle = "2023 狼人杀大赛" 
-          description = "还在为凑不齐一桌狼人杀苦恼? 还愁没有找到旗鼓相当的大佬对手？ 还在线上狼人杀？ 快来一局酣畅淋漓的面杀吧！"
+          eventTitle = "狼人杀大赛"
           image = {werewolf} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
 
-        <Grid item xs={12} md={3}>
+        {/* 校友会 */}
+        <Grid item xs={12} md={4}>
           <Event 
-          eventTitle = "2023 NYU 校友会" 
-          description = "还在为凑不齐一桌狼人杀苦恼? 还愁没有找到旗鼓相当的大佬对手？ 还在线上狼人杀？ 快来一局酣畅淋漓的面杀吧！"
-          // image = {werewolf} 
+          eventTitle = "校友会" 
+          image = {alimni_association} 
+          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+        </Grid>
+
+        {/* 校友会 */}
+        <Grid item xs={12} md={4}>
+          <Event 
+          eventTitle = "Coffee Chat" 
+          image = {Voice_of_NYC} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
       </Grid>

@@ -1,9 +1,36 @@
 import * as React from 'react';
-import CardActionArea from '@mui/material/CardActionArea';
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box } from '@material-ui/core';
+//import CardActionArea from '@mui/material/CardActionArea';
+//import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, CardCover } from '@material-ui/core';
+import Box from '@mui/joy/Box';
+import Card from '@mui/joy/Card';
+import CardCover from '@mui/joy/CardCover';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
 
-function Event({ eventTitle, eventSubTitle ,date, description, image, url }) {
+function Event({ eventTitle, image, url }) {
   return (
+      <Card component="li" sx={{ minWidth: 300, flexGrow: 1 }}>
+        <CardCover>
+          <img
+            src={image}
+            srcSet={image}
+            loading="lazy"
+            alt=""
+          />
+        </CardCover>
+        <CardContent>
+          <Typography
+            level="body-lg"
+            fontWeight="lg"
+            textColor="#fff"
+            mt={{ xs: 12, sm: 18 }}
+          >
+            {eventTitle}
+          </Typography>
+        </CardContent>
+      </Card>
+    )
+/*
     <Card>
       <CardMedia
         component="img"
@@ -27,6 +54,7 @@ function Event({ eventTitle, eventSubTitle ,date, description, image, url }) {
       </CardActions>
     </Card>
   );
+  */
 }
 
 export default Event;
