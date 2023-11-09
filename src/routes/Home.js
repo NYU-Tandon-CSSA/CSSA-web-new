@@ -5,8 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { useEffect, useState} from 'react';
 import img from '../images/bridge.png'
-
 import Event from '../components/Event';
+
+//Winnie's import
+import AboutContainer from '../components/AboutContainer';
+import groupPhoto from '../images/GroupPhoto.jpg'
+
 
 // Section for images of recent posts
 import manual from '../images/manual.png'
@@ -14,7 +18,6 @@ import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf.png'
 import Footer from '../components/Footer';
-
 
 
 const useStyles = makeStyles(() => ({
@@ -65,7 +68,7 @@ function Home() {
 
         {/* Banner Image */}
 
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{ padding: 0, margin: 0 }}>
           <div style={{ position: 'relative' }}>
             <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} />
             <div
@@ -75,32 +78,24 @@ function Home() {
                 left: 0,
                 width: '100%',
                 height: '40vh',
-                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(238, 238, 238, 1))',
               }}
             ></div>
           </div>
         </Grid>
 
-        {/* 首页文案 */}
+        {/* 关于我们 */}
+        <div>
+        < AboutContainer
+         title="关于我们"
+         paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
+          我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。"
+         imageUrl={groupPhoto}
+      />
+        </div>
+       
+      
         
-        <Grid item xs={12}>
-        <Typography gutterBottom variant="h4" component="div"  align="center">
-          本学年活动一览（瞎想的文案）
-        </Typography>
-        </Grid>
-     
-
-        {/* Icon */}
-
-        <Grid item xs={12}>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <ArrowDownwardRoundedIcon className={`${classes.icon} ${!isVisible && classes.iconHidden}`} />
-          </Box>
-        </Grid>
       </Grid>
 
       {/* 入学手册 & Timeline */}
@@ -243,26 +238,8 @@ function Home() {
         </Grid>
       </Grid>
       
-      {/* 新生手册*/}
-      <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
-      <img src=""
-       alt="background" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} />
-      
-      <Grid container style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }} alignItems="center" justifyContent="center">
-        <Grid item xs={12} style={{ textAlign: 'center' }}>
-          <Typography gutterBottom variant="h4" component="div" style={{ color: 'white' }}>
-            Your Text Here
-          </Typography>
-          
-          <Button variant="contained" color="primary">
-            Button 1
-          </Button>
-          <Button variant="contained" color="secondary">
-            Button 2
-          </Button>
-        </Grid>
-      </Grid>
-    </div>
+  
+
 
 
 
