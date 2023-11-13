@@ -4,7 +4,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Bo
 
 function Event({ eventTitle, eventSubTitle ,date, description, image, url }) {
   return (
-    <Card>
+    <Card sx={{ width: '20rem', height: '12.5rem' }}>
       <CardMedia
         component="img"
         image={image}

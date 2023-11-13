@@ -5,8 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { useEffect, useState} from 'react';
 import img from '../images/bridge.png'
-
 import Event from '../components/Event';
+
+//Winnie's import
+import AboutContainer from '../components/AboutContainer';
+import groupPhoto from '../images/GroupPhoto.jpg'
+
 
 // Section for images of recent posts
 import manual from '../images/manual.png'
@@ -64,7 +68,7 @@ function Home() {
 
         {/* Banner Image */}
 
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{ padding: 0, margin: 0 }}>
           <div style={{ position: 'relative' }}>
             <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} />
             <div
@@ -74,23 +78,24 @@ function Home() {
                 left: 0,
                 width: '100%',
                 height: '40vh',
-                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(238, 238, 238, 1))',
               }}
             ></div>
           </div>
         </Grid>
 
-        {/* Icon */}
-
-        <Grid item xs={12}>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <ArrowDownwardRoundedIcon className={`${classes.icon} ${!isVisible && classes.iconHidden}`} />
-          </Box>
-        </Grid>
+        {/* 关于我们 */}
+        <div>
+        < AboutContainer
+         title="关于我们"
+         paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
+          我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。"
+         imageUrl={groupPhoto}
+      />
+        </div>
+       
+      
+        
       </Grid>
 
       {/* 入学手册 & Timeline */}
@@ -175,7 +180,26 @@ function Home() {
 
       </Grid>
       
+      
+      {/* Events */}
       <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
+
+        {/* 月份标题 */}
+        <Grid item xs={12} md={3}>
+        <Typography variant="h4" gutterBottom>
+          11月
+        </Typography>
+        </Grid>
+
+        {/* 心动的声音 */}
+          <Grid item xs={12} md={3}>
+          <Event 
+          eventTitle = "2023 心动的声音" 
+          description = "来心动的声音一站歌喉吧！"
+          image = {Voice} 
+          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+        </Grid>
+
         {/* 非诚勿扰 */}
         <Grid item xs={12} md={3}>
           <Event 
@@ -184,14 +208,15 @@ function Home() {
           image = {fcwr} 
           url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/>
         </Grid>
+      </Grid>
 
-        {/* 心动的声音 */}
+      <Grid container style={{paddingLeft: "10%", paddingRight: "10%"}} spacing={3}>
+
+        {/* 月份标题 */}
         <Grid item xs={12} md={3}>
-          <Event 
-          eventTitle = "2023 心动的声音" 
-          description = "来心动的声音一站歌喉吧！"
-          image = {Voice} 
-          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+          <Typography variant="h4" gutterBottom>
+            12月
+          </Typography>
         </Grid>
 
         {/* 狼人杀大赛 */}
@@ -202,7 +227,8 @@ function Home() {
           image = {werewolf} 
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
-
+      
+        {/* 校友会 */}
         <Grid item xs={12} md={3}>
           <Event 
           eventTitle = "2023 NYU 校友会" 
@@ -211,6 +237,12 @@ function Home() {
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
       </Grid>
+      
+  
+
+
+
+
     </div>
   );
 }

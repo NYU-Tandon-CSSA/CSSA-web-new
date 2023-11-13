@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url("https://192960944.r.cdn36.com/chinesefonts2/packages/ysbth/dist/优设标题黑/result.css"); 
 
 body {
   margin: 0;
@@ -17,6 +18,7 @@ code {
 .Silkscreen{
   font-family: 'Silkscreen', sans-serif;
 }
+
 
 .font-button{
   font-size: 1.5rem;
