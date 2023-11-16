@@ -12,7 +12,7 @@ import Event from '../components/Event';
 import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
-import werewolf from '../images/werewolf.png'
+import werewolf from '../images/Werewolf2.0.png'
 import Footer from '../components/Footer'
 import alimni_association from '../images/alumni_association.jpg'
 import If_you_are_the_one from '../images/If_you_are_the_one.png'

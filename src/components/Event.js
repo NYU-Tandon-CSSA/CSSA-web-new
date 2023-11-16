@@ -6,11 +6,17 @@ import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
+import Link from '@mui/joy/Link';
+
 
 function Event({ eventTitle, image, url }) {
+
   return (
-      <Card component="li" sx={{ minWidth: 300, flexGrow: 1 }}>
-        <CardCover>
+      <Card component="li" sx={{ minWidth: 300, flexGrow: 1 ,
+        '&:hover': { boxShadow: 'xl', borderColor: 'warning.softActiveColor', borderWidth:3, borderRadius: 10} }}>
+       
+        <CardCover >
+        
           <img
             src={image}
             srcSet={image}
@@ -18,14 +24,30 @@ function Event({ eventTitle, image, url }) {
             alt=""
           />
         </CardCover>
+        <CardCover
+        sx={{
+          background:
+            'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 100px)',
+        }}
+      />
         <CardContent>
+          
           <Typography
             level="body-lg"
             fontWeight="lg"
             textColor="#fff"
             mt={{ xs: 12, sm: 18 }}
           >
-            {eventTitle}
+            <Link
+            overlay
+            underline="none"
+            href={url}
+            target="_blank"
+            sx={{color: '#fff'}}
+            > 
+                {eventTitle}
+
+            </Link> 
           </Typography>
         </CardContent>
       </Card>
