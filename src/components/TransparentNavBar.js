@@ -63,7 +63,7 @@ const useStyles = makeStyles({
     appBar: {
         transition: 'all 0.3s ease-in-out',
         boxShadow: 'none',
-        opacity: 0.75,
+        // opacity: 0.75,
         backgroundColor: '#8900e1',
     },
     appBarSolid: {

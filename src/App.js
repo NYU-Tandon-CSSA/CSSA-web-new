@@ -42,15 +42,19 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <TransparentNavBar />
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/activity" component={Activity} />
-            <Route exact path="/studentservice" component={StudentService} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
+        <div style={{ maxWidth: '85vw', margin: '0 auto' }}>
+          <BrowserRouter>
+            <Switch>
+              <div>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/activity" component={Activity} />
+                <Route exact path="/studentservice" component={StudentService} />
+              </div>
+            </Switch>
+          </BrowserRouter>
+        </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );
