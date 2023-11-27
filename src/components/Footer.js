@@ -54,7 +54,7 @@ function Footer() {
   return (
     <Box
       component="footer"
-      sx={{ bgcolor: "#8900e1", py: 6, marginTop: "5vh" }}
+      sx={{ bgcolor: "#8900e1", py: 6 }}
     >
       <Container maxWidth="lg">
         <Grid container spacing={3}>

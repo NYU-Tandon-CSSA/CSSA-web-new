@@ -17,7 +17,6 @@ import manual from '../images/manual.png'
 import fcwr from '../images/fcwr.png'
 import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf2.0.png'
-import Footer from '../components/Footer';
 import alimni_association from '../images/alumni_association.jpg'
 import If_you_are_the_one from '../images/If_you_are_the_one.png'
 import Voice_of_NYC from '../images/Voice_of_NYC.jpg'
@@ -67,14 +66,16 @@ function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+
   return (
-    <div>
+    <div style={{backgroundColor: '#EEEEEE'}}>
       <Grid container spacing={3}>
 
         {/* Banner Image */}
 
-        <Grid item xs={12} style={{ padding: 0, margin: 0 }}>
-          <div style={{ position: 'relative' }}>
+        <Grid item xs={12} style={{ padding: 0, margin: 0}}>
+          <div style={{ position: 'relative'}}>
             <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} />
             <div
               style={{
@@ -88,106 +89,24 @@ function Home() {
             ></div>
           </div>
         </Grid>
+      </Grid>
 
-        {/* 关于我们 */}
-        <div>
+      {/* 关于我们 */}
+      <div style={{maxWidth: '85vw', margin: '0 auto'}}>
         < AboutContainer
-         title="关于我们"
-         paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
+          title="关于我们"
+          paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
           我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。"
-         imageUrl={groupPhoto}
-      />
-        </div>
-       
-      
-        
-      </Grid>
-
-      {/* 入学手册 & Timeline */}
-      <Grid container style={{padding: "10%"}} spacing={3}>
-
-        {/* 入学手册 */}
-        <Grid item xs={6}>
-          <Card>
-            <CardMedia
-              component="img"
-              image={manual}
-              title="New Student Handbook"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h4" component="div">
-                新生手册
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                了解校园、学习生活、和关于Tandon的一切
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/a55zpVmTg3yf3aLi0zNSVQ') }}>出行前</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/aNoRUfjdUYAPZWwiBO3lEw') }}>吃喝攻略</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/4wWcxyJl74neiGRiqsia8Q') }}>宿舍生活</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/v6QSQVzf76bpdvmNEIBmWw') }}>选课推荐</Button>
-              <Button size="medium" variant='contained' color="primary" onClick={() => { window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q') }}>校园须知</Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        {/* 时间线 */}
-
-        <Grid item xs={6} md={6}>
-          <Typography component="div" class = 'Silkscreen' style={{fontSize: "1.5rem"}}> Upcoming Events </Typography>
-            <Timeline position="alternate">
-              <TimelineItem>
-                <TimelineOppositeContent color="textSecondary">
-                  March 26th
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent><Typography variant="h6" component="div" color='primary'> 狼人杀大赛 </Typography></TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineOppositeContent>
-                  <Typography variant="h6" component="div" color='primary'> 非诚勿扰 </Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>April 8th</TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineOppositeContent color="textSecondary">
-                upcoming soon
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>-</TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineOppositeContent color="textSecondary">
-                  -
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>upcoming soon</TimelineContent>
-              </TimelineItem>
-            </Timeline>
-        </Grid>
-
-      </Grid>
-      
+          imageUrl={groupPhoto}/>
+      </div>
       
       {/* Events */}
-      <Grid container style={{paddingLeft: "0%", paddingRight: "0%"}} spacing={3}>
+      <Grid container style={{paddingTop:"8vh", paddingBottom:"8vh", maxWidth: '85vw', margin: '0 auto'}} spacing={3}>
+        <Grid item xs={12}>
+        <Typography variant="h4" style={{ textAlign: 'center', fontFamily: 'YouSheBiaoTiHei' }}>
+              我们的活动
+        </Typography>
+        </Grid>
         {/* 非诚勿扰 */}
         <Grid item xs={12} md={4}>
           <Event 
@@ -228,12 +147,6 @@ function Home() {
           url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
         </Grid>
       </Grid>
-
-      
-  
-
-
-
 
     </div>
   );

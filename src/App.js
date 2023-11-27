@@ -42,7 +42,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <TransparentNavBar />
-        <div style={{ maxWidth: '85vw', margin: '0 auto' }}>
+        {/* <div style={{ maxWidth: '85vw', margin: '0 auto' }}> */}
+        <div>
           <BrowserRouter>
             <Switch>
               <div>

@@ -19,6 +19,10 @@ code {
   font-family: 'Silkscreen', sans-serif;
 }
 
+.pagePadding{
+  max-width: '85vw';
+  margin: '0 auto'
+}
 
 .font-button{
   font-size: 1.5rem;
