@@ -103,12 +103,12 @@ function Home() {
       {/* Events */}
       <Grid container style={{paddingTop:"8vh", paddingBottom:"8vh", maxWidth: '85vw', margin: '0 auto'}} spacing={3}>
         <Grid item xs={12}>
-        <Typography variant="h4" style={{ textAlign: 'center', fontFamily: 'YouSheBiaoTiHei' }}>
-              我们的活动
-        </Typography>
+          <Typography variant="h4" style={{ textAlign: 'center', fontFamily: 'YouSheBiaoTiHei' }}>
+                我们的活动
+          </Typography>
         </Grid>
         {/* 非诚勿扰 */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Event 
           eventTitle = "非诚勿扰"
           image = {If_you_are_the_one} 
@@ -116,7 +116,7 @@ function Home() {
         </Grid>
 
         {/* 心动的声音 */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Event 
           eventTitle = "心动的声音"
           image = {Voice_of_NYC} 
@@ -124,7 +124,7 @@ function Home() {
         </Grid>
 
         {/* 狼人杀大赛 */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Event 
           eventTitle = "狼人杀大赛"
           image = {werewolf} 
@@ -132,7 +132,7 @@ function Home() {
         </Grid>
 
         {/* 校友会 */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Event 
           eventTitle = "校友会" 
           image = {alimni_association} 
@@ -140,7 +140,7 @@ function Home() {
         </Grid>
 
         {/* 校友会 */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Event 
           eventTitle = "Coffee Chat" 
           image = {coffee_chat} 

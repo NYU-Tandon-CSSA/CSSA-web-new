@@ -28,13 +28,13 @@ function Copyright() {
 function SocialMedia() {
   return (
     <Typography variant="body2" color="#FFF" align="center">
-      <Link color="inherit" href="https://www.instagram.com/nyutandoncssa/" sx={{mr: 2}}>
+      <Link color="inherit" href="https://www.instagram.com/tandoncssa/" sx={{mr: 2}} target="_blank">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </Link>{" "}
-      <Link color="inherit" href="https://www.facebook.com/nyutandoncssa/" sx={{mr: 2}}>
+      <Link color="inherit" href="https://www.facebook.com/nyutandoncssa/" sx={{mr: 2}} target="_blank">
         <FontAwesomeIcon icon={faFacebook} size="2x" />
       </Link>{" "}
-      <Link color="inherit" href="https://mp.weixin.qq.com/s/4wWcxyJl74neiGRiqsia8Q" sx={{mr: 2}}>
+      <Link color="inherit" href="https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q" sx={{mr: 2}} target="_blank">
         <FontAwesomeIcon icon={faWeixin} size="2x" />
       </Link>{" "}
     </Typography>
@@ -45,7 +45,7 @@ function ContactInfo() {
   return (
     <Typography variant="body2" color="#FFF" align="center">
       {/* Replace this with your actual contact info */}
-      <Button size="large" variant='contained' color="#FFF" onClick={() => { window.open('mailto: info@nyutandoncssa.com') }}>Contact Us</Button>
+      <Button size="large" variant='contained' color="#FFF" onClick={() => { window.open('mailto: nyutandoncssa22@gmail.com') }}>Contact Us</Button>
     </Typography>
   );
 }

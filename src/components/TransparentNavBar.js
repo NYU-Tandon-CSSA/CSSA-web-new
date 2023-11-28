@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, makeStyles, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List} from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton'
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import Divider from '@mui/material/Divider';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles({
@@ -106,6 +114,67 @@ function TransparentNavBar(props) {
         };
     }, [prevScrollPos]);
 
+
+    // toggleDrawer funtion 
+    const [drawerOpen, setDrawerOpen] = useState(false);
+
+    const toggleDrawer = (open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+        setDrawerOpen(open);
+    };
+
+    //drawer Link - an array of URLs
+    const urls = [
+        'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', // Internal link example
+        '#home',
+        '#home',
+        '#home',
+    ];
+
+    // drawer content 
+    const list = () => (
+        <Box
+            sx={{ width: 250 }}
+            role="presentation"
+            onClick={toggleDrawer(false)}
+            onKeyDown={toggleDrawer(false)}
+        >
+
+            {/* list 1 */}
+
+            <List>
+            {['NYU Engage', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                <ListItem key={text} disablePadding>
+                        <ListItemButton to={urls[index]} target="_blank">
+                            <ListItemIcon>
+                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItemButton>
+                </ListItem>
+            ))}
+            </List>
+            <Divider />
+
+            {/* list 2 */}
+
+            <List>
+            {['Contact Us', 'Trash'].map((text, index) => (
+                <ListItem key={text} disablePadding>
+                <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}>
+                    <ListItemIcon>
+                    {index % 2 === 0 ? <MailIcon /> : <InboxIcon />}
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                </ListItemButton>
+                </ListItem>
+            ))}
+            </List>
+        </Box>
+      );
+
     return (
         <Box>
             <AppBar
@@ -123,12 +192,18 @@ function TransparentNavBar(props) {
                     <Grid xs={1}>
                         <IconButton 
                             color="inherit" 
-                            aria-label="menu">
+                            aria-label="menu"
+                            onClick={() => setDrawerOpen(true)}>
                             <MenuIcon className={classes.icon}/>
                         </IconButton>
                     </Grid>
                 </Toolbar>
             </AppBar>
+            <Drawer anchor="right" 
+                    open={drawerOpen} 
+                    onClose={toggleDrawer(false)}>
+                    {list()}
+            </Drawer>
         </Box>
     );
 }
