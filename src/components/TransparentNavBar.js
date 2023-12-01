@@ -130,13 +130,12 @@ function TransparentNavBar(props) {
         'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', // Internal link example
         '#home',
         '#home',
-        '#home',
     ];
 
     // drawer content 
     const list = () => (
         <Box
-            sx={{ width: 250 }}
+            sx={{ width: 350 }}
             role="presentation"
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
@@ -145,7 +144,7 @@ function TransparentNavBar(props) {
             {/* list 1 */}
 
             <List>
-            {['NYU Engage', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['NYU Engage', '关于我们', "我们的活动"].map((text, index) => (
                 <ListItem key={text} disablePadding>
                         <ListItemButton to={urls[index]} target="_blank">
                             <ListItemIcon>
@@ -161,7 +160,7 @@ function TransparentNavBar(props) {
             {/* list 2 */}
 
             <List>
-            {['Contact Us', 'Trash'].map((text, index) => (
+            {['Contact Us'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                 <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}>
                     <ListItemIcon>
