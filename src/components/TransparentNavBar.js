@@ -9,7 +9,12 @@ import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import LoginIcon from '@mui/icons-material/Login';
 import Divider from '@mui/material/Divider';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
+import InfoIcon from '@mui/icons-material/Info';
 import { Link } from 'react-router-dom';
 
 
@@ -144,11 +149,17 @@ function TransparentNavBar(props) {
             {/* list 1 */}
 
             <List>
-            {['NYU Engage', '关于我们', "我们的活动"].map((text, index) => (
+            {['NYU Engage',"我们的活动", '关于我们',].map((text, index) => (
                 <ListItem key={text} disablePadding>
                         <ListItemButton to={urls[index]} target="_blank">
                             <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            {
+                                index % 3 === 0 
+                                ? <CalendarTodayIcon /> 
+                                : (index % 2 === 1 
+                                    ? <TheaterComedyIcon /> 
+                                    : <InfoIcon />)
+                            }
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
@@ -160,11 +171,17 @@ function TransparentNavBar(props) {
             {/* list 2 */}
 
             <List>
-            {['Contact Us'].map((text, index) => (
+            {['小红书', 'Contact Us'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                 <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}>
                     <ListItemIcon>
-                    {index % 2 === 0 ? <MailIcon /> : <InboxIcon />}
+                    {
+                        index % 3 === 0 
+                        ? <ImportContactsIcon /> 
+                        : (index % 2 === 1 
+                            ? <MailIcon /> 
+                            : <ImportContactsIcon />)
+                    }
                     </ListItemIcon>
                     <ListItemText primary={text} />
                 </ListItemButton>
@@ -179,22 +196,33 @@ function TransparentNavBar(props) {
             <AppBar
                 position="fixed" 
                 className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}>
-                <Toolbar sx={{ justifyContent: "space-between" }}>
-                    <Grid xs={11}>
-                        <Typography 
-                            variant="h1" 
-                            color="#ffffff"
-                            class = 'Silkscreen'>
-                            NYU Tandon CSSA
-                        </Typography>
-                    </Grid>
-                    <Grid xs={1}>
-                        <IconButton 
-                            color="inherit" 
-                            aria-label="menu"
-                            onClick={() => setDrawerOpen(true)}>
-                            <MenuIcon className={classes.icon}/>
-                        </IconButton>
+                <Toolbar>
+                    <Grid container spacing={2} alignItems="center" justifyContent = 'space-between'>
+                        <Grid item xs={12} md ={10}>
+                            <Typography 
+                                variant="h1" 
+                                color="#ffffff"
+                                class = 'Silkscreen'
+                                sx={{ flexGrow: 3 }}>
+                                NYU Tandon CSSA
+                            </Typography>
+                        </Grid>
+                        <Grid xs={6} md ={1}>
+                            <IconButton 
+                                color="inherit" 
+                                aria-label="login">
+                                <LoginIcon sx = {{fontSize: 'inherit', p:1}} className={classes.icon}/>
+                                Login
+                            </IconButton>
+                        </Grid>
+                        <Grid xs={6} md ={1} sx={{p:3}}>
+                            <IconButton 
+                                color="inherit" 
+                                aria-label="menu"
+                                onClick={() => setDrawerOpen(true)}>
+                                <MenuIcon sx = {{fontSize: 'medium'}} className={classes.icon}/>
+                            </IconButton>
+                        </Grid>
                     </Grid>
                 </Toolbar>
             </AppBar>

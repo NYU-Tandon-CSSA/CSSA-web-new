@@ -1,11 +1,12 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box} from '@material-ui/core';
-import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator, TimelineOppositeContent } from '@material-ui/lab';
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper} from '@material-ui/core';
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { useEffect, useState} from 'react';
 import img from '../images/bridge.png'
 import Event from '../components/Event';
+import Banner from '../components/Banner';
+
 
 //Winnie's import
 import AboutContainer from '../components/AboutContainer';
@@ -47,6 +48,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+// Dynamic Navbar
 
 function Home() {
   const classes = useStyles();
@@ -76,17 +78,7 @@ function Home() {
 
         <Grid item xs={12} style={{ padding: 0, margin: 0}}>
           <div style={{ position: 'relative'}}>
-            <img src={img} alt={`Bridge`} style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} />
-            <div
-              style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                width: '100%',
-                height: '40vh',
-                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(238, 238, 238, 1))',
-              }}
-            ></div>
+            <Banner/>
           </div>
         </Grid>
       </Grid>
