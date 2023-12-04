@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7f71c6c.css",
-    "main.js": "/static/js/main.18fa4c32.js",
+    "main.css": "/static/css/main.b3127b40.css",
+    "main.js": "/static/js/main.9d7b111c.js",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
     "static/media/Voice.png": "/static/media/Voice.edfd35b020ca837924cf.png",
@@ -14,11 +14,11 @@
     "static/media/GroupPhoto.jpg": "/static/media/GroupPhoto.57871dce90eb50176f2f.jpg",
     "static/media/manual.png": "/static/media/manual.2ba66426744aa000c586.png",
     "index.html": "/index.html",
-    "main.d7f71c6c.css.map": "/static/css/main.d7f71c6c.css.map",
-    "main.18fa4c32.js.map": "/static/js/main.18fa4c32.js.map"
+    "main.b3127b40.css.map": "/static/css/main.b3127b40.css.map",
+    "main.9d7b111c.js.map": "/static/js/main.9d7b111c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7f71c6c.css",
-    "static/js/main.18fa4c32.js"
+    "static/css/main.b3127b40.css",
+    "static/js/main.9d7b111c.js"
   ]
 }
