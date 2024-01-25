@@ -133,8 +133,8 @@ function TransparentNavBar(props) {
     //drawer Link - an array of URLs
     const urls = [
         'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', // Internal link example
-        '#home',
-        '#home',
+        '/home',
+        '/about',
     ];
 
     // drawer content 
@@ -206,14 +206,6 @@ function TransparentNavBar(props) {
                                 sx={{ flexGrow: 3 }}>
                                 NYU Tandon CSSA
                             </Typography>
-                        </Grid>
-                        <Grid xs={6} md ={1}>
-                            <IconButton 
-                                color="inherit" 
-                                aria-label="login">
-                                <LoginIcon sx = {{fontSize: 'inherit', p:1}} className={classes.icon}/>
-                                Login
-                            </IconButton>
                         </Grid>
                         <Grid xs={6} md ={1} sx={{p:3}}>
                             <IconButton 
