@@ -16,7 +16,6 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import InfoIcon from '@mui/icons-material/Info';
-// import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles({

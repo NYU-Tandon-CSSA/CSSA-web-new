@@ -3,10 +3,12 @@ import Carousel from 'react-material-ui-carousel'
 import IconButton from '@mui/material/IconButton'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// images
 import img from '../images/bridge.png'
 import werewolf from '../images/werewolf2.0.png'
 import groupPhoto from '../images/GroupPhoto.jpg'
 import Voice_of_NYC from '../images/Voice_of_NYC.jpg'
+import Tandon from '../images/Tandon.jpg'
 import { useState } from 'react';
 
 
@@ -33,7 +35,7 @@ function Banner() {
 
         <div style={{ position: 'relative', height: '100%' }}>
           <img 
-            src={img} 
+            src={Tandon} 
             alt={`Bridge`} 
             style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} 
           />
