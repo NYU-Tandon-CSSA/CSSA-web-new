@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List} from '@material-ui/core';
+import { Link } from '@mui/material';
 import IconButton from '@material-ui/core/IconButton'
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -15,7 +16,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import InfoIcon from '@mui/icons-material/Info';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles({
@@ -198,16 +199,16 @@ function TransparentNavBar(props) {
                 className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}>
                 <Toolbar>
                     <Grid container spacing={2} alignItems="center" justifyContent = 'space-between'>
-                        <Grid item xs={12} md ={10}>
+                        <Grid item xs={10} md={11}>
                             <Typography 
                                 variant="h1" 
                                 color="#ffffff"
                                 class = 'Silkscreen'
                                 sx={{ flexGrow: 3 }}>
-                                NYU Tandon CSSA
+                                    <Link href="/" style={{textDecoration: 'none', color: 'inherit'}}>NYU Tandon CSSA</Link>
                             </Typography>
                         </Grid>
-                        <Grid xs={6} md ={1} sx={{p:3}}>
+                        <Grid item xs={2}  md={1}>
                             <IconButton 
                                 color="inherit" 
                                 aria-label="menu"

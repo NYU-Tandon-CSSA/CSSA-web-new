@@ -1,5 +1,9 @@
 import React from 'react';
 import { Paper, Typography, Divider, Grid, Box } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 function AboutContainer({ title, paragraph, imageUrl }) {
   return (
@@ -21,9 +25,14 @@ function AboutContainer({ title, paragraph, imageUrl }) {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="body1" sx={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.1rem'}}>
-              {paragraph}
-            </Typography>
+            <Stack spacing={2}>
+              <Typography variant="body1" sx={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.1rem'}}>
+                {paragraph}
+              </Typography>
+              <Box sx={{ textAlign: 'right' }}>
+                <Button href = "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Learn More <DoubleArrowIcon/> </Button>
+              </Box>
+            </Stack>
           </Grid>
         </Grid>
     </Paper>
