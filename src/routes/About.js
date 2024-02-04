@@ -3,32 +3,39 @@ import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Bo
 import aboutUs from "../images/AboutUs.jpeg"
 import Container from '@mui/material/Container';
 
+// css
+import '../css/about.css'
+
 // images
-import mario from '../images/members/Mario.jpg'
-import tim from '../images/members/Tim.jpg'
+import mario from '../images/members/Mario.jpg';
+import tim from '../images/members/Tim.jpg';
+import helen from '../images/members/Helen.jpg';
+
+//ITCD
+import mia from '../images/members/Mia.jpg'
 
 import IntroOfMembers from '../components/IntroOfMembers.js';
 import IntroOfEboard from '../components/IntroOfEboard.js';
 
 
-
 export default function About() {
   return (
-    <Container maxWidth="lg">
-      <div 
-        style={{paddingTop: "130px",
-                textAlign:"center"
-        
-        }}>
+    <Container maxWidth="lg" sx={{marginBottom: "8%"}}>
 
+      <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul> 
 
-        {/* <Grid container>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={10}>
-            <img src={aboutUs} width="100%"></img>
-          </Grid>
-          <Grid item xs={1}></Grid>
-        </Grid> */}
+      <div style={{paddingTop: "130px", textAlign:"center"}}>
 
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           {/* Row 1 */}
@@ -41,8 +48,8 @@ export default function About() {
           </Grid> */}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board</Typography>
-            <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2023 - 2024</Typography>
+            {/* <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography> */}
           </Grid>
 
           <Grid item xs={12}>
@@ -108,7 +115,7 @@ export default function About() {
                 position = "技术与职业发展部副部长"
                 year = "2024"
                 intro="目标是改变世界！明天开开心心"
-                image={mario}/>
+                image={helen}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -181,37 +188,52 @@ export default function About() {
             <IntroOfMembers
                 name = "苑林霏 - Helen"
                 major = "Computer Science"
-                year = "2026"/>
+                year = "2026"
+                image = {helen}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
             <IntroOfMembers
-                name = "苑林霏 - Helen"
+                name = "严语 - Alex"
                 major = "Computer Science"
-                year = "2026"/>
+                year = "2024"/>
           </Grid>
 
           <Grid item xs={12} md={6}>
             <IntroOfMembers
-                name = "苑林霏 - Helen"
-                major = "Computer Science"
-                year = "2026"/>
+                name = "吴伟宁 - Winnie"
+                major = "Computer Engineering"
+                year = "2025"/>
           </Grid>
 
           <Grid item xs={12} md={6}>
             <IntroOfMembers
-                name = "苑林霏 - Helen"
-                major = "Computer Science"
-                year = "2026"/>
+                name = "缪丝雨 - Mia"
+                major = "Applied Urban Science & Informatics"
+                year = "2025"
+                image= {mia}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
             <IntroOfMembers
-                name = "苑林霏 - Helen"
-                major = "Computer Science"
-                year = "2026"/>
+                name = "李卓伦"
+                major = "Computer Engineering"
+                year = "2025"/>
           </Grid>
 
+          <Grid item xs={12} md={6}>
+            <IntroOfMembers
+                name = "胡泽西"
+                major = "Computer Engineering"
+                year = "2025"/>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <IntroOfMembers
+                name = "周亦桥"
+                major = "Computer Science"
+                year = "2025"/>
+          </Grid>
         </Grid>
 
       </div>

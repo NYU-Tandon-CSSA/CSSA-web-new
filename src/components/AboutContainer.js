@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 
 function AboutContainer({ title, paragraph, imageUrl }) {
   return (
@@ -31,6 +32,9 @@ function AboutContainer({ title, paragraph, imageUrl }) {
               </Typography>
               <Box sx={{ textAlign: 'right' }}>
                 <Button href = "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Learn More <DoubleArrowIcon/> </Button>
+              </Box>
+              <Box sx={{ textAlign: 'right' }}>
+                <Button href = "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
               </Box>
             </Stack>
           </Grid>
