@@ -14,6 +14,10 @@ import helen from '../images/members/Helen.jpg';
 //ITCD
 import mia from '../images/members/Mia.jpg'
 import aelx from '../images/members/Alex.jpg'
+import yi from '../images/members/Yi.jpg'
+import winnie from '../images/members/Winnie.jpg'
+
+
 
 import IntroOfMembers from '../components/IntroOfMembers.js';
 import IntroOfEboard from '../components/IntroOfEboard.js';
@@ -205,7 +209,8 @@ export default function About() {
             <IntroOfMembers
                 name = "吴伟宁 - Winnie"
                 major = "Computer Engineering"
-                year = "2025"/>
+                year = "2025"
+                image = {winnie}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
@@ -234,7 +239,8 @@ export default function About() {
             <IntroOfMembers
                 name = "周亦桥"
                 major = "Computer Science"
-                year = "2025"/>
+                year = "2025"
+                image = {yi}/>
           </Grid>
         </Grid>
 

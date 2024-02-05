@@ -34,7 +34,7 @@ function AboutContainer({ title, paragraph, imageUrl }) {
                 <Button href = "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Learn More <DoubleArrowIcon/> </Button>
               </Box>
               <Box sx={{ textAlign: 'right' }}>
-                <Button href = "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
+                <Button href = "https://docs.google.com/forms/d/e/1FAIpQLSd3mrxcJSVcfCKKVd2hJ1ItEgTBZz46YPpmf60-dVgwMRcL1Q/viewform?usp=sf_link" target={"_blank"} variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
               </Box>
             </Stack>
           </Grid>

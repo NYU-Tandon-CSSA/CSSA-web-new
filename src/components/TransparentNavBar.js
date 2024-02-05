@@ -133,7 +133,7 @@ function TransparentNavBar(props) {
     //drawer Link - an array of URLs
     const urls = [
         'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', // Internal link example
-        '/home',
+        '',
         '/about',
     ];
 
