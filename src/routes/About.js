@@ -13,6 +13,7 @@ import helen from '../images/members/Helen.jpg';
 
 //ITCD
 import mia from '../images/members/Mia.jpg'
+import aelx from '../images/members/Alex.jpg'
 
 import IntroOfMembers from '../components/IntroOfMembers.js';
 import IntroOfEboard from '../components/IntroOfEboard.js';
@@ -196,7 +197,8 @@ export default function About() {
             <IntroOfMembers
                 name = "严语 - Alex"
                 major = "Computer Science"
-                year = "2024"/>
+                year = "2024"
+                image= {aelx}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
