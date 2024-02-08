@@ -1,24 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3127b40.css",
-    "main.js": "/static/js/main.9d7b111c.js",
+    "main.css": "/static/css/main.d45ba5de.css",
+    "main.js": "/static/js/main.2bd2270c.js",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
     "static/media/Voice.png": "/static/media/Voice.edfd35b020ca837924cf.png",
     "static/media/bridge.png": "/static/media/bridge.3154143b4988be1d6bc5.png",
     "static/media/alumni_association.jpg": "/static/media/alumni_association.9f787ce11bbc86ea80d8.jpg",
+    "static/media/xiaoHongShu.jpg": "/static/media/xiaoHongShu.2f463803a1078c1757ca.jpg",
     "static/media/Voice_of_NYC.jpg": "/static/media/Voice_of_NYC.ebd17fdd8a0b8abbdb75.jpg",
+    "static/media/Tandon.jpg": "/static/media/Tandon.9ec3c4df8710fe84e8cf.jpg",
     "static/media/If_you_are_the_one.png": "/static/media/If_you_are_the_one.8fa1b0dbe8aa2cffea9d.png",
+    "static/media/Winnie.jpg": "/static/media/Winnie.92b352637cd1bb9fa3fe.jpg",
     "static/media/coffee_chat.jpg": "/static/media/coffee_chat.9758f555e3814d82fb46.jpg",
     "static/media/fcwr.png": "/static/media/fcwr.7acf9c838cfc05f0470a.png",
+    "static/media/Mia.jpg": "/static/media/Mia.a89cbadaf97288b6078b.jpg",
+    "static/media/Mario.jpg": "/static/media/Mario.8024c7b36c203c5f2465.jpg",
     "static/media/GroupPhoto.jpg": "/static/media/GroupPhoto.57871dce90eb50176f2f.jpg",
+    "static/media/Yi.jpg": "/static/media/Yi.1f3c7442c707a4f51c8a.jpg",
+    "static/media/Helen.jpg": "/static/media/Helen.da108b4e17312a99ed94.jpg",
+    "static/media/Tim.jpg": "/static/media/Tim.9a438901a97fcbc14bc3.jpg",
     "static/media/manual.png": "/static/media/manual.2ba66426744aa000c586.png",
+    "static/media/Alex.jpg": "/static/media/Alex.265a8d5c40c5b839e171.jpg",
+    "static/media/Unknow.png": "/static/media/Unknow.c3f945216dc12c9498dc.png",
     "index.html": "/index.html",
-    "main.b3127b40.css.map": "/static/css/main.b3127b40.css.map",
-    "main.9d7b111c.js.map": "/static/js/main.9d7b111c.js.map"
+    "main.d45ba5de.css.map": "/static/css/main.d45ba5de.css.map",
+    "main.2bd2270c.js.map": "/static/js/main.2bd2270c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3127b40.css",
-    "static/js/main.9d7b111c.js"
+    "static/css/main.d45ba5de.css",
+    "static/js/main.2bd2270c.js"
   ]
 }
