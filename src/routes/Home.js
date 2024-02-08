@@ -104,7 +104,7 @@ function Home() {
           <Event 
           eventTitle = "非诚勿扰"
           image = {If_you_are_the_one} 
-          url = 'https://mp.weixin.qq.com/s/Oswuuh26ITa4PqWnsHFywQ'/>
+          url = 'https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g'/>
         </Grid>
 
         {/* 心动的声音 */}
@@ -112,15 +112,15 @@ function Home() {
           <Event 
           eventTitle = "心动的声音"
           image = {Voice_of_NYC} 
-          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+          url = 'https://mp.weixin.qq.com/s/TfM_ZKyMJvkZcAJlt8gsaQ'/>
         </Grid>
 
         {/* 狼人杀大赛 */}
         <Grid item xs={12} md={6} lg={4}>
           <Event 
-          eventTitle = "狼人杀大赛"
+          eventTitle = "周五桌游夜"
           image = {werewolf} 
-          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+          url = 'https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA'/>
         </Grid>
 
         {/* 校友会 */}
@@ -128,7 +128,7 @@ function Home() {
           <Event 
           eventTitle = "校友会" 
           image = {alimni_association} 
-          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+          url = 'https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA'/>
         </Grid>
 
         {/* 校友会 */}
@@ -136,7 +136,7 @@ function Home() {
           <Event 
           eventTitle = "Coffee Chat" 
           image = {coffee_chat} 
-          url = 'https://mp.weixin.qq.com/s/Ap1EgwW0Dl2fRExNIPflEQ'/>
+          url = 'https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw'/>
         </Grid>
       </Grid>
 

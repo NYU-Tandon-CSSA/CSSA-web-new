@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List} from '@material-ui/core';
+import { Link } from '@mui/material';
 import IconButton from '@material-ui/core/IconButton'
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -7,15 +8,19 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import LoginIcon from '@mui/icons-material/Login';
 import Divider from '@mui/material/Divider';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import InfoIcon from '@mui/icons-material/Info';
-import { Link } from 'react-router-dom';
+// icons
+import {
+    faWeixin,
+    faInstagram,
+    faFacebook,
+  } from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
 const useStyles = makeStyles({
@@ -132,9 +137,9 @@ function TransparentNavBar(props) {
 
     //drawer Link - an array of URLs
     const urls = [
-        'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', // Internal link example
-        '#home',
-        '#home',
+        '/about',
+        'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association',
+        '/activity',
     ];
 
     // drawer content 
@@ -149,16 +154,16 @@ function TransparentNavBar(props) {
             {/* list 1 */}
 
             <List>
-            {['NYU Engage',"我们的活动", '关于我们',].map((text, index) => (
+            {['关于我们', 'NYU Engage', "我们的活动",].map((text, index) => (
                 <ListItem key={text} disablePadding>
                         <ListItemButton to={urls[index]} target="_blank">
                             <ListItemIcon>
                             {
                                 index % 3 === 0 
-                                ? <CalendarTodayIcon /> 
+                                ? <InfoIcon />
                                 : (index % 2 === 1 
-                                    ? <TheaterComedyIcon /> 
-                                    : <InfoIcon />)
+                                    ?  <CalendarTodayIcon />
+                                    :  <TheaterComedyIcon />)
                             }
                             </ListItemIcon>
                             <ListItemText primary={text} />
@@ -171,15 +176,35 @@ function TransparentNavBar(props) {
             {/* list 2 */}
 
             <List>
-            {['小红书', 'Contact Us'].map((text, index) => (
+            {[ '微信公众号', '小红书', 'Instagram', 'Facebook', 'Contact Us'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}>
+                {/* <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}> */}
+                <ListItemButton
+                    onClick={() => {
+                        if (text === '微信公众号') {
+                            window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q');
+                        } else if (text === '小红书') {
+                            window.open('/xiaohongshu', '_blank');
+                        } else if (text === 'Instagram') {
+                            window.open('https://www.instagram.com/tandoncssa/', '_blank');
+                        } else if (text === 'Facebook') {
+                            window.open('https://www.facebook.com/nyutandoncssa/', '_blank');
+                        } else if (text === 'Contact Us') {
+                            window.open('mailto:nyutandoncssa22@gmail.com');
+                        } 
+                        }}>
                     <ListItemIcon>
                     {
-                        index % 3 === 0 
-                        ? <ImportContactsIcon /> 
-                        : (index % 2 === 1 
-                            ? <MailIcon /> 
+                        index % 5 === 0 
+                        ? <FontAwesomeIcon className='fa-xl' icon={faWeixin}/>
+                        : index % 5 === 1
+                        ? <ImportContactsIcon/>
+                        : index % 5 === 2
+                        ? <FontAwesomeIcon className='fa-xl' icon={faInstagram}/>
+                        : index % 5 === 3
+                        ? <FontAwesomeIcon className='fa-xl' icon={faFacebook}/>
+                        : (index % 5 === 4
+                        ? <MailIcon /> 
                             : <ImportContactsIcon />)
                     }
                     </ListItemIcon>
@@ -198,24 +223,16 @@ function TransparentNavBar(props) {
                 className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}>
                 <Toolbar>
                     <Grid container spacing={2} alignItems="center" justifyContent = 'space-between'>
-                        <Grid item xs={12} md ={10}>
+                        <Grid item xs={10} md={11}>
                             <Typography 
                                 variant="h1" 
                                 color="#ffffff"
                                 class = 'Silkscreen'
                                 sx={{ flexGrow: 3 }}>
-                                NYU Tandon CSSA
+                                    <Link href="/" style={{textDecoration: 'none', color: 'inherit'}}>NYU Tandon CSSA</Link>
                             </Typography>
                         </Grid>
-                        <Grid xs={6} md ={1}>
-                            <IconButton 
-                                color="inherit" 
-                                aria-label="login">
-                                <LoginIcon sx = {{fontSize: 'inherit', p:1}} className={classes.icon}/>
-                                Login
-                            </IconButton>
-                        </Grid>
-                        <Grid xs={6} md ={1} sx={{p:3}}>
+                        <Grid item xs={2}  md={1}>
                             <IconButton 
                                 color="inherit" 
                                 aria-label="menu"

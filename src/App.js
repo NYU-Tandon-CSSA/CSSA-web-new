@@ -9,6 +9,7 @@ import About from './routes/About';
 import Activity from './routes/Activity';
 import StudentService from './routes/StudentService';
 import TransparentNavBar from './components/TransparentNavBar';
+import XiaoHongShu from './routes/XiaoHongShu';
 
 const theme = createTheme({
   palette: {
@@ -51,6 +52,7 @@ function App() {
                 <Route exact path="/about" component={About} />
                 <Route exact path="/activity" component={Activity} />
                 <Route exact path="/studentservice" component={StudentService} />
+                <Route exact path="/xiaohongshu" component={XiaoHongShu} />
               </div>
             </Switch>
           </BrowserRouter>

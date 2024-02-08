@@ -28,6 +28,7 @@ function Copyright() {
 function SocialMedia() {
   return (
     <Typography variant="body2" color="#FFF" align="center">
+      {/* <Typography class = 'Silkscreen' style={{fontSize:"120%", textTransform: 'uppercase'}}>Are you Following us?</Typography> */}
       <Link color="inherit" href="https://www.instagram.com/tandoncssa/" sx={{mr: 2}} target="_blank">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </Link>{" "}
@@ -56,7 +57,7 @@ function Footer() {
       component="footer"
       sx={{ bgcolor: "#8900e1", py: 6 }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" >
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>
             <SocialMedia />

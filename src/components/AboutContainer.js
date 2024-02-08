@@ -1,5 +1,10 @@
 import React from 'react';
 import { Paper, Typography, Divider, Grid, Box } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 
 function AboutContainer({ title, paragraph, imageUrl }) {
   return (
@@ -21,9 +26,17 @@ function AboutContainer({ title, paragraph, imageUrl }) {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="body1" sx={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.1rem'}}>
-              {paragraph}
-            </Typography>
+            <Stack spacing={2}>
+              <Typography variant="body1" sx={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.1rem'}}>
+                {paragraph}
+              </Typography>
+              <Box sx={{ textAlign: 'right' }}>
+                <Button href = "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Learn More <DoubleArrowIcon/> </Button>
+              </Box>
+              <Box sx={{ textAlign: 'right' }}>
+                <Button href = "https://docs.google.com/forms/d/e/1FAIpQLSd3mrxcJSVcfCKKVd2hJ1ItEgTBZz46YPpmf60-dVgwMRcL1Q/viewform?usp=sf_link" target={"_blank"} variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
+              </Box>
+            </Stack>
           </Grid>
         </Grid>
     </Paper>
