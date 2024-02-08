@@ -8,6 +8,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
 import MailIcon from '@mui/icons-material/Mail';
@@ -137,9 +139,10 @@ function TransparentNavBar(props) {
         setDrawerOpen(open);
     };
 
+    
     //drawer Link - an array of URLs
     const urls = [
-        '/about',
+        "/about",
         'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association',
         '/',
     ];
@@ -147,18 +150,18 @@ function TransparentNavBar(props) {
     // drawer content 
     const list = () => (
         <Box
-            sx={{ width: 350 }}
+            sx={{ width: 280 }}
             role="presentation"
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
         >
 
-            {/* list 1 */}
+            {/* list 1 内部链接 */}
 
             <List>
             {['关于我们', 'NYU Engage', "我们的活动",].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                        <ListItemButton component={Link} to={urls[index]} target="_blank">
+                        <ListItemButton component={Link} to={urls[index]}>
                             <ListItemIcon>
                             {
                                 index % 3 === 0 
@@ -172,10 +175,12 @@ function TransparentNavBar(props) {
                         </ListItemButton>
                 </ListItem>
             ))}
+                <Button component={Link} to= "/about" variant="contained">Learn More </Button>
             </List>
-            <Divider />
 
-            {/* list 2 */}
+            {/* <Divider /> */}
+
+            {/* list 2 外部链接*/}
 
             <List>
             {[ '微信公众号', '小红书', 'Instagram', 'Facebook', 'Contact Us'].map((text, index) => (
