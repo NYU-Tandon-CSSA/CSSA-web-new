@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List} from '@material-ui/core';
-// import { Link } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link } from '@mui/material';
+import { Link as RouterLink} from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton'
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -157,7 +157,7 @@ function TransparentNavBar(props) {
             <List>
             {['关于我们', 'NYU Engage', "我们的活动",].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                        <ListItemButton component={Link} to={urls[index]} target="_blank">
+                        <ListItemButton component={RouterLink} to={urls[index]} target="_blank">
                             <ListItemIcon>
                             {
                                 index % 3 === 0 
@@ -180,7 +180,7 @@ function TransparentNavBar(props) {
             {[ '微信公众号', '小红书', 'Instagram', 'Facebook', 'Contact Us'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                 {/* <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}> */}
-                <ListItemButton component={Link}
+                <ListItemButton component={RouterLink}
                     onClick={() => {
                         if (text === '微信公众号') {
                             window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q');
