@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core';
-
 import Footer from './components/Footer';
 
 import Home from './routes/Home';
@@ -42,10 +41,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <TransparentNavBar />
+        {/* <TransparentNavBar /> */}
         {/* <div style={{ maxWidth: '85vw', margin: '0 auto' }}> */}
         <div>
           <BrowserRouter>
+            <TransparentNavBar />
             <Switch>
               <div>
                 <Route exact path="/" component={Home} />
