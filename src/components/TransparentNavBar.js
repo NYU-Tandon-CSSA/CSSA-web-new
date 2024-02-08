@@ -8,8 +8,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import MenuIcon from "@material-ui/icons/Menu";
 import MailIcon from '@mui/icons-material/Mail';
@@ -143,8 +141,8 @@ function TransparentNavBar(props) {
     //drawer Link - an array of URLs
     const urls = [
         "/about",
-        'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association',
         '/',
+        '/xiaohongshu',
     ];
 
     // drawer content 
@@ -159,7 +157,7 @@ function TransparentNavBar(props) {
             {/* list 1 内部链接 */}
 
             <List>
-            {['关于我们', 'NYU Engage', "我们的活动",].map((text, index) => (
+            {['关于我们', "我们的活动", '小红书',].map((text, index) => (
                 <ListItem key={text} disablePadding>
                         <ListItemButton component={Link} to={urls[index]}>
                             <ListItemIcon>
@@ -167,15 +165,14 @@ function TransparentNavBar(props) {
                                 index % 3 === 0 
                                 ? <InfoIcon />
                                 : (index % 2 === 1 
-                                    ?  <CalendarTodayIcon />
-                                    :  <TheaterComedyIcon />)
+                                    ?  <TheaterComedyIcon />
+                                    :  <ImportContactsIcon/>)
                             }
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
                 </ListItem>
             ))}
-                <Button component={Link} to= "/about" variant="contained">Learn More </Button>
             </List>
 
             {/* <Divider /> */}
@@ -183,15 +180,14 @@ function TransparentNavBar(props) {
             {/* list 2 外部链接*/}
 
             <List>
-            {[ '微信公众号', '小红书', 'Instagram', 'Facebook', 'Contact Us'].map((text, index) => (
+            {[ '微信公众号', 'Instagram', 'Facebook','NYU Engage' ,'Contact Us'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                {/* <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}> */}
                 <ListItemButton
                     onClick={() => {
                         if (text === '微信公众号') {
-                            window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q');
-                        } else if (text === '小红书') {
-                            window.open('/xiaohongshu', '_blank');
+                            window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q', '_blank');
+                        } else if (text === 'NYU Engage') {
+                            window.open('https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', '_blank');
                         } else if (text === 'Instagram') {
                             window.open('https://www.instagram.com/tandoncssa/', '_blank');
                         } else if (text === 'Facebook') {
@@ -205,11 +201,11 @@ function TransparentNavBar(props) {
                         index % 5 === 0 
                         ? <FontAwesomeIcon className='fa-xl' icon={faWeixin}/>
                         : index % 5 === 1
-                        ? <ImportContactsIcon/>
-                        : index % 5 === 2
                         ? <FontAwesomeIcon className='fa-xl' icon={faInstagram}/>
-                        : index % 5 === 3
+                        : index % 5 === 2
                         ? <FontAwesomeIcon className='fa-xl' icon={faFacebook}/>
+                        : index % 5 === 3
+                        ? <CalendarTodayIcon />
                         : (index % 5 === 4
                         ? <MailIcon /> 
                             : <ImportContactsIcon />)
