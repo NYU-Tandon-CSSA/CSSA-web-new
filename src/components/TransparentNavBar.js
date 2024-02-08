@@ -139,7 +139,7 @@ function TransparentNavBar(props) {
     const urls = [
         '/about',
         'https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association',
-        '/activity',
+        '/',
     ];
 
     // drawer content 
@@ -156,7 +156,7 @@ function TransparentNavBar(props) {
             <List>
             {['关于我们', 'NYU Engage', "我们的活动",].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                        <ListItemButton to={urls[index]} target="_blank">
+                        <ListItemButton component={Link} to={urls[index]} target="_blank">
                             <ListItemIcon>
                             {
                                 index % 3 === 0 
@@ -179,7 +179,7 @@ function TransparentNavBar(props) {
             {[ '微信公众号', '小红书', 'Instagram', 'Facebook', 'Contact Us'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                 {/* <ListItemButton onClick={text === 'Contact Us' ? () => { window.open('mailto: nyutandoncssa22@gmail.com') } : null}> */}
-                <ListItemButton
+                <ListItemButton component={Link}
                     onClick={() => {
                         if (text === '微信公众号') {
                             window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q');

@@ -20,7 +20,6 @@ function IntroOfMembers({name, major, year, image}) {
       <AspectRatio ratio="1" sx={{ width: 90 }}>
         <img
           src= {image}
-          srcSet="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90&dpr=2 2x"
           loading="lazy"
           alt=""
         />

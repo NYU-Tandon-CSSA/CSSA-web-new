@@ -2,6 +2,7 @@ import React from 'react';
 import { Paper, Typography, Divider, Grid, Box } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
@@ -34,7 +35,7 @@ function AboutContainer({ title, paragraph, imageUrl }) {
                 <Button component={Link} to= "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Learn More <DoubleArrowIcon/> </Button>
               </Box>
               <Box sx={{ textAlign: 'right' }}>
-                <Button href = "https://docs.google.com/forms/d/e/1FAIpQLSd3mrxcJSVcfCKKVd2hJ1ItEgTBZz46YPpmf60-dVgwMRcL1Q/viewform?usp=sf_link" target={"_blank"} variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
+                <Button href= "https://docs.google.com/forms/d/e/1FAIpQLSd3mrxcJSVcfCKKVd2hJ1ItEgTBZz46YPpmf60-dVgwMRcL1Q/viewform?usp=sf_link" target={"_blank"} variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
               </Box>
             </Stack>
           </Grid>
