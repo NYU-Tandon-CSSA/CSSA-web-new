@@ -11,6 +11,9 @@ import mario from '../images/members/Mario.jpg';
 import tim from '../images/members/Tim.jpg';
 import helen from '../images/members/Helen.jpg';
 
+//unknow
+import unknow from '../images/members/Unknow.png'
+
 //ITCD
 import mia from '../images/members/Mia.jpg'
 import aelx from '../images/members/Alex.jpg'
@@ -80,7 +83,7 @@ export default function About() {
                 position = "副主席"
                 year = "2024"
                 intro="近期刻苦专研琴技，但是雨点不协调的音乐爱好者&贪吃鬼"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -89,7 +92,7 @@ export default function About() {
                 position = "秘书"
                 year = "2024"
                 intro="喜欢玩游戏和露营的CS自闭秃头宅男"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -98,7 +101,7 @@ export default function About() {
                 position = "财务"
                 year = "2024"
                 intro="estp 幸运小可爱一枚"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12}>
@@ -129,7 +132,7 @@ export default function About() {
                 position = "活动部部长"
                 year = "2024"
                 intro="又菜又爱玩儿的，snowboarder, skier, air-softer, baller, boxer, wheel-thrower, mechanic."
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -138,7 +141,7 @@ export default function About() {
                 position = "活动部副部长"
                 year = "2024"
                 intro="东北小松菜奈"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -147,7 +150,7 @@ export default function About() {
                 position = "外联部部长"
                 year = "2024"
                 intro="脑洞比黑洞更深不可测的美食家"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -156,7 +159,7 @@ export default function About() {
                 position = "外联部副部长"
                 year = "2024"
                 intro="ENFJ；烘培、钩针初学者"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -165,7 +168,7 @@ export default function About() {
                 position = "宣传部部长"
                 year = "2024"
                 intro="招财如意的妈妈"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -174,7 +177,7 @@ export default function About() {
                 position = "宣传部副部长"
                 year = "2024"
                 intro="debug失败的Trader Joe's小粉丝修炼厨艺ing"
-                image={mario}/>
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12}>
@@ -225,22 +228,40 @@ export default function About() {
             <IntroOfMembers
                 name = "李卓伦"
                 major = "Computer Engineering"
-                year = "2025"/>
+                year = "2025"
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
             <IntroOfMembers
                 name = "胡泽西"
                 major = "Computer Engineering"
-                year = "2025"/>
+                year = "2025"
+                image={unknow}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
             <IntroOfMembers
                 name = "周亦桥"
                 major = "Computer Science"
-                year = "2025"
+                year = "2026"
                 image = {yi}/>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <IntroOfMembers
+                name = "张丰泽"
+                major = "Computer Science"
+                year = "2024"
+                image = {unknow}/>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <IntroOfMembers
+                name = "Mark"
+                major = "Computer Science"
+                year = "2026"
+                image = {unknow}/>
           </Grid>
         </Grid>
 

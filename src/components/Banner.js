@@ -73,7 +73,7 @@ function Banner() {
         
         {/* Iteam 3 */}
 
-        <div style={{ position: 'relative', height: '100%' }}>
+        {/* <div style={{ position: 'relative', height: '100%' }}>
           <img 
             src={Voice_of_NYC} 
             alt={`Voice_of_NYC`} 
@@ -89,7 +89,7 @@ function Banner() {
               background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(238, 238, 238, 1))',
             }}
           ></div>
-        </div>
+        </div> */}
 
       </Carousel>
 
