@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import Footer from './components/Footer';
 
@@ -44,7 +44,7 @@ function App() {
         {/* <TransparentNavBar /> */}
         {/* <div style={{ maxWidth: '85vw', margin: '0 auto' }}> */}
         <div>
-          <BrowserRouter>
+          <HashRouter>
             <TransparentNavBar />
             <Switch>
               <div>
@@ -55,7 +55,7 @@ function App() {
                 <Route exact path="/xiaohongshu" component={XiaoHongShu} />
               </div>
             </Switch>
-          </BrowserRouter>
+          </HashRouter>
         </div>
         <Footer />
       </div>
