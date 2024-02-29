@@ -69,7 +69,7 @@ export default function FreshmanHandbook() {
           <li></li>
         </ul>
 
-        <div style={{paddingTop: "130px", minHeight:"90vh"}}>
+        <div style={{paddingTop: "130px", minHeight:"90vh", backgroundColor:"#EEEEEE"}}>
           <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Pre-Trip</Typography>
           <Box sx={{ width: '100%'}}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
