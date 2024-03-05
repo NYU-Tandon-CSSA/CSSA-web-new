@@ -127,8 +127,20 @@ export default function Rent() {
                                     豪华公寓楼
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
+                                    <ul>
+                                        <li>
+                                            <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
+                                        </li>
+                                    </ul>
                                 </Typography>
                                 </CardContent>
                             </CardActionArea>
