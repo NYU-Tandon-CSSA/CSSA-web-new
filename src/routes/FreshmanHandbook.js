@@ -69,7 +69,7 @@ export default function FreshmanHandbook() {
           <li></li>
         </ul>
 
-        <div style={{paddingTop: "130px", minHeight:"90vh", backgroundColor:"#EEEEEE"}}>
+        <div style={{paddingTop: "130px", minHeight:"90vh"}}>
           <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Pre-Trip</Typography>
           <Box sx={{ width: '100%'}}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -79,7 +79,7 @@ export default function FreshmanHandbook() {
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="海关" {...a11yProps(2)} />
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="租房" {...a11yProps(3)} />
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="交通" {...a11yProps(4)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="通讯" {...a11yProps(5)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="电话卡 / 银行卡" {...a11yProps(5)} />
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
@@ -98,10 +98,13 @@ export default function FreshmanHandbook() {
               交通
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
-              通讯
+              办电话卡/银行卡
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={5}>
+              宿舍
             </CustomTabPanel>
           </Box>
-          <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Prerequisites</Typography>        
+          {/* <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Prerequisites</Typography>         */}
         </div>
       </Container>
     </div>
