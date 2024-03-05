@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import '../css/about.css'
 
 import Visa from '../components/fhComponents/visa'
+import Rent from '../components/fhComponents/rent'
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,13 +74,15 @@ export default function FreshmanHandbook() {
           <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Pre-Trip</Typography>
           <Box sx={{ width: '100%'}}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="签证 Visa" {...a11yProps(0)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="行前准备 Pack" {...a11yProps(1)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="海关" {...a11yProps(2)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="租房" {...a11yProps(3)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="交通" {...a11yProps(4)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei'}} label="电话卡 / 银行卡" {...a11yProps(5)} />
+              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+                    sx={{ '.MuiTabs-flexContainer': {justifyContent: 'center',}}
+                    }>
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="签证 Visa" {...a11yProps(0)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="行前准备 Pack" {...a11yProps(1)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="海关" {...a11yProps(2)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="租房" {...a11yProps(3)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="交通" {...a11yProps(4)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="电话卡 / 银行卡" {...a11yProps(5)} />
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
@@ -92,7 +95,7 @@ export default function FreshmanHandbook() {
               海关
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
-              租房
+              <Rent/>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={4}>
               交通

@@ -5,8 +5,19 @@ import Typography from '@mui/material/Typography';
 
 const theme = createTheme({
     typography: {
-        fontFamily: "YouSheBiaoTiHei",
-        fontSize: 15
+        // fontFamily: "YouSheBiaoTiHei",
+        fontFamily: "Noto Sans SC",
+        // fontSize: 15,
+        fontWeight:"500",
+        h5:{
+            fontFamily: "YouSheBiaoTiHei",
+        },
+        h6:{
+            fontFamily: "YouSheBiaoTiHei",
+        },
+        subtitle1:{
+            fontFamily: "YouSheBiaoTiHei",
+        }
     },
   });
 
@@ -48,7 +59,7 @@ export default function Visa() {
                     3. 申请F1签证
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 1:
                 </Typography>
 
@@ -66,14 +77,14 @@ export default function Visa() {
                     （还有一些辅助材料可能后用到，后文会提及）
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 2:
                 </Typography>
                 <Typography gutterBottom>
                     缴纳SEVIS费（并需打印）进入学生和交流访问学者信息系统（https://www.fmjfee.com/），根据I-20上的内容完成表格的填写并缴纳SEVIS费，一般信用卡即可支付，支付完成后打印电子收据并备用。
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 3:
                 </Typography>
                 <Typography gutterBottom>
@@ -82,7 +93,7 @@ export default function Visa() {
                     表格填写完毕之后，请把邮箱中收到的确认函打印备用。
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 4: 缴纳签证费（并需打印）
                 </Typography>
                 <Typography gutterBottom>
@@ -93,7 +104,7 @@ export default function Visa() {
                     护照和申请费去任意一家中信银行缴费即可。在交完费之后，银行会让你选择是否寄到中信银行的网点（可任意选择）并填写地址，签证通过之后会将护照寄到你选择的中信银行，等待领取。
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 5: 预约面签时间（并需打印）
                 </Typography>
                 <Typography gutterBottom>
@@ -102,18 +113,18 @@ export default function Visa() {
                     辅助材料清单：学生的个人简历、学校给的奖学金信件（如果有）、学习计划（在美期间已经计划好的详细内容）、家庭关系证明（全家福、户口本、父母结婚证、公安局开具的子女关系证明等）、财产证明（房产证等）。
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 6: 面签当天
                 </Typography>
                 <Typography gutterBottom>
                     由于六七月一直是签证申请的旺季，因此前往使馆面签的人会很多，常常需要排很久的队，建议比预约的时间提前到达比较保险。背包、手机、水、食物等一律都是不可以带进大使馆的，因此请提前寄存或是让陪同前往的人帮忙看管。但请注意，除了申请人之外，其他人是不可以陪同进入大使馆的（残疾人及13岁以下儿童可能例外），因此将所有材料装进文件袋会比较方便携带。经过安检之后，到指定窗口递交签证申请表和材料，之后等待指纹扫描和签证面谈。面谈时，自然的回答签证官的问题，问什么答什么，不用说多余的话，建议穿着得体，不要化浓妆。切记在回答问题时不要表现出有任何的移民倾向，这有可能会导致拒签。如果面签当场通过，签证官会收走你的护照，你只要安心回家等待护照寄到你付费时选择的中信银行，再前去领取即可。
                 </Typography>
 
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     step 7: 等待护照
                 </Typography>
                 <Typography gutterBottom>
-                    虽然当场通过了但护照没拿到手还是觉得不放心？可以在此网址https://ceac.state.gov/CEACStatTracker/Status.aspx 随时查看护照状态！拿到签证之后就可以开始安排美国的行程啦！撒花！
+                    虽然当场通过了但护照没拿到手还是觉得不放心？可以在此网址 https://ceac.state.gov/CEACStatTracker/Status.aspx 随时查看护照状态！拿到签证之后就可以开始安排美国的行程啦！撒花！
                 </Typography>
 
             </Box>
