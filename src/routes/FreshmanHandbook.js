@@ -1,17 +1,20 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import { useParams } from "react-router-dom";
 
 // css
-import '../css/about.css'
+import "../css/about.css";
 
-import Visa from '../components/fhComponents/visa'
-import Rent from '../components/fhComponents/rent'
+import Visa from "../components/fhComponents/visa";
+import Rent from "../components/fhComponents/rent";
+import Transport from "../components/fhComponents/transport";
+import { useEffect } from "react";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,13 +45,13 @@ CustomTabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
 export default function FreshmanHandbook() {
-
-  const [value, setValue] = React.useState(0);
+  const { pageInd } = useParams();
+  const [value, setValue] = React.useState(pageInd ? parseInt(pageInd) : 0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -56,7 +59,7 @@ export default function FreshmanHandbook() {
 
   return (
     <div>
-      <Container maxWidth="lg" sx={{marginBottom: "8%"}}>
+      <Container maxWidth="lg" sx={{ marginBottom: "8%" }}>
         <ul class="background">
           <li></li>
           <li></li>
@@ -70,36 +73,72 @@ export default function FreshmanHandbook() {
           <li></li>
         </ul>
 
-        <div style={{paddingTop: "130px", minHeight:"90vh"}}>
-          <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Freshman Handbook</Typography>
-          <Box sx={{ width: '100%'}}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
-                    sx={{ '.MuiTabs-flexContainer': {justifyContent: 'center',}}
-                    }>
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="签证 Visa" {...a11yProps(0)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="行前准备 Pack" {...a11yProps(1)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="海关" {...a11yProps(2)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="租房" {...a11yProps(3)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="交通" {...a11yProps(4)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="电话卡 / 银行卡" {...a11yProps(5)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="学术" {...a11yProps(6)} />
+        <div style={{ paddingTop: "130px", minHeight: "90vh" }}>
+          <Typography
+            class="Silkscreen"
+            style={{ textAlign: "center", fontSize: "200%" }}
+          >
+            Freshman Handbook
+          </Typography>
+          <Box sx={{ width: "100%" }}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+                sx={{ ".MuiTabs-flexContainer": { justifyContent: "center" } }}
+              >
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="签证 Visa"
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="行前准备 Pack"
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="海关"
+                  {...a11yProps(2)}
+                />
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="租房"
+                  {...a11yProps(3)}
+                />
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="交通"
+                  {...a11yProps(4)}
+                />
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="电话卡 / 银行卡"
+                  {...a11yProps(5)}
+                />
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="学术"
+                  {...a11yProps(6)}
+                />
               </Tabs>
             </Box>
-            <CustomTabPanel value={value} index={0}>
-              <Visa/>
+            <CustomTabPanel value={value} index={0} id="visa">
+              <Visa />
             </CustomTabPanel>
-            <CustomTabPanel value={value} index={1}>
+            <CustomTabPanel value={value} index={1} id="pack">
               Xi
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
               Winnie
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
-              <Rent/>
+              <Rent />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={4}>
-              Alex
+              <Transport />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
               Helen

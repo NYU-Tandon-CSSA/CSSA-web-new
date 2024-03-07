@@ -50,6 +50,7 @@ function App() {
               <div>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
+                <Route exact path="/freshmanHandbook/:pageInd" component={freshmanHandbook} />
                 <Route exact path="/freshmanHandbook" component={freshmanHandbook} />
                 <Route exact path="/studentservice" component={StudentService} />
                 <Route exact path="/xiaohongshu" component={XiaoHongShu} />
