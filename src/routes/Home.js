@@ -8,15 +8,12 @@ import Event from '../components/Event';
 import Banner from '../components/Banner';
 
 
-//Winnie's import
+//About us import
 import AboutContainer from '../components/AboutContainer';
 import groupPhoto from '../images/GroupPhoto.jpg'
 
 
 // Section for images of recent posts
-import manual from '../images/manual.png'
-import fcwr from '../images/fcwr.png'
-import Voice from '../images/Voice.png'
 import werewolf from '../images/werewolf2.0.png'
 import alimni_association from '../images/alumni_association.jpg'
 import If_you_are_the_one from '../images/If_you_are_the_one.png'
