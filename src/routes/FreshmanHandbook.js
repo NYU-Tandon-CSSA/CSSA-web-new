@@ -71,7 +71,7 @@ export default function FreshmanHandbook() {
         </ul>
 
         <div style={{paddingTop: "130px", minHeight:"90vh"}}>
-          <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Pre-Trip</Typography>
+          <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Freshman Handbook</Typography>
           <Box sx={{ width: '100%'}}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
@@ -83,28 +83,32 @@ export default function FreshmanHandbook() {
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="租房" {...a11yProps(3)} />
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="交通" {...a11yProps(4)} />
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="电话卡 / 银行卡" {...a11yProps(5)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="学术" {...a11yProps(6)} />
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
               <Visa/>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-              行前准备
+              Xi
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
-              海关
+              Winnie
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
               <Rent/>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={4}>
-              交通
+              Alex
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
-              办电话卡/银行卡
+              Helen
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
-              宿舍
+              yi
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={6}>
+              Li
             </CustomTabPanel>
           </Box>
           {/* <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Prerequisites</Typography>         */}
