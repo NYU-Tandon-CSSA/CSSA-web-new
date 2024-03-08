@@ -78,36 +78,40 @@ export default function FreshmanHandbook() {
                     sx={{ '.MuiTabs-flexContainer': {justifyContent: 'center',}}
                     }>
                 <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="签证 Visa" {...a11yProps(0)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="行前准备 Pack" {...a11yProps(1)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="海关" {...a11yProps(2)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="租房" {...a11yProps(3)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="交通" {...a11yProps(4)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="电话卡 / 银行卡" {...a11yProps(5)} />
-                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="学术" {...a11yProps(6)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="体检" {...a11yProps(1)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="行前准备 Pack" {...a11yProps(2)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="海关" {...a11yProps(3)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="租房" {...a11yProps(4)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="交通" {...a11yProps(5)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="电话卡 / 银行卡" {...a11yProps(6)} />
+                <Tab style={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.3rem'}} label="学术" {...a11yProps(7)} />
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
               <Visa/>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-              Xi
+              Mia
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
-              Winnie
+              Xi
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
-              <Rent/>
+              Winnie
             </CustomTabPanel>
             <CustomTabPanel value={value} index={4}>
+              <Rent/>
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={5}>
               Alex
             </CustomTabPanel>
-            <CustomTabPanel value={value} index={5}>
+            <CustomTabPanel value={value} index={6}>
               Helen
             </CustomTabPanel>
-            <CustomTabPanel value={value} index={5}>
+            <CustomTabPanel value={value} index={7}>
               yi
             </CustomTabPanel>
-            <CustomTabPanel value={value} index={6}>
+            <CustomTabPanel value={value} index={8}>
               Li
             </CustomTabPanel>
           </Box>
