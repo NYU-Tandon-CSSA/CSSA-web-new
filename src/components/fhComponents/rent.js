@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Grid, CardActionArea } from '@mui/material';
+import { Grid, CardActionArea, Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
@@ -12,6 +12,9 @@ import ListItemText from '@mui/material/ListItemText';
 // image
 import walkUP from '../../images/fhImage/Walkup_Building.jpg'
 import apartment from '../../images/fhImage/Apartment.jpg'
+import luxuryApt from '../../images/fhImage/luxuryApt.jpg'
+import BrooklynBridge from '../../images/fhImage/BrooklynBridge.jpg'
+
 
 const theme = createTheme({
     typography: {
@@ -32,9 +35,38 @@ const theme = createTheme({
             fontFamily: "YouSheBiaoTiHei",
         }
     },
-  });
+});
 
 export default function Rent() {
+
+    // Initial height for BKDT Card
+    const [isBkdtExtended, setisBkdtExtended] = useState(false);
+    const [cardBkdtHeight, setcardBkdtHeight] = useState('600px');
+
+    const handleToggleExtendBkdt = () => {
+        if (isBkdtExtended) {
+            setcardBkdtHeight('600px'); // Collapsed height
+            setisBkdtExtended(false);
+        } else {
+            setcardBkdtHeight('auto'); // Expanded to fit content
+            setisBkdtExtended(true);
+        }
+    };
+
+    // Initial height for BK Card
+    const [isBkExtended, setisBkExtended] = useState(false);
+    const [cardBkHeight, setcardBkHeight] = useState('600px');
+
+    const handleToggleExtendBk = () => {
+        if (isBkExtended) {
+            setcardBkHeight('600px'); // Collapsed height
+            setisBkExtended(false);
+        } else {
+            setcardBkHeight('auto'); // Expanded to fit content
+            setisBkExtended(true);
+        }
+    };
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -119,7 +151,7 @@ export default function Rent() {
                                 <CardMedia
                                 component="img"
                                 height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
+                                image={luxuryApt}
                                 alt="green iguana"
                                 />
                                 <CardContent>
@@ -146,8 +178,101 @@ export default function Rent() {
                             </CardActionArea>
                         </Card>
                     </Grid>
-                </Grid>
 
+
+                    <Grid item xs={12} md={6}>
+                        <Card sx={{overflow: 'hidden', maxHeight: cardBkdtHeight, transition: 'max-height 0.3s ease'}}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                height="200"
+                                image={luxuryApt}
+                                alt="green iguana"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        Downtown Brooklyn
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        <ul>
+                                            <li>
+                                                <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
+                                            </li>
+                                        </ul>
+                                    </Typography>
+                                    {/* Extended Part*/}
+                                    {isBkdtExtended && (
+                                        <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
+                                            <ul>
+                                                <li>额外设施包括泳池、停车场、影音室等</li>
+                                                <li>宠物SPA、遛狗服务、自行车存放</li>
+                                            </ul>
+                                        </Typography>
+                                    )}
+                                    <Button variant="contained" onClick={handleToggleExtendBkdt}>
+                                        {isBkdtExtended ? 'Less' : 'More'}
+                                    </Button>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+
+                    <Grid item xs={12} md={6}>
+                        <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                height="200"
+                                image={luxuryApt}
+                                alt="green iguana"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        Downtown Brooklyn
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        <ul>
+                                            <li>
+                                                <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
+                                            </li>
+                                        </ul>
+                                    </Typography>
+                                    {/* Extended Part*/}
+                                    {isBkExtended && (
+                                        <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
+                                            <ul>
+                                                <li>额外设施包括泳池、停车场、影音室等</li>
+                                                <li>宠物SPA、遛狗服务、自行车存放</li>
+                                            </ul>
+                                        </Typography>
+                                    )}
+                                    <Button variant="contained" onClick={handleToggleExtendBk}>
+                                        {isBkExtended ? 'Less' : 'More'}
+                                    </Button>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+
+                </Grid>
             </Box>
         </ThemeProvider>
     )
