@@ -15,6 +15,10 @@ import apartment from '../../images/fhImage/Apartment.jpg'
 import luxuryApt from '../../images/fhImage/luxuryApt.jpg'
 import BrooklynBridge from '../../images/fhImage/BrooklynBridge.jpg'
 
+// Icon
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+
 
 const theme = createTheme({
     typography: {
@@ -41,11 +45,11 @@ export default function Rent() {
 
     // Initial height for BKDT Card
     const [isBkdtExtended, setisBkdtExtended] = useState(false);
-    const [cardBkdtHeight, setcardBkdtHeight] = useState('600px');
+    const [cardBkdtHeight, setcardBkdtHeight] = useState('700px');
 
     const handleToggleExtendBkdt = () => {
         if (isBkdtExtended) {
-            setcardBkdtHeight('600px'); // Collapsed height
+            setcardBkdtHeight('700px'); // Collapsed height
             setisBkdtExtended(false);
         } else {
             setcardBkdtHeight('auto'); // Expanded to fit content
@@ -180,18 +184,80 @@ export default function Rent() {
                     </Grid>
 
 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} >
                         <Card sx={{overflow: 'hidden', maxHeight: cardBkdtHeight, transition: 'max-height 0.3s ease'}}>
                             <CardActionArea>
                                 <CardMedia
                                 component="img"
-                                height="200"
-                                image={luxuryApt}
+                                height="350"
+                                image={BrooklynBridge}
                                 alt="green iguana"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
                                         Downtown Brooklyn
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        <ul>
+                                            <li>
+                                                <Typography>布鲁克林Downtown是布鲁克林众多区域中的一块，也算是布鲁克林的交通、商业中心了。</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>布鲁克林downtown内除了有NYU Tandon，还有长岛大学，Pratt等高校，还有各大金融机构的大楼，区内有不少Rental Building。</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>区内交通便利，生活配套比较完善，综合来说是布鲁克林地区最适合学生租房的区域。</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>布鲁克林downtown有众多地铁线，包括2、3、4、5、A、B、C、Q、R、N以及长岛火车，交通方便。</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>地铁至曼哈顿中城只需20分钟，至NYU主校区只需15分钟，至曼哈顿或Brooklyn 中国城也只需20分钟。</Typography>
+                                            </li>
+                                        </ul>
+                                    </Typography>
+
+                                    {/* <Typography variant="h5">房租价格</Typography> */}
+
+                                    {/* Extended Part*/}
+                                    {isBkdtExtended && (
+                                        <div>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                Downtown Brooklyn 房租价格
+                                            </Typography>
+                                            <Typography variant="body1" color="text.secondary" sx={{marginTop: 2}}>
+                                                <ul>
+                                                    <li>Studio:         $2,200 - $2,900</li>
+                                                    <li>One Bedroom:    $2,800 - $3,800</li>
+                                                    <li>Two Bedrooms:   $3,500 - $5,700</li>
+                                                    <li>Three Bedrooms: $6,000 - $8,500</li>
+                                                </ul>
+                                            </Typography>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                推荐大楼
+                                            </Typography>
+                                        </div>
+                                    )}
+                                    <Button variant="contained" className='nyuColor' onClick={handleToggleExtendBkdt}>
+                                        {isBkdtExtended ? <ExpandLessIcon/> : <>房租价格<ExpandMoreIcon /></>}
+                                    </Button>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+
+                    <Grid item xs={12} >
+                        <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                height="300"
+                                image={luxuryApt}
+                                alt="green iguana"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        Downtown 南区（八大道）
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
                                         <ul>
@@ -210,7 +276,7 @@ export default function Rent() {
                                         </ul>
                                     </Typography>
                                     {/* Extended Part*/}
-                                    {isBkdtExtended && (
+                                    {isBkExtended && (
                                         <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
                                             <ul>
                                                 <li>额外设施包括泳池、停车场、影音室等</li>
@@ -218,15 +284,15 @@ export default function Rent() {
                                             </ul>
                                         </Typography>
                                     )}
-                                    <Button variant="contained" onClick={handleToggleExtendBkdt}>
-                                        {isBkdtExtended ? 'Less' : 'More'}
+                                    <Button variant="contained" onClick={handleToggleExtendBk}>
+                                        {isBkExtended ? 'Less' : 'More'}
                                     </Button>
                                 </CardContent>
                             </CardActionArea>
                         </Card>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} >
                         <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
                             <CardActionArea>
                                 <CardMedia
@@ -237,7 +303,53 @@ export default function Rent() {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
-                                        Downtown Brooklyn
+                                        Downtown 南区（八大道）
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        <ul>
+                                            <li>
+                                                <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
+                                            </li>
+                                        </ul>
+                                    </Typography>
+                                    {/* Extended Part*/}
+                                    {isBkExtended && (
+                                        <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
+                                            <ul>
+                                                <li>额外设施包括泳池、停车场、影音室等</li>
+                                                <li>宠物SPA、遛狗服务、自行车存放</li>
+                                            </ul>
+                                        </Typography>
+                                    )}
+                                    <Button variant="contained" onClick={handleToggleExtendBk}>
+                                        {isBkExtended ? 'Less' : 'More'}
+                                    </Button>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+
+                    <Grid item xs={12} >
+                        <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                height="200"
+                                image={luxuryApt}
+                                alt="green iguana"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        Downtown 南区（八大道）
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
                                         <ul>

@@ -59,3 +59,7 @@ code {
 .MuiPaper-elevation4 {
   box-shadow: none;
 }
+
+.nyuColor{
+  background-color: #56018D !important;
+}
