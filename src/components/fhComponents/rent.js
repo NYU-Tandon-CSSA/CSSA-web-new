@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Grid, CardActionArea, Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
 import List from '@mui/material/List';
-import ListItemText from '@mui/material/ListItemText';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 // image
 import walkUP from '../../images/fhImage/Walkup_Building.jpg'
@@ -41,35 +44,46 @@ const theme = createTheme({
     },
 });
 
+function CustomTabPanel(props) {
+    const { children, value, index, ...other } = props;
+  
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+  
+  CustomTabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+  
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
 export default function Rent() {
 
-    // Initial height for BKDT Card
-    const [isBkdtExtended, setisBkdtExtended] = useState(false);
-    const [cardBkdtHeight, setcardBkdtHeight] = useState('700px');
+    const [value, setValue] = React.useState(0);
 
-    const handleToggleExtendBkdt = () => {
-        if (isBkdtExtended) {
-            setcardBkdtHeight('700px'); // Collapsed height
-            setisBkdtExtended(false);
-        } else {
-            setcardBkdtHeight('auto'); // Expanded to fit content
-            setisBkdtExtended(true);
-        }
-    };
-
-    // Initial height for BK Card
-    const [isBkExtended, setisBkExtended] = useState(false);
-    const [cardBkHeight, setcardBkHeight] = useState('600px');
-
-    const handleToggleExtendBk = () => {
-        if (isBkExtended) {
-            setcardBkHeight('600px'); // Collapsed height
-            setisBkExtended(false);
-        } else {
-            setcardBkHeight('auto'); // Expanded to fit content
-            setisBkExtended(true);
-        }
-    };
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };  
 
     return (
         <ThemeProvider theme={theme}>
@@ -182,209 +196,73 @@ export default function Rent() {
                             </CardActionArea>
                         </Card>
                     </Grid>
-
-
-                    <Grid item xs={12} >
-                        <Card sx={{overflow: 'hidden', maxHeight: cardBkdtHeight, transition: 'max-height 0.3s ease'}}>
-                            <CardActionArea>
-                                <CardMedia
-                                component="img"
-                                height="350"
-                                image={BrooklynBridge}
-                                alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Downtown Brooklyn
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <ul>
-                                            <li>
-                                                <Typography>布鲁克林Downtown是布鲁克林众多区域中的一块，也算是布鲁克林的交通、商业中心了。</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>布鲁克林downtown内除了有NYU Tandon，还有长岛大学，Pratt等高校，还有各大金融机构的大楼，区内有不少Rental Building。</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>区内交通便利，生活配套比较完善，综合来说是布鲁克林地区最适合学生租房的区域。</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>布鲁克林downtown有众多地铁线，包括2、3、4、5、A、B、C、Q、R、N以及长岛火车，交通方便。</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>地铁至曼哈顿中城只需20分钟，至NYU主校区只需15分钟，至曼哈顿或Brooklyn 中国城也只需20分钟。</Typography>
-                                            </li>
-                                        </ul>
-                                    </Typography>
-
-                                    {/* <Typography variant="h5">房租价格</Typography> */}
-
-                                    {/* Extended Part*/}
-                                    {isBkdtExtended && (
-                                        <div>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Downtown Brooklyn 房租价格
-                                            </Typography>
-                                            <Typography variant="body1" color="text.secondary" sx={{marginTop: 2}}>
-                                                <ul>
-                                                    <li>Studio:         $2,200 - $2,900</li>
-                                                    <li>One Bedroom:    $2,800 - $3,800</li>
-                                                    <li>Two Bedrooms:   $3,500 - $5,700</li>
-                                                    <li>Three Bedrooms: $6,000 - $8,500</li>
-                                                </ul>
-                                            </Typography>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                推荐大楼
-                                            </Typography>
-                                        </div>
-                                    )}
-                                    <Button variant="contained" className='nyuColor' onClick={handleToggleExtendBkdt}>
-                                        {isBkdtExtended ? <ExpandLessIcon/> : <>房租价格<ExpandMoreIcon /></>}
-                                    </Button>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-
-                    <Grid item xs={12} >
-                        <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
-                            <CardActionArea>
-                                <CardMedia
-                                component="img"
-                                height="300"
-                                image={luxuryApt}
-                                alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Downtown 南区（八大道）
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <ul>
-                                            <li>
-                                                <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
-                                            </li>
-                                        </ul>
-                                    </Typography>
-                                    {/* Extended Part*/}
-                                    {isBkExtended && (
-                                        <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
-                                            <ul>
-                                                <li>额外设施包括泳池、停车场、影音室等</li>
-                                                <li>宠物SPA、遛狗服务、自行车存放</li>
-                                            </ul>
-                                        </Typography>
-                                    )}
-                                    <Button variant="contained" onClick={handleToggleExtendBk}>
-                                        {isBkExtended ? 'Less' : 'More'}
-                                    </Button>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-
-                    <Grid item xs={12} >
-                        <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
-                            <CardActionArea>
-                                <CardMedia
-                                component="img"
-                                height="200"
-                                image={luxuryApt}
-                                alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Downtown 南区（八大道）
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <ul>
-                                            <li>
-                                                <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
-                                            </li>
-                                        </ul>
-                                    </Typography>
-                                    {/* Extended Part*/}
-                                    {isBkExtended && (
-                                        <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
-                                            <ul>
-                                                <li>额外设施包括泳池、停车场、影音室等</li>
-                                                <li>宠物SPA、遛狗服务、自行车存放</li>
-                                            </ul>
-                                        </Typography>
-                                    )}
-                                    <Button variant="contained" onClick={handleToggleExtendBk}>
-                                        {isBkExtended ? 'Less' : 'More'}
-                                    </Button>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-
-                    <Grid item xs={12} >
-                        <Card sx={{overflow: 'hidden', maxHeight: cardBkHeight, transition: 'max-height 0.3s ease'}}>
-                            <CardActionArea>
-                                <CardMedia
-                                component="img"
-                                height="200"
-                                image={luxuryApt}
-                                alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Downtown 南区（八大道）
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <ul>
-                                            <li>
-                                                <Typography>有电梯、有24小时门卫、提供保安维修服务和代租客泊车服务</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>健身房、洗衣房、休闲商务中心、露台，是基本标配，除此以外有的大楼还会有泳池、停车场、影音室、派对室、宠物SPA、遛狗、自行车存放、等额外设施</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>有楼内物业管理，报修之后24小时之内各种问题可以得到处理</Typography>
-                                            </li>
-                                            <li>
-                                                <Typography>相比walk-up和普通电梯楼，安全能得到保证</Typography>
-                                            </li>
-                                        </ul>
-                                    </Typography>
-                                    {/* Extended Part*/}
-                                    {isBkExtended && (
-                                        <Typography variant="body2" color="text.secondary" sx={{marginTop: 2}}>
-                                            <ul>
-                                                <li>额外设施包括泳池、停车场、影音室等</li>
-                                                <li>宠物SPA、遛狗服务、自行车存放</li>
-                                            </ul>
-                                        </Typography>
-                                    )}
-                                    <Button variant="contained" onClick={handleToggleExtendBk}>
-                                        {isBkExtended ? 'Less' : 'More'}
-                                    </Button>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-
                 </Grid>
+            </Box>
+            <Box sx={{ width: '100%' }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tab label="Brooklyn Downtown - （首选）" {...a11yProps(0)} />
+                    <Tab label="Brooklyn 南区" {...a11yProps(1)} />
+                    <Tab label="Manhattan 曼岛" {...a11yProps(2)} />
+                    <Tab label="New Jersey" {...a11yProps(3)} />
+                    </Tabs>
+                </Box>
+                <CustomTabPanel value={value} index={0}>
+                    <Box elevation={3}>
+                        <Card sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                alt="Building Image"
+                                height="140"
+                                image=""
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Building Name
+                                </Typography>
+                                <Typography variant="body1" color="text.secondary">
+                                    Description
+                                </Typography>
+                                <Typography variant="subtitle1" color="text.secondary">
+                                    Price:
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" display={'inline'}>
+                                    Studio: {" "}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" display={'inline'}>
+                                    $2000 - $3000
+                                </Typography> 
+                                <br></br>
+                                <Typography variant="body2" color="text.secondary" display={'inline'}>
+                                    1 Bed:  {" "}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" display={'inline'}>
+                                    $3000 - $2000
+                                </Typography> 
+                                <br></br>
+                                <Typography variant="body2" color="text.secondary" display={'inline'}>
+                                    2 Bed:  {" "}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" display={'inline'}>
+                                    $4000 - $5000
+                                </Typography> 
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small">leasing office</Button>
+                                <Button size="small">Learn More</Button>
+                            </CardActions>
+                        </Card>
+                    </Box>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={1}>
+                    Item Two
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={2}>
+                    Item Three
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={3}>
+                    Item Three
+                </CustomTabPanel>
             </Box>
         </ThemeProvider>
     )
