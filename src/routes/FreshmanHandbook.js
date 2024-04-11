@@ -14,6 +14,7 @@ import "../css/about.css";
 import Visa from "../components/fhComponents/visa";
 import Rent from "../components/fhComponents/rent";
 import Transport from "../components/fhComponents/transport";
+import Customs from "../components/fhComponents/customs";
 import { useEffect } from "react";
 
 function CustomTabPanel(props) {
@@ -132,7 +133,7 @@ export default function FreshmanHandbook() {
               Xi
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
-              Winnie
+              <Customs />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
               <Rent />
