@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Grid, CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -12,6 +12,11 @@ import ListItemText from '@mui/material/ListItemText';
 // image
 import walkUP from '../../images/fhImage/Walkup_Building.jpg'
 import apartment from '../../images/fhImage/Apartment.jpg'
+import luxury from '../../images/fhImage/Luxury.jpg'
+
+// components
+import BuildingCard from "./BuildingCard.js"
+
 
 const theme = createTheme({
     typography: {
@@ -35,6 +40,24 @@ const theme = createTheme({
   });
 
 export default function Rent() {
+
+    const [rentals, setRentals] = useState([]);
+
+    useEffect(() => {
+        fetch('/NYC_Rentals.json')  // Make sure this path is correct
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                console.log(data)
+                setRentals(data)
+            })
+            .catch(error => console.error('Error loading the data:', error));
+    }, []);
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -119,7 +142,7 @@ export default function Rent() {
                                 <CardMedia
                                 component="img"
                                 height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
+                                image={luxury}
                                 alt="green iguana"
                                 />
                                 <CardContent>
@@ -147,7 +170,42 @@ export default function Rent() {
                         </Card>
                     </Grid>
                 </Grid>
-
+                <div>
+                    <h1>Brooklyn 布鲁克林（离学校最近）</h1>
+                    <Grid container spacing={2}>
+                        {rentals.map((rental) => (
+                            rental.area === "Brooklyn" ? (
+                            <Grid item xs={12} md={4}>
+                                <BuildingCard 
+                                    buildingName={rental.building_name} 
+                                    address={rental.address}
+                                    priceStudio={rental.prices.studio}
+                                    price1b={rental.prices['1b']}
+                                    price2b={rental.prices['2b']}
+                                    buildingUrl={rental.url}
+                                />
+                            </Grid>
+                            ) : null
+                        ))}
+                    </Grid>
+                    <h1>Manhattan 曼哈顿区域</h1>
+                    <Grid container spacing={2}>
+                        {rentals.map((rental) => (
+                            rental.area === "Manhattan" ? (
+                            <Grid item xs={12} md={4}>
+                                <BuildingCard 
+                                    buildingName={rental.building_name} 
+                                    address={rental.address}
+                                    priceStudio={rental.prices.studio}
+                                    price1b={rental.prices['1b']}
+                                    price2b={rental.prices['2b']}
+                                    buildingUrl={rental.url}
+                                />
+                            </Grid>
+                            ) : null
+                        ))}
+                    </Grid>
+                </div>
             </Box>
         </ThemeProvider>
     )
