@@ -220,10 +220,10 @@ export default function Rent() {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Building Name
                                 </Typography>
-                                <Typography variant="body1" color="text.secondary">
-                                    Description
-                                </Typography>
                                 <Typography variant="subtitle1" color="text.secondary">
+                                    Description:
+                                </Typography>
+                                <Typography variant="subtitle2" color="text.secondary">
                                     Price:
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" display={'inline'}>
