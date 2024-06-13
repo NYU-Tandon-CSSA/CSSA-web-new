@@ -15,6 +15,7 @@ import Visa from "../components/fhComponents/visa";
 import Rent from "../components/fhComponents/rent";
 import Transport from "../components/fhComponents/transport";
 import Customs from "../components/fhComponents/customs";
+import SimCard from "../components/fhComponents/simCard";
 import { useEffect } from "react";
 
 function CustomTabPanel(props) {
@@ -142,7 +143,7 @@ export default function FreshmanHandbook() {
               <Transport />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
-              Helen
+              <SimCard />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={5}>
               yi
