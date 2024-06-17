@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import "../css/about.css";
 
 import Visa from "../components/fhComponents/visa";
+import Preparations from "../components/fhComponents/preparations";
 import Rent from "../components/fhComponents/rent";
 import Transport from "../components/fhComponents/transport";
 import Customs from "../components/fhComponents/customs";
@@ -130,7 +131,7 @@ export default function FreshmanHandbook() {
               <Visa />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1} id="pack">
-              Xi
+              <Preparations />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
               <Customs />
