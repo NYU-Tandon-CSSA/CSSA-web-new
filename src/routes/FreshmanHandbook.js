@@ -62,22 +62,9 @@ export default function FreshmanHandbook() {
   return (
     <div>
       <Container maxWidth="lg" sx={{ marginBottom: "8%" }}>
-        <ul class="background">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-
         <div style={{ paddingTop: "130px", minHeight: "90vh" }}>
           <Typography
-            class="Silkscreen"
+            className="Silkscreen"
             style={{ textAlign: "center", fontSize: "200%" }}
           >
             Freshman Handbook
@@ -92,12 +79,12 @@ export default function FreshmanHandbook() {
               >
                 <Tab
                   style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
-                  label="签证 Visa"
+                  label="签证"
                   {...a11yProps(0)}
                 />
                 <Tab
                   style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
-                  label="行前准备 Pack"
+                  label="行前准备"
                   {...a11yProps(1)}
                 />
                 <Tab
@@ -145,14 +132,10 @@ export default function FreshmanHandbook() {
             <CustomTabPanel value={value} index={5}>
               <SimCard />
             </CustomTabPanel>
-            <CustomTabPanel value={value} index={5}>
-              yi
-            </CustomTabPanel>
             <CustomTabPanel value={value} index={6}>
               Li
             </CustomTabPanel>
           </Box>
-          {/* <Typography class = 'Silkscreen' style={{textAlign:"center", fontSize:"200%"}}>Prerequisites</Typography>         */}
         </div>
       </Container>
     </div>
