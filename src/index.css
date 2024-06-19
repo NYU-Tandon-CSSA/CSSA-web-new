@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url("https://192960944.r.cdn36.com/chinesefonts2/packages/ysbth/dist/优设标题黑/result.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=ZCOOL+XiaoWei&display=swap');
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','ZCOOL XiaoWei',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,6 +16,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.zhi-mang-xing-regular {
+  font-family: "Zhi Mang Xing", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .Silkscreen{

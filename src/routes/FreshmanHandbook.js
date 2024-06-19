@@ -16,6 +16,7 @@ import Rent from "../components/fhComponents/rent";
 import Transport from "../components/fhComponents/transport";
 import Customs from "../components/fhComponents/customs";
 import SimCard from "../components/fhComponents/simCard";
+import BankCard from "../components/fhComponents/bankcard";
 import { useEffect } from "react";
 
 function CustomTabPanel(props) {
@@ -63,9 +64,9 @@ export default function FreshmanHandbook() {
     <div>
       <Container maxWidth="lg" sx={{ marginBottom: "8%" }}>
         <div style={{ paddingTop: "130px", minHeight: "90vh" }}>
-          <Typography
-            className="Silkscreen"
-            style={{ textAlign: "center", fontSize: "200%" }}
+          <Typography 
+            //class="Silkscreen"
+            style={{  textAlign: "center", fontSize: "300%", fontFamily: 'ZCOOL XiaoWei' }}
           >
             Freshman Handbook
           </Typography>
@@ -104,13 +105,19 @@ export default function FreshmanHandbook() {
                 />
                 <Tab
                   style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
-                  label="电话卡 / 银行卡"
+                  label="电话卡"
                   {...a11yProps(5)}
                 />
                 <Tab
                   style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
-                  label="学术"
+                  label="银行卡"
                   {...a11yProps(6)}
+                />
+              
+                <Tab
+                  style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                  label="学术"
+                  {...a11yProps(7)}
                 />
               </Tabs>
             </Box>
@@ -133,6 +140,9 @@ export default function FreshmanHandbook() {
               <SimCard />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={6}>
+              <BankCard />
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={7}>
               Li
             </CustomTabPanel>
           </Box>
