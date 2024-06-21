@@ -15,8 +15,7 @@ const steps = [
   },
   {
     label: '使用 NetID 登陆 NYUHome',
-    description:
-      '',
+    description: '',
   },
   {
     label: '选择 Albert Login',
@@ -46,25 +45,25 @@ const steps = [
 
 const CustomStepIcon = styled(StepIcon)(({ theme }) => ({
   '& .MuiStepIcon-text': {
-    fill: 'blue', // 数字颜色
+    fill: '#d3b4f8', // 数字颜色
   },
   '&.Mui-active': {
-    color: 'green', // active步骤图标颜色
+    color: '#d3b4f8', // active步骤图标颜色
   },
   '&.Mui-completed': {
-    color: '#ADD8E6', // 完成步骤图标颜色
+    color: '#d3b4f8', // 完成步骤图标颜色
   },
 }));
 
 export default function OfferSteps() {
   return (
-    <Box sx={{ maxWidth: 500, ml: 4}}>
+    <Box sx={{ maxWidth: 500, ml: 4 }}>
       <Stepper orientation="vertical" activeStep={steps.length}>
         {steps.map((step, index) => (
           <Step key={step.label} active>
             <StepLabel StepIconComponent={CustomStepIcon}>{step.label}</StepLabel>
             <StepContent>
-              <Typography>{step.description}</Typography>
+              <Typography sx={{ ml: 2 }}>{step.description}</Typography>
             </StepContent>
           </Step>
         ))}
