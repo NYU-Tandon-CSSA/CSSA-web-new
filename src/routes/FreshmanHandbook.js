@@ -18,6 +18,7 @@ import Rent from "../components/fhComponents/rent";
 import Transport from "../components/fhComponents/transport";
 import Customs from "../components/fhComponents/customs";
 import SimCard from "../components/fhComponents/simCard";
+import BankCard from "../components/fhComponents/bankcard";
 import { useEffect } from "react";
 
 function CustomTabPanel(props) {
