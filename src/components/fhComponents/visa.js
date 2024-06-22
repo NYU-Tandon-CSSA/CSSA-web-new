@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import OfferSteps from './offerSteps';
 
-// cover image
+// images
 import visaCover from '../../images/fhImage/visa_cover.jpg';
 import NYUStartImage from '../../images/fhImage/NYUStartImg.png';
 
