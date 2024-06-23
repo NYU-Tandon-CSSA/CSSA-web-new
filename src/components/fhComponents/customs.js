@@ -130,7 +130,7 @@ export default function Customs() {
 
                 <Box
                     sx={{
-                        width: '80%',
+                        width: '100%',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -144,50 +144,47 @@ export default function Customs() {
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         SEVIS Fee缴费证明
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         I-20
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
-                        <Typography>护照（内含有你的签证页）:</Typography>
-                        <Typography>F1/J1学生签有效期不少于6个月</Typography>
-                        <Typography>B1/B2旅游签有效期不少于预定行程时间</Typography>
+                        <Typography>护照（内含有你的签证页）:F1/J1学生签有效期不少于6个月，B1/B2旅游签有效期不少于预定行程时间</Typography>
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         学校体检表，疫苗表
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         小红本&小黄本免疫证明
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         毕业证、学位证、学校成绩单、语言考试成绩单（托福、雅思、SAT等）
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         学校官方出具的offer
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         证件照（各类尺寸）
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
-                        <Typography>海关码：</Typography>
-                        <Typography>提前在小程序“海关旅客指尖服务”上填写好个人信息并截图海关码，有效期为24小时</Typography>
+                        <Typography>海关码：提前在小程序“海关旅客指尖服务”上填写好个人信息并截图海关码，有效期为24小时</Typography>
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         住宿信息证明：比如你的租房合同，学校宿舍信息等。B1/B2旅客可提供中英文版酒店预订单
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         EVUS（仅针对B1/B2签证）：出行前要及时更新EVUS信息，注册打印
                     </Typography>
-                    <Divider sx={{ width: '80%', my: 1 }} />
+                    <Divider sx={{ width: '90%', my: 1 }} />
                     <Typography gutterBottom sx={{ lineHeight: 1 }}>
                         其他辅助文件：行程单，课程表，驾照等
                     </Typography>
