@@ -28,9 +28,10 @@ function CustomTabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      style={{ maxWidth: "100%", overflowX: "auto" }}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 3, display: "flex", flexDirection: "row" }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -87,6 +88,8 @@ export default function FreshmanHandbook() {
               <Tabs
                 value={value}
                 onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
                 aria-label="basic tabs example"
                 sx={{ ".MuiTabs-flexContainer": { justifyContent: "center" } }}
               >
