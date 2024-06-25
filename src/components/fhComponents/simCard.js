@@ -18,6 +18,9 @@ const theme = createTheme({
     subtitle1: {
       fontFamily: "YouSheBiaoTiHei",
     },
+    body: {
+      fontFamily: "Zhi Mang Xing",
+    },
   },
 });
 
@@ -33,13 +36,13 @@ export default function SimCard() {
           overflowY: "scroll",
         }}
       >
-         <Typography gutterBottom>
+         <Typography variant="body" gutterBottom>
          提前准备好手机卡，不仅方便下飞机后及时跟父母报声平安，更便于联系接机同学，安排接下来的行程。那么美国的手机卡应该在哪里购买，如何购买呢？ 
          </Typography>
-        <Typography gutterBottom>
+        <Typography variant="body" gutterBottom>
           首先向大家介绍一下美国通讯基本模式。同中国相同，美国通讯也拥有几大知名运营商，如ATT，T-Mobile，和Verizon等等。各运营商提供服务大致相同，不同套餐价格所含流量，通话分钟数不同，信号强弱也略有分别。运营商分别出售Monthly Plan（月付卡），Prepaid（预付款）卡和 Family Plan（家庭套餐）卡。
         </Typography>
-        <Typography gutterBottom>
+        <Typography variant="body" gutterBottom>
           那么该如果选择呢？让我们来了解一下这三种模式吧。
           <br />
         </Typography>
