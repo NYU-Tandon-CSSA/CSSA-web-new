@@ -6,6 +6,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import { useParams } from "react-router-dom";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 
 // cover images
 import picture2 from '../images/fhImage/2.jpg';
@@ -55,7 +57,7 @@ function a11yProps(index) {
   };
 }
 
-export default function FreshmanHandbook() {
+function FreshmanHandbook() {
   const { pageInd } = useParams();
   const [value, setValue] = React.useState(pageInd ? parseInt(pageInd) : 0);
 
@@ -63,9 +65,12 @@ export default function FreshmanHandbook() {
     setValue(newValue);
   };
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <div>
-      <Box sx={{ width: "100%", padding: 0, margin: 0, marginTop: '64px', height: '80vh', backgroundColor: '#E6E6FA' }}> {/* 顶部距离导航栏高度，设置高度为屏幕80%，背景色为浅紫色 */}
+      <Box sx={{ width: "100%", padding: 0, margin: 0, marginTop: '64px', height: '80vh', backgroundColor: '#E6E6FA' }}>
         <Box sx={{ display: 'flex', height: '100%', width: '100%', margin: 0, padding: 0 }}>
           <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: 2 }}>
             <Typography variant="h4" component="div" gutterBottom sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
@@ -89,7 +94,7 @@ export default function FreshmanHandbook() {
               variant="scrollable"
               scrollButtons="auto"
               aria-label="basic tabs example"
-              sx={{ ".MuiTabs-flexContainer": { justifyContent: "center" } }}
+              sx={{ ".MuiTabs-flexContainer": { justifyContent: isMobile ? "left" : "center" } }}
             >
               <Tab
                 style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
@@ -154,3 +159,15 @@ export default function FreshmanHandbook() {
     </div>
   );
 }
+
+const theme = createTheme();
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <FreshmanHandbook />
+    </ThemeProvider>
+  );
+}
+
+export default App;
