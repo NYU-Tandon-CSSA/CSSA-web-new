@@ -31,9 +31,10 @@ function CustomTabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      style={{ maxWidth: "100%", overflowX: "auto" }}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 3, display: "flex", flexDirection: "row" }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -79,7 +80,6 @@ export default function FreshmanHandbook() {
           </Box>
         </Box>
       </Box>
-
       <Container maxWidth="lg" sx={{ marginBottom: "8%", paddingTop: "20px" }}>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
