@@ -86,6 +86,8 @@ export default function FreshmanHandbook() {
             <Tabs
               value={value}
               onChange={handleChange}
+              variant="scrollable"
+              scrollButtons="auto"
               aria-label="basic tabs example"
               sx={{ ".MuiTabs-flexContainer": { justifyContent: "center" } }}
             >
