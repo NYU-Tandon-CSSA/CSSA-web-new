@@ -234,7 +234,11 @@ export default function Visa() {
                             申请签证必备材料
                         </Typography>
                         <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-                            护照（有效期六个月以上），所有旧护照也需要一起带上
+                            护照（有效期六个月以上）
+                        </Typography>
+                        <Divider sx={{ width: '80%', my: 1 }} />
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                            所有旧护照(如有)
                         </Typography>
                         <Divider sx={{ width: '80%', my: 1 }} />
                         <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
