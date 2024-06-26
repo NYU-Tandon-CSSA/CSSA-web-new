@@ -123,13 +123,18 @@ function FreshmanHandbook() {
               />
               <Tab
                 style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
-                label="电话卡 / 银行卡"
+                label="电话卡"
                 {...a11yProps(5)}
               />
               <Tab
                 style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
-                label="学术"
+                label="银行卡"
                 {...a11yProps(6)}
+              />
+              <Tab
+                style={{ fontFamily: "YouSheBiaoTiHei", fontSize: "1.3rem" }}
+                label="学术"
+                {...a11yProps(7)}
               />
             </Tabs>
           </Box>
@@ -152,6 +157,9 @@ function FreshmanHandbook() {
             <SimCard />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={6}>
+            <BankCard />
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={7}>
             Li
           </CustomTabPanel>
         </Box>

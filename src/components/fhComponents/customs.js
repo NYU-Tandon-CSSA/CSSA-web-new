@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 // images
-import visaCover from '../../images/fhImage/visa_cover.jpg';
+import customCover from '../../images/fhImage/custom_cover.jpg';
 import NYUStartImage from '../../images/fhImage/NYUStartImg.png';
 
 // template setting
@@ -73,7 +73,7 @@ export default function Customs() {
                 <Box
                     sx={{
                         height: '300px',
-                        backgroundImage: `url(${visaCover})`,
+                        backgroundImage: `url(${customCover})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         display: 'flex',

@@ -10,6 +10,7 @@ import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 
 // image
+import rentCover from '../../images/fhImage/rent_cover.jpg';
 import walkUP from '../../images/fhImage/Walkup_Building.jpg'
 import apartment from '../../images/fhImage/Apartment.jpg'
 
@@ -45,6 +46,29 @@ export default function Rent() {
                 overflow: "hidden",
                 overflowY: "scroll"
             }}>
+                <Box
+                    sx={{
+                        height: '300px',
+                        backgroundImage: `url(${rentCover})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: '#fff',
+                        textShadow: '0 0 10px rgba(0,0,0,0.5)',
+                        mb: 4,
+                    }}
+                >
+                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+                        关于租房
+                    </Typography>
+                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                        这是简介。
+                    </Typography>
+                </Box>
+
                 <Typography variant="h6" gutterBottom>
                 租房是留学生来到美国面临的一个大问题。纽约房源众多，如何选到最满意的那一个？Tandon CSSA选择租房篇为新生手册的第三篇，为大家带来最全面、最专业并且最适合Tandon学生的房源分析。
                 </Typography>
