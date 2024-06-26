@@ -3,6 +3,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+// image
+import simCover from '../../images/fhImage/sim_cover.jpg';
+
 const theme = createTheme({
   typography: {
     // fontFamily: "YouSheBiaoTiHei",
@@ -36,6 +39,30 @@ export default function SimCard() {
           overflowY: "scroll",
         }}
       >
+
+<Box
+            sx={{
+                height: '300px',
+                backgroundImage: `url(${simCover})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: '#fff',
+                textShadow: '0 0 10px rgba(0,0,0,0.5)',
+                mb: 4,
+            }}
+        >
+            <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+                关于电话卡
+            </Typography>
+            <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                美国的电话卡在哪里购买？如何购买通讯套餐？
+            </Typography>
+        </Box>
+        
          <Typography variant="body" gutterBottom>
          提前准备好手机卡，不仅方便下飞机后及时跟父母报声平安，更便于联系接机同学，安排接下来的行程。那么美国的手机卡应该在哪里购买，如何购买呢？ 
          </Typography>

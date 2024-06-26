@@ -3,6 +3,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+// image
+import bankCover from '../../images/fhImage/bank_cover.jpg';
+
 const theme = createTheme({
   typography: {
     // fontFamily: "YouSheBiaoTiHei",
@@ -40,6 +43,29 @@ export default function SimCard() {
           overflowY: "scroll",
         }}
       >
+
+        <Box  
+            sx={{
+                height: '300px',
+                backgroundImage: `url(${bankCover})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: '#fff',
+                textShadow: '0 0 10px rgba(0,0,0,0.5)',
+                mb: 4,
+            }}
+        >
+            <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+                关于银行卡
+            </Typography>
+            <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                这是简介。
+            </Typography>
+        </Box>
         <Typography variant="h5" gutterBottom>
         国内信用卡及借记卡指南
         </Typography>
