@@ -76,8 +76,14 @@ function FreshmanHandbook() {
             <Typography variant="h4" component="div" gutterBottom sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
               新生手册
             </Typography>
+            <Typography variant="body1" component="div" sx={{ marginTop: 4}}>
+              欢迎大家加入NYU Tandon！
+            </Typography>
+            <Typography variant="body1" component="div" sx={{ marginTop: 2}}>
+              希望这份手册能够帮助大家更好地准备你的留学旅程。
+            </Typography>
             <Typography variant="body1" component="div" sx={{ marginTop: 2 }}>
-              这是引言。欢迎大家加入NYU Tandon！
+              内容仅供参考，请配合相关政府官网和NYU官网信息食用。
             </Typography>
           </Box>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
