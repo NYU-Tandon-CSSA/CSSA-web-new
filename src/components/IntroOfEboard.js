@@ -14,7 +14,7 @@ import SvgIcon from '@mui/joy/SvgIcon';
 import Divider from '@mui/material/Divider';
 
 
-function IntroOfEboard({name,position,year,intro,image}) {
+function IntroOfEboard({name,position,year,major,intro,image}) {
     return (
         <Card
         sx={{
@@ -42,6 +42,8 @@ function IntroOfEboard({name,position,year,intro,image}) {
           </Chip>
           <Typography level="title-lg">{name}</Typography>
           <Typography level="body-xs">Class of {year}</Typography>
+          <Typography level="body-xs">{major}</Typography>
+
 
           <Divider style={{width:'100%', backgroundColor: "#8900e1"}} />
 
