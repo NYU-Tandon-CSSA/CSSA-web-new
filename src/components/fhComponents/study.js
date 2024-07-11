@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import { Divider } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowRight, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import Link from '@material-ui/core/Link';
+
 
 // Image import
 import studyCover from '../../images/fhImage/nyu_study.jpg';
@@ -17,12 +19,14 @@ const theme = createTheme({
         fontWeight: "500",
         h3: {
             fontFamily: "YouSheBiaoTiHei",
+            textShadow: "2px 2px 4px black",
         },
         h5: {
             fontFamily: "YouSheBiaoTiHei",
         },
         h6: {
             fontFamily: "YouSheBiaoTiHei",
+            textShadow: "1px 1px 2px black",
         },
         subtitle1: {
             fontFamily: "YouSheBiaoTiHei",
@@ -114,8 +118,9 @@ export default function StudySupport() {
                 </Box>
 
                 <Typography variant="body1" gutterBottom>
-                    欢迎来到纽约大学！作为全球最具声誉的学术机构之一，我们致力于提供卓越的教育和丰富的学术资源，帮助你们实现学术和职业目标。希望本手册能为你们提供必要的指导，帮助你们顺利开展在NYU的学术旅程。
-                    在纽约大学求学期间，我们将全力支持你探索个人、学术和职业兴趣。以下是我们提供的顶级工具、服务、资源和机会：
+                欢迎加入纽约大学大家庭！我们非常高兴你选择了这个全球知名的学术殿堂。在NYU，我们不仅提供顶尖的教育资源，还致力于帮助你达成学术与职业的梦想。这份手册将引导你了解如何在NYU展开一段精彩的学术之旅。
+                在你的学习旅程中，纽约大学将全心全意地支持你探索个人、学术以及职业上的各种兴趣。下面列出了我们提供的一些顶级工具、服务、资源和机会，希望它们对你大有裨益。
+                （顺便一提，我们是NYU Tandon学生会，随时欢迎你的咨询和参与！）
                     <ul>
                         <li><strong>Albert</strong>: 注册课程并编辑个人信息</li>
                         <li><strong>Brightspace</strong>: 访问课程资料并与班级同学进行合作</li>
@@ -125,7 +130,13 @@ export default function StudySupport() {
                 </Typography>
 
                 <Typography variant="body1" gutterBottom>
-                    为满足上海纽约大学的毕业条件，学生须修满128个学分。所修课程须包括核心课程、专业课程及选修课程。
+                    为满足纽约大学本科的毕业条件，学生须修满128个学分。所修课程须包括核心课程、专业课程及选修课程。
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                    研究生的学分要求可以参考学校的
+                    <Link href="https://www.nyu.edu/admissions/graduate-admissions.html" target="_blank">
+                    官网
+                    </Link>，其中有详细的毕业学分要求。
                 </Typography>
 
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
@@ -200,6 +211,24 @@ export default function StudySupport() {
                         硕士论文是一项原创研究项目，在某些情况下，可能是之前研讨会或学期论文的独立成果。理想情况下，学生应在课程第二学期结束前与学术顾问会面，确定论文指导老师（如果尚未确定），并讨论他们拟定的论文主题。硕士论文必须由相关教职员工赞助和指导。
                     </Typography>
                 </Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                    <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
+                        毕业
+                    </Typography>
+                </Box>
+
+                <Box sx={lightPurpleBackground}>
+                    <Typography variant="body1" gutterBottom>
+                    学生毕业时间为九月、一月或五月。纽约大学所有学院的毕业典礼均于五月举行。若要在特定学期毕业，学生必须在申请截止日期前申请毕业。建议学生最迟在计划完成所有课程要求的学期开始前申请毕业。学生有责任了解计划毕业学期的截止日期，并将所有必要材料送至相关办公室。
+                    具体信息可以参考官网的<Link href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation.html" target="_blank">
+                    教务页面
+                    </Link>。
+                    </Typography>
+                </Box>
+                
+
             </Box>
         </ThemeProvider>
     );
