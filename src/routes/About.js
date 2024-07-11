@@ -143,17 +143,17 @@ export default function About() {
               position = " 技术与职业发展部部长"
               year = "2025"
               major = "M.S. Computer Engineering"
-              intro="非常淡人但是喜欢城市; 从初中开始就参加社团，策划过很多活动。希望可以在ITCD部门把自己的专业和社团活动也联系起来"
+              intro="非常淡人但是喜欢城市"
               image={winnie}/>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <IntroOfEboard 
               name = "张怡然 - Carol" 
               position = "外联部部长"
               year = "2026"
-              major = "B.S. Business and Technology Management"
-              intro="在E和I之间来回摇摆的ESFP，烘焙&美食&旅游&跳舞一级爱好者，AKA不会跳舞的KPOP人不是好厨子👩‍🍳梦想是带着2TB的胃走遍世界🌍; 分别在PM&外联游历一年"
+              major = "B.S. BTM"
+              intro="ESFP，烘焙&美食&旅游&跳舞一级爱好者，AKA不会跳舞的KPOP人不是好厨子"
               image={carol}/>
           </Grid>
 
@@ -210,12 +210,14 @@ export default function About() {
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name={<a href="https://www.linkedin.com/in/alice-zhang" target="_blank" rel="noopener noreferrer">张爱丽 - Alice</a>}
-              position = "2019-2020 Tandon CSSA主席"
-              year = "2020"
-              major = "B.S. Computer Science"
+              name="张爱丽 - Alice"
+              position="2019-2020 Tandon CSSA主席"
+              year="2020"
+              major="B.S. Computer Science"
               intro="现就职于Google，热衷于人工智能和机器学习"
-              image={unknow}/>
+              image={unknow}
+              linkedinUrl="https://www.linkedin.com/in/alice-zhang"
+            />
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -377,7 +379,7 @@ export default function About() {
             <IntroOfMembers
               name = "姚俊煜 - Tim"
               major = "Computer Engineering"
-              year = "2024"
+              year = "2023-2024"
               image = {tim}/>
           </Grid>
 
@@ -385,7 +387,7 @@ export default function About() {
             <IntroOfMembers
                 name = "苑林霏 - Helen"
                 major = "Computer Science"
-                year = "2026"
+                year = "2023-2024"
                 image = {helen}/>
           </Grid>
 
@@ -393,7 +395,7 @@ export default function About() {
             <IntroOfMembers
                 name = "严语 - Alex"
                 major = "Computer Science"
-                year = "2024"
+                year = "2023-2024"
                 image= {aelx}/>
           </Grid>
 
@@ -401,7 +403,7 @@ export default function About() {
             <IntroOfMembers
                 name = "吴伟宁 - Winnie"
                 major = "Computer Engineering"
-                year = "2025"
+                year = "2023-2025"
                 image = {winnie}/>
           </Grid>
 
@@ -409,7 +411,7 @@ export default function About() {
             <IntroOfMembers
                 name = "缪丝雨 - Mia"
                 major = "Applied Urban Science & Informatics"
-                year = "2025"
+                year = "2023-2024"
                 image= {mia}/>
           </Grid>
 
@@ -417,7 +419,7 @@ export default function About() {
             <IntroOfMembers
                 name = "李卓伦"
                 major = "Computer Engineering"
-                year = "2025"
+                year = "2023-2025"
                 image={unknow}/>
           </Grid>
 
@@ -425,7 +427,7 @@ export default function About() {
             <IntroOfMembers
                 name = "胡泽西"
                 major = "Computer Engineering"
-                year = "2025"
+                year = "2023-2025"
                 image={unknow}/>
           </Grid>
 
@@ -433,7 +435,7 @@ export default function About() {
             <IntroOfMembers
                 name = "周亦桥"
                 major = "Computer Science"
-                year = "2026"
+                year = "2023-2025"
                 image = {yi}/>
           </Grid>
 
@@ -441,7 +443,7 @@ export default function About() {
             <IntroOfMembers
                 name = "张丰泽"
                 major = "Computer Science"
-                year = "2024"
+                year = "2023-2024"
                 image = {unknow}/>
           </Grid>
 
@@ -449,7 +451,7 @@ export default function About() {
             <IntroOfMembers
                 name = "Mark"
                 major = "Computer Science"
-                year = "2026"
+                year = "2023-2024"
                 image = {unknow}/>
           </Grid>
         </Grid>

@@ -12,14 +12,14 @@ import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import SvgIcon from '@mui/joy/SvgIcon';
 import Divider from '@mui/material/Divider';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-
-function IntroOfEboard({name,position,year,major,intro,image}) {
+function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
     return (
         <Card
         sx={{
           width: '80%',
-          minHeight: '330px',
+          minHeight: '380px',
           maxWidth: '100%',
           boxShadow: 'lg',
           margin: 'auto',
@@ -132,6 +132,16 @@ function IntroOfEboard({name,position,year,major,intro,image}) {
             </ButtonGroup>
           </CardActions>
         </CardOverflow> */}
+        <CardActions sx={{ marginTop: 'auto', justifyContent: 'flex-end' }}>
+        {linkedinUrl && (
+          <IconButton 
+            aria-label="linkedin" 
+            onClick={() => window.open(linkedinUrl, '_blank', 'noopener,noreferrer')}
+          >
+            <LinkedInIcon />
+          </IconButton>
+        )}
+      </CardActions>
       </Card>
     );
 

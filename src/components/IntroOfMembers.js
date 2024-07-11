@@ -32,7 +32,7 @@ function IntroOfMembers({name, major, year, image}) {
             Major :  {major}
         </Typography>
         <Typography level="body-sm" aria-describedby="card-description" mb={1}>
-            Class of {year}
+            From {year}
         </Typography>
         {/* <Chip
           variant="outlined"
