@@ -19,7 +19,7 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
         <Card
         sx={{
           width: '80%',
-          minHeight: '380px',
+          minHeight: '400px',
           maxWidth: '100%',
           boxShadow: 'lg',
           margin: 'auto',

@@ -36,6 +36,7 @@ import mia from '../images/members/Mia.jpg'
 
 import IntroOfMembers from '../components/IntroOfMembers.js';
 import IntroOfEboard from '../components/IntroOfEboard.js';
+import IntroOfDevTeam from "../components/IntroOfDevTeam.js";
 
 
 export default function About() {
@@ -68,7 +69,7 @@ export default function About() {
           </Grid> */}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2023 - 2024</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2024 - 2025</Typography>
             {/* <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography> */}
           </Grid>
 
@@ -204,7 +205,7 @@ export default function About() {
           </Grid>
           <Grid item xs={12}>
             <Typography class='Silkscreen' style={{fontSize:"120%", marginBottom: '20px'}}>
-              欢迎点击链接connect Linkedin
+              欢迎点击卡片右下角链接connect Linkedin
             </Typography>
           </Grid>
 
@@ -222,35 +223,37 @@ export default function About() {
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name={<a href="https://www.linkedin.com/in/bob-li" target="_blank" rel="noopener noreferrer">李博 - Bob</a>}
+              name="李博 - Bob"
               position = "2020-2021 Tandon CSSA主席"
               year = "2021"
               major = "B.S. Electrical Engineering"
               intro="目前在特斯拉工作，专注于电动汽车技术创新"
-              image={unknow}/>
+              image={unknow}
+              linkedinUrl="https://www.linkedin.com/in/bob-li"/>
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name={<a href="https://www.linkedin.com/in/cindy-wang" target="_blank" rel="noopener noreferrer">王晨 - Cindy</a>}
+              name="王晨 - Cindy"
               position = "2021-2022 Tandon CSSA主席"
               year = "2022"
               major = "B.S. Chemical Engineering"
               intro="现在在阿布扎比的石油公司工作，致力于可持续能源研究"
-              image={unknow}/>
+              image={unknow}
+              linkedinUrl="https://www.linkedin.com/in/cindy-wang"/>
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name={<a href="https://www.linkedin.com/in/david-chen" target="_blank" rel="noopener noreferrer">陈大伟 - David</a>}
+              name="陈大伟 - David"
               position = "2022-2023 Tandon CSSA主席"
               year = "2023"
               major = "B.S. Mechanical Engineering"
               intro="目前在波音公司工作，参与航空航天技术开发"
-              image={unknow}/>
+              image={unknow}
+              linkedinUrl="https://www.linkedin.com/in/david-chen"/>
           </Grid>
           
-
           <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>ADVISOR COMMITTEE</Typography>
           </Grid>
@@ -375,8 +378,8 @@ export default function About() {
             }} />
           </Grid>
           
-          <Grid item xs={12} md={6}>
-            <IntroOfMembers
+          <Grid item xs={12} md={6} >
+            <IntroOfDevTeam
               name = "姚俊煜 - Tim"
               major = "Computer Engineering"
               year = "2023-2024"
@@ -384,7 +387,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "苑林霏 - Helen"
                 major = "Computer Science"
                 year = "2023-2024"
@@ -392,7 +395,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "严语 - Alex"
                 major = "Computer Science"
                 year = "2023-2024"
@@ -400,7 +403,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "吴伟宁 - Winnie"
                 major = "Computer Engineering"
                 year = "2023-2025"
@@ -408,7 +411,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "缪丝雨 - Mia"
                 major = "Applied Urban Science & Informatics"
                 year = "2023-2024"
@@ -416,7 +419,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "李卓伦"
                 major = "Computer Engineering"
                 year = "2023-2025"
@@ -424,7 +427,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "胡泽西"
                 major = "Computer Engineering"
                 year = "2023-2025"
@@ -432,7 +435,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "周亦桥"
                 major = "Computer Science"
                 year = "2023-2025"
@@ -440,7 +443,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "张丰泽"
                 major = "Computer Science"
                 year = "2023-2024"
@@ -448,7 +451,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <IntroOfMembers
+            <IntroOfDevTeam
                 name = "Mark"
                 major = "Computer Science"
                 year = "2023-2024"
