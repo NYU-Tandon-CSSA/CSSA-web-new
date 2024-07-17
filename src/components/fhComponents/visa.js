@@ -16,13 +16,16 @@ const theme = createTheme({
         fontFamily: "Noto Sans SC",
         fontWeight: "500",
         h5: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         h6: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
+        },
+        intro: {
+            fontFamily: "Noto Sans SC",
         },
         subtitle1: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         }
     },
 });

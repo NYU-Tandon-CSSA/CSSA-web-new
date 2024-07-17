@@ -67,3 +67,13 @@ code {
 .MuiPaper-elevation4 {
   box-shadow: none;
 }
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+
+.noto-sans-sc-intro {
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

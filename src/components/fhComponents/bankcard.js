@@ -8,13 +8,11 @@ import bankCover from '../../images/fhImage/bank_cover.jpg';
 
 const theme = createTheme({
   typography: {
-    // fontFamily: "YouSheBiaoTiHei",
     fontFamily: "Noto Sans SC",
-    // fontSize: 15,
-    fontWeight: "500",
+    fontWeight: "400",
     h5: {
-      fontFamily: "YouSheBiaoTiHei",
-      fontWeight: "bold",
+      fontFamily: "Noto Sans SC",
+      fontWeight: "500",
       // color: "#E1BEE7" 
     },
     h6: {
@@ -25,7 +23,8 @@ const theme = createTheme({
       
     },
     body: {
-      fontFamily: "YouSheBiaoTiHei",
+      fontFamily: "Noto Sans SC",
+      fontWeight: "400",
       fontSize: 17,
     },
   },
