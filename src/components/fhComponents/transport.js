@@ -56,7 +56,7 @@ export default function Transport() {
                 关于交通
             </Typography>
             <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
-                公共交通是首选。
+                在纽约，公共交通是首选。
             </Typography>
         </Box>
         
