@@ -10,7 +10,7 @@ import Link from '@material-ui/core/Link';
 
 
 // Image import
-import studyCover from '../../images/fhImage/nyu_study.jpg';
+import academicCover from '../../images/fhImage/academic_cover.jpg';
 
 // Theme setup
 const theme = createTheme({
@@ -83,7 +83,7 @@ const listItemTitleStyle = {
     display: 'inline',
 };
 
-export default function StudySupport() {
+export default function Academic() {
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -97,7 +97,7 @@ export default function StudySupport() {
                 <Box
                     sx={{
                         height: '300px',
-                        backgroundImage: `url(${studyCover})`,
+                        backgroundImage: `url(${academicCover})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         display: 'flex',
@@ -110,7 +110,7 @@ export default function StudySupport() {
                     }}
                 >
                     <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
-                        关于纽约大学学术
+                        关于学术
                     </Typography>
                     <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
                         纽约大学的毕业要求是什么？是否有找研究的机会？

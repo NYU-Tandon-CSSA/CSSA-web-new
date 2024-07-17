@@ -21,7 +21,7 @@ import Transport from "../components/fhComponents/transport";
 import Customs from "../components/fhComponents/customs";
 import SimCard from "../components/fhComponents/simCard";
 import BankCard from "../components/fhComponents/bankcard";
-import StudySupport from "../components/fhComponents/study"
+import Academic from "../components/fhComponents/academic";
 import { useEffect } from "react";
 
 function CustomTabPanel(props) {
@@ -167,7 +167,7 @@ function FreshmanHandbook() {
             <BankCard />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={7}>
-            <StudySupport />
+            <Academic />
           </CustomTabPanel>
         </Box>
       </Container>
