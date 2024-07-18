@@ -174,7 +174,7 @@ export default function BankCard() {
         <Box sx={lightPurpleBackground}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', my: 3, flexDirection: { xs: 'column', md: 'row' } }}>
             <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-              办好银行账户和借记卡后，可以考虑申请信用卡。申请信用卡通常需要你拥有SSN（你需要在美国找到一份工作）。Chase银行需要你在账户中存有至少1000美元才能申请Freedom Rise卡；而BoA银行的Customized Cash Rewards卡则不需要SSN，存款越多，获批几率越高，信用额度也越高。其他银行如申请Discover It卡则需要SSN。
+              办好银行账户和借记卡后，可以考虑申请信用卡。申请信用卡通常需要你拥有SSN。Chase银行需要你在账户中存有至少1000美元才能申请Freedom Rise卡；而BoA银行的Customized Cash Rewards卡则不需要SSN，存款越多，获批几率越高，信用额度也越高。其他银行如申请Discover It卡则需要SSN。
               F1学生可以通过在校内找任何工作获取SSN，工作类型和时长不限。
             </Typography>
           </Box> 
