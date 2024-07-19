@@ -6,7 +6,7 @@ import CardContent from '@mui/joy/CardContent';
 import Chip from '@mui/joy/Chip';
 import Typography from '@mui/joy/Typography';
 
-function IntroOfMembers({name, major, year, image}) {
+function IntroOfDevTeam({name, major, year, image}) {
   return (
     <Card
       variant="outlined"
@@ -14,7 +14,7 @@ function IntroOfMembers({name, major, year, image}) {
       sx={{
         width: 399,
         margin: "auto",
-        minHeight:'400px'
+        minHeight:'80px'
         // '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
       }}
     >
@@ -48,4 +48,4 @@ function IntroOfMembers({name, major, year, image}) {
   );
 }
 
-export default IntroOfMembers;
+export default IntroOfDevTeam;
