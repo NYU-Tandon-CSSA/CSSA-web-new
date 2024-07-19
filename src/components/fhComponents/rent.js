@@ -1,13 +1,13 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Grid, CardActionArea } from '@mui/material';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import { Grid, CardActionArea,useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import List from '@mui/material/List';
-import ListItemText from '@mui/material/ListItemText';
+
 
 // image
 import rentCover from '../../images/fhImage/rent_cover.jpg';
@@ -15,28 +15,72 @@ import walkUP from '../../images/fhImage/Walkup_Building.jpg'
 import apartment from '../../images/fhImage/Apartment.jpg'
 import luxury from '../../images/fhImage/luxury-apartment.jpg';
 
+// template setting
 const theme = createTheme({
     typography: {
-        // fontFamily: "YouSheBiaoTiHei",
         fontFamily: "Noto Sans SC",
-        // fontSize: 15,
-        fontWeight:"500",
-        h6:{
-            fontFamily: "YouSheBiaoTiHei",
+        fontWeight: "500",
+        h5: {
+            fontFamily: "Noto Sans SC",
         },
-        h5:{
-            fontFamily: "YouSheBiaoTiHei",
+        h6: {
+            fontFamily: "Noto Sans SC",
         },
-        h4:{
-            fontFamily: "YouSheBiaoTiHei",
-        },
-        subtitle1:{
-            fontFamily: "YouSheBiaoTiHei",
+        subtitle1: {
+            fontFamily: "Noto Sans SC",
         }
     },
-  });
+});
+
+const iconStyle = {
+    color: '#57068c',
+    fontSize: '1.5rem',
+    marginRight: '8px'
+};
+
+const noticeStyle = {
+    border: '2px solid #af7ac5',
+    padding: '16px',
+    marginBottom: '16px',
+    borderRadius: '8px',
+    backgroundColor: '#f9f6ff',
+    display: 'flex',
+    alignItems: 'flex-start',
+    mt: 4, 
+    mb: 4,
+};
+
+const exclamationIconStyle = {
+    color: '#af7ac5',
+    fontSize: '1.5rem',
+    marginRight: '8px'
+};
+
+const lightPurpleBackground = {
+    backgroundColor: '#f9f6ff',
+    borderRadius: '8px',
+    padding: '16px',
+    marginBottom: '16px',
+};
+
+const listItemStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    listStyleType: 'none',
+    marginBottom: '16px',
+};
+
+const listItemTitleStyle = {
+    fontWeight: 'bold',
+    color: '#57068c',
+    display: 'inline',
+};
 
 export default function Rent() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -60,12 +104,13 @@ export default function Rent() {
                         color: '#fff',
                         textShadow: '0 0 10px rgba(0,0,0,0.5)',
                         mb: 4,
+                        padding: isMobile ? '20px' : '0', 
                     }}
                 >
-                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8, fontSize: { xs: '1.5rem', md: '3rem' } }}>
                         关于租房
                     </Typography>
-                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8, fontSize: { xs: '1rem', md: '1.5rem' } }}>
                         本篇针对校外租房。
                     </Typography>
                 </Box>

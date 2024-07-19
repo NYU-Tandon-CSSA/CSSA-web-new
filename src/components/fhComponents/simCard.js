@@ -1,9 +1,10 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useMediaQuery } from '@mui/material';
 
 // Image import
 import simCover from '../../images/fhImage/sim_cover.jpg';
@@ -45,6 +46,8 @@ const sectionStyle = {
 };
 
 export default function SimCard() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <ThemeProvider theme={theme}>
             <Box sx={{
@@ -53,23 +56,26 @@ export default function SimCard() {
                 flexDirection: "column",
                 overflow: "hidden"
             }}>
-                <Box sx={{
-                    height: '300px',
-                    backgroundImage: `url(${simCover})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    color: '#fff',
-                    textShadow: '0 0 10px rgba(0,0,0,0.5)',
-                    mb: 4,
-                }}>
-                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+                <Box
+                    sx={{
+                        height: '300px',
+                        backgroundImage: `url(${simCover})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: '#fff',
+                        textShadow: '0 0 10px rgba(0,0,0,0.5)',
+                        mb: 4,
+                        padding: isMobile ? '20px' : '0', 
+                    }}
+                >
+                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8, fontSize: { xs: '1.5rem', md: '3rem' } }}>
                         关于电话卡
                     </Typography>
-                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8, fontSize: { xs: '1rem', md: '1.5rem' } }}>
                         美国的电话卡在哪里购买？如何购买通讯套餐？
                     </Typography>
                 </Box>

@@ -103,6 +103,7 @@ export default function Customs() {
                         color: '#fff',
                         textShadow: '0 0 10px rgba(0,0,0,0.5)',
                         mb: 4,
+                        padding: isMobile ? '20px' : '0', 
                     }}
                 >
                     <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8, fontSize: { xs: '1.5rem', md: '3rem' } }}>

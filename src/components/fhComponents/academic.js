@@ -93,25 +93,26 @@ export default function Academic() {
                     overflow: "hidden"
                 }}
             >
-                <Box
-                    sx={{
-                        height: '300px',
-                        backgroundImage: `url(${academicCover})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        color: '#fff',
-                        textShadow: '0 0 10px rgba(0,0,0,0.5)',
-                        mb: 4,
-                    }}
-                >
-                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+            <Box
+                sx={{
+                    height: '300px',
+                    backgroundImage: `url(${academicCover})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    color: '#fff',
+                    textShadow: '0 0 10px rgba(0,0,0,0.5)',
+                    mb: 4,
+                    padding: isMobile ? '20px' : '0', 
+                }}
+            >
+                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8, fontSize: { xs: '1.5rem', md: '3rem' } }}>
                         关于学术
                     </Typography>
-                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8, fontSize: { xs: '1rem', md: '1.5rem' } }}>
                         我们的资源和平台
                     </Typography>
                 </Box>
