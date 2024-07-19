@@ -162,7 +162,7 @@ export default function Academic() {
                             </a>
                         </span>
                         <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-                            保持你的NYU邮箱的24小时登录。很多重要信息都会通过邮件直接发送到你的NYU专属邮箱
+                            记得保持你的NYU邮箱的24小时登录。很多重要信息都会通过邮件直接发送到你的NYU专属邮箱
                         </Typography>
                         </li>
 
