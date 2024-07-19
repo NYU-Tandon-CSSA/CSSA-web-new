@@ -192,7 +192,7 @@ export default function About() {
 
           
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>WALL OF FAME</Typography>
           </Grid>
           <Grid item xs={12}>
@@ -252,7 +252,7 @@ export default function About() {
               intro="目前在波音公司工作，参与航空航天技术开发"
               image={unknow}
               linkedinUrl="https://www.linkedin.com/in/david-chen"/>
-          </Grid>
+          </Grid> */}
           
           <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>ADVISOR COMMITTEE</Typography>
