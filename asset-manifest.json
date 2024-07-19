@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dac5169f.css",
-    "main.js": "/static/js/main.96637edb.js",
+    "main.js": "/static/js/main.f3efa4f9.js",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
@@ -47,6 +47,7 @@
     "static/media/MiaSong.jpg": "/static/media/MiaSong.d5bc6eb8b3b914169565.jpg",
     "static/media/Alex.jpg": "/static/media/Alex.265a8d5c40c5b839e171.jpg",
     "static/media/Walkup_Building.jpg": "/static/media/Walkup_Building.aadd5934e47dcc79021e.jpg",
+    "static/media/Andrew.jpg": "/static/media/Andrew.5e3181d2c35851dc2352.jpg",
     "static/media/Max.jpg": "/static/media/Max.980a0269e7921c1291f8.jpg",
     "static/media/Gerald.jpg": "/static/media/Gerald.14e8992d8f7a49fc0373.jpg",
     "static/media/Stephanie.jpg": "/static/media/Stephanie.986e476c9a6a41927381.jpg",
@@ -56,10 +57,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.dac5169f.css.map": "/static/css/main.dac5169f.css.map",
-    "main.96637edb.js.map": "/static/js/main.96637edb.js.map"
+    "main.f3efa4f9.js.map": "/static/js/main.f3efa4f9.js.map"
   },
   "entrypoints": [
     "static/css/main.dac5169f.css",
-    "static/js/main.96637edb.js"
+    "static/js/main.f3efa4f9.js"
   ]
 }
