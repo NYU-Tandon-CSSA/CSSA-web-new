@@ -149,7 +149,7 @@ function FreshmanHandbook() {
             <Visa />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1} id="pack">
-            Xi
+            
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
             <Customs />
