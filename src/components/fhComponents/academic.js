@@ -1,50 +1,45 @@
-import React from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import { Divider } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowRight, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import { Divider, useMediaQuery } from '@mui/material';
+import CustomSteps from './customSteps';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleArrowRight, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import Link from '@material-ui/core/Link';
 
 
 // Image import
 import academicCover from '../../images/fhImage/academic_cover.jpg';
+import albert from '../../images/fhImage/NYUAlbert.png';
+import photo1 from '../../images/fhImage/academic.jpg';
 
 // Theme setup
+// template setting
 const theme = createTheme({
     typography: {
         fontFamily: "Noto Sans SC",
         fontWeight: "500",
-        h3: {
-            fontFamily: "YouSheBiaoTiHei",
-            textShadow: "2px 2px 4px black",
-        },
         h5: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         h6: {
-            fontFamily: "YouSheBiaoTiHei",
-            textShadow: "1px 1px 2px black",
+            fontFamily: "Noto Sans SC",
         },
         subtitle1: {
-            fontFamily: "YouSheBiaoTiHei",
-        },
-        body1: {
-            fontFamily: "Kaiti SC", 
-            fontSize: '1.2rem', 
-        },
+            fontFamily: "Noto Sans SC",
+        }
     },
-});
-
-const iconStyle = {
+  });
+  
+  const iconStyle = {
     color: '#57068c',
     fontSize: '1.5rem',
     marginRight: '8px'
-};
-
-const noticeStyle = {
+  };
+  
+  const noticeStyle = {
     border: '2px solid #af7ac5',
     padding: '16px',
     marginBottom: '16px',
@@ -54,36 +49,40 @@ const noticeStyle = {
     alignItems: 'flex-start',
     mt: 4, 
     mb: 4,
-};
-
-const exclamationIconStyle = {
+  };
+  
+  const exclamationIconStyle = {
     color: '#af7ac5',
     fontSize: '1.5rem',
     marginRight: '8px'
-};
-
-const lightPurpleBackground = {
+  };
+  
+  const lightPurpleBackground = {
     backgroundColor: '#f9f6ff',
     borderRadius: '8px',
     padding: '16px',
     marginBottom: '16px',
-};
-
-const listItemStyle = {
+  };
+  
+  const listItemStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     listStyleType: 'none',
     marginBottom: '16px',
-};
-
-const listItemTitleStyle = {
+  };
+  
+  const listItemTitleStyle = {
     fontWeight: 'bold',
     color: '#57068c',
     display: 'inline',
-};
+  };
+  
 
 export default function Academic() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -113,120 +112,265 @@ export default function Academic() {
                         关于学术
                     </Typography>
                     <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
-                        纽约大学的毕业要求是什么？是否有找研究的机会？
+                        我们的资源和平台
                     </Typography>
                 </Box>
 
-                <Typography variant="body1" gutterBottom>
-                欢迎加入纽约大学大家庭！我们非常高兴你选择了这个全球知名的学术殿堂。在NYU，我们不仅提供顶尖的教育资源，还致力于帮助你达成学术与职业的梦想。这份手册将引导你了解如何在NYU展开一段精彩的学术之旅。
-                在你的学习旅程中，纽约大学将全心全意地支持你探索个人、学术以及职业上的各种兴趣。下面列出了我们提供的一些顶级工具、服务、资源和机会，希望它们对你大有裨益。
-                （顺便一提，我们是NYU Tandon学生会，随时欢迎你的咨询和参与！）
-                    <ul>
-                        <li><strong>Albert</strong>: 注册课程并编辑个人信息</li>
-                        <li><strong>Brightspace</strong>: 访问课程资料并与班级同学进行合作</li>
-                        <li><strong>StudentLink</strong>: 提供账单、助学金、注册等相关帮助</li>
-                        <li><strong>学术日历</strong>: 浏览重要日期和截止时间</li>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
+                    <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
+                        NYU学生常用系统
+                    </Typography>
+                </Box>
+                <Box sx={lightPurpleBackground}>
+                <Typography gutterBottom component="div" sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
+                    <ul style={{ paddingLeft: '0' }}>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}>
+                            <a href="https://albert.nyu.edu/albert_index.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 NYU Albert
+                            </a>
+                            </span>
+                            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                                NYU的主要学生信息系统，用于课程注册、查看成绩单、查看学费账单、管理个人信息等。在你的Albert主页，就可以查询到NYU正在开放的课程，包括开课状态，教授，上课时间地点等等，并在这里直接进行选课。
+                                戳
+                                <a href="https://meet.nyu.edu/academics/your-guide-to-course-registration-at-nyu/"
+                                style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                    这里
+                                </a>看选课攻略。
+                            </Typography> 
+                            <div style={{ textAlign: 'center', marginTop: '30px', marginBottom:'30px' }}>
+                                <img src={albert} alt="NYU Albert" style={{ width: '70%', height: 'auto' }} />
+                            </div>  
+                        </li>
+                        
+                        <li style={listItemStyle}><span style={listItemTitleStyle}>
+                            <a href="https://www.nyu.edu/life/information-technology/teaching-and-learning-services/instructional-tools/nyu-lms-brightspace.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Brightspace
+                            </a>
+                        </span>
+                        <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                            课程管理系统。教授会把课程大纲，学习资料，公告，作业，成绩，课堂录像等等材料上传到这个平台。学生则主要在这里获取学习资料，提交作业，进行在线考试，查询成绩。
+                        </Typography>
+                        </li>
+
+                        <li style={listItemStyle}><span style={listItemTitleStyle}>
+                            <a href="https://www.nyu.edu/life/information-technology/communication-and-collaboration/email-and-communication/nyu-email.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 NYU Gmail邮箱
+                            </a>
+                        </span>
+                        <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                            保持你的NYU邮箱的24小时登录。很多重要信息都会通过邮件直接发送到你的NYU专属邮箱
+                        </Typography>
+                        </li>
+
+                        <li style={listItemStyle}><span style={listItemTitleStyle}>
+                            <a href="https://piazza.com/nyu"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Piazza
+                            </a>
+                        </span>
+                        <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                            Piazza 是一个在线问答论坛，学生之间和学生与教授、TA之间可以通过这个论坛平台就课程相关的问题进行交流和讨论，比如问作业，问考试要求等等。看教授开学后给到的具体指引，他们也可能会用其他论坛式平台来交流问题，比如Slack。
+                        </Typography>
+                        </li>             
+                        </ul>
+                    </Typography>
+                </Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
+                    <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
+                        信息查询
+                    </Typography>
+                </Box>
+
+                <Box sx={lightPurpleBackground}>
+                    <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                        碰到任何学术相关具体的问题（选课、毕业要求等）都可以联系你的academic advisor，学校会邮件告知你谁是你的advisor，也可以在NYU Albert的Academic板块看到你的advisor信息。对于一些比较重要的问题，建议都和advisor进行二次确认。
+                    </Typography>
+                    <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                        另外，向NYU的微信群/学长学姐提问也会得到一些比较实用的建议。
+                    </Typography>
+                    <Typography gutterBottom component="div" sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}></Typography>
+                    <Typography variant="h6" sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold', fontSize: { xs: '1rem', md: '1.5rem' } }}>
+                        重要信息链接汇总
+                    </Typography>
+                    
+                    <Box sx={{ display: 'flex', justifyContent: 'left', alignItems: 'center', my: 0, flexDirection: { xs: 'column', md: 'row' } }}>
+                    <Typography gutterBottom component="div" sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
+                    <ul style={{ paddingLeft: '0' }}>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 学术日历：
+                            <a href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/academic-calendar.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Academic Calendar
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 学术诚信政策：
+                            <a href="https://engineering.nyu.edu/life-tandon/student-life/student-advocacy/student-code-conduct"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Student Code of Conduct
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 成绩和GPA：
+                            <a href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/transcripts-certifications-grades/grades.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Grades
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 工院项目：
+                            <a href="https://engineering.nyu.edu/academics/programs"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Programs
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 学位进度：
+                            <a href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/albert-help/training/students/degree-progress-report.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Degree Progress Report
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 毕业申请：
+                            <a href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/graduation-and-diplomas/graduation-information.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Applying for Graduation
+                            </a>
+                        </span>
+                        </li>
                     </ul>
-                </Typography>
+                    </Typography>
 
-                <Typography variant="body1" gutterBottom>
-                    为满足纽约大学本科的毕业条件，学生须修满128个学分。所修课程须包括核心课程、专业课程及选修课程。
-                </Typography>
-                <Typography variant="body1" gutterBottom>
-                    研究生的学分要求可以参考学校的
-                    <Link href="https://www.nyu.edu/admissions/graduate-admissions.html" target="_blank">
-                    官网
-                    </Link>，其中有详细的毕业学分要求。
-                </Typography>
+                    <Box
+                        component="img"
+                        src={photo1}
+                        alt="NYU academic"
+                        sx={{ width: { xs: '80%', md: '40%' }, height: 'auto', ml: 'auto', mr: 'auto', mb:'auto', mt: { xs: 3, md: 0 } }}
+                        />                    
+                    </Box>
+                </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
                     <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
-                        图书馆和研究资源
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
+                        图书馆
                     </Typography>
                 </Box>
-
                 <Box sx={lightPurpleBackground}>
-                    <Typography variant="body1" gutterBottom>
-                        NYU拥有丰富的图书馆资源，包括：
-                        <ul>
-                            <li><strong>Bobst 图书馆</strong>: 主要的学术图书馆，提供广泛的书籍、期刊和电子资源。</li>
-                            <li><strong>法律图书馆</strong>: 专为法学院学生提供法律资源和研究支持。</li>
-                            <li><strong>医学图书馆</strong>: 为医学院学生和教职员工提供医学研究资源。</li>
-                        </ul>
+                    <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                        工院学生最常去的两个图书馆，一个是Tandon校区的
+                        <a href="https://library.nyu.edu/locations/bern-dibner-library/"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Bern Dibner Library of Science and Technology
+                        </a>
+                        以及Washington Square主校区的
+                        <a href="https://www.nyu.edu/academics/libraries/elmer-holmes-bobstlibrary.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                 Elmer Holmes Bobst Library
+                        </a>。
+                        两个图书馆都有大量的自习空间，但相对来说Tandon校区的Dibner图书馆人更少，更容易抢到位置，桌子也更大，而且Dibner离我们一般上课的地方更近。图书馆内还有几台打印机供大家使用，每个学生一学期有50刀的打印额度。凭学生id就可以使用打印机。如果想要提前预约自习室，可以通过以下链接申请。预约一般很快就会通过。
+                        
+                        <ul style={{ paddingLeft: '0' }}>
+                            <li style={listItemStyle}><span style={listItemTitleStyle}> 小组自习室：
+                                <a href="https://library.nyu.edu/spaces/dibner-group-study-rooms/"
+                                style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                    Dibner Group Study Rooms
+                                </a>
+                            </span>
+                            </li>
+                            <li style={listItemStyle}><span style={listItemTitleStyle}> 单人自习室：
+                                <a href="https://library.nyu.edu/spaces/dibner-individual-study-rooms/"
+                                style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                    Dibner Individual Study Rooms
+                                </a>
+                            </span>
+                            </li>
+                        </ul>                       
                     </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
                     <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
-                        学术辅导和支持
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
+                        Research机会
                     </Typography>
                 </Box>
-
                 <Box sx={lightPurpleBackground}>
-                    <Typography variant="body1" gutterBottom>
-                        NYU提供多种学术辅导和支持服务，包括：
-                        <ul>
-                            <li><strong>写作中心</strong>: 帮助学生提升写作能力。</li>
-                            <li><strong>数学辅导中心</strong>: 提供数学和统计学的辅导。</li>
-                            <li><strong>语言学习支持</strong>: 帮助非母语学生提升语言能力。</li>
-                        </ul>
+                    <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                        如果想要获得更多research的机会，还是鼓励大家多去和学校的教授进行networking。你的academic advisor也可能会给你发邮件，推送最近学校教授正在进行并有意招募的项目。以下也有一些给大家推荐的渠道，可以点击了解详情：
+                    <ul style={{ paddingLeft: '0' }}>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> VIP项目：
+                            <a href="https://engineering.nyu.edu/research-innovation/student-research/vertically-integrated-projects"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                Vertically Integrated Projects
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> UGSRP：
+                            <a href="https://engineering.nyu.edu/research-innovation/student-research/undergraduate-summer-research-program"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                Undergraduate Summer Research Program
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> 其他实验室：
+                            <a href="https://engineering.nyu.edu/research/labs-and-groups"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                Labs and Groups
+                            </a>
+                        </span>
+                        </li>
+                    </ul>         
                     </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
                     <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
-                        成绩评定
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
+                        职业发展
                     </Typography>
                 </Box>
-
                 <Box sx={lightPurpleBackground}>
-                    <Typography variant="body1" gutterBottom>
-                        NYU采用字母评分系统（A、B、C等），每个课程的成绩将计入学生的GPA。学生需保持一定的GPA以维持良好的学术状态。以下是评分标准：
-                        <ul>
-                            <li>A：优秀（4.0）</li>
-                            <li>B：良好（3.0）</li>
-                            <li>C：及格（2.0）</li>
-                            <li>D：低于标准（1.0）</li>
-                            <li>F：不及格（0.0）</li>
-                        </ul>
-                        学生应在每学期注册之前与学术顾问一起查看课程安排，以确保他们能够按时完成学位。NYU希望学生在秋季和春季学期都参加课程，直到满足学位要求。没有参加课程但仍在努力完成其他要求（如论文、实习或语言）的学生必须参加维持入学计划。 
-                        某些课程需要获得教师或课程的特别许可，学生才能注册。这些课程在 Albert 课程搜索和课程表网页列表中列出。想要参加这些课程之一的学生应按照说明上的指示进行操作。如需更多说明，请联系教务处并提供课程编号和标题。 
+                    <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                        在美国，Networking对于求职也至关重要。建议大家善用LinkedIn去和行业内的人多建立联系和交流。
+                        如果想要拓展自己的技能，也可以留意NYU的邮箱，NYU会给大家推送一些有针对性的Bootcamp，比如Data Science Bootcamp。
+                        另外，NYU系统内还有这些平台可以帮助大家找工作和实习机会：
+                    <ul style={{ paddingLeft: '0' }}>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> Handshake平台：
+                            <a href="https://nyu.joinhandshake.com/"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                NYU Handshake
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> Wasserman Career Center：
+                            <a href="https://www.nyu.edu/students/student-information-and-resources/career-development-and-jobs.html"
+                            style={{ color: '#402E7A', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                                Wasserman Center for Career Development
+                            </a>
+                        </span>
+                        </li>
+                        <li style={listItemStyle}><span style={listItemTitleStyle}> Career fair：
+                        </span>
+                        <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                                NYU每学期基本都会举办Career Fair，大家可以去和公司直接沟通，给他们看简历。主校区的Career Fair一般是线下形式，而Tandon一般是线上。
+                            </Typography>
+                        </li>
+                    </ul> 
                     </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                    <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
-                        论文要求
-                    </Typography>
-                </Box>
 
-                <Box sx={lightPurpleBackground}>
-                    <Typography variant="body1" gutterBottom>
-                        学位论文部分允许学生根据自己的兴趣研究课题，并根据他们在纽约大学的课程和导师指导下完成的工作来选择。学生应与他们选择的合作教师协商后选择论文主题。
-                        所有学生都必须在所选的学习领域撰写一篇论文。两名教员（其中一人为学生的导师）将对论文进行评估。论文可以基于课程学期论文，但仍然应是一份独立的研究工作，通常在 50 页或更多页的范围内。
-                        硕士论文是一项原创研究项目，在某些情况下，可能是之前研讨会或学期论文的独立成果。理想情况下，学生应在课程第二学期结束前与学术顾问会面，确定论文指导老师（如果尚未确定），并讨论他们拟定的论文主题。硕士论文必须由相关教职员工赞助和指导。
-                    </Typography>
-                </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                    <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
-                        毕业
-                    </Typography>
-                </Box>
 
-                <Box sx={lightPurpleBackground}>
-                    <Typography variant="body1" gutterBottom>
-                    学生毕业时间为九月、一月或五月。纽约大学所有学院的毕业典礼均于五月举行。若要在特定学期毕业，学生必须在申请截止日期前申请毕业。建议学生最迟在计划完成所有课程要求的学期开始前申请毕业。学生有责任了解计划毕业学期的截止日期，并将所有必要材料送至相关办公室。
-                    具体信息可以参考官网的<Link href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation.html" target="_blank">
-                    教务页面
-                    </Link>。
-                    </Typography>
-                </Box>
+
                 
 
             </Box>
