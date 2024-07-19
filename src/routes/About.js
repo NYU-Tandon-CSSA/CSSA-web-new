@@ -32,6 +32,9 @@ import winnie from '../images/members/Winnie.jpg'
 import yi from '../images/members/Yi.jpg'
 import mia from '../images/members/Mia.jpg'
 
+//IT team
+import andrew from '../images/members/Andrew.jpg';
+
 
 
 import IntroOfMembers from '../components/IntroOfMembers.js';
@@ -58,7 +61,7 @@ export default function About() {
 
       <div style={{paddingTop: "130px", textAlign:"center"}}>
 
-        <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid container spacing={2} justifyContent="left" alignItems="center">
           {/* Row 1 */}
           {/* <Grid item xs={4} justifyContent="center">
             AboutUs
@@ -269,7 +272,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "梅依玟 - Cory" 
-                position = "22-23 Tandon CSSA主席"
+                position = "22-23 主席"
                 year = "2023"
                 major = "B.S. Mathematics."
                 intro="put a dent in the universe"
@@ -279,7 +282,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "王铭赫 - Mario" 
-                position = "23-24 Tandon CSSA主席"
+                position = "23-24 主席"
                 year = "2024"
                 major = "B.S. Applied Mathematics."
                 intro=" 研究生在哥大读Biostatistics。Tandon CSSA四年老粉，坚定的enfp"
@@ -289,7 +292,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "荆雨薇 - Christina" 
-                position = "23-24 Tandon CSSA副主席"
+                position = "23-24 副主席"
                 year = "2024"
                 major= "B.S / M.S. Mathematics / MFE."
                 intro=" 二月水瓶/永恒ENTJ 喜欢旅行和音乐 爱喝茶/爱咖啡/天天温开水 爱吃饭/爱睡觉/处处易发呆 "
@@ -299,7 +302,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "宋一荞 - Elaine" 
-                position = "22-24 Tandon CSSA外联部部长"
+                position = "22-24 外联部部长"
                 year = "2024"
                 major= "B.S. Mechanical Engineering."
                 intro=" 脑洞比黑洞更大♠️"
@@ -309,7 +312,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "姚俊煜 - Tim" 
-                position = "21-24 Tandon CSSA ITCD部长"
+                position = "23-24 技术与职业发展部部长"
                 year = "2024"
                 major= "M.S. Computer Engineering."
                 intro="不吃蘑菇！"
@@ -319,7 +322,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "曾海琪 - Stephanie" 
-                position = "23-24 Tandon CSSA PM部副部长"
+                position = "23-24 宣传部 22-23 外联部副部长"
                 year = "2024"
                 major= "B.S. / M.S Business and Technology Management / Financial Engineering"
                 intro="Trader Joe小粉丝修炼厨艺ing"
@@ -440,6 +443,14 @@ export default function About() {
                 major = "Computer Science"
                 year = "2023-2025"
                 image = {yi}/>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <IntroOfDevTeam
+                name = "张健桁 - Andrew"
+                major = "Computer Science"
+                year = "2024-2025"
+                image = {andrew}/>
           </Grid>
 
           <Grid item xs={12} md={6}>
