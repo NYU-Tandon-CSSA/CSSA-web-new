@@ -13,6 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import rentCover from '../../images/fhImage/rent_cover.jpg';
 import walkUP from '../../images/fhImage/Walkup_Building.jpg'
 import apartment from '../../images/fhImage/Apartment.jpg'
+import luxury from '../../images/fhImage/luxury-apartment.jpg';
 
 const theme = createTheme({
     typography: {
@@ -65,7 +66,7 @@ export default function Rent() {
                         关于租房
                     </Typography>
                     <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
-                        这是简介。
+                        本篇针对校外租房。
                     </Typography>
                 </Box>
 
@@ -143,7 +144,7 @@ export default function Rent() {
                                 <CardMedia
                                 component="img"
                                 height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
+                                image={luxury}
                                 alt="green iguana"
                                 />
                                 <CardContent>
