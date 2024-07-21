@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dac5169f.css",
-    "main.js": "/static/js/main.f3efa4f9.js",
+    "main.js": "/static/js/main.7b9427bd.js",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
@@ -18,6 +18,7 @@
     "static/media/Mia.jpg": "/static/media/Mia.a89cbadaf97288b6078b.jpg",
     "static/media/Apartment.jpg": "/static/media/Apartment.16269b747f236f144ff5.jpg",
     "static/media/grand-central.jpg": "/static/media/grand-central.eae6cbdf1590fa67184b.jpg",
+    "static/media/carriers.jpg": "/static/media/carriers.00fcf6f2136741486491.jpg",
     "static/media/GroupPhoto.jpg": "/static/media/GroupPhoto.57871dce90eb50176f2f.jpg",
     "static/media/subway.jpg": "/static/media/subway.d072203986666275a45e.jpg",
     "static/media/visa_cover.jpg": "/static/media/visa_cover.a42254ee135f7f9636e9.jpg",
@@ -57,10 +58,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.dac5169f.css.map": "/static/css/main.dac5169f.css.map",
-    "main.f3efa4f9.js.map": "/static/js/main.f3efa4f9.js.map"
+    "main.7b9427bd.js.map": "/static/js/main.7b9427bd.js.map"
   },
   "entrypoints": [
     "static/css/main.dac5169f.css",
-    "static/js/main.f3efa4f9.js"
+    "static/js/main.7b9427bd.js"
   ]
 }
