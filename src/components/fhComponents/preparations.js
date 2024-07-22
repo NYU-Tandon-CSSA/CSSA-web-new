@@ -15,45 +15,31 @@ import List from '@mui/material/List';
 
 // images
 import PreparationsCover from '../../images/fhImage/preparations_cover.png';
-import NYUStartImage from '../../images/fhImage/NYUStartImg.png';
 
+// template setting
 const theme = createTheme({
     typography: {
         fontFamily: "Noto Sans SC",
         fontWeight: "500",
         h5: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         h6: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         subtitle1: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         }
     },
-});
-
-const listItemStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    listStyleType: 'none',
-    marginBottom: '16px',
-};
-
-const listItemTitleStyle = {
-    fontWeight: 'bold',
+  });
+  
+  const iconStyle = {
     color: '#57068c',
-    display: 'inline',
-};
-
-const iconStyle = {
-    color: '#57068c',  
-    fontSize: '1.5rem',  
+    fontSize: '1.5rem',
     marginRight: '8px'
-};
-
-const noticeStyle = {
+  };
+  
+  const noticeStyle = {
     border: '2px solid #af7ac5',
     padding: '16px',
     marginBottom: '16px',
@@ -61,20 +47,36 @@ const noticeStyle = {
     backgroundColor: '#f9f6ff',
     display: 'flex',
     alignItems: 'flex-start',
-};
-
-const exclamationIconStyle = {
+    mt: 4, 
+    mb: 4,
+  };
+  
+  const exclamationIconStyle = {
     color: '#af7ac5',
     fontSize: '1.5rem',
     marginRight: '8px'
-};
-
-const lightPurpleBackground = {
+  };
+  
+  const lightPurpleBackground = {
     backgroundColor: '#f9f6ff',
     borderRadius: '8px',
     padding: '16px',
     marginBottom: '16px',
-};
+  };
+  
+  const listItemStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    listStyleType: 'none',
+    marginBottom: '16px',
+  };
+  
+  const listItemTitleStyle = {
+    fontWeight: 'bold',
+    color: '#57068c',
+    display: 'inline',
+  };  
 
 export default function Preparations() {
     return (
