@@ -1,5 +1,6 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Divider } from '@mui/material';
@@ -11,25 +12,26 @@ import OfferSteps from './offerSteps';
 import visaCover from '../../images/fhImage/visa_cover.jpg';
 import NYUStartImage from '../../images/fhImage/NYUStartImg.png';
 
+// template setting
 const theme = createTheme({
     typography: {
         fontFamily: "Noto Sans SC",
         fontWeight: "500",
         h5: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         h6: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         subtitle1: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         }
     },
 });
 
 const iconStyle = {
-    color: '#57068c',  
-    fontSize: '1.5rem',  
+    color: '#57068c',
+    fontSize: '1.5rem',
     marginRight: '8px'
 };
 
@@ -41,6 +43,8 @@ const noticeStyle = {
     backgroundColor: '#f9f6ff',
     display: 'flex',
     alignItems: 'flex-start',
+    mt: 4, 
+    mb: 4,
 };
 
 const exclamationIconStyle = {
@@ -56,7 +60,24 @@ const lightPurpleBackground = {
     marginBottom: '16px',
 };
 
+const listItemStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    listStyleType: 'none',
+    marginBottom: '16px',
+};
+
+const listItemTitleStyle = {
+    fontWeight: 'bold',
+    color: '#57068c',
+    display: 'inline',
+};
+
 export default function Visa() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -69,7 +90,7 @@ export default function Visa() {
             >
                 <Box
                     sx={{
-                        height: { xs: '200px', md: '300px' },
+                        height: '300px',
                         backgroundImage: `url(${visaCover})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
@@ -80,7 +101,7 @@ export default function Visa() {
                         color: '#fff',
                         textShadow: '0 0 10px rgba(0,0,0,0.5)',
                         mb: 4,
-                        padding: { xs: 2, md: 0 }
+                        padding: isMobile ? '20px' : '0', 
                     }}
                 >
                     <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8, fontSize: { xs: '1.5rem', md: '3rem' } }}>

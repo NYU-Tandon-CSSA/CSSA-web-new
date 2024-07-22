@@ -1,9 +1,9 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { Divider } from '@mui/material';
+import { Divider, useMediaQuery } from '@mui/material';
 import CustomSteps from './customSteps';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
@@ -20,13 +20,13 @@ const theme = createTheme({
         fontFamily: "Noto Sans SC",
         fontWeight: "500",
         h5: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         h6: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         },
         subtitle1: {
-            fontFamily: "YouSheBiaoTiHei",
+            fontFamily: "Noto Sans SC",
         }
     },
 });
@@ -77,6 +77,9 @@ const listItemTitleStyle = {
 };
 
 export default function Customs() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -100,19 +103,20 @@ export default function Customs() {
                         color: '#fff',
                         textShadow: '0 0 10px rgba(0,0,0,0.5)',
                         mb: 4,
+                        padding: isMobile ? '20px' : '0', 
                     }}
                 >
-                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8 }}>
+                    <Typography variant="h3" component="h1" gutterBottom sx={{ lineHeight: 1.8, fontSize: { xs: '1.5rem', md: '3rem' } }}>
                         关于海关
                     </Typography>
-                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8 }}>
+                    <Typography variant="h6" component="p" sx={{ lineHeight: 1.8, fontSize: { xs: '1rem', md: '1.5rem' } }}>
                         飞机落地后，通过了海关的检查才是真正入境美国。
                     </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
                     <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
                         过关流程
                     </Typography>
                 </Box>
@@ -122,19 +126,19 @@ export default function Customs() {
                     <Box sx={noticeStyle}>
                         <FontAwesomeIcon icon={faExclamationCircle} style={exclamationIconStyle} />
                         <Box>
-                            <Typography sx={{ lineHeight: 2, mb: 2 }}>
+                            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: isMobile ? '0.875rem' : '1rem' }}>
                                 海关询问过程中，一般会要求你取下眼镜拍照+按指纹。按照惯例，海关人员会问你一些简单的问题，比如生日、居住地、来美目的、身上带了多少现金，大家如实回答就好。注意不要有留美倾向。
                             </Typography>
-                            <Typography sx={{ lineHeight: 2, mb: 2 }}>
+                            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: isMobile ? '0.875rem' : '1rem' }}>
                                 海关有可能会开箱检查你的行李中是否有违禁品。
                             </Typography>
-                            <Typography sx={{ lineHeight: 2, mb: 2 }}>
+                            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: isMobile ? '0.875rem' : '1rem' }}>
                                 过关时不要打电话，不要拍照。
                             </Typography>
-                            <Typography sx={{ lineHeight: 2, mb: 2 }}>
+                            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: isMobile ? '0.875rem' : '1rem' }}>
                                 入关的类型分两种，一种是美国公民或者永久居民的（US Citizens and Permanent Residents）,第二个是给非美国居民的（Non Residents/Foreign Nationals）如果非美国绿卡或者公民入关，排在非美国居民的窗口
                             </Typography>
-                            <Typography sx={{ lineHeight: 2, mb: 2 }}>
+                            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: isMobile ? '0.875rem' : '1rem' }}>
                                 机场有小推车可以使用，需支付硬币。
                             </Typography>
 
@@ -190,7 +194,7 @@ export default function Customs() {
                         </Box>
                     </Box>
 
-                    <Typography gutterBottom>
+                    <Typography gutterBottom sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
                         随身携带以下文件，以备海关人员在询问过程中检查：
                     </Typography>
 
@@ -204,76 +208,76 @@ export default function Customs() {
                             mb: 4
                         }}
                     >
-                        <Typography variant="h6" gutterBottom sx={{ lineHeight: 2 , my: 4, fontWeight: 'bold' }}>
+                        <Typography variant="h6" gutterBottom sx={{ lineHeight: 2 , my: 4, fontWeight: 'bold', fontSize: { xs: '1rem', md: '1.5rem' } }}>
                             随身文件清单
                         </Typography>
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             SEVIS Fee缴费证明
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             I-20
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
-                            <Typography>护照（内含有你的签证页）:F1/J1学生签有效期不少于6个月，B1/B2旅游签有效期不少于预定行程时间</Typography>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                            护照（内含有你的签证页）:F1/J1学生签有效期不少于6个月，B1/B2旅游签有效期不少于预定行程时间
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             学校体检表，疫苗表
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             小红本&小黄本免疫证明
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             毕业证、学位证、学校成绩单、语言考试成绩单（托福、雅思、SAT等）
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             学校官方出具的offer
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             证件照（各类尺寸）
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
-                            <Typography>海关码：提前在小程序“海关旅客指尖服务”上填写好个人信息并截图海关码，有效期为24小时</Typography>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                            海关码：提前在小程序“海关旅客指尖服务”上填写好个人信息并截图海关码，有效期为24小时
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             住宿信息证明：比如你的租房合同，学校宿舍信息等。B1/B2旅客可提供中英文版酒店预订单
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             EVUS（仅针对B1/B2签证）：出行前要及时更新EVUS信息，注册打印
                         </Typography>
                         <Divider sx={{ width: '90%', my: 1 }} />
-                        <Typography gutterBottom sx={{ lineHeight: 1 }}>
+                        <Typography gutterBottom sx={{ lineHeight: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
                             其他辅助文件：行程单，课程表，驾照等
                         </Typography>
                     </Box>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, flexDirection: { xs: 'column', md: 'row' } }}>
                     <FontAwesomeIcon icon={faCircleArrowRight} style={iconStyle} />
-                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold' }}>
+                    <Typography variant="h5" sx={{ lineHeight: 2, fontWeight: 'bold', fontSize: isMobile ? '1.2rem' : '2rem' }}>
                         违禁品
                     </Typography>
                 </Box>
 
                 <Box sx={lightPurpleBackground}>
-                <Typography gutterBottom>
+                <Typography gutterBottom sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
                     不要带违禁品， 海关会抽查行李，如果被查出携带违禁品或未按要求申报，后果很严重。
                 </Typography>
                 <br />
 
-                    <Typography variant="h6" gutterBottom sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold' }}>
+                    <Typography variant="h6" gutterBottom sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold', fontSize: isMobile ? '1rem' : '1.25rem' }}>
                         违禁品分类
                     </Typography>
-                    <Typography gutterBottom component="div">
+                    <Typography gutterBottom component="div" sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
                     <ul style={{ paddingLeft: '0' }}>
                             <li style={listItemStyle}><span style={listItemTitleStyle}>生物制品：</span>一般禁止未经消毒的人类和动物组织（包括血液、人或动植物排泄物）、活体细菌培养基、病毒或类似有机体、被怀疑感染人畜共患疾病的动物、昆虫、蜗牛和蝙蝠的进口。</li>
                             <li style={listItemStyle}><span style={listItemTitleStyle}>水果、蔬菜和植物：</span>许多水果、蔬菜、植物、枝条、种籽、未经处理的植物产品、特定濒危物种等一般都禁止进口。所有植物、植物产品、水果或蔬菜都必须向海关官员申报并接受检查。</li>
@@ -307,14 +311,14 @@ export default function Customs() {
                         </ul>
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography gutterBottom sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
                         类别总述如上，具体食品种类请在线搜索对照 USDA Miscellaneous and Processed Products Manual。
                     </Typography>
 
-                    <Typography variant="h6" gutterBottom sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold' }}>
+                    <Typography variant="h6" gutterBottom sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold', fontSize: isMobile ? '1rem' : '1.25rem' }}>
                         可免关税携带的物品:
                     </Typography>
-                    <Typography gutterBottom component="div">
+                    <Typography gutterBottom component="div" sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
                         <ul>
                             <li style={listItemStyle}><span style={listItemTitleStyle}>个人财产：</span>个人穿戴使用的衣物、珠宝、化妆品、打猎或钓鱼用具、照相机、便携式收音机以及其他类似个人、物品如仅用于个人使用，可免于征税。上述物品可跟随着入境者入出境。</li>
                             <li style={listItemStyle}><span style={listItemTitleStyle}>酒精饮料：</span>年满21岁的非美国居民可免税携带入境1公升啤酒、葡萄酒、白酒等酒精饮料，但仅限个人使用。超过上述数量的酒精饮料将被征收海关税和国内税注意：除了联邦法律，入境者还必须遵守可能比联邦法律更加严格的有关酒精饮料的州法律。</li>
@@ -326,10 +330,10 @@ export default function Customs() {
                         </ul>
                     </Typography>
 
-                    <Typography variant="h6" gutterBottom sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold' }}>
+                    <Typography variant="h6" gutterBottom sx={{ lineHeight: 4, mb: 1, fontWeight: 'bold', fontSize: isMobile ? '1rem' : '1.25rem' }}>
                         应予征税的物品:
                     </Typography>
-                    <Typography gutterBottom component="div">
+                    <Typography gutterBottom component="div" sx={{ fontSize: isMobile ? '0.875rem' : '1rem' }}>
                         <ul>
                             <li>超出上述免税范围的物品将被征税。其征收方法是：减去应予免税的物品价值后，1000美元价值的部分将被征收统一税率为3％的关税，超过1000美元价值的部分将按适用于该商品的税率征税。</li>
                             <li>按统一税率征税的物品必须跟随入境者本人，并且只供入境者个人使用或当作礼品。</li>
