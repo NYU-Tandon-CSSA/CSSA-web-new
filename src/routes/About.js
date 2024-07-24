@@ -193,9 +193,8 @@ export default function About() {
               image={yi}/>
           </Grid>
 
-          
-
-          {/* <Grid item xs={12}>
+        
+          <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>WALL OF FAME</Typography>
           </Grid>
           <Grid item xs={12}>
@@ -214,22 +213,21 @@ export default function About() {
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="张爱丽 - Alice"
-              position="2019-2020 Tandon CSSA主席"
-              year="2020"
-              major="B.S. Computer Science"
-              intro="现就职于Google，热衷于人工智能和机器学习"
+              name="Sherry Fu"
+              position = "2019-2020 Tandon CSSA主席"
+              year = "2020"
+              major = "Business and Technology Management (BTM)"
+              intro=""
               image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/alice-zhang"
-            />
+              />
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="李博 - Bob"
-              position = "2020-2021 Tandon CSSA主席"
-              year = "2021"
-              major = "B.S. Electrical Engineering"
+              name="Sherry Fu"
+              position = "2019-2020 Tandon CSSA主席"
+              year = "2020"
+              major = "Business and Technology Management (BTM)"
               intro="目前在特斯拉工作，专注于电动汽车技术创新"
               image={unknow}
               linkedinUrl="https://www.linkedin.com/in/bob-li"/>
@@ -255,7 +253,7 @@ export default function About() {
               intro="目前在波音公司工作，参与航空航天技术开发"
               image={unknow}
               linkedinUrl="https://www.linkedin.com/in/david-chen"/>
-          </Grid> */}
+          </Grid>
           
           <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>ADVISOR COMMITTEE</Typography>
@@ -332,7 +330,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "林之 - Zoey" 
-                position = "23-24 Tandon CSSA外联部副部长"
+                position = "23-24 外联部副部长"
                 year = "2024"
                 major= "M.S. Management of Technology."
                 intro=" enfj努力进阶中"
@@ -342,7 +340,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "张露文 - Luwen" 
-                position = "23-24 Tandon CSSA活动部副部长"
+                position = "23-24 活动部副部长"
                 year = "2024"
                 major= "M.S. Management of Technology."
                 intro=" 活动部yyds，希望cssa越来越好！"
@@ -352,7 +350,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "宋梦雅 - Mia" 
-                position = "23-24 Tandon CSSA财务"
+                position = "23-24 财务"
                 year = "2024"
                 major = "M.S. Biotechnology and Entrepreneurship."
                 intro=" 没什么大愿望，每天开心就好！"
@@ -362,7 +360,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "严语 - Alex" 
-                position = "21-24 Tandon CSSA Tech Lead"
+                position = "21-24 Tech Lead"
                 year = "2024"
                 major= "B.S. Computer Science."
                 intro="See more at http://alexyan.me ~"
