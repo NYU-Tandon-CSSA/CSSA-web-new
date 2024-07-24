@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dac5169f.css",
-    "main.js": "/static/js/main.cb325a76.js",
+    "main.js": "/static/js/main.7e51b9d9.js",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
@@ -14,6 +14,7 @@
     "static/media/NYUAlbert.png": "/static/media/NYUAlbert.bb64c8cc4b8ec9e1a37c.png",
     "static/media/If_you_are_the_one.png": "/static/media/If_you_are_the_one.8fa1b0dbe8aa2cffea9d.png",
     "static/media/coffee_chat.jpg": "/static/media/coffee_chat.9758f555e3814d82fb46.jpg",
+    "static/media/nyc_map.jpg": "/static/media/nyc_map.096bbe66fb350af5dff0.jpg",
     "static/media/cart.jpg": "/static/media/cart.3bfe335cdb94b6eeea13.jpg",
     "static/media/Mia.jpg": "/static/media/Mia.a89cbadaf97288b6078b.jpg",
     "static/media/Apartment.jpg": "/static/media/Apartment.16269b747f236f144ff5.jpg",
@@ -59,10 +60,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.dac5169f.css.map": "/static/css/main.dac5169f.css.map",
-    "main.cb325a76.js.map": "/static/js/main.cb325a76.js.map"
+    "main.7e51b9d9.js.map": "/static/js/main.7e51b9d9.js.map"
   },
   "entrypoints": [
     "static/css/main.dac5169f.css",
-    "static/js/main.cb325a76.js"
+    "static/js/main.7e51b9d9.js"
   ]
 }
