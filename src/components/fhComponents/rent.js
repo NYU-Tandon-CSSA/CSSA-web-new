@@ -93,8 +93,7 @@ export default function Rent() {
                 mb: 2,
                 display: "flex",
                 flexDirection: "column",
-                overflow: "hidden",
-                overflowY: "scroll"
+                overflow: "hidden"
             }}>
                 <Box
                     sx={{
@@ -129,7 +128,7 @@ export default function Rent() {
             
             <Box component="ul" sx={{ listStyle: 'none', padding: 0, mb: 4, ...lightPurpleBackground }}>
             
-            <Typography variant="h6" gutterBottom>
+            <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
             作为一名即将到来的新生，你可能对在纽约的住宿安排感到兴奋和有些不安。纽约房源众多，如何挑选到最满意的新家？在这里，Tandon CSSA为你准备了一些关于在纽约租房的基本信息，希望你能对各种房源有一个基本的了解，帮助你顺利过渡到新生活。
                 </Typography>
             </Box>
