@@ -6,6 +6,10 @@ import Container from '@mui/material/Container';
 // css
 import '../css/about.css'
 
+//presidents
+import sherry from '../images/members/Sherry.jpg';
+import cynthia from '../images/members/Cynthia2.jpg';
+
 // advisor
 import mario from '../images/members/Mario.jpg';
 import tim from '../images/members/Tim.jpg';
@@ -218,19 +222,19 @@ export default function About() {
               year = "2020"
               major = "Business and Technology Management (BTM)"
               intro=""
-              image={unknow}
+              image={sherry}
               />
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="Sherry Fu"
-              position = "2019-2020 Tandon CSSA主席"
-              year = "2020"
-              major = "Business and Technology Management (BTM)"
-              intro="目前在特斯拉工作，专注于电动汽车技术创新"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/bob-li"/>
+              name="范可欣"
+              position = "2021-2022 Tandon CSSA主席"
+              year = "2022"
+              major = "B.A. Economics and Mathematics"
+              intro="目前在DA行业"
+              image={cynthia}
+              linkedinUrl="https://www.linkedin.com/in/kexin-cynthia-fan/"/>
           </Grid>
 
           <Grid item xs={12} md={3}>
