@@ -6,6 +6,11 @@ import Container from '@mui/material/Container';
 // css
 import '../css/about.css'
 
+//presidents
+import sherry from '../images/members/Sherry.jpg';
+import cynthia from '../images/members/Cynthia.jpg';
+import zhe from '../images/members/Zhe.jpg';
+
 // advisor
 import mario from '../images/members/Mario.jpg';
 import tim from '../images/members/Tim.jpg';
@@ -193,9 +198,8 @@ export default function About() {
               image={yi}/>
           </Grid>
 
-          
-
-          {/* <Grid item xs={12}>
+        
+          <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>WALL OF FAME</Typography>
           </Grid>
           <Grid item xs={12}>
@@ -214,48 +218,58 @@ export default function About() {
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="张爱丽 - Alice"
-              position="2019-2020 Tandon CSSA主席"
-              year="2020"
-              major="B.S. Computer Science"
-              intro="现就职于Google，热衷于人工智能和机器学习"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/alice-zhang"
-            />
+              name="曹隽哲"
+              position = "2018-2019 Tandon CSSA主席"
+              year = "2019"
+              major = "MFE专业"
+              intro="目前在中国银联做大数据分析相关的工作"
+              image={zhe}
+              linkedinUrl="https://www.linkedin.com/in/junzhe-cao-64368782/"/>
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="李博 - Bob"
-              position = "2020-2021 Tandon CSSA主席"
-              year = "2021"
-              major = "B.S. Electrical Engineering"
-              intro="目前在特斯拉工作，专注于电动汽车技术创新"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/bob-li"/>
+              name="Sherry Fu"
+              position = "2019-2020 Tandon CSSA主席"
+              year = "2020"
+              major = "Business and Technology Management (BTM)"
+              intro=""
+              image={sherry}
+              />
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="王晨 - Cindy"
+              name="范可欣"
               position = "2021-2022 Tandon CSSA主席"
               year = "2022"
-              major = "B.S. Chemical Engineering"
-              intro="现在在阿布扎比的石油公司工作，致力于可持续能源研究"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/cindy-wang"/>
+              major = "B.A. Economics and Mathematics"
+              intro="目前在DA行业"
+              image={cynthia}
+              linkedinUrl="https://www.linkedin.com/in/kexin-cynthia-fan/"/>
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="陈大伟 - David"
+              name="梅依玟 - Cory"
               position = "2022-2023 Tandon CSSA主席"
               year = "2023"
-              major = "B.S. Mechanical Engineering"
-              intro="目前在波音公司工作，参与航空航天技术开发"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/david-chen"/>
-          </Grid> */}
+              major = "B.S. Mathematics"
+              intro="put a dent in the universe"
+              image={cory}
+              linkedinUrl="https://www.linkedin.com/in/cory-mei/"/>
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <IntroOfEboard 
+              name="王铭赫 - Mario"
+              position = "2023-2024 Tandon CSSA主席"
+              year = "2024"
+              major = "B.S. Applied Mathematics"
+              intro="研究生在哥大读Biostatistics"
+              image={mario}
+              linkedinUrl="https://www.linkedin.com/in/minghe-wang-510852236/"/>
+          </Grid>
           
           <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>ADVISOR COMMITTEE</Typography>
@@ -284,8 +298,8 @@ export default function About() {
                 name = "王铭赫 - Mario" 
                 position = "23-24 主席"
                 year = "2024"
-                major = "B.S. Applied Mathematics."
-                intro=" 研究生在哥大读Biostatistics。Tandon CSSA四年老粉，坚定的enfp"
+                major = "B.S. Applied Mathematics"
+                intro="Tandon CSSA四年老粉，坚定的enfp"
                 image={mario}/>
           </Grid>
 
@@ -332,7 +346,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "林之 - Zoey" 
-                position = "23-24 Tandon CSSA外联部副部长"
+                position = "23-24 外联部副部长"
                 year = "2024"
                 major= "M.S. Management of Technology."
                 intro=" enfj努力进阶中"
@@ -342,7 +356,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "张露文 - Luwen" 
-                position = "23-24 Tandon CSSA活动部副部长"
+                position = "23-24 活动部副部长"
                 year = "2024"
                 major= "M.S. Management of Technology."
                 intro=" 活动部yyds，希望cssa越来越好！"
@@ -352,7 +366,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "宋梦雅 - Mia" 
-                position = "23-24 Tandon CSSA财务"
+                position = "23-24 财务"
                 year = "2024"
                 major = "M.S. Biotechnology and Entrepreneurship."
                 intro=" 没什么大愿望，每天开心就好！"
@@ -362,7 +376,7 @@ export default function About() {
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
                 name = "严语 - Alex" 
-                position = "21-24 Tandon CSSA Tech Lead"
+                position = "21-24 Tech Lead"
                 year = "2024"
                 major= "B.S. Computer Science."
                 intro="See more at http://alexyan.me ~"
