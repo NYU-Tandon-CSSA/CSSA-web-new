@@ -10,6 +10,7 @@ import Banner from '../components/Banner';
 // About us import
 import AboutContainer from '../components/AboutContainer';
 import groupPhoto from '../images/GroupPhoto.jpg';
+import group1 from '../images/Group1.jpg';
 
 // Section for images of recent posts
 import werewolf from '../images/werewolf2.0.png';
@@ -80,7 +81,7 @@ function Home() {
           title="关于我们"
           paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
           我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。"
-          imageUrl={groupPhoto}
+          imageUrl={group1}
         />
       </div>
 
