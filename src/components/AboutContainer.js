@@ -10,7 +10,7 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 function AboutContainer({ title, paragraph, imageUrl }) {
   return (
     <Paper elevation={0} sx={{ backgroundColor: '#EEEEEE', padding: '16px'}}>
-        <Typography variant="h4" gutterBottom sx={{ textAlign: 'center', fontFamily: 'YouSheBiaoTiHei' }}>
+        <Typography variant="h4" component="div" gutterBottom sx={{ textAlign:'center', fontWeight: 'bold', fontSize: '2.3 rem' }}>
           {title}
         </Typography>
         <Divider sx={{ marginY: '16px' }} />
@@ -28,7 +28,7 @@ function AboutContainer({ title, paragraph, imageUrl }) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Stack spacing={2}>
-              <Typography variant="body1" sx={{fontFamily: 'YouSheBiaoTiHei', fontSize: '1.1rem'}}>
+              <Typography variant="body1" component="div" sx={{ fontSize:'1.5 rem'}}>
                 {paragraph}
               </Typography>
               <Box sx={{ textAlign: 'right' }}>
