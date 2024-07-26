@@ -75,7 +75,7 @@ function FreshmanHandbook() {
       <Box sx={{ width: "100%", padding: 0, margin: 0, marginTop: '64px', height: '80vh', backgroundColor: '#E6E6FA' }}>
         <Box sx={{ display: 'flex', height: '100%', width: '100%', margin: 0, padding: 0 }}>
           <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: 2 }}>
-            <Typography variant="h4" component="div" gutterBottom sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
+            <Typography variant="h4" component="div" gutterBottom sx={{ fontWeight: 'bold', fontSize: '2.5rem' }}>
               新生手册
             </Typography>
             <Typography variant="body1" component="div" sx={{ marginTop: 4}}>

@@ -15,7 +15,7 @@ import { useState } from 'react';
 function Banner() {
 
   const customCarouselStyles = {
-    width: '100%', 
+    width: '80%', 
     height: '90vh',
     '& .MuiPaper-root': { // This specific line might not work as expected with inline styles
       transitionDuration: '10000ms'
