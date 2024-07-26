@@ -8,7 +8,7 @@ import '../css/about.css'
 
 //presidents
 import sherry from '../images/members/Sherry.jpg';
-import cynthia from '../images/members/Cynthia2.jpg';
+import cynthia from '../images/members/Cynthia.jpg';
 
 // advisor
 import mario from '../images/members/Mario.jpg';
