@@ -384,9 +384,9 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%", textTransform: 'uppercase'}}>Web development team</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>Web development team</Typography>
           </Grid>
-          <Grid item xs={10}>
+          <Grid item xs={12}>
             <hr style={{
               border: 'none',
               height: '1px',
