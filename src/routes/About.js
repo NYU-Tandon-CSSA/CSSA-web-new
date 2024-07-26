@@ -9,6 +9,7 @@ import '../css/about.css'
 //presidents
 import sherry from '../images/members/Sherry.jpg';
 import cynthia from '../images/members/Cynthia.jpg';
+import zhe from '../images/members/Zhe.jpg';
 
 // advisor
 import mario from '../images/members/Mario.jpg';
@@ -217,6 +218,17 @@ export default function About() {
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
+              name="曹隽哲"
+              position = "2018-2019 Tandon CSSA主席"
+              year = "2019"
+              major = "MFE专业"
+              intro="目前在中国银联做大数据分析相关的工作"
+              image={zhe}
+              linkedinUrl="https://www.linkedin.com/in/junzhe-cao-64368782/"/>
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <IntroOfEboard 
               name="Sherry Fu"
               position = "2019-2020 Tandon CSSA主席"
               year = "2020"
@@ -239,24 +251,24 @@ export default function About() {
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="王晨 - Cindy"
-              position = "2021-2022 Tandon CSSA主席"
-              year = "2022"
-              major = "B.S. Chemical Engineering"
-              intro="现在在阿布扎比的石油公司工作，致力于可持续能源研究"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/cindy-wang"/>
+              name="梅依玟 - Cory"
+              position = "2022-2023 Tandon CSSA主席"
+              year = "2023"
+              major = "B.S. Mathematics"
+              intro="put a dent in the universe"
+              image={cory}
+              linkedinUrl="https://www.linkedin.com/in/cory-mei/"/>
           </Grid>
 
           <Grid item xs={12} md={3}>
             <IntroOfEboard 
-              name="陈大伟 - David"
-              position = "2022-2023 Tandon CSSA主席"
-              year = "2023"
-              major = "B.S. Mechanical Engineering"
-              intro="目前在波音公司工作，参与航空航天技术开发"
-              image={unknow}
-              linkedinUrl="https://www.linkedin.com/in/david-chen"/>
+              name="王铭赫 - Mario"
+              position = "2023-2024 Tandon CSSA主席"
+              year = "2024"
+              major = "B.S. Applied Mathematics"
+              intro="研究生在哥大读Biostatistics"
+              image={mario}
+              linkedinUrl="https://www.linkedin.com/in/minghe-wang-510852236/"/>
           </Grid>
           
           <Grid item xs={12}>
@@ -286,8 +298,8 @@ export default function About() {
                 name = "王铭赫 - Mario" 
                 position = "23-24 主席"
                 year = "2024"
-                major = "B.S. Applied Mathematics."
-                intro=" 研究生在哥大读Biostatistics。Tandon CSSA四年老粉，坚定的enfp"
+                major = "B.S. Applied Mathematics"
+                intro="Tandon CSSA四年老粉，坚定的enfp"
                 image={mario}/>
           </Grid>
 
