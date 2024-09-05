@@ -6,10 +6,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useState } from 'react';
 
 // images
-import img from '../images/bridge.png'
-import werewolf from '../images/werewolf2.0.png'
+import JoinPoster from "../images/JoinUs2024.png";
 import groupPhoto from '../images/GroupPhoto.jpg'
-import Voice_of_NYC from '../images/Voice_of_NYC.jpg'
 import Tandon from '../images/Tandon.jpg'
 import EventPhoto from '../images/Event.jpg';
 import group2 from '../images/Group2.jpg';
@@ -36,6 +34,23 @@ function Banner() {
       >
 
         {/* Iteam 1 */}
+        <div style={{ position: 'relative', height: '100%' }}>
+          <img 
+            src={JoinPoster} 
+            alt={`Join Us Poster`} 
+            style={{ width: '100%', height: '90vh', pointerEvents: "none", objectFit: "cover" }} 
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '100%',
+              height: '20vh',
+              background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(238, 238, 238, 1))',
+            }}
+          ></div>
+        </div>
 
         <div style={{ position: 'relative', height: '100%' }}>
           <img 
