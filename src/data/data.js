@@ -106,6 +106,18 @@ export const devTeam = [
         year: "2024-2025",
         image: unknow,
     },
+    {
+        name: "孟宏道",
+        major: "Computer Science",
+        year: "2024-2025",
+        image: unknow,
+    },
+    {
+        name: "刘祈良",
+        major: "Computer Engineering",
+        year: "2024-2025",
+        image: unknow,
+    },
   ];
 
 export const advisorTeam = [
