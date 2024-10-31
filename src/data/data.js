@@ -31,7 +31,7 @@ import mia from '../images/members/Mia.jpg'
 
 //IT team
 import andrew from '../images/members/Andrew.jpg';
-
+import sichang from '../images/members/Sichang.jpg';
 
 export const devTeam = [
     {
@@ -118,6 +118,12 @@ export const devTeam = [
         year: "2024-2025",
         image: unknow,
     },
+    {
+      name: "于思畅",
+      major: "Informatics",
+      year: "2024-2025",
+      image: sichang,
+  },
   ];
 
 export const advisorTeam = [
