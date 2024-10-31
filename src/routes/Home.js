@@ -19,7 +19,7 @@ import If_you_are_the_one from '../images/If_you_are_the_one.png';
 import Voice_of_NYC from '../images/Voice_of_NYC.jpg';
 import coffee_chat from '../images/coffee_chat.jpg';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   icon: {
     fontSize: '4rem !important',
     animation: '$jumpAnimation 1s linear infinite',
@@ -40,7 +40,17 @@ const useStyles = makeStyles(() => ({
   iconHidden: {
     opacity: 0,
   },
+  // 新增 aboutSection 样式
+  aboutSection: {
+    backgroundColor: '#333',  // 初始背景色，可以随时更改
+    color: 'white',
+    padding: theme.spacing(6),
+    borderRadius: '8px',
+    margin: '0 auto',  // 居中
+    maxWidth: '85%',   // 限制最大宽度
+  },
 }));
+
 
 // Dynamic Navbar
 
@@ -76,7 +86,7 @@ function Home() {
       </Grid>
 
       {/* 关于我们 */}
-      <div style={{ maxWidth: '85%', margin: '0 auto' }}>
+      <div className={classes.aboutSection}>
         <AboutContainer
           title="关于我们"
           paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
