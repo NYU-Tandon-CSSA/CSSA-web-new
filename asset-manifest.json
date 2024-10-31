@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dac5169f.css",
-    "main.js": "/static/js/main.8b446bae.js",
+    "main.js": "/static/js/main.234dc4c2.js",
     "static/media/Group1.jpg": "/static/media/Group1.6dae49ec543d9a05a164.jpg",
     "static/media/Group_Photo_Fall2024.JPG": "/static/media/Group_Photo_Fall2024.a35e5d4ef85999aef86c.JPG",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
@@ -13,9 +13,9 @@
     "static/media/Voice_of_NYC.jpg": "/static/media/Voice_of_NYC.ebd17fdd8a0b8abbdb75.jpg",
     "static/media/Sherry.jpg": "/static/media/Sherry.2a7fd9195dc2336abf26.jpg",
     "static/media/shuttle.jpg": "/static/media/shuttle.e9c9e2f4e226b80efcc4.jpg",
+    "static/media/last_man_standing.png": "/static/media/last_man_standing.aba7882b75965e1bd18e.png",
     "static/media/Tandon.jpg": "/static/media/Tandon.9ec3c4df8710fe84e8cf.jpg",
     "static/media/Zhe.jpg": "/static/media/Zhe.8e6069bf4155057eff19.jpg",
-    "static/media/last_man_standing.png": "/static/media/last_man_standing.1119d13adf836f33aa26.png",
     "static/media/NYUAlbert.png": "/static/media/NYUAlbert.bb64c8cc4b8ec9e1a37c.png",
     "static/media/If_you_are_the_one.png": "/static/media/If_you_are_the_one.8fa1b0dbe8aa2cffea9d.png",
     "static/media/coffee_chat.jpg": "/static/media/coffee_chat.9758f555e3814d82fb46.jpg",
@@ -68,10 +68,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.dac5169f.css.map": "/static/css/main.dac5169f.css.map",
-    "main.8b446bae.js.map": "/static/js/main.8b446bae.js.map"
+    "main.234dc4c2.js.map": "/static/js/main.234dc4c2.js.map"
   },
   "entrypoints": [
     "static/css/main.dac5169f.css",
-    "static/js/main.8b446bae.js"
+    "static/js/main.234dc4c2.js"
   ]
 }
