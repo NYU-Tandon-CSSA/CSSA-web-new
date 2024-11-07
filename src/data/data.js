@@ -32,6 +32,7 @@ import mia from '../images/members/Mia.jpg'
 //IT team
 import andrew from '../images/members/Andrew.jpg';
 import sichang from '../images/members/Sichang.jpg';
+import sj from '../images/members/SJ.jpg';
 
 export const devTeam = [
     {
@@ -104,7 +105,7 @@ export const devTeam = [
         name: "SJ",
         major: "Computer Science",
         year: "2024-2025",
-        image: unknow,
+        image: sj,
     },
     {
         name: "孟宏道",
