@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dac5169f.css",
-    "main.js": "/static/js/main.f3449c66.js",
+    "main.js": "/static/js/main.d64c2af8.js",
     "static/media/Group1.jpg": "/static/media/Group1.6dae49ec543d9a05a164.jpg",
     "static/media/Group_Photo_Fall2024.JPG": "/static/media/Group_Photo_Fall2024.a35e5d4ef85999aef86c.JPG",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
@@ -26,7 +26,6 @@
     "static/media/Apartment.jpg": "/static/media/Apartment.16269b747f236f144ff5.jpg",
     "static/media/grand-central.jpg": "/static/media/grand-central.eae6cbdf1590fa67184b.jpg",
     "static/media/carriers.jpg": "/static/media/carriers.00fcf6f2136741486491.jpg",
-    "static/media/Sichang.jpg": "/static/media/Sichang.f634ecf912f86afc137d.jpg",
     "static/media/GroupPhoto.jpg": "/static/media/GroupPhoto.57871dce90eb50176f2f.jpg",
     "static/media/subway.jpg": "/static/media/subway.d072203986666275a45e.jpg",
     "static/media/visa_cover.jpg": "/static/media/visa_cover.a42254ee135f7f9636e9.jpg",
@@ -38,6 +37,7 @@
     "static/media/rent_cover.jpg": "/static/media/rent_cover.89ac39eae160a72e587b.jpg",
     "static/media/transport_cover.jpg": "/static/media/transport_cover.445553e2766524b2c30c.jpg",
     "static/media/Yi.jpg": "/static/media/Yi.1f3c7442c707a4f51c8a.jpg",
+    "static/media/Sichang.jpg": "/static/media/Sichang.d8f29b6d9e88a281fc2c.jpg",
     "static/media/bus.jpg": "/static/media/bus.a17a3f3049f5ad8a95ed.jpg",
     "static/media/taxi.jpg": "/static/media/taxi.f7674a4980f01cadd221.jpg",
     "static/media/bank_cover.jpg": "/static/media/bank_cover.5599840fc5b531cc61dc.jpg",
@@ -54,6 +54,7 @@
     "static/media/Elaine.jpg": "/static/media/Elaine.95b8f0250731a28dfd1c.jpg",
     "static/media/Luwen.jpg": "/static/media/Luwen.a1e961f106cd1effb32d.jpg",
     "static/media/nophoto.jpg": "/static/media/nophoto.27131f2b8a35c1c1a6fe.jpg",
+    "static/media/SJ.jpg": "/static/media/SJ.bb4b27f30b30fdef4602.jpg",
     "static/media/Helen.jpg": "/static/media/Helen.579098460c23050743d1.jpg",
     "static/media/NYUStartImg.png": "/static/media/NYUStartImg.93a1a0e58f0d5903f989.png",
     "static/media/MiaSong.jpg": "/static/media/MiaSong.d5bc6eb8b3b914169565.jpg",
@@ -69,10 +70,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.dac5169f.css.map": "/static/css/main.dac5169f.css.map",
-    "main.f3449c66.js.map": "/static/js/main.f3449c66.js.map"
+    "main.d64c2af8.js.map": "/static/js/main.d64c2af8.js.map"
   },
   "entrypoints": [
     "static/css/main.dac5169f.css",
-    "static/js/main.f3449c66.js"
+    "static/js/main.d64c2af8.js"
   ]
 }
