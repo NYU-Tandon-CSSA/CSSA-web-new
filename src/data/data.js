@@ -29,6 +29,8 @@ import winnie from '../images/members/Winnie.jpg'
 import yi from '../images/members/Yi.jpg'
 import mia from '../images/members/Mia.jpg'
 import jeremy from '../images/members/Jeremy.jpg'
+import angela from '../images/members/Angela.jpg'
+import jennifer from '../images/members/Jennifer.jpg'
 
 //IT team
 import andrew from '../images/members/Andrew.jpg';
@@ -284,6 +286,14 @@ export const wallOfFame = [
       image: samuel,
     },
     {
+      name: "顾安琪 - Angela",
+      position: "宣传部部长",
+      year: "2026",
+      major: "B.S. Data Science",
+      intro: "istj/面包脑袋/周杰伦/citywalk/喜欢晒太阳/冰美式选手/努力成为e人",
+      image: angela,
+    },
+    {
       name: "周亦桥 - Yiqiao",
       position: "技术与职业发展部副部长",
       year: "2026",
@@ -306,6 +316,14 @@ export const wallOfFame = [
       major: "B.S. Computer Science",
       intro: "业余围棋选手; 炉石传说美服前500",
       image: daniel,
+    },
+    {
+      name: "钟雨桐 - Jennifer",
+      position: "宣传部副部长",
+      year: "2027",
+      major: "B.A. Computer Science & Data Science",
+      intro: "ESTJ-跳舞&数学爱好者-非常高兴认识你！",
+      image: jennifer,
     },
   ];
   
