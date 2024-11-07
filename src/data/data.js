@@ -28,6 +28,9 @@ import daniel from '../images/members/Daniel.jpg'
 import winnie from '../images/members/Winnie.jpg'
 import yi from '../images/members/Yi.jpg'
 import mia from '../images/members/Mia.jpg'
+import jeremy from '../images/members/Jeremy.jpg'
+import angela from '../images/members/Angela.jpg'
+import jennifer from '../images/members/Jennifer.jpg'
 
 //IT team
 import andrew from '../images/members/Andrew.jpg';
@@ -284,12 +287,12 @@ export const wallOfFame = [
       image: samuel,
     },
     {
-      name: "梁逸伦 - Daniel",
-      position: "活动部副部长",
-      year: "2025",
-      major: "B.S. Computer Science",
-      intro: "业余围棋选手; 炉石传说美服前500",
-      image: daniel,
+      name: "顾安琪 - Angela",
+      position: "宣传部部长",
+      year: "2026",
+      major: "B.S. Data Science",
+      intro: "istj/面包脑袋/周杰伦/citywalk/喜欢晒太阳/冰美式选手/努力成为e人",
+      image: angela,
     },
     {
       name: "周亦桥 - Yiqiao",
@@ -298,6 +301,30 @@ export const wallOfFame = [
       major: "B.S. Computer Science",
       intro: "事已至此，先吃饭吧",
       image: yi,
+    },
+    {
+      name: "林子童 - Jeremy",
+      position: "外联部副部长",
+      year: "2026",
+      major: "M.S. Management of Technology",
+      intro: "ENFP是个兴趣爱好很广泛的游戏宅啊，梦想是可以想吃什么吃什么，再开一个猫咖呀",
+      image: jeremy,
+    },
+    {
+      name: "梁逸伦 - Daniel",
+      position: "活动部副部长",
+      year: "2025",
+      major: "B.S. Computer Science",
+      intro: "业余围棋选手; 炉石传说美服前500",
+      image: daniel,
+    },
+    {
+      name: "钟雨桐 - Jennifer",
+      position: "宣传部副部长",
+      year: "2027",
+      major: "B.A. Computer Science & Data Science",
+      intro: "ESTJ-跳舞&数学爱好者-非常高兴认识你！",
+      image: jennifer,
     },
   ];
   
