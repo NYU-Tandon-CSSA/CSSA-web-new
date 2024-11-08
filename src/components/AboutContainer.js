@@ -1,47 +1,184 @@
-import React from 'react';
-import { Paper, Typography, Divider, Grid, Box } from '@mui/material';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper} from '@material-ui/core';
+import aboutUs from "../images/AboutUs.jpeg"
+import Container from '@mui/material/Container';
 
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+// css
+import '../css/about.css'
 
-function AboutContainer({ title, paragraph, imageUrl }) {
+import IntroOfMembers from '../components/IntroOfMembers.js';
+import IntroOfEboard from '../components/IntroOfEboard.js';
+import IntroOfDevTeam from "../components/IntroOfDevTeam.js";
+
+import {devTeam, advisorTeam, wallOfFame, boardTeam, cabinetTeam}  from "../data/data.js"
+
+export default function About() {
   return (
-    <Paper elevation={0} sx={{ backgroundColor: '#EEEEEE', padding: '16px'}}>
-        <Typography variant="h4" component="div" gutterBottom sx={{ textAlign:'center', fontWeight: 'bold', fontSize: '2.3 rem' }}>
-          {title}
-        </Typography>
-        <Divider sx={{ marginY: '16px' }} />
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            {/* Box component to add styles to the image */}
-            <Box sx={{
-              boxShadow: 3, // this applies a predefined shadow
-              margin: '16px', // larger margin around the image
-              overflow: 'hidden', // this ensures the shadow doesn't get cut off
-              borderRadius: '8px', // optional: if you want rounded corners
-            }}>
-              <img src={imageUrl} alt={title} style={{ width: '100%', height: 'auto', display: 'block' }} />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Stack spacing={2}>
-              <Typography variant="body1" component="div" sx={{ fontSize:'1.5 rem'}}>
-                {paragraph}
-              </Typography>
-              <Box sx={{ textAlign: 'right' }}>
-                <Button component={Link} to= "/about" variant="contained" style={{backgroundColor: "#57068c"}}>Learn More <DoubleArrowIcon/> </Button>
-              </Box>
-              <Box sx={{ textAlign: 'right' }}>
-                <Button href= "https://forms.gle/J7QJbiVAWX6nu9Je7" target={"_blank"} variant="contained" style={{backgroundColor: "#57068c"}}>Join Us <AssignmentIndIcon/> </Button>
-              </Box>
-            </Stack>
-          </Grid>
-        </Grid>
-    </Paper>
-  );
-}
+    <Container maxWidth="lg" sx={{marginBottom: "8%"}}>
 
-export default AboutContainer;
+      <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul> 
+
+      <div style={{paddingTop: "130px", textAlign:"center"}}>
+
+        <Grid container spacing={2} justifyContent="left" alignItems="center">
+          {/* Row 1 */}
+          {/* <Grid item xs={4} justifyContent="center">
+            AboutUs
+          </Grid>
+
+          <Grid item xs={8}>
+            Image
+          </Grid> */}
+
+          <Grid item xs={12}>
+            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2024 - 2025</Typography>
+            {/* <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography> */}
+          </Grid>
+
+          <Grid item xs={12}>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>CABINET</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <hr style={{
+              border: 'none',
+              height: '1px',
+              backgroundColor: 'black',
+              margin: '0 0 10px 0'
+            }} />
+          </Grid>
+
+          {/* Row 2 */}
+          {cabinetTeam.map(({name,position,year,major,intro,image},index)=> (
+            <Grid item xs={12} md={3} key={index}>
+              <IntroOfEboard 
+                name={name}
+                position={position}
+                year={year}
+                major={major}
+                intro={intro}
+                image={image}
+              />
+            </Grid>
+          ))}
+
+          <Grid item xs={12}>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>BOARD</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <hr style={{
+              border: 'none',
+              height: '1px',
+              backgroundColor: 'black',
+              margin: '0 0 10px 0'
+            }} />
+          </Grid>
+
+          {boardTeam.map(({name,position,year,major,intro,image},index)=> (
+            <Grid item xs={12} md={3} key={index}>
+              <IntroOfEboard 
+                name={name}
+                position={position}
+                year={year}
+                major={major}
+                intro={intro}
+                image={image}
+              />
+            </Grid>
+          ))}
+        
+          <Grid item xs={12}>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>WALL OF FAME</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <hr style={{
+              border: 'none',
+              height: '1px',
+              backgroundColor: 'black',
+              margin: '0 0 10px 0'
+            }} />
+          </Grid>
+          <Grid item xs={12}>
+            <Typography class='Silkscreen' style={{fontSize:"120%", marginBottom: '20px'}}>
+              欢迎点击卡片右下角链接connect Linkedin
+            </Typography>
+          </Grid>
+          {wallOfFame.map(({ name, position, year, major, intro, image, linkedinUrl }, index) => (
+            <Grid item xs={12} md={3} key={index}>
+              <IntroOfEboard 
+                name={name}
+                position={position}
+                year={year}
+                major={major}
+                intro={intro}
+                image={image}
+                linkedinUrl={linkedinUrl ? linkedinUrl : null}
+              />
+            </Grid>
+          ))}
+          
+          <Grid item xs={12}>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>ADVISOR COMMITTEE</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <hr style={{
+              border: 'none',
+              height: '1px',
+              backgroundColor: 'black',
+              margin: '0 0 10px 0'
+            }} />
+          </Grid>
+
+          {advisorTeam.map(({name, position,year,major,intro,image},index)=>{
+            return (
+              <Grid item xs={12} md={3} key={index}>
+                <IntroOfEboard 
+                    name = {name}
+                    position = {position}
+                    year = {year}
+                    major = {major}
+                    intro = {intro}
+                    image={image}/>
+              </Grid>
+            )
+          })}
+
+          <Grid item xs={12}>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>Web development team</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <hr style={{
+              border: 'none',
+              height: '1px',
+              backgroundColor: 'black',
+              margin: '0 0 10px 0'
+            }} />
+          </Grid>
+
+          {devTeam.map(({name, major, year, image},index) => {
+            return (
+              <Grid item xs={12} md={6} key={index}>
+                <IntroOfDevTeam
+                  name = {name}
+                  major = {major}
+                  year = {year}
+                  image = {image}/>
+              </Grid>
+            )
+          })}
+        </Grid>
+
+      </div>
+    </Container>
+  )
+}
