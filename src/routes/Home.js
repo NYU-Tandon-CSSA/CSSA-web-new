@@ -1,18 +1,10 @@
-import React from 'react';
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper } from '@material-ui/core';
-import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
+import React, { useEffect, useState } from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { useEffect, useState } from 'react';
-import img from '../images/bridge.png';
-import Event from '../components/Event';
 import Banner from '../components/Banner';
-
-// About us import
 import AboutContainer from '../components/AboutContainer';
-import groupPhoto from '../images/GroupPhoto.jpg';
 import group1 from '../images/Group1.jpg';
-
-// Section for images of recent posts
+import Event from '../components/Event';
 import werewolf from '../images/werewolf2.0.png';
 import alimni_association from '../images/alumni_association.jpg';
 import If_you_are_the_one from '../images/If_you_are_the_one.png';
@@ -20,39 +12,16 @@ import Voice_of_NYC from '../images/Voice_of_NYC.jpg';
 import coffee_chat from '../images/coffee_chat.jpg';
 
 const useStyles = makeStyles((theme) => ({
-  icon: {
-    fontSize: '4rem !important',
-    animation: '$jumpAnimation 1s linear infinite',
-    opacity: 1,
-    transition: 'opacity 0.5s ease',
-  },
-  '@keyframes jumpAnimation': {
-    '0%': {
-      transform: 'translateY(0)',
-    },
-    '50%': {
-      transform: 'translateY(-20px)',
-    },
-    '100%': {
-      transform: 'translateY(0)',
-    },
-  },
-  iconHidden: {
-    opacity: 0,
-  },
-  // 新增 aboutSection 样式
   aboutSection: {
-    backgroundColor: '#333',  // 初始背景色，可以随时更改
+    backgroundColor: '#333', // 深色背景
     color: 'white',
     padding: theme.spacing(6),
-    borderRadius: '8px',
-    margin: '0 auto',  // 居中
-    maxWidth: '85%',   // 限制最大宽度
+    // 去掉 maxWidth 或设置为 '100%'
+    width: '100%', // 确保占据整个宽度
   },
 }));
 
 
-// Dynamic Navbar
 
 function Home() {
   const classes = useStyles();
@@ -61,13 +30,10 @@ function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const { scrollY } = window;
-      const isVisible = scrollY < window.innerHeight / 2;
-
-      setIsVisible(isVisible);
+      setIsVisible(scrollY < window.innerHeight / 2);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -76,7 +42,6 @@ function Home() {
   return (
     <div style={{ backgroundColor: '#EEEEEE', width: '100%' }}>
       <Grid container spacing={3} style={{ width: '100%', margin: 0 }}>
-
         {/* Banner Image */}
         <Grid item xs={12} style={{ padding: 0, margin: 0 }}>
           <div style={{ position: 'relative' }}>
@@ -86,14 +51,17 @@ function Home() {
       </Grid>
 
       {/* 关于我们 */}
-      <div className={classes.aboutSection}>
-        <AboutContainer
-          title="关于我们"
-          paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。
-          我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。"
-          imageUrl={group1}
-        />
-      </div>
+<div className={classes.aboutSection}>
+  <AboutContainer
+    title="关于我们"
+    paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体..."
+    imageUrl={group1}
+    titleColor="#FFFFFF"          // 标题颜色（白色）
+    paragraphColor="rgba(255, 255, 255, 0.8)" // 段落颜色（白色半透明）
+  />
+</div>
+
+
 
       {/* Events */}
       <Grid container style={{ paddingTop: '8vh', paddingBottom: '8vh', maxWidth: '85%', margin: '0 auto' }} spacing={3}>
@@ -102,52 +70,19 @@ function Home() {
             我们的活动
           </Typography>
         </Grid>
-        {/* 非诚勿扰 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="非诚勿扰"
-            image={If_you_are_the_one}
-            url='https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g'
-          />
-        </Grid>
 
-        {/* 心动的声音 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="心动的声音"
-            image={Voice_of_NYC}
-            url='https://mp.weixin.qq.com/s/TfM_ZKyMJvkZcAJlt8gsaQ'
-          />
-        </Grid>
-
-        {/* 狼人杀大赛 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="周五桌游夜"
-            image={werewolf}
-            url='https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA'
-          />
-        </Grid>
-
-        {/* 校友会 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="校友会"
-            image={alimni_association}
-            url='https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA'
-          />
-        </Grid>
-
-        {/* Coffee Chat */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="Coffee Chat"
-            image={coffee_chat}
-            url='https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw'
-          />
-        </Grid>
+        {/* Event Cards */}
+        {[{ title: "非诚勿扰", image: If_you_are_the_one, url: 'https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g' },
+          { title: "心动的声音", image: Voice_of_NYC, url: 'https://mp.weixin.qq.com/s/TfM_ZKyMJvkZcAJlt8gsaQ' },
+          { title: "周五桌游夜", image: werewolf, url: 'https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA' },
+          { title: "校友会", image: alimni_association, url: 'https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA' },
+          { title: "Coffee Chat", image: coffee_chat, url: 'https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw' }]
+          .map((event, index) => (
+            <Grid item xs={12} md={6} lg={4} key={index}>
+              <Event eventTitle={event.title} image={event.image} url={event.url} />
+            </Grid>
+          ))}
       </Grid>
-
     </div>
   );
 }
