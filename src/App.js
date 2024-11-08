@@ -9,6 +9,8 @@ import freshmanHandbook from './routes/FreshmanHandbook';
 import StudentService from './routes/StudentService';
 import TransparentNavBar from './components/TransparentNavBar';
 import XiaoHongShu from './routes/XiaoHongShu';
+import Gallery from './routes/Gallery';
+import Events from './routes/Events';
 
 const theme = createTheme({
   palette: {
@@ -54,6 +56,8 @@ function App() {
                 <Route exact path="/freshmanHandbook" component={freshmanHandbook} />
                 <Route exact path="/studentservice" component={StudentService} />
                 <Route exact path="/xiaohongshu" component={XiaoHongShu} />
+                <Route exact path="/gallery" component={Gallery} />
+                <Route exact path="/events" component={Events} />
               </div>
             </Switch>
           </HashRouter>
