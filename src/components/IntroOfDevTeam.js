@@ -10,8 +10,8 @@ function IntroOfDevTeam({name, major, year, image}, index) {
     <Card
         variant="outlined" 
         sx={{
-          width: 230,
-          minHeight: 350,
+          width: 200,
+          minHeight: 280,
           maxWidth: '100%',
           boxShadow: 'lg',
           margin: 'auto',
@@ -21,7 +21,7 @@ function IntroOfDevTeam({name, major, year, image}, index) {
         >
 
       <CardOverflow>
-        <AspectRatio ratio="1.2">
+        <AspectRatio ratio="1.5">
           <img
             src={image}
             loading="lazy"
