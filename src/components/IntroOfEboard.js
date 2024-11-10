@@ -44,7 +44,7 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
       
 
         <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
-        <Chip
+        {/* <Chip
             size="md"
             variant="soft"
             color="primary"
@@ -56,8 +56,9 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
             }}
           >
             {position}
-          </Chip>
+          </Chip> */}
           <Typography level="title-lg">{name}</Typography>
+          <Typography variant='h6' sx={{fontWeight: 'bold', color: '#593483'}}>{position}</Typography>
           <Typography level="body-xs">Class of {year}</Typography>
           <Typography level="body-xs">{major}</Typography>
 
