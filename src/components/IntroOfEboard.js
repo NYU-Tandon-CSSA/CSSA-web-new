@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/joy/Avatar';
+import AspectRatio from '@mui/joy/AspectRatio';
 import Chip from '@mui/joy/Chip';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
@@ -13,21 +14,37 @@ import Typography from '@mui/joy/Typography';
 import SvgIcon from '@mui/joy/SvgIcon';
 import Divider from '@mui/material/Divider';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { CardCover } from '@mui/joy';
 
 function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
     return (
         <Card
+        variant="outlined" 
         sx={{
-          width: '80%',
-          minHeight: '400px',
+          width: 230,
+          minHeight: 440,
           maxWidth: '100%',
           boxShadow: 'lg',
           margin: 'auto',
-        }}
-      >
+          backgroundColor: 'rgba(255, 255, 255, 0.5)',
+          backdropFilter: 'blur(10px)',
+        }}  
+        >
+
+        <CardOverflow>
+        <AspectRatio ratio="1.2">
+          <img
+            src={image}
+            loading="lazy"
+            alt=""
+          />
+        </AspectRatio>
+      </CardOverflow>   
+
+      
+
         <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
-          <Avatar src={image} sx={{ '--Avatar-size': '70%' }} />
-          <Chip
+        <Chip
             size="md"
             variant="soft"
             color="primary"
@@ -50,6 +67,8 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
           <Typography level="body-sm" sx={{ maxWidth: '24ch', p: 1 }}>
             {intro}
           </Typography>
+
+          {/* <Avatar src={image} sx={{ '--Avatar-size': '70%' }} /> */}
             {/* <Box
               sx={{
                 display: 'flex',
