@@ -1,11 +1,11 @@
 //presidents
-import sherry from '../images/members/Sherry.jpg';
-import cynthia from '../images/members/Cynthia.jpg';
-import zhe from '../images/members/Zhe.jpg';
+import sherry from '../images/members/Sherry.jpg'
+import cynthia from '../images/members/Cynthia.jpg'
+import zhe from '../images/members/Zhe.jpg'
 
 // advisor
-import mario from '../images/members/Mario.jpg';
-import tim from '../images/members/Tim.jpg';
+import mario from '../images/members/Mario.jpg'
+import tim from '../images/members/Tim.jpg'
 import cory from '../images/members/Cory.jpg'
 import christina from '../images/members/Christina.jpg'
 import elaine from '../images/members/Elaine.jpg'
@@ -33,9 +33,10 @@ import angela from '../images/members/Angela.jpg'
 import jennifer from '../images/members/Jennifer.jpg'
 
 //IT team
-import andrew from '../images/members/Andrew.jpg';
-import sichang from '../images/members/Sichang.jpg';
-import sj from '../images/members/SJ.jpg';
+import andrew from '../images/members/Andrew.jpg'
+import sichang from '../images/members/Sichang.jpg'
+import sj from '../images/members/SJ.jpg'
+import steven from '../images/members/Steven.jpg'
 
 export const devTeam = [
     {
@@ -127,7 +128,13 @@ export const devTeam = [
       major: "Informatics",
       year: "2024-2025",
       image: sichang,
-  },
+    },
+    {
+      name: "王寅飞",
+      major: "Computer Engineering",
+      year: "2024-2025",
+      image: steven,
+    },
   ];
 
 export const advisorTeam = [
