@@ -1,30 +1,35 @@
 import * as React from 'react';
 import AspectRatio from '@mui/joy/AspectRatio';
-import Link from '@mui/joy/Link';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
-import Chip from '@mui/joy/Chip';
+import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 
-function IntroOfDevTeam({name, major, year, image}) {
+function IntroOfDevTeam({name, major, year, image}, index) {
   return (
     <Card
-      variant="outlined"
-      orientation="horizontal"
-      sx={{
-        width: 399,
-        margin: "auto",
-        minHeight:'80px'
-        // '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
-      }}
-    >
-      <AspectRatio ratio="1" sx={{ width: 90 }}>
-        <img
-          src= {image}
-          loading="lazy"
-          alt=""
-        />
-      </AspectRatio>
+        variant="outlined" 
+        sx={{
+          width: 230,
+          minHeight: 350,
+          maxWidth: '100%',
+          boxShadow: 'lg',
+          margin: 'auto',
+          backgroundColor: 'rgba(255, 255, 255, 0.5)',
+          backdropFilter: 'blur(10px)',
+        }}  
+        >
+
+      <CardOverflow>
+        <AspectRatio ratio="1.2">
+          <img
+            src={image}
+            loading="lazy"
+            alt=""
+          />
+        </AspectRatio>
+      </CardOverflow> 
+
       <CardContent>
         <Typography level="title-lg" id="card-description">
             {name}
@@ -35,14 +40,6 @@ function IntroOfDevTeam({name, major, year, image}) {
         <Typography level="body-sm" aria-describedby="card-description" mb={1}>
            {year}
         </Typography>
-        {/* <Chip
-          variant="outlined"
-          color="primary"
-          size="sm"
-          sx={{ pointerEvents: 'none' }}
-        >
-          Cool weather all day long
-        </Chip> */}
       </CardContent>
     </Card>
   );
