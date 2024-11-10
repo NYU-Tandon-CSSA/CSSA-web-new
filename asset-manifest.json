@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dac5169f.css",
-    "main.js": "/static/js/main.3769a610.js",
+    "main.js": "/static/js/main.2c59868a.js",
     "static/media/Group1.jpg": "/static/media/Group1.6dae49ec543d9a05a164.jpg",
     "static/media/Group_Photo_Fall2024.JPG": "/static/media/Group_Photo_Fall2024.a35e5d4ef85999aef86c.JPG",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
@@ -39,6 +39,7 @@
     "static/media/transport_cover.jpg": "/static/media/transport_cover.445553e2766524b2c30c.jpg",
     "static/media/Yi.jpg": "/static/media/Yi.1f3c7442c707a4f51c8a.jpg",
     "static/media/Sichang.jpg": "/static/media/Sichang.d8f29b6d9e88a281fc2c.jpg",
+    "static/media/Steven.jpg": "/static/media/Steven.0ab928509ae862dc2b9f.jpg",
     "static/media/bus.jpg": "/static/media/bus.a17a3f3049f5ad8a95ed.jpg",
     "static/media/taxi.jpg": "/static/media/taxi.f7674a4980f01cadd221.jpg",
     "static/media/bank_cover.jpg": "/static/media/bank_cover.5599840fc5b531cc61dc.jpg",
@@ -73,10 +74,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.dac5169f.css.map": "/static/css/main.dac5169f.css.map",
-    "main.3769a610.js.map": "/static/js/main.3769a610.js.map"
+    "main.2c59868a.js.map": "/static/js/main.2c59868a.js.map"
   },
   "entrypoints": [
     "static/css/main.dac5169f.css",
-    "static/js/main.3769a610.js"
+    "static/js/main.2c59868a.js"
   ]
 }
