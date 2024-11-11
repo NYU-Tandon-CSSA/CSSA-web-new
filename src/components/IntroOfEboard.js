@@ -21,7 +21,7 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
         <Card
         variant="outlined" 
         sx={{
-          width: 230,
+          width: 220,
           minHeight: 440,
           maxWidth: '100%',
           boxShadow: 'lg',
@@ -43,7 +43,7 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
 
       
 
-        <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
+        <CardContent sx={{alignItems: 'center', textAlign: 'center', marginTop: '5px' }}>
         {/* <Chip
             size="md"
             variant="soft"
@@ -58,17 +58,24 @@ function IntroOfEboard({name,position,year,major,intro,image,linkedinUrl}) {
             {position}
           </Chip> */}
           <Typography level="title-lg">{name}</Typography>
-          <Typography variant='h6' sx={{fontWeight: 'bold', color: '#593483'}}>{position}</Typography>
+          <Typography variant='h6' sx={{fontWeight: 'bold', color: '#593483', fontFamily: 'Noto Sans SC'}}>{position}</Typography>
           <Typography level="body-xs">Class of {year}</Typography>
           <Typography level="body-xs">{major}</Typography>
 
 
           <Divider style={{width:'100%', backgroundColor: "#8900e1"}} />
-
-          <Typography level="body-sm" sx={{ maxWidth: '24ch', p: 1 }}>
-            {intro}
-          </Typography>
-
+          <CardContent
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '200vh',
+          }}
+          >
+            <Typography level="body-sm" sx={{ maxWidth: '24ch', p: 1 }}>
+              {intro}
+            </Typography>
+          </CardContent>
           {/* <Avatar src={image} sx={{ '--Avatar-size': '70%' }} /> */}
             {/* <Box
               sx={{

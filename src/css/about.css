@@ -126,7 +126,7 @@
   
   .card-gallery {
     display: flex;
-    animation: scrollLeftToRight 300s linear infinite;
+    animation: scrollLeftToRight 600s linear infinite;
   }
   
   .dev-team-card {
