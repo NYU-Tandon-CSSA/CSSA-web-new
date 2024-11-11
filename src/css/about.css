@@ -11,6 +11,16 @@
     }
 }
 
+@keyframes scrollLeftToRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
 .background {
     position: fixed;
     width: 100vw;
@@ -107,3 +117,20 @@
     bottom: -174px;
     animation-delay: 35s;
 }
+
+.card-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card-gallery {
+    display: flex;
+    animation: scrollLeftToRight 600s linear infinite;
+  }
+  
+  .dev-team-card {
+    min-width: 230px; /* Adjust to the width of card */
+    margin: 0 10px;   
+    transition: transform 0.3s ease-in-out;
+  }

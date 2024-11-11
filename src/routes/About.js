@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper} from '@material-ui/core';
 import aboutUs from "../images/AboutUs.jpeg"
 import Container from '@mui/material/Container';
+import { useEffect, useState } from "react";
 
 // css
 import '../css/about.css'
@@ -13,6 +14,12 @@ import IntroOfDevTeam from "../components/IntroOfDevTeam.js";
 import {devTeam, advisorTeam, wallOfFame, boardTeam, cabinetTeam}  from "../data/data.js"
 
 export default function About() {
+  const numOfDuplicates = 10; 
+
+  const allCards = [...devTeam]; // Original set of devTeam
+  const repeatedCards = Array(numOfDuplicates).fill(devTeam).flat();
+
+
   return (
     <Container maxWidth="lg" sx={{marginBottom: "8%"}}>
 
@@ -108,11 +115,7 @@ export default function About() {
               margin: '0 0 10px 0'
             }} />
           </Grid>
-          <Grid item xs={12}>
-            <Typography class='Silkscreen' style={{fontSize:"120%", marginBottom: '20px'}}>
-              欢迎点击卡片右下角链接connect Linkedin
-            </Typography>
-          </Grid>
+
           {wallOfFame.map(({ name, position, year, major, intro, image, linkedinUrl }, index) => (
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
@@ -152,30 +155,35 @@ export default function About() {
               </Grid>
             )
           })}
+          
+          
 
           <Grid item xs={12}>
             <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>Web development team</Typography>
           </Grid>
-          <Grid item xs={12}>
-            <hr style={{
-              border: 'none',
-              height: '1px',
-              backgroundColor: 'black',
-              margin: '0 0 10px 0'
-            }} />
-          </Grid>
-
-          {devTeam.map(({name, major, year, image},index) => {
-            return (
-              <Grid item xs={12} md={6} key={index}>
-                <IntroOfDevTeam
-                  name = {name}
-                  major = {major}
-                  year = {year}
-                  image = {image}/>
-              </Grid>
-            )
-          })}
+            <Grid item xs={12}>
+              <hr style={{
+                border: 'none',
+                height: '1px',
+                backgroundColor: 'black',
+                margin: '0 0 10px 0'
+              }} />
+            </Grid>
+          
+          <div className="card-wrapper">
+            <div className="card-gallery">
+            {repeatedCards.map(({ name, major, year, image }, index) => (
+                <div className="dev-team-card" key={index}>
+                  <IntroOfDevTeam
+                    name={name}
+                    major={major}
+                    year={year}
+                    image={image}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>  
         </Grid>
 
       </div>
