@@ -232,6 +232,7 @@ function Home() {
           <Typography variant="h4" component="div" gutterBottom style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '2.3rem' }}>
             我们的活动
           </Typography>
+
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <Event
@@ -247,7 +248,7 @@ function Home() {
             rel="noopener noreferrer" 
             style={{ textDecoration: 'none' }}
           >
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 10 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
