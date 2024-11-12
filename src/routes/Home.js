@@ -234,13 +234,39 @@ function Home() {
           </Typography>
 
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="非诚勿扰"
-            image={If_you_are_the_one}
-            url='https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g'
-          />
+        
+         {/* 非诚勿扰 */}
+         <Grid item xs={12} md={6} lg={4}>
+          <Link 
+            href="'https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g'" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ textDecoration: 'none' }}
+          >
+            <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={If_you_are_the_one}
+                  alt="Voice of NYC"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
+                    非诚勿扰
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    让我们共同见证爱情的奇迹，聆听心跳的声音，寻找属于你的"The One"！
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Link>
         </Grid>
+
+    
+
+        {/* 心动的声音 */}
         <Grid item xs={12} md={6} lg={4}>
           <Link 
             href="https://mp.weixin.qq.com/s/your-link-here" 
