@@ -133,13 +133,34 @@ function Home() {
           </Link>
         </Grid>
 
-        {/* 狼人杀大赛 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="周五桌游夜"
-            image={werewolf}
-            url='https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA'
-          />
+         
+         {/* 周五桌游夜 */}
+         <Grid item xs={12} md={6} lg={4}>
+          <Link 
+            href="https://mp.weixin.qq.com/s/your-link-here" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ textDecoration: 'none' }}
+          >
+            <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={werewolf}
+                  alt="Voice of NYC"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
+                    周五桌游夜
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                  周五桌游夜，带上朋友一起探索丰富多彩的桌游世界，享受趣味对战和策略挑战！！
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Link>
         </Grid>
 
         {/* 校友会 */}
