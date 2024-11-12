@@ -13,10 +13,10 @@ import coffee_chat from '../images/coffee_chat.jpg';
 
 const useStyles = makeStyles((theme) => ({
   aboutSection: {
-    backgroundColor: '#333', // 深色背景
+    backgroundColor: '#000', // 深色背景
     color: 'white',
     padding: theme.spacing(6),
-    // 去掉 maxWidth 或设置为 '100%'
+    // 去掉 maxWidth 或设置为 '100%'c
     width: '100%', // 确保占据整个宽度
   },
 }));
@@ -51,15 +51,15 @@ function Home() {
       </Grid>
 
       {/* 关于我们 */}
-<div className={classes.aboutSection}>
-  <AboutContainer
-    title="关于我们"
-    paragraph="NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体..."
-    imageUrl={group1}
-    titleColor="#FFFFFF"          // 标题颜色（白色）
-    paragraphColor="rgba(255, 255, 255, 0.8)" // 段落颜色（白色半透明）
-  />
-</div>
+    <div className={classes.aboutSection}>
+       <AboutContainer
+       title="关于我们"
+       paragraph="NYU Tandon CSSA（全称 Chinese Students and Scholars Association，即中国学生学者联合会）是 NYU Tandon School of Engineering 最大的华人学生团体，也是中国驻纽约领事馆正式注册的学生组织。我们致力于为 NYU Tandon 以及整个 NYU 的中国留学生提供一个支持和交流的平台。NYU Tandon CSSA 通过丰富多彩的活动、职业发展指导、文化推广以及社区支持，为广大华人学生打造一个温暖的大家庭。我们的活动包括迎新会、学术讲座、文化节、职业发展工作坊、以及其他社交活动，旨在帮助中国留学生适应海外生活、提升自我价值、扩展人际网络，并在学业和职业上取得成功。我们以促进中美文化交流、支持华人学生成长为使命，努力为所有 NYU 华人学生创造一个更包容、更有意义的学习和生活环境。"
+       imageUrl={group1}
+       titleColor="#FFFFFF"          // 标题颜色（白色）
+       paragraphColor="rgba(255, 255, 255, 0.8)" // 段落颜色（白色半透明）
+      />
+    </div>
 
 
 
