@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper, Link } from '@material-ui/core';
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
@@ -11,6 +11,9 @@ import Banner from '../components/Banner';
 import AboutContainer from '../components/AboutContainer';
 import groupPhoto from '../images/GroupPhoto.jpg';
 import group1 from '../images/Group1.jpg';
+
+//Events import
+import CardActionArea from '@mui/material/CardActionArea';
 
 // Section for images of recent posts
 import werewolf from '../images/werewolf2.0.png';
@@ -103,11 +106,31 @@ function Home() {
 
         {/* 心动的声音 */}
         <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="心动的声音"
-            image={Voice_of_NYC}
-            url='https://mp.weixin.qq.com/s/TfM_ZKyMJvkZcAJlt8gsaQ'
-          />
+          <Link 
+            href="https://mp.weixin.qq.com/s/your-link-here" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ textDecoration: 'none' }}
+          >
+            <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={Voice_of_NYC}
+                  alt="Voice of NYC"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
+                    心动的声音
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    让我们共同见证音乐的奇迹，聆听心动的力量，寻找属于你的"最强之声"！
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Link>
         </Grid>
 
         {/* 狼人杀大赛 */}
