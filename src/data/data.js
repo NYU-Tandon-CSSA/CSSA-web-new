@@ -33,11 +33,18 @@ import angela from '../images/members/Angela.jpg'
 import jennifer from '../images/members/Jennifer.jpg'
 
 //IT team
+<<<<<<< Updated upstream
 import andrew from '../images/members/Andrew.jpg'
 import sichang from '../images/members/Sichang.jpg'
 import sj from '../images/members/SJ.jpg'
 import steven from '../images/members/Steven.jpg'
 import cicyliu from '../images/members/cc.jpg'
+=======
+import andrew from '../images/members/Andrew.jpg';
+import sichang from '../images/members/Sichang.jpg';
+import cicyliu from '../images/members/cc.jpg';
+
+>>>>>>> Stashed changes
 
 export const devTeam = [
     {
@@ -131,6 +138,7 @@ export const devTeam = [
       image: sichang,
     },
     {
+<<<<<<< Updated upstream
       name: "王寅飞",
       major: "Computer Engineering",
       year: "2024-2025",
@@ -141,6 +149,12 @@ export const devTeam = [
       major: "Computer Engineering",
       year: "2024-2025",
       image: cicyliu,
+=======
+    name: "刘泽慧",
+    major: "Informatics",
+    year: "2024-2025",
+    image: cicyliu,
+>>>>>>> Stashed changes
     },
   ];
 
