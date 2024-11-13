@@ -5,7 +5,9 @@ import Footer from './components/Footer';
 
 import Home from './routes/Home';
 import About from './routes/About';
+import Events from './routes/Events';
 import freshmanHandbook from './routes/FreshmanHandbook';
+import Gallery from './routes/Gallery';
 import StudentService from './routes/StudentService';
 import TransparentNavBar from './components/TransparentNavBar';
 import XiaoHongShu from './routes/XiaoHongShu';
@@ -50,8 +52,10 @@ function App() {
               <div>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
+                <Route exact path="/events" component={Events} />
                 <Route exact path="/freshmanHandbook/:pageInd" component={freshmanHandbook} />
                 <Route exact path="/freshmanHandbook" component={freshmanHandbook} />
+                <Route exact path="/gallery" component={Gallery} />
                 <Route exact path="/studentservice" component={StudentService} />
                 <Route exact path="/xiaohongshu" component={XiaoHongShu} />
               </div>
