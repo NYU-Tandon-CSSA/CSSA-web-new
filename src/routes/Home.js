@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from "react-dom";
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper, Link } from '@material-ui/core';
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,11 +7,12 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
 import Event from '../components/Event';
+import EventCarousel from '../components/EventCarousel';
+import EventCard from '../components/EventCard';
 // import Header from '../components/Header';
 
 // About us import
 import groupPhoto from '../images/Group_Photo_Fall2024.JPG'
-
 
 //Events import
 import CardActionArea from '@mui/material/CardActionArea';
@@ -21,6 +23,7 @@ import alimni_association from '../images/alumni_association.jpg';
 import If_you_are_the_one from '../images/If_you_are_the_one.png';
 import Voice_of_NYC from '../images/Voice_of_NYC.jpg';
 import coffee_chat from '../images/coffee_chat.jpg';
+import { upcomingEvents } from '../data/upcomingEvents';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -115,6 +118,18 @@ function Home() {
     };
   }, []);
 
+  const events = upcomingEvents.map(event => ({
+    id: event.id,
+    content: (
+      <img 
+        src={event.image} 
+        alt="Event poster" 
+        style={{ width: '100%', cursor: 'pointer' }}
+        onClick={() => window.open(event.url, '_blank')}
+      />
+    )
+  }));
+
   return (
     <div style={{ backgroundColor: '#EEEEEE', width: '100%' }}>
       {/* Banner Image */}
@@ -201,7 +216,7 @@ function Home() {
             关于我们
           </Typography>
           <Typography variant="body1" className={classes.paragraph}>
-            NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering最大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。 我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。
+            NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。 我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。
           </Typography>
           <Box className={classes.buttonContainer}>
             <Button 
@@ -236,9 +251,101 @@ function Home() {
             我们的活动
           </Typography>
         </Grid>
-        
-         {/* 非诚勿扰 */}
-         <Grid item xs={12} md={6} lg={4}>
+
+        <Grid item xs={12} style={{ display: 'flex', alignItems: 'center' }}>
+          {/* 左侧色块 */}
+          <Box 
+            sx={{
+              width: '20%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginRight: '2rem',
+            }}
+          >
+            <Typography 
+              variant="h4" 
+              sx={{ 
+                color: '#1c1c2d', 
+                fontWeight: 300, 
+                textAlign: 'center',
+                lineHeight: 1.2
+              }}
+            >
+              活动
+              <br />
+              /
+              <br />
+              预告
+            </Typography>
+          </Box>
+
+          {/* EventCarousel */}
+          <Box 
+            sx={{ 
+              flex: 1,
+              maxWidth: '75%',
+              margin: '0 auto',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              '& .carousel-root': {
+                height: '80vh',
+              },
+              '& .carousel .slide img': {
+                borderRadius: '16px',
+              }
+            }}
+          >
+            <EventCarousel events={events} />
+          </Box>
+        </Grid>
+
+        {/* 过往活动 */}
+        <Grid item xs={12} style={{ display: 'flex', alignItems: 'center', marginTop: '4rem' }}>
+          {/* 左侧 EventCard */}
+          <Box sx={{ width: '60%', paddingRight: '2rem' }}>
+            <EventCard
+              imageSrc={werewolf}
+              eventName="技术分享会"
+              eventDescription="这是一次关于React技术的精彩分享，快来参加！"
+              reviewLink="https://example.com/review"
+            />
+          </Box>
+
+          {/* 中间空白占位 */}
+          <Box sx={{ width: '20%' }} />
+
+          {/* 右侧标题 */}
+          <Box 
+            sx={{
+              width: '20%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Typography 
+              variant="h4" 
+              sx={{ 
+                color: '#1c1c2d', 
+                fontWeight: 300, 
+                textAlign: 'center',
+                lineHeight: 1.2
+              }}
+            >
+              过往
+              <br />
+              /
+              <br />
+              活动
+            </Typography>
+          </Box>
+        </Grid>
+
+        {/* 非诚勿扰 */}
+        <Grid item xs={12} md={6} lg={4}>
           <Link 
             href="'https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g'" 
             target="_blank" 
