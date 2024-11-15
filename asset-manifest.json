@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.f383031f.css",
-    "main.js": "/static/js/main.097aecae.js",
+    "main.js": "/static/js/main.cb41c99f.js",
     "static/media/Group1.jpg": "/static/media/Group1.6dae49ec543d9a05a164.jpg",
     "static/media/Group_Photo_Fall2024.JPG": "/static/media/Group_Photo_Fall2024.a35e5d4ef85999aef86c.JPG",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
     "static/media/Jennifer.jpg": "/static/media/Jennifer.2665649aae1e93a633ce.jpg",
-    "static/media/bridge.png": "/static/media/bridge.3154143b4988be1d6bc5.png",
     "static/media/alumni_association.jpg": "/static/media/alumni_association.9f787ce11bbc86ea80d8.jpg",
     "static/media/xiaoHongShu.jpg": "/static/media/xiaoHongShu.2f463803a1078c1757ca.jpg",
     "static/media/Voice_of_NYC.jpg": "/static/media/Voice_of_NYC.ebd17fdd8a0b8abbdb75.jpg",
@@ -75,10 +74,10 @@
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
     "main.f383031f.css.map": "/static/css/main.f383031f.css.map",
-    "main.097aecae.js.map": "/static/js/main.097aecae.js.map"
+    "main.cb41c99f.js.map": "/static/js/main.cb41c99f.js.map"
   },
   "entrypoints": [
     "static/css/main.f383031f.css",
-    "static/js/main.097aecae.js"
+    "static/js/main.cb41c99f.js"
   ]
 }
