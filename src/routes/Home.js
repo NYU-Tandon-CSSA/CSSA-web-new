@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
-import img from '../images/bridge.png';
 import Event from '../components/Event';
 import Banner from '../components/Banner';
 // import Header from '../components/Header';
@@ -80,7 +79,7 @@ function Home() {
         <Grid 
           item 
           xs={12} 
-          style={{ padding: 0, margin: 0, height: '97vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
+          style={{ padding: 0, margin: 0, height: '100vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
         >
           {/* <Banner /> */}
           {/* <video autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: '-1' }}>
