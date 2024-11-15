@@ -9,9 +9,8 @@ import Event from '../components/Event';
 // import Header from '../components/Header';
 
 // About us import
-import AboutContainer from '../components/AboutContainer';
 import groupPhoto from '../images/Group_Photo_Fall2024.JPG'
-import group1 from '../images/Group1.jpg';
+
 
 //Events import
 import CardActionArea from '@mui/material/CardActionArea';
@@ -229,10 +228,13 @@ function Home() {
       {/* Events */}
       <Grid container style={{ paddingTop: '8vh', paddingBottom: '8vh', maxWidth: '85%', margin: '0 auto' }} spacing={3}>
         <Grid item xs={12}>
-          <Typography variant="h4" component="div" gutterBottom style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '2.3rem' }}>
+          <Typography 
+            variant="h2" 
+            className={classes.title}
+            style={{ textAlign: 'center' }}
+          >
             我们的活动
           </Typography>
-
         </Grid>
         
          {/* 非诚勿扰 */}
