@@ -273,11 +273,7 @@ function Home() {
                 lineHeight: 1.2
               }}
             >
-              活动
-              <br />
-              /
-              <br />
-              预告
+              活动 · 预告
             </Typography>
           </Box>
 
@@ -301,31 +297,63 @@ function Home() {
           </Box>
         </Grid>
 
-        {/* 过往活动 */}
-        <Grid item xs={12} style={{ display: 'flex', alignItems: 'center', marginTop: '4rem' }}>
-          {/* 左侧 EventCard */}
-          <Box sx={{ width: '60%', paddingRight: '2rem' }}>
-            <EventCard
-              imageSrc={werewolf}
-              eventName="技术分享会"
-              eventDescription="这是一次关于React技术的精彩分享，快来参加！"
-              reviewLink="https://example.com/review"
-            />
-          </Box>
+        {/* 过往活动卡片区域 */}
+        <Grid 
+          container 
+          spacing={6} 
+          style={{ 
+            marginTop: '2rem',
+            padding: '0 2rem'  // 添加左右内边距
+          }}
+        >
+          {/* 第一行 */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ 
+              width: '100%',
+              '& .MuiCard-root': {  // 调整卡片大小
+                maxWidth: '100%',
+                height: '100%'
+              },
+              '& .MuiCardMedia-root': {  // 调整图片比例
+                paddingTop: '75%'  // 4:3 比例
+              }
+            }}>
+              <EventCard
+                imageSrc={werewolf}
+                eventName="周五桌游夜"
+                eventDescription="游戏开始了，你准备好了吗？"
+                reviewLink="https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA"
+              />
+            </Box>
+          </Grid>
 
-          {/* 中间空白占位 */}
-          <Box sx={{ width: '20%' }} />
+          <Grid item xs={12} md={4}>
+            <Box sx={{ 
+              width: '100%',
+              '& .MuiCard-root': {
+                maxWidth: '100%',
+                height: '100%'
+              },
+              '& .MuiCardMedia-root': {
+                paddingTop: '75%'
+              }
+            }}>
+              <EventCard
+                imageSrc={alimni_association}
+                eventName="校友会"
+                eventDescription="与优秀校友面对面交流"
+                reviewLink="https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA"
+              />
+            </Box>
+          </Grid>
 
-          {/* 右侧标题 */}
-          <Box 
-            sx={{
-              width: '20%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
+          {/* 右上角标题 */}
+          <Grid item xs={12} md={4} style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center',
+            minHeight: '300px'  // 确保标题区域高度与卡片一致
+          }}>
             <Typography 
               variant="h4" 
               sx={{ 
@@ -335,94 +363,70 @@ function Home() {
                 lineHeight: 1.2
               }}
             >
-              过往
-              <br />
-              /
-              <br />
-              活动
+              活动 · 回顾
             </Typography>
-          </Box>
-        </Grid>
+          </Grid>
 
-        {/* 非诚勿扰 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Link 
-            href="'https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g'" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            style={{ textDecoration: 'none' }}
-          >
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image={If_you_are_the_one}
-                  alt="Voice of NYC"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
-                    非诚勿扰
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    让我们共同见证爱情的奇迹，聆听心跳的声音，寻找属于你的"The One"！
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Link>
-        </Grid>
+          {/* 第二行 */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ 
+              width: '100%',
+              '& .MuiCard-root': {
+                maxWidth: '100%',
+                height: '100%'
+              },
+              '& .MuiCardMedia-root': {
+                paddingTop: '75%'
+              }
+            }}>
+              <EventCard
+                imageSrc={If_you_are_the_one}
+                eventName="非诚勿扰"
+                eventDescription="寻找属于你的'The One'"
+                reviewLink="https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g"
+              />
+            </Box>
+          </Grid>
 
-    
+          <Grid item xs={12} md={4}>
+            <Box sx={{ 
+              width: '100%',
+              '& .MuiCard-root': {
+                maxWidth: '100%',
+                height: '100%'
+              },
+              '& .MuiCardMedia-root': {
+                paddingTop: '75%'
+              }
+            }}>
+              <EventCard
+                imageSrc={Voice_of_NYC}
+                eventName="心动的声音"
+                eventDescription="一起寻找最强之声"
+                reviewLink="https://mp.weixin.qq.com/s/bcJDCI84PLyek9O63GaJRg"
+              />
+            </Box>
+          </Grid>
 
-        {/* 心动的声音 */}
-        <Grid item xs={12} md={6} lg={4}>
-          <Link 
-            href="https://mp.weixin.qq.com/s/your-link-here" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            style={{ textDecoration: 'none' }}
-          >
-            <Card sx={{ maxWidth: 10 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image={Voice_of_NYC}
-                  alt="Voice of NYC"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
-                    心动的声音
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    让我们共同见证音乐的奇迹，聆听心动的力量，寻找属于你的"最强之声"！
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Link>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="周五桌游夜"
-            image={werewolf}
-            url='https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA'
-          />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="校友会"
-            image={alimni_association}
-            url='https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA'
-          />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Event
-            eventTitle="Coffee Chat"
-            image={coffee_chat}
-            url='https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw'
-          />
+          <Grid item xs={12} md={4}>
+            <Box sx={{ 
+              width: '100%',
+              '& .MuiCard-root': {
+                maxWidth: '100%',
+                height: '100%'
+              },
+              '& .MuiCardMedia-root': {
+                paddingTop: '75%'
+              }
+            }}>
+              <EventCard
+                imageSrc={coffee_chat}
+                eventName="Coffee Chat"
+                eventDescription="与资深嘉宾近距离交流"
+                reviewLink="https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw"
+              />
+            </Box>
+          </Grid>
         </Grid>
       </Grid>
     </div>

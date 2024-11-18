@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/EventCard.css";
+import Button from '@material-ui/core/Button';
 
 const EventCard = ({ imageSrc, eventName, eventDescription, reviewLink }) => {
   const [hovered, setHovered] = useState(false);
@@ -15,9 +16,14 @@ const EventCard = ({ imageSrc, eventName, eventDescription, reviewLink }) => {
         <div className="event-overlay">
           <h3>{eventName}</h3>
           <p>{eventDescription}</p>
-          <a href={reviewLink} className="event-link">
+          <Button 
+            variant="contained" 
+            color="primary" 
+            href={reviewLink}
+            className="event-link"
+          >
             活动回顾
-          </a>
+          </Button>
         </div>
       )}
     </div>

@@ -38,6 +38,7 @@ import sichang from '../images/members/Sichang.jpg'
 import sj from '../images/members/SJ.jpg'
 import steven from '../images/members/Steven.jpg'
 import cicyliu from '../images/members/cc.jpg'
+import xi from '../images/members/Xi.jpg'
 
 export const devTeam = [
     {
@@ -80,7 +81,7 @@ export const devTeam = [
       name: "胡泽西",
       major: "Computer Engineering",
       year: "2023-2025",
-      image: unknow,
+      image: xi,
     },
     {
       name: "周亦桥",
