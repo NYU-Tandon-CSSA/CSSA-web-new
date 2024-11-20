@@ -7,6 +7,7 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Events from './routes/Events';
 import freshmanHandbook from './routes/FreshmanHandbook';
+import departmentIntro from './routes/DepartmentIntro';
 import Gallery from './routes/Gallery';
 import StudentService from './routes/StudentService';
 import TransparentNavBar from './components/TransparentNavBar';
@@ -55,6 +56,7 @@ function App() {
                 <Route exact path="/events" component={Events} />
                 <Route exact path="/freshmanHandbook/:pageInd" component={freshmanHandbook} />
                 <Route exact path="/freshmanHandbook" component={freshmanHandbook} />
+                <Route exact path="/departments" component={departmentIntro} />
                 <Route exact path="/gallery" component={Gallery} />
                 <Route exact path="/studentservice" component={StudentService} />
                 <Route exact path="/xiaohongshu" component={XiaoHongShu} />

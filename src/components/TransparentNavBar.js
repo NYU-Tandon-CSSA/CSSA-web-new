@@ -140,9 +140,10 @@ function TransparentNavBar(props) {
     
     //drawer Link - an array of URLs
     const urls = [
-        "/about",
-        '/freshmanHandbook',
-        '/xiaohongshu',
+        "/about",           // About Us
+        "/departments",     // 部门介绍
+        "/freshmanHandbook", // 新生手册
+        "/xiaohongshu"      // 小红书
     ];
 
     // drawer content 
@@ -157,17 +158,14 @@ function TransparentNavBar(props) {
             {/* list 1 内部链接 */}
 
             <List>
-            {['About Us', "新生手册", '小红书',].map((text, index) => (
+            {["About Us", "部门介绍", "新生手册", '小红书'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                         <ListItemButton component={Link} to={urls[index]}>
                             <ListItemIcon>
-                            {
-                                index % 3 === 0 
-                                ? <InfoIcon />
-                                : (index % 2 === 1 
-                                    ?  <TheaterComedyIcon />
-                                    :  <ImportContactsIcon/>)
-                            }
+                            {index === 0 ? <InfoIcon /> : 
+                             index === 1 ? <InfoIcon /> :
+                             index === 2 ? <TheaterComedyIcon /> :
+                             index === 3 ? <ImportContactsIcon />: null}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
