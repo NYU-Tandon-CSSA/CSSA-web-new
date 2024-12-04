@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
-import img from '../images/bridge.png';
 import Event from '../components/Event';
 import Banner from '../components/Banner';
 // import Header from '../components/Header';
@@ -51,13 +50,6 @@ function Home() {
   const classes = useStyles();
   const [isVisible, setIsVisible] = useState(true);
 
-  const data = {
-    // project: "https://example.com/project",
-    // github: "https://github.com/username",
-    name: "NYU TANDON CSSA",
-    description: "Your description here",
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       const { scrollY } = window;
@@ -80,13 +72,13 @@ function Home() {
         <Grid 
           item 
           xs={12} 
-          style={{ padding: 0, margin: 0, height: '97vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
+          style={{ padding: 0, margin: 0, height: '100vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
         >
           {/* <Banner /> */}
-          {/* <video autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: '-1' }}>
-            <source src="/main theme.mp4" type="video/mp4" />
-          </video> */}
-          <img 
+          <video autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: '-1' }}>
+            <source src="/background.mp4" type="video/mp4" />
+          </video>
+          {/* <img 
             src="CSSAFLAG.jpg" 
             alt="Background" 
             style={{
@@ -96,7 +88,7 @@ function Home() {
               objectFit: 'cover', 
               zIndex: '-1'
             }} 
-          />
+          /> */}
               {/* 文字内容 */}
           <div
             style={{
@@ -114,6 +106,7 @@ function Home() {
             }}
           >
             <h1 style={{ fontSize: '5rem', fontWeight: 'bold' }}>NYU TANDON CSSA</h1>
+            
           </div>
             {/* 滚动按钮 */}
           <p 
@@ -149,6 +142,7 @@ function Home() {
           </p>
         </Grid>
       </Grid>
+      
       {/* 关于我们 */}
       <div id='aboutUs' style={{ maxWidth: '85%', margin: '0 auto' }}>
         <AboutContainer
