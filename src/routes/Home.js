@@ -50,6 +50,13 @@ function Home() {
   const classes = useStyles();
   const [isVisible, setIsVisible] = useState(true);
 
+  const data = {
+    // project: "https://example.com/project",
+    // github: "https://github.com/username",
+    name: "NYU TANDON CSSA",
+    description: "Your description here",
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const { scrollY } = window;
