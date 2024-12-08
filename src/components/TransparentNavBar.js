@@ -143,6 +143,7 @@ function TransparentNavBar(props) {
         "/about",
         '/freshmanHandbook',
         '/xiaohongshu',
+        '/events',
     ];
 
     // drawer content 
@@ -157,7 +158,7 @@ function TransparentNavBar(props) {
             {/* list 1 内部链接 */}
 
             <List>
-            {['About Us', "新生手册", '小红书',].map((text, index) => (
+            {['About Us', "新生手册", '小红书', 'Events',].map((text, index) => (
                 <ListItem key={text} disablePadding>
                         <ListItemButton component={Link} to={urls[index]}>
                             <ListItemIcon>
