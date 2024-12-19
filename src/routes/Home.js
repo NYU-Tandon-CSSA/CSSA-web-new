@@ -139,10 +139,17 @@ function Home() {
           xs={12} 
           style={{ padding: 0, margin: 0, height: '100vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
         >
-          {/* <Banner /> */}
-          <video autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: '-1' }}>
-            <source src="/background.mp4" type="video/mp4" />
-          </video>
+          <img 
+            src="CSSAFLAG.jpg" 
+            alt="Background" 
+            style={{
+              position: 'absolute', 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', 
+              zIndex: '-1'
+            }} 
+          />
           <div
             style={{
               position: 'relative',
@@ -159,7 +166,6 @@ function Home() {
             }}
           >
             <h1 style={{ fontSize: '5rem', fontWeight: 'bold' }}>NYU TANDON CSSA</h1>
-            
           </div>
           <p 
             className="scrolldown" 
