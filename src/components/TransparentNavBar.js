@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List} from '@material-ui/core';
+import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List } from '@material-ui/core';
 import { Link as MuiLink } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import IconButton from '@material-ui/core/IconButton'
+import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -16,79 +16,35 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import InfoIcon from '@mui/icons-material/Info';
-// icons
-import {
-    faWeixin,
-    faInstagram,
-    faFacebook,
-  } from "@fortawesome/free-brands-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
+import HomeIcon from '@mui/icons-material/Home';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { faWeixin, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const useStyles = makeStyles({
-    textShadows: {
-        '--color-primary': '#a74dbf',
-        '--color-secondary': '#bf65a3',
-        '--color-tertiary': '#d17c87',
-        '--color-quaternary': '#e0946b',
-        '--color-quinary': '#eeab52',
-        textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
-        animation: '$shadows 1.2s ease-in infinite',
-        display: 'block',
-        margin: '0 auto',
-        textAlign: 'center',
-        color: '#8900e1',
-        animationDuration: '3.0s',
-    },
-    '@keyframes shadows': {
-        '0%': {
-            textShadow: 'none',
-        },
-        '10%': {
-            transform: 'translate(-3px, -3px)',
-            textShadow: '3px 3px 0 var(--color-secondary)',
-        },
-        '20%': {
-            transform: 'translate(-6px, -6px)',
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary)',
-        },
-        '30%': {
-            transform: 'translate(-9px, -9px)',
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary)',
-        },
-        '40%': {
-            transform: 'translate(-12px, -12px)',
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
-        },
-        '50%': {
-            transform: 'translate(-12px, -12px)',
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
-        },
-        '60%': {
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary)',
-        },
-        '70%': {
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary)',
-        },
-        '80%': {
-            textShadow: '3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary)',
-        },
-        '90%': {
-            textShadow: `3px 3px 0 var(--color-secondary)`,
-        },
-        '100%': {
-            textShadow: 'none',
+    navLink: {
+        color: '#ffffff',
+        textDecoration: 'none',
+        margin: '0 15px',
+        fontSize: '1rem',
+        '&:hover': {
+            color: (props) => (props.isHomePage ? '#2d004d' : '#ccc6ca'),
         },
     },
     appBar: {
         transition: 'all 0.3s ease-in-out',
         boxShadow: 'none',
-        // opacity: 0.75,
-        backgroundColor: '#8900e1',
+        backgroundColor: 'transparent',
     },
     appBarSolid: {
-        backgroundColor: '#8900e1',
-        boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.2)',
+        backgroundColor: 'rgba(137, 0, 225, 0.8)',
+        backdropFilter: 'blur(5px)',
+    },
+    appBarNonHome: {
+        backgroundColor: 'rgba(137, 0, 225, 1)',
+        backdropFilter: 'blur(5px)',
     },
     appBarHidden: {
         transform: 'translateY(-100%)',
@@ -96,26 +52,23 @@ const useStyles = makeStyles({
     appBarVisible: {
         transform: 'translateY(0)',
     },
-    icon: {
-        fontSize: '4vh',
-    }
 });
 
-
 function TransparentNavBar(props) {
-    const classes = useStyles();
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
+    const classes = useStyles({ isHomePage });
     const [isSolid, setIsSolid] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
+    const [anchorEl, setAnchorEl] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
 
             setIsSolid(currentScrollPos > 100);
-
             setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-
             setPrevScrollPos(currentScrollPos);
         };
 
@@ -126,10 +79,7 @@ function TransparentNavBar(props) {
         };
     }, [prevScrollPos]);
 
-
-    // toggleDrawer funtion 
     const [drawerOpen, setDrawerOpen] = useState(false);
-
     const toggleDrawer = (open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
@@ -137,118 +87,160 @@ function TransparentNavBar(props) {
         setDrawerOpen(open);
     };
 
-    
-    //drawer Link - an array of URLs
-    const urls = [
-        "/about",           // About Us
-        "/departments",     // 部门介绍
-        "/freshmanHandbook", // 新生手册
-        "/xiaohongshu"      // 小红书
-    ];
+    const handleContactClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
 
-    // drawer content 
-    const list = () => (
-        <Box
-            sx={{ width: 280 }}
-            role="presentation"
-            onClick={toggleDrawer(false)}
-            onKeyDown={toggleDrawer(false)}
-        >
-
-            {/* list 1 内部链接 */}
-
-            <List>
-            {["About Us", "部门介绍", "新生手册", '小红书'].map((text, index) => (
-                <ListItem key={text} disablePadding>
-                        <ListItemButton component={Link} to={urls[index]}>
-                            <ListItemIcon>
-                            {index === 0 ? <InfoIcon /> : 
-                             index === 1 ? <InfoIcon /> :
-                             index === 2 ? <TheaterComedyIcon /> :
-                             index === 3 ? <ImportContactsIcon />: null}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                </ListItem>
-            ))}
-            </List>
-
-            {/* <Divider /> */}
-
-            {/* list 2 外部链接*/}
-
-            <List>
-            {[ '微信公众号', 'Instagram', 'Facebook','NYU Engage' ,'Contact Us'].map((text, index) => (
-                <ListItem key={text} disablePadding>
-                <ListItemButton
-                    onClick={() => {
-                        if (text === '微信公众号') {
-                            window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q', '_blank');
-                        } else if (text === 'NYU Engage') {
-                            window.open('https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', '_blank');
-                        } else if (text === 'Instagram') {
-                            window.open('https://www.instagram.com/tandoncssa/', '_blank');
-                        } else if (text === 'Facebook') {
-                            window.open('https://www.facebook.com/nyutandoncssa/', '_blank');
-                        } else if (text === 'Contact Us') {
-                            window.open('mailto:nyutandoncssa22@gmail.com');
-                        } 
-                        }}>
-                    <ListItemIcon>
-                    {
-                        index % 5 === 0 
-                        ? <FontAwesomeIcon className='fa-xl' icon={faWeixin}/>
-                        : index % 5 === 1
-                        ? <FontAwesomeIcon className='fa-xl' icon={faInstagram}/>
-                        : index % 5 === 2
-                        ? <FontAwesomeIcon className='fa-xl' icon={faFacebook}/>
-                        : index % 5 === 3
-                        ? <CalendarTodayIcon />
-                        : (index % 5 === 4
-                        ? <MailIcon /> 
-                            : <ImportContactsIcon />)
-                    }
-                    </ListItemIcon>
-                    <ListItemText primary={text} />
-                </ListItemButton>
-                </ListItem>
-            ))}
-            </List>
-        </Box>
-      );
+    const handleContactClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
         <Box>
             <AppBar
-                position="fixed" 
-                className={`${classes.appBar} ${isSolid && classes.appBarSolid} ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}>
+                position="fixed"
+                className={`${classes.appBar} 
+                    ${isHomePage 
+                        ? (isSolid && classes.appBarSolid)
+                        : classes.appBarNonHome
+                    } 
+                    ${isVisible ? classes.appBarVisible : classes.appBarHidden}`}
+            >
                 <Toolbar>
-                    <Grid container spacing={2} alignItems="center" justifyContent = 'space-between'>
-                        <Grid item xs={10} md={11}>
-                            <Typography 
-                                variant="h1" 
-                                color="#ffffff"
-                                class = 'Silkscreen'
-                                sx={{ flexGrow: 3 }}>
-                                    <MuiLink href="/" style={{textDecoration: 'none', color: 'inherit'}}>NYU Tandon CSSA</MuiLink>
-                            </Typography>
+                    <Grid container alignItems="center">
+                        <Grid item xs={3}>
+                            <MuiLink
+                                href="/"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                <HomeIcon
+                                    sx={{
+                                        fontSize: '2rem',
+                                        '&:hover': {
+                                            color: isHomePage ? '#2d004d' : '#ccc6ca',
+                                        },
+                                    }}
+                                />
+                            </MuiLink>
                         </Grid>
-                        <Grid item xs={2}  md={1}>
-                            <IconButton 
-                                color="inherit" 
-                                aria-label="menu"
-                                onClick={() => setDrawerOpen(true)}>
-                                <MenuIcon sx = {{fontSize: 'medium'}} className={classes.icon}/>
-                            </IconButton>
+                        <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Link to="/about" className={classes.navLink}>关于我们</Link>
+                            <div
+                                className={classes.navLink}
+                                onClick={(e) => {}}
+                            >
+                                部门介绍
+                            </div>
+                            <div
+                                className={classes.navLink}
+                                onClick={(e) => {}}
+                            >
+                                活动
+                            </div>
+                            <div
+                                className={classes.navLink}
+                                onClick={(e) => {}}
+                            >
+                                剪影
+                            </div>
+                            <Link 
+                                to="/freshmanHandbook" 
+                                className={classes.navLink}
+                            >
+                                新生手册
+                            </Link>
+                            <div
+                                className={classes.navLink}
+                                onClick={handleContactClick}
+                                style={{
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                联系我们
+                                <ExpandMoreIcon
+                                    sx={{
+                                        fontSize: '1.2rem',
+                                        marginLeft: '2px',
+                                        transition: '0.3s',
+                                        transform: Boolean(anchorEl) ? 'rotate(180deg)' : 'rotate(0)',
+                                    }}
+                                />
+                            </div>
                         </Grid>
                     </Grid>
                 </Toolbar>
             </AppBar>
-            <Drawer anchor="right" 
-                    open={drawerOpen} 
-                    onClose={toggleDrawer(false)}>
-                    {list()}
-            </Drawer>
+
+            <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleContactClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                transformOrigin={{ vertical: -10, horizontal: 'center' }}
+                PaperProps={{
+                    sx: {
+                        width: '160px',
+                        marginTop: '10px',
+                        '& .MuiMenuItem-root': {
+                            fontSize: '0.9rem',
+                            padding: '6px 16px',
+                        },
+                    },
+                }}
+            >
+                <MenuItem
+                    onClick={() => {
+                        window.open('https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q', '_blank');
+                        handleContactClose();
+                    }}
+                >
+                    <FontAwesomeIcon icon={faWeixin} style={{ marginRight: '8px', fontSize: '0.9rem' }} />
+                    微信公众号
+                </MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        window.open('https://www.instagram.com/tandoncssa/', '_blank');
+                        handleContactClose();
+                    }}
+                >
+                    <FontAwesomeIcon icon={faInstagram} style={{ marginRight: '8px', fontSize: '0.9rem' }} />
+                    Instagram
+                </MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        window.open('https://nyutandoncssa.com/#/xiaohongshu', '_blank');
+                        handleContactClose();
+                    }}
+                >
+                    <ImportContactsIcon style={{ marginRight: '8px', fontSize: '0.9rem' }} />
+                    小红书
+                </MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        window.open('https://www.facebook.com/NYUTandonCSSA/', '_blank');
+                        handleContactClose();
+                    }}
+                >
+                    <FontAwesomeIcon icon={faFacebook} style={{ marginRight: '8px', fontSize: '0.9rem' }} />
+                    Facebook
+                </MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        window.open('https://engage.nyu.edu/organization/nyu-tandon-chinese-students-scholars-association', '_blank');
+                        handleContactClose();
+                    }}
+                >
+                    <CalendarTodayIcon style={{ marginRight: '8px', fontSize: '0.9rem' }} />
+                    NYU Engage
+                </MenuItem>
+            </Menu>
         </Box>
     );
 }
