@@ -30,9 +30,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Roboto, sans-serif',
     h1: {
-      fontFamily: 'Tilt Warp, cursive',
       fontSize: '4vw',
     },
   },
