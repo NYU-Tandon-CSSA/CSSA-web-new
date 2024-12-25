@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6fd1b26.css",
-    "main.js": "/static/js/main.8ebf9bb7.js",
+    "main.css": "/static/css/main.1454f6bc.css",
+    "main.js": "/static/js/main.9e758b2c.js",
     "static/media/Group_Photo_Fall2024.JPG": "/static/media/Group_Photo_Fall2024.a35e5d4ef85999aef86c.JPG",
+    "static/media/EO2.jpg": "/static/media/EO2.f589cb769699b714a353.jpg",
     "static/media/2.jpg": "/static/media/2.2424417415d28acdd7ca.jpg",
     "static/media/AboutUs.jpeg": "/static/media/AboutUs.5fb765be95a2ba450f31.jpeg",
+    "static/media/team-build.JPG": "/static/media/team-build.9d36b94a68966e71e8a4.JPG",
     "static/media/werewolf2.0.png": "/static/media/werewolf2.0.ccc8feada68a0293265e.png",
     "static/media/Jennifer.jpg": "/static/media/Jennifer.2665649aae1e93a633ce.jpg",
+    "static/media/ITCD.png": "/static/media/ITCD.b22885a697c9ac1131cd.png",
     "static/media/alumni_association.jpg": "/static/media/alumni_association.9f787ce11bbc86ea80d8.jpg",
     "static/media/xiaoHongShu.jpg": "/static/media/xiaoHongShu.2f463803a1078c1757ca.jpg",
     "static/media/last_man_standing.png": "/static/media/last_man_standing.c7e0699e8366a87ab2c5.png",
@@ -22,6 +25,7 @@
     "static/media/nyc_map.jpg": "/static/media/nyc_map.096bbe66fb350af5dff0.jpg",
     "static/media/cart.jpg": "/static/media/cart.3bfe335cdb94b6eeea13.jpg",
     "static/media/Mia.jpg": "/static/media/Mia.a89cbadaf97288b6078b.jpg",
+    "static/media/PM.png": "/static/media/PM.bb08f5d98ae8763e6b15.png",
     "static/media/Apartment.jpg": "/static/media/Apartment.16269b747f236f144ff5.jpg",
     "static/media/grand-central.jpg": "/static/media/grand-central.eae6cbdf1590fa67184b.jpg",
     "static/media/carriers.jpg": "/static/media/carriers.00fcf6f2136741486491.jpg",
@@ -36,6 +40,7 @@
     "static/media/rent_cover.jpg": "/static/media/rent_cover.89ac39eae160a72e587b.jpg",
     "static/media/transport_cover.jpg": "/static/media/transport_cover.445553e2766524b2c30c.jpg",
     "static/media/Yi.jpg": "/static/media/Yi.1f3c7442c707a4f51c8a.jpg",
+    "static/media/EA.jpg": "/static/media/EA.19fe47f6e28aaefd60b5.jpg",
     "static/media/Sichang.jpg": "/static/media/Sichang.d8f29b6d9e88a281fc2c.jpg",
     "static/media/Steven.jpg": "/static/media/Steven.0ab928509ae862dc2b9f.jpg",
     "static/media/bus.jpg": "/static/media/bus.a17a3f3049f5ad8a95ed.jpg",
@@ -71,11 +76,11 @@
     "static/media/Unknow.png": "/static/media/Unknow.c3f945216dc12c9498dc.png",
     "static/media/Samuel.jpg": "/static/media/Samuel.292b39cc82b159fa50bd.jpg",
     "index.html": "/index.html",
-    "main.f6fd1b26.css.map": "/static/css/main.f6fd1b26.css.map",
-    "main.8ebf9bb7.js.map": "/static/js/main.8ebf9bb7.js.map"
+    "main.1454f6bc.css.map": "/static/css/main.1454f6bc.css.map",
+    "main.9e758b2c.js.map": "/static/js/main.9e758b2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6fd1b26.css",
-    "static/js/main.8ebf9bb7.js"
+    "static/css/main.1454f6bc.css",
+    "static/js/main.9e758b2c.js"
   ]
 }
