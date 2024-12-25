@@ -3,7 +3,10 @@ import "../css/DepartmentIntro.css";
 import { Button } from "@mui/material";
 
 import teamBuild from "../images/team-build.JPG";
-import EOPhoto from "../images/EO.jpg";
+import EOPhoto from "../images/EO2.jpg";
+import PMPhoto from "../images/PM.png";
+import EAPhoto from "../images/EA.jpg";
+import ITCDPhoto from "../images/ITCD.png";
 
 const DepartmentIntro = () => {
   return (
@@ -71,39 +74,36 @@ const DepartmentIntro = () => {
           marginBottom: '30px',
           fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
           fontSize: '2rem',
-          fontWeight: '600'
+          fontWeight: '600',
+          color: '#000000'
         }}>
           部门介绍
         </h2>
 
         <div style={{
-          minHeight: '100vh',
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '40px',
           padding: '0 40px'
         }}>
-          {/* 左边部分 */}
+          {/* 活动部 */}
           <div style={{
-            flex: 1,
             display: 'flex',
             flexDirection: 'column',
             padding: '20px'
           }}>
-            {/* 上半部分-图片 */}
-            <div style={{
-              marginBottom: '40px'
-            }}>
+            <div style={{ marginBottom: '40px' }}>
               <img 
                 src={EOPhoto} 
-                alt="Department Image" 
+                alt="活动部" 
                 style={{
                   width: '100%',
-                  height: 'auto',
+                  height: '300px',
+                  objectFit: 'cover',
                   borderRadius: '8px'
                 }}
               />
             </div>
-            
-            {/* 下半部分-部门介绍 */}
             <div>
               <h3 style={{
                 fontSize: '1.8rem',
@@ -123,11 +123,115 @@ const DepartmentIntro = () => {
             </div>
           </div>
 
-          {/* 右边部分 - 待定 */}
+          {/* 外联部 */}
           <div style={{
-            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
             padding: '20px'
           }}>
+            <div style={{ marginBottom: '40px' }}>
+              <img 
+                src={EAPhoto} 
+                alt="外联部" 
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  objectFit: 'cover',
+                  borderRadius: '8px'
+                }}
+              />
+            </div>
+            <div>
+              <h3 style={{
+                fontSize: '1.8rem',
+                marginBottom: '20px',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              }}>
+                外联部 External Affair
+              </h3>
+              <p style={{
+                fontSize: '1rem',
+                lineHeight: '1.6',
+                color: '#4A5568',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              }}>
+                我们主要负责对外联系公司、赞助商以及其他学联，在建立良好沟通、合作的基础上，为Tandon CSSA提供活动和宣传所需要的信息、资源、赞助资金等。              
+              </p>
+            </div>
+          </div>
+
+          {/* 宣传媒体部 */}
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '20px'
+          }}>
+            <div style={{ marginBottom: '40px' }}>
+              <img 
+                src={PMPhoto} 
+                alt="宣传媒体部" 
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  objectFit: 'cover',
+                  borderRadius: '8px'
+                }}
+              />
+            </div>
+            <div>
+              <h3 style={{
+                fontSize: '1.8rem',
+                marginBottom: '20px',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              }}>
+                宣传媒体部 Public Relation & Media
+              </h3>
+              <p style={{
+                fontSize: '1rem',
+                lineHeight: '1.6',
+                color: '#4A5568',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              }}>
+                我们运营着CSSA各个官方平台，负责各项活动工作的宣传、记录及总结，是搭建起各部门间合作及学联与学生间交流的重要桥梁。我们产出各种活动海报、纪录片和各类干货，还有不定期的原创主题专栏。
+              </p>
+            </div>
+          </div>
+
+          {/* 技术和职业发展部 */}
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '20px'
+          }}>
+            <div style={{ marginBottom: '40px' }}>
+              <img 
+                src={ITCDPhoto} 
+                alt="技术和职业发展部" 
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  objectFit: 'cover',
+                  borderRadius: '8px'
+                }}
+              />
+            </div>
+            <div>
+              <h3 style={{
+                fontSize: '1.8rem',
+                marginBottom: '20px',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              }}>
+                技术和职业发展部 ITCD
+              </h3>
+              <p style={{
+                fontSize: '1rem',
+                lineHeight: '1.6',
+                color: '#4A5568',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              }}>
+                我们正在积极运用学校和CSSA的校友资源，为中国学生及学者搭建一个职业发展和交流的平台。我们策划了和行业精英的Coffee Chat活动以及校友网的搭建。同时，我们还为CSSA举办的各种活动提供技术支持。
+              </p>
+            </div>
           </div>
         </div>
       </div>

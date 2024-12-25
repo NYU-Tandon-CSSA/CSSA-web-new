@@ -109,8 +109,8 @@ function TransparentNavBar(props) {
                 <Toolbar>
                     <Grid container alignItems="center">
                         <Grid item xs={3}>
-                            <MuiLink
-                                href="/"
+                            <Link
+                                to="/"
                                 style={{
                                     textDecoration: 'none',
                                     color: 'inherit',
@@ -126,16 +126,16 @@ function TransparentNavBar(props) {
                                         },
                                     }}
                                 />
-                            </MuiLink>
+                            </Link>
                         </Grid>
                         <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center' }}>
                             <Link to="/about" className={classes.navLink}>关于我们</Link>
-                            <div
+                            <Link 
+                                to="/departments" 
                                 className={classes.navLink}
-                                onClick={(e) => {}}
                             >
                                 部门介绍
-                            </div>
+                            </Link>
                             <div
                                 className={classes.navLink}
                                 onClick={(e) => {}}
