@@ -23,7 +23,6 @@ import SimCard from "../components/fhComponents/simCard";
 import BankCard from "../components/fhComponents/bankcard";
 import Preparations from "../components/fhComponents/preparations"
 import Academic from "../components/fhComponents/academic";
-import { useEffect } from "react";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
