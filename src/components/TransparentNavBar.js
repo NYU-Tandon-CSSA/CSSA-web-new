@@ -140,7 +140,7 @@ function TransparentNavBar(props) {
                                 className={classes.navLink}
                                 onClick={(e) => {}}
                             >
-                                活动
+                                <Link to="/events" className={classes.navLink}>活动</Link>
                             </div>
                             <div
                                 className={classes.navLink}
