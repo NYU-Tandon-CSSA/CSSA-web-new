@@ -139,17 +139,9 @@ function Home() {
           xs={12} 
           style={{ padding: 0, margin: 0, height: '100vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
         >
-          <img 
-            src="CSSAFLAG.jpg" 
-            alt="Background" 
-            style={{
-              position: 'absolute', 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              zIndex: '-1'
-            }} 
-          />
+          <video autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: '-1' }}>
+            <source src="https://www.dropbox.com/scl/fi/hisyxg8p9as215l8levyf/background.mp4?rlkey=yelgb15pfk0t38ti1svqi8r1u&st=kklr36vt&raw=1" type="video/mp4" />
+          </video>
           <div
             style={{
               position: 'relative',
