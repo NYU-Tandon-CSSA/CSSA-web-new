@@ -140,7 +140,7 @@ function Home() {
           style={{ padding: 0, margin: 0, height: '100vh', position: 'relative', zIndex: 10 ,filter: 'brightness(1.2)' }}
         >
           <video autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: '-1' }}>
-            <source src="https://www.dropbox.com/scl/fi/hisyxg8p9as215l8levyf/background.mp4?rlkey=yelgb15pfk0t38ti1svqi8r1u&st=kklr36vt&raw=1" type="video/mp4" />
+            <source src="https://www.dropbox.com/scl/fi/ous3mi1i6rrttezudzdda/background.mp4?rlkey=rvjsxik5mr6tx2eg3hc0a3icc&st=z6onkb6c&raw=1" type="video/mp4" />
           </video>
           <div
             style={{
