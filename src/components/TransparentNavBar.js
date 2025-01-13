@@ -23,15 +23,35 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     navLink: {
         color: '#ffffff',
         textDecoration: 'none',
         margin: '0 15px',
         fontSize: '1rem',
+        whiteSpace: 'nowrap',
+        display: 'flex',
+        alignItems: 'center',
+        height: '100%',
         '&:hover': {
             color: (props) => (props.isHomePage ? '#2d004d' : '#ccc6ca'),
         },
+        [theme.breakpoints.down('md')]: {
+            margin: '0 8px',
+            fontSize: '0.9rem',
+        },
+    },
+    contactLink: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '2px',
+        cursor: 'pointer',
+        height: '100%',
+    },
+    expandIcon: {
+        fontSize: '1.2rem',
+        transition: '0.3s',
+        marginLeft: '2px',
     },
     appBar: {
         transition: 'all 0.3s ease-in-out',
@@ -52,7 +72,22 @@ const useStyles = makeStyles({
     appBarVisible: {
         transform: 'translateY(0)',
     },
-});
+    menuButton: {
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        },
+    },
+    desktopMenu: {
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+    },
+    mobileDrawer: {
+        width: 250,
+    },
+}));
 
 function TransparentNavBar(props) {
     const location = useLocation();
@@ -128,55 +163,72 @@ function TransparentNavBar(props) {
                                 />
                             </Link>
                         </Grid>
-                        <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Grid item xs={9} className={classes.desktopMenu} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <Link to="/about" className={classes.navLink}>关于我们</Link>
-                            <Link 
-                                to="/departments" 
-                                className={classes.navLink}
-                            >
-                                部门介绍
-                            </Link>
+                            <Link to="/departments" className={classes.navLink}>部门介绍</Link>
+                            <Link to="/events" className={classes.navLink}>活动</Link>
+                            <div className={classes.navLink}>剪影</div>
+                            <Link to="/freshmanHandbook" className={classes.navLink}>新生手册</Link>
                             <div
-                                className={classes.navLink}
-                                onClick={(e) => {}}
-                            >
-                                <Link to="/events" className={classes.navLink}>活动</Link>
-                            </div>
-                            <div
-                                className={classes.navLink}
-                                onClick={(e) => {}}
-                            >
-                                剪影
-                            </div>
-                            <Link 
-                                to="/freshmanHandbook" 
-                                className={classes.navLink}
-                            >
-                                新生手册
-                            </Link>
-                            <div
-                                className={classes.navLink}
+                                className={`${classes.navLink} ${classes.contactLink}`}
                                 onClick={handleContactClick}
-                                style={{
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                }}
                             >
                                 联系我们
-                                <ExpandMoreIcon
-                                    sx={{
-                                        fontSize: '1.2rem',
-                                        marginLeft: '2px',
-                                        transition: '0.3s',
+                                <ExpandMoreIcon 
+                                    className={classes.expandIcon}
+                                    style={{
                                         transform: Boolean(anchorEl) ? 'rotate(180deg)' : 'rotate(0)',
                                     }}
                                 />
                             </div>
                         </Grid>
+                        <IconButton
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            onClick={toggleDrawer(true)}
+                            className={classes.menuButton}
+                        >
+                            <MenuIcon />
+                        </IconButton>
                     </Grid>
                 </Toolbar>
             </AppBar>
+
+            <Drawer
+                anchor="right"
+                open={drawerOpen}
+                onClose={toggleDrawer(false)}
+                classes={{ paper: classes.mobileDrawer }}
+            >
+                <List>
+                    <ListItem button component={Link} to="/about" onClick={toggleDrawer(false)}>
+                        <ListItemIcon><InfoIcon /></ListItemIcon>
+                        <ListItemText primary="关于我们" />
+                    </ListItem>
+                    <ListItem button component={Link} to="/departments" onClick={toggleDrawer(false)}>
+                        <ListItemIcon><TheaterComedyIcon /></ListItemIcon>
+                        <ListItemText primary="部门介绍" />
+                    </ListItem>
+                    <ListItem button component={Link} to="/events" onClick={toggleDrawer(false)}>
+                        <ListItemIcon><CalendarTodayIcon /></ListItemIcon>
+                        <ListItemText primary="活动" />
+                    </ListItem>
+                    <ListItem button onClick={toggleDrawer(false)}>
+                        <ListItemIcon><ImportContactsIcon /></ListItemIcon>
+                        <ListItemText primary="剪影" />
+                    </ListItem>
+                    <ListItem button component={Link} to="/freshmanHandbook" onClick={toggleDrawer(false)}>
+                        <ListItemIcon><ImportContactsIcon /></ListItemIcon>
+                        <ListItemText primary="新生手册" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button onClick={handleContactClick}>
+                        <ListItemIcon><MailIcon /></ListItemIcon>
+                        <ListItemText primary="联系我们" />
+                    </ListItem>
+                </List>
+            </Drawer>
 
             <Menu
                 anchorEl={anchorEl}
