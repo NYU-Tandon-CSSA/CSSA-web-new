@@ -57,6 +57,14 @@ const useStyles = makeStyles((theme) => ({
     gap: theme.spacing(4),
     boxSizing: 'border-box',
     overflowX: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      height: 'auto',
+      padding: theme.spacing(4),
+      gap: theme.spacing(3),
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
   },
   imageContainer: {
     flex: 1,
@@ -66,6 +74,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '16px',
     overflow: 'hidden',
     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      height: '250px',
+      maxWidth: 'none',
+      marginBottom: theme.spacing(3),
+      flex: 'none',
+    },
   },
   contentContainer: {
     flex: 1,
@@ -75,20 +90,128 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     maxWidth: '600px',
     margin: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2),
+      maxWidth: 'none',
+      width: '100%',
+      textAlign: 'center',
+      flex: 'none',
+    },
   },
   title: {
     marginBottom: theme.spacing(2),
     fontSize: '2.5rem',
     fontWeight: 'bold',
+    textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.8rem',
+      marginBottom: theme.spacing(2),
+    },
+  },
+  bannerTitle: {
+    fontSize: '5rem',
+    fontWeight: 'bold',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '3rem',
+    },
   },
   paragraph: {
     marginBottom: theme.spacing(4),
     fontSize: '1rem',
     lineHeight: 1.6,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.9rem',
+      marginBottom: theme.spacing(3),
+      padding: '0 16px',
+    },
   },
   buttonContainer: {
     display: 'flex',
     gap: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+      gap: theme.spacing(1.5),
+      '& .MuiButton-root': {
+        minWidth: '120px',
+      },
+    },
+  },
+  eventsSection: {
+    paddingTop: '8vh',
+    paddingBottom: '8vh',
+    maxWidth: '85%',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '95%',
+      paddingTop: '2vh',
+      paddingBottom: '2vh',
+    },
+  },
+  sectionTitle: {
+    color: '#1c1c2d',
+    fontWeight: 300,
+    textAlign: 'center',
+    lineHeight: 1.2,
+    marginBottom: theme.spacing(4),
+    fontSize: '2rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.3rem',
+      marginBottom: theme.spacing(0.5),
+    },
+  },
+  previewSection: {
+    marginBottom: theme.spacing(6),
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(1),
+    },
+  },
+  reviewSection: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(1),
+    },
+  },
+  carouselWrapper: {
+    maxWidth: '75%',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100%',
+      height: '250px',
+      '& .slick-slider, & .slick-list, & .slick-track': {
+        height: '100%',
+      },
+      '& .slick-slide > div': {
+        height: '100%',
+      },
+      '& img': {
+        height: '100%',
+        objectFit: 'contain',
+      },
+    },
+  },
+  pastEventsGrid: {
+    marginTop: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(1),
+      padding: '0 0.2rem',
+      '& .MuiGrid-item': {
+        padding: theme.spacing(0.5),
+        display: 'flex',
+        justifyContent: 'center',
+      },
+    },
+  },
+  eventCard: {
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+      margin: '0 auto',
+      '& .MuiCard-root': {
+        maxWidth: '100%',
+      },
+      '& .MuiCardMedia-root': {
+        paddingTop: '56.25%',
+      },
+    },
   },
 }));
 
@@ -157,7 +280,7 @@ function Home() {
               backgroundColor: 'rgba(0, 0, 0, 0.3)' // 半透明背景
             }}
           >
-            <h1 style={{ fontSize: '5rem', fontWeight: 'bold' }}>NYU TANDON CSSA</h1>
+            <h1 className={classes.bannerTitle}>NYU TANDON CSSA</h1>
           </div>
           <p 
             className="scrolldown" 
@@ -232,192 +355,84 @@ function Home() {
       </Box>
 
 
-      {/* Events */}
-      <Grid container style={{ paddingTop: '8vh', paddingBottom: '8vh', maxWidth: '85%', margin: '0 auto' }} spacing={3}>
+      {/* Events Section */}
+      <Grid container className={classes.eventsSection} spacing={3}>
         <Grid item xs={12}>
-          <Typography 
-            variant="h2" 
-            className={classes.title}
-            style={{ textAlign: 'center' }}
-          >
+          <Typography variant="h2" className={classes.title}>
             我们的活动
           </Typography>
         </Grid>
 
-        <Grid item xs={12} style={{ display: 'flex', alignItems: 'center' }}>
-          {/* 左侧色块 */}
-          <Box 
-            sx={{
-              width: '20%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginRight: '2rem',
-            }}
-          >
-            <Typography 
-              variant="h4" 
-              sx={{ 
-                color: '#1c1c2d', 
-                fontWeight: 300, 
-                textAlign: 'center',
-                lineHeight: 1.2
-              }}
-            >
-              活动 · 预告
-            </Typography>
-          </Box>
-
-          {/* EventCarousel */}
-          <Box 
-            sx={{ 
-              flex: 1,
-              maxWidth: '75%',
-              margin: '0 auto',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              '& .carousel-root': {
-                height: '80vh',
-              },
-              '& .carousel .slide img': {
-                borderRadius: '16px',
-              }
-            }}
-          >
+        {/* 活动预告部分 */}
+        <Grid item xs={12} className={classes.previewSection}>
+          <Typography variant="h4" className={classes.sectionTitle}>
+            活动 · 预告
+          </Typography>
+          <Box className={classes.carouselWrapper}>
             <EventCarousel events={events} />
           </Box>
         </Grid>
 
-        {/* 过往活动卡片区域 */}
-        <Grid 
-          container 
-          spacing={6} 
-          style={{ 
-            marginTop: '2rem',
-            padding: '0 2rem'  // 添加左右内边距
-          }}
-        >
-          {/* 第一行 */}
-          <Grid item xs={12} md={4}>
-            <Box sx={{ 
-              width: '100%',
-              '& .MuiCard-root': {  // 调整卡片大小
-                maxWidth: '100%',
-                height: '100%'
-              },
-              '& .MuiCardMedia-root': {  // 调整图片比例
-                paddingTop: '75%'  // 4:3 比例
-              }
-            }}>
-              <EventCard
-                imageSrc={werewolf}
-                eventName="周五桌游夜"
-                eventDescription="游戏开始了，你准备好了吗？"
-                reviewLink="https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA"
-              />
-            </Box>
-          </Grid>
+        {/* 活动回顾部分 */}
+        <Grid item xs={12} className={classes.reviewSection}>
+          <Typography variant="h4" className={classes.sectionTitle}>
+            活动 · 回顾
+          </Typography>
+          <Grid container spacing={3} className={classes.pastEventsGrid}>
+            <Grid item xs={12} md={4}>
+              <Box className={classes.eventCard}>
+                <EventCard
+                  imageSrc={werewolf}
+                  eventName="周五桌游夜"
+                  eventDescription="游戏开始了，你准备好了吗？"
+                  reviewLink="https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA"
+                />
+              </Box>
+            </Grid>
 
-          <Grid item xs={12} md={4}>
-            <Box sx={{ 
-              width: '100%',
-              '& .MuiCard-root': {
-                maxWidth: '100%',
-                height: '100%'
-              },
-              '& .MuiCardMedia-root': {
-                paddingTop: '75%'
-              }
-            }}>
-              <EventCard
-                imageSrc={alimni_association}
-                eventName="校友会"
-                eventDescription="与优秀校友面对面交流"
-                reviewLink="https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA"
-              />
-            </Box>
-          </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={classes.eventCard}>
+                <EventCard
+                  imageSrc={alimni_association}
+                  eventName="校友会"
+                  eventDescription="与优秀校友面对面交流"
+                  reviewLink="https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA"
+                />
+              </Box>
+            </Grid>
 
-          {/* 右上角标题 */}
-          <Grid item xs={12} md={4} style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center',
-            minHeight: '300px'  // 确保标题区域高度与卡片一致
-          }}>
-            <Typography 
-              variant="h4" 
-              sx={{ 
-                color: '#1c1c2d', 
-                fontWeight: 300, 
-                textAlign: 'center',
-                lineHeight: 1.2
-              }}
-            >
-              活动 · 回顾
-            </Typography>
-          </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={classes.eventCard}>
+                <EventCard
+                  imageSrc={If_you_are_the_one}
+                  eventName="非诚勿扰"
+                  eventDescription="寻找属于你的'The One'"
+                  reviewLink="https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g"
+                />
+              </Box>
+            </Grid>
 
-          {/* 第二行 */}
-          <Grid item xs={12} md={4}>
-            <Box sx={{ 
-              width: '100%',
-              '& .MuiCard-root': {
-                maxWidth: '100%',
-                height: '100%'
-              },
-              '& .MuiCardMedia-root': {
-                paddingTop: '75%'
-              }
-            }}>
-              <EventCard
-                imageSrc={If_you_are_the_one}
-                eventName="非诚勿扰"
-                eventDescription="寻找属于你的'The One'"
-                reviewLink="https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g"
-              />
-            </Box>
-          </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={classes.eventCard}>
+                <EventCard
+                  imageSrc={Voice_of_NYC}
+                  eventName="心动的声音"
+                  eventDescription="一起寻找最强之声"
+                  reviewLink="https://mp.weixin.qq.com/s/bcJDCI84PLyek9O63GaJRg"
+                />
+              </Box>
+            </Grid>
 
-          <Grid item xs={12} md={4}>
-            <Box sx={{ 
-              width: '100%',
-              '& .MuiCard-root': {
-                maxWidth: '100%',
-                height: '100%'
-              },
-              '& .MuiCardMedia-root': {
-                paddingTop: '75%'
-              }
-            }}>
-              <EventCard
-                imageSrc={Voice_of_NYC}
-                eventName="心动的声音"
-                eventDescription="一起寻找最强之声"
-                reviewLink="https://mp.weixin.qq.com/s/bcJDCI84PLyek9O63GaJRg"
-              />
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Box sx={{ 
-              width: '100%',
-              '& .MuiCard-root': {
-                maxWidth: '100%',
-                height: '100%'
-              },
-              '& .MuiCardMedia-root': {
-                paddingTop: '75%'
-              }
-            }}>
-              <EventCard
-                imageSrc={coffee_chat}
-                eventName="Coffee Chat"
-                eventDescription="与资深嘉宾近距离交流"
-                reviewLink="https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw"
-              />
-            </Box>
+            <Grid item xs={12} md={4}>
+              <Box className={classes.eventCard}>
+                <EventCard
+                  imageSrc={coffee_chat}
+                  eventName="Coffee Chat"
+                  eventDescription="与资深嘉宾近距离交流"
+                  reviewLink="https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw"
+                />
+              </Box>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
