@@ -3,13 +3,11 @@ import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List } from '@mat
 import { Link as MuiLink } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
-import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid'; // Grid version 1
-import MenuIcon from "@material-ui/icons/Menu";
 import MailIcon from '@mui/icons-material/Mail';
 import Divider from '@mui/material/Divider';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -23,14 +21,50 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     navLink: {
         color: '#ffffff',
         textDecoration: 'none',
         margin: '0 15px',
         fontSize: '1rem',
+        whiteSpace: 'nowrap',
+        display: 'flex',
+        alignItems: 'center',
+        height: '40px',
+        padding: '0 8px',
         '&:hover': {
             color: (props) => (props.isHomePage ? '#2d004d' : '#ccc6ca'),
+        },
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 2px',
+            fontSize: '0.75rem',
+            height: '32px',
+            padding: '0 4px',
+            minWidth: 'auto',
+        },
+    },
+    contactLink: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+        cursor: 'pointer',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        '& .MuiSvgIcon-root': {
+            display: 'flex',
+            alignItems: 'center',
+        },
+        [theme.breakpoints.down('sm')]: {
+            gap: '1px',
+        },
+    },
+    expandIcon: {
+        fontSize: '1.2rem',
+        transition: '0.3s',
+        display: 'flex',
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.8rem',
         },
     },
     appBar: {
@@ -52,7 +86,32 @@ const useStyles = makeStyles({
     appBarVisible: {
         transform: 'translateY(0)',
     },
-});
+    desktopMenu: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            flexWrap: 'nowrap',
+            justifyContent: 'space-between',
+            width: '100%',
+            padding: '0 4px',
+            overflowX: 'auto',
+            '&::-webkit-scrollbar': {
+                display: 'none',
+            },
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+        },
+    },
+    mobileMenuItem: {
+        [theme.breakpoints.down('sm')]: {
+            flex: '0 0 auto',
+            whiteSpace: 'nowrap',
+            textAlign: 'center',
+        },
+    },
+}));
 
 function TransparentNavBar(props) {
     const location = useLocation();
@@ -79,14 +138,6 @@ function TransparentNavBar(props) {
         };
     }, [prevScrollPos]);
 
-    const [drawerOpen, setDrawerOpen] = useState(false);
-    const toggleDrawer = (open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-        setDrawerOpen(open);
-    };
-
     const handleContactClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -108,7 +159,12 @@ function TransparentNavBar(props) {
             >
                 <Toolbar>
                     <Grid container alignItems="center">
-                        <Grid item xs={3}>
+                        <Grid item xs={2} md={2} style={{ 
+                            display: 'flex', 
+                            justifyContent: 'flex-start', 
+                            paddingLeft: '20px',
+                            minWidth: 'fit-content',
+                        }}>
                             <Link
                                 to="/"
                                 style={{
@@ -120,7 +176,10 @@ function TransparentNavBar(props) {
                             >
                                 <HomeIcon
                                     sx={{
-                                        fontSize: '2rem',
+                                        fontSize: {
+                                            xs: '1.5rem',
+                                            md: '2rem'
+                                        },
                                         '&:hover': {
                                             color: isHomePage ? '#2d004d' : '#ccc6ca',
                                         },
@@ -128,52 +187,31 @@ function TransparentNavBar(props) {
                                 />
                             </Link>
                         </Grid>
-                        <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Link to="/about" className={classes.navLink}>关于我们</Link>
-                            <Link 
-                                to="/departments" 
-                                className={classes.navLink}
-                            >
-                                部门介绍
-                            </Link>
-                            <div
-                                className={classes.navLink}
-                                onClick={(e) => {}}
-                            >
-                                <Link to="/events" className={classes.navLink}>活动</Link>
-                            </div>
-                            <div
-                                className={classes.navLink}
-                                onClick={(e) => {}}
-                            >
-                                剪影
-                            </div>
-                            <Link 
-                                to="/freshmanHandbook" 
-                                className={classes.navLink}
-                            >
-                                新生手册
-                            </Link>
-                            <div
-                                className={classes.navLink}
-                                onClick={handleContactClick}
-                                style={{
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                }}
-                            >
-                                联系我们
-                                <ExpandMoreIcon
-                                    sx={{
-                                        fontSize: '1.2rem',
-                                        marginLeft: '2px',
-                                        transition: '0.3s',
-                                        transform: Boolean(anchorEl) ? 'rotate(180deg)' : 'rotate(0)',
-                                    }}
-                                />
+                        <Grid 
+                            item 
+                            xs={10} 
+                            md={8} 
+                            className={classes.desktopMenu}
+                        >
+                            <Link to="/about" className={`${classes.navLink} ${classes.mobileMenuItem}`}>关于我们</Link>
+                            <Link to="/departments" className={`${classes.navLink} ${classes.mobileMenuItem}`}>部门介绍</Link>
+                            <Link to="/events" className={`${classes.navLink} ${classes.mobileMenuItem}`}>活动</Link>
+                            <div className={`${classes.navLink} ${classes.mobileMenuItem}`}>剪影</div>
+                            <Link to="/freshmanHandbook" className={`${classes.navLink} ${classes.mobileMenuItem}`}>新生手册</Link>
+                            <div className={`${classes.navLink} ${classes.contactLink} ${classes.mobileMenuItem}`} onClick={handleContactClick}>
+                                <span style={{ display: 'flex', alignItems: 'center' }}>
+                                    联系我们
+                                    <ExpandMoreIcon 
+                                        className={classes.expandIcon}
+                                        style={{
+                                            transform: Boolean(anchorEl) ? 'rotate(180deg)' : 'rotate(0)',
+                                            marginLeft: '2px',
+                                        }}
+                                    />
+                                </span>
                             </div>
                         </Grid>
+                        <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }} />
                     </Grid>
                 </Toolbar>
             </AppBar>
