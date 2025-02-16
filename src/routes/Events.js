@@ -7,13 +7,11 @@ import Container from '@mui/material/Container';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
 
-//活动照片
-import voice2024 from "../images/Events/Voice2024.JPG";
-
 // css
 import '../css/about.css'
 
 import {devTeam, advisorTeam, wallOfFame, boardTeam, cabinetTeam}  from "../data/data.js"
+import { eventsData } from "../data/eventsData.js"
 
 
 function Events() {
@@ -22,37 +20,22 @@ function Events() {
     const allCards = [...devTeam]; // Original set of devTeam
     const repeatedCards = Array(numOfDuplicates).fill(devTeam).flat();
 
-    const [selectedYear, setSelectedYear] = useState(dayjs().year());
+    const [selectedYear, setSelectedYear] = useState(null);
     const [searchText, setSearchText] = useState('');
 
-    // 模拟的活动数据
-    const eventsData = [
-        {
-            id: 1,
-            title: 'Planning an Event',
-            date: '2022-11-15',
-            description: 'Learn how to plan an event with Gallatin School.',
-            image: 'https://via.placeholder.com/300x200',
-            link: 'https://example.com/event-details',
-        },
-        {
-            id: 2,
-            title: '心动的声音 NYC Open Mic 2024',
-            date: '2024-12-03',
-            description: '一起寻找最强之声！',
-            image: voice2024,
-            link: 'https://example.com/event-details-2',
-        },
-    ];
-
-    // 过滤活动数据
-    const filteredEvents = eventsData.filter((event) => {
-        const eventYear = new Date(event.date).getFullYear();
-        return (
-            eventYear === selectedYear &&
-            event.title.toLowerCase().includes(searchText.toLowerCase())
-        );
-    });
+    // 过滤并排序活动数据
+    const filteredEvents = eventsData
+        .filter((event) => {
+            const eventYear = new Date(event.date).getFullYear();
+            return (
+                (selectedYear === null || eventYear === selectedYear) &&
+                event.title.toLowerCase().includes(searchText.toLowerCase())
+            );
+        })
+        .sort((a, b) => {
+            // 将日期字符串转换为时间戳进行比较，按时间从近到远排序
+            return new Date(b.date) - new Date(a.date);
+        });
 
     return (
         <Container maxWidth="lg" sx={{marginBottom: "8%"}}>
@@ -91,10 +74,12 @@ function Events() {
                         <DatePicker
                             views={['year']}
                             label="年份"
-                            value={dayjs(`${selectedYear}-01-01`)}
-                            onChange={(newDate) => setSelectedYear(newDate.year())}
+                            value={selectedYear ? dayjs(`${selectedYear}-01-01`) : null}
+                            onChange={(newDate) => setSelectedYear(newDate ? newDate.year() : null)}
                             minDate={dayjs('2000-01-01')}
-                            maxDate={dayjs()} // 限制最大年份为当前年份
+                            maxDate={dayjs()}
+                            slotProps={{ textField: { placeholder: '选择年份' } }}
+                            clearable={true}  // 允许清除选择
                         />
 
                         {/* 搜索框 */}
@@ -109,7 +94,7 @@ function Events() {
                     </Box>
 
                     {/* 活动列表 */}
-                    <Grid container spacing={4}>
+                    <Grid container spacing={4} sx={{ mt: 6 }}>
                         {filteredEvents.length > 0 ? (
                             filteredEvents.map((event) => (
                                 <Grid item xs={12} key={event.id}>
@@ -150,8 +135,11 @@ function Events() {
                                         <CardMedia
                                             component="img"
                                             sx={{
-                                                width: { xs: '100%', md: '300px' }, // 小屏占满，大屏固定宽度
-                                                height: 'auto',
+                                                width: { xs: '100%', md: '400px' }, // 大屏幕固定宽度400px
+                                                height: { xs: '225px', md: '225px' }, // 固定高度225px，创建16:9的宽高比
+                                                objectFit: 'cover', // 保持图片比例并填充整个区域
+                                                objectPosition: 'center', // 居中裁剪
+                                                aspectRatio: '16/9', // 强制16:9宽高比
                                             }}
                                             image={event.image}
                                             alt={event.title}

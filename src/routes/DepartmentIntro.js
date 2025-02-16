@@ -59,7 +59,7 @@ const DepartmentIntro = () => {
                   document.querySelector('.section-title').scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                部门介绍
+                部门详情
           </Button>
         </div>
       </div>
@@ -77,7 +77,7 @@ const DepartmentIntro = () => {
           fontWeight: '600',
           color: '#000000'
         }}>
-          部门介绍
+          部门详情
         </h2>
 
         <div style={{
