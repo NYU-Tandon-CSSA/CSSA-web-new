@@ -4,8 +4,8 @@ import { Grid, Container, Typography } from '@mui/material';
 // 动态导入 src/images/fhImage 目录中的所有图片
 // 注意：路径是相对于当前文件（src/routes/Gallery.js）的
 const importAll = (context) => context.keys().map(context);
-const images = importAll(require.context('../images/fhImage', false, /\.(png|jpe?g|svg)$/));
-console.log(images)
+const images = importAll(require.context('../images/Events', false, /\.(png|jpe?g|svg)$/));
+console.log('Loaded images:', images);
 
 const Gallery = () => {
   return (
