@@ -196,7 +196,7 @@ function TransparentNavBar(props) {
                             <Link to="/about" className={`${classes.navLink} ${classes.mobileMenuItem}`}>关于我们</Link>
                             <Link to="/departments" className={`${classes.navLink} ${classes.mobileMenuItem}`}>部门介绍</Link>
                             <Link to="/events" className={`${classes.navLink} ${classes.mobileMenuItem}`}>活动</Link>
-                            <div className={`${classes.navLink} ${classes.mobileMenuItem}`}>剪影</div>
+                            <Link to="/gallery" className={`${classes.navLink} ${classes.mobileMenuItem}`}>剪影</Link>
                             <Link to="/freshmanHandbook" className={`${classes.navLink} ${classes.mobileMenuItem}`}>新生手册</Link>
                             <div className={`${classes.navLink} ${classes.contactLink} ${classes.mobileMenuItem}`} onClick={handleContactClick}>
                                 <span style={{ display: 'flex', alignItems: 'center' }}>
