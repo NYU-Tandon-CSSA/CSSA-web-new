@@ -1,0 +1,97 @@
+{
+  "note": "自动生成。往 gallery/ 里放任意图片，运行 npm run sync-content 后刷新网站。",
+  "images": [
+    {
+      "file": "IMG_0406.JPG",
+      "alt": "IMG_0406"
+    },
+    {
+      "file": "IMG_0412.JPG",
+      "alt": "IMG_0412"
+    },
+    {
+      "file": "IMG_0445.JPG",
+      "alt": "IMG_0445"
+    },
+    {
+      "file": "IMG_0449.JPG",
+      "alt": "IMG_0449"
+    },
+    {
+      "file": "IMG_0524.JPG",
+      "alt": "IMG_0524"
+    },
+    {
+      "file": "IMG_0534.JPG",
+      "alt": "IMG_0534"
+    },
+    {
+      "file": "IMG_0558.JPG",
+      "alt": "IMG_0558"
+    },
+    {
+      "file": "IMG_0573.JPG",
+      "alt": "IMG_0573"
+    },
+    {
+      "file": "IMG_0580.JPG",
+      "alt": "IMG_0580"
+    },
+    {
+      "file": "IMG_0590.JPG",
+      "alt": "IMG_0590"
+    },
+    {
+      "file": "IMG_0600.JPG",
+      "alt": "IMG_0600"
+    },
+    {
+      "file": "IMG_0610.JPG",
+      "alt": "IMG_0610"
+    },
+    {
+      "file": "IMG_0744.JPG",
+      "alt": "IMG_0744"
+    },
+    {
+      "file": "IMG_0816.JPG",
+      "alt": "IMG_0816"
+    },
+    {
+      "file": "IMG_0845.JPG",
+      "alt": "IMG_0845"
+    },
+    {
+      "file": "IMG_0858.JPG",
+      "alt": "IMG_0858"
+    },
+    {
+      "file": "IMG_0864.JPG",
+      "alt": "IMG_0864"
+    },
+    {
+      "file": "IMG_0880.JPG",
+      "alt": "IMG_0880"
+    },
+    {
+      "file": "IMG_0888.JPG",
+      "alt": "IMG_0888"
+    },
+    {
+      "file": "IMG_0913.JPG",
+      "alt": "IMG_0913"
+    },
+    {
+      "file": "IMG_0949.JPG",
+      "alt": "IMG_0949"
+    },
+    {
+      "file": "IMG_1103.JPG",
+      "alt": "IMG_1103"
+    },
+    {
+      "file": "IMG_8915.JPG",
+      "alt": "IMG_8915"
+    }
+  ]
+}

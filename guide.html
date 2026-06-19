@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSSA 网站 · 本地换图说明</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
+    h1 { color: #8900e1; font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; color: #8900e1; }
+    code { background: #f3e8ff; padding: 0.1rem 0.35rem; border-radius: 4px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 0.5rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f3e8ff; }
+    .tip { background: #f3e8ff; border-left: 4px solid #8900e1; padding: 0.75rem 1rem; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <h1>本地换图 · 最简说明</h1>
+  <p>图片在 <code>public/content/</code>，<strong>不绑 webpack 文件名</strong>。换图多数情况<strong>不用改代码</strong>。</p>
+
+  <h2>相册</h2>
+  <ol>
+    <li>照片放进 <code>public/content/gallery/</code>（文件名随意）</li>
+    <li>运行 <code>npm run sync-content</code>（<code>npm start</code> 会自动跑）</li>
+    <li><code>git push origin master</code></li>
+  </ol>
+
+  <h2>首页轮播</h2>
+  <p>覆盖固定文件即可：</p>
+  <table>
+    <tr><th>文件</th><th>说明</th></tr>
+    <tr><td><code>banner/slide-1.jpg</code></td><td>第 1 张</td></tr>
+    <tr><td><code>banner/slide-2.jpg</code></td><td>第 2 张</td></tr>
+    <tr><td>… slide-3 ~ 5</td><td>第 3–5 张</td></tr>
+  </table>
+  <p>改标题：编辑 <code>banner/slides.json</code> 里的 <code>alt</code>。</p>
+
+  <h2>换届 · 加新人</h2>
+  <ol>
+    <li>照片放进 <code>public/content/members/zhangsan.jpg</code></li>
+    <li>编辑 <code>public/content/teams.json</code>，在 <code>boardTeam</code> 等数组里加一条（可复制文件里的 <code>_memberTemplate</code>）</li>
+    <li><code>git push origin master</code></li>
+  </ol>
+  <p>离任：从 <code>teams.json</code> 删掉对应条目。换头像：覆盖同名 jpg，不用改 JSON。</p>
+
+  <h2>成员头像（已在 teams.json 里的人）</h2>
+  <p>覆盖 <code>public/content/members/</code> 里固定名，例如 <code>helen.jpg</code>、<code>tim.jpg</code>。</p>
+
+  <h2>本地开发</h2>
+  <pre><code>npm install
+npm start          # localhost:3000
+npm run upload     # 可选：本地上传页 localhost:3333</code></pre>
+
+  <div class="tip">
+    部署：push 到 <code>master</code> → 等 GitHub Actions → 硬刷新网站。
+  </div>
+</body>
+</html>

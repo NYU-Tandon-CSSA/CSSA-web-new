@@ -1,0 +1,25 @@
+{
+  "note": "换轮播图：直接覆盖 slide-1.jpg ~ slide-5.jpg，不用改代码。alt 文字可在此文件里改。",
+  "slides": [
+    {
+      "file": "slide-1.jpg",
+      "alt": "Group Photo 2024 Fall"
+    },
+    {
+      "file": "slide-2.jpg",
+      "alt": "6 MetroTech"
+    },
+    {
+      "file": "slide-3.png",
+      "alt": "Last Man Standing Poster"
+    },
+    {
+      "file": "slide-4.png",
+      "alt": "Board Game Night Poster"
+    },
+    {
+      "file": "slide-5.png",
+      "alt": "Feichengwurao Poster"
+    }
+  ]
+}
