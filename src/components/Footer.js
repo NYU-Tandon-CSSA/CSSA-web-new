@@ -10,6 +10,7 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import XiaohongshuIcon from "./icons/XiaohongshuIcon";
 import { Button } from "@material-ui/core";
 
 function Copyright() {
@@ -25,19 +26,38 @@ function Copyright() {
   );
 }
 
+const socialLinkSx = {
+  display: "inline-flex",
+  alignItems: "center",
+  lineHeight: 0,
+};
+
 function SocialMedia() {
   return (
-    <Typography variant="body2" color="#FFF" align="center">
-      {/* <Typography class = 'Silkscreen' style={{fontSize:"120%", textTransform: 'uppercase'}}>Are you Following us?</Typography> */}
-      <Link color="inherit" href="https://www.instagram.com/tandoncssa/" sx={{mr: 2}} target="_blank">
+    <Typography
+      variant="body2"
+      color="#FFF"
+      align="center"
+      component="div"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 2,
+      }}
+    >
+      <Link color="inherit" href="https://www.instagram.com/tandoncssa/" sx={socialLinkSx} target="_blank">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
-      </Link>{" "}
-      <Link color="inherit" href="https://www.facebook.com/nyutandoncssa/" sx={{mr: 2}} target="_blank">
+      </Link>
+      <Link color="inherit" href="https://www.facebook.com/nyutandoncssa/" sx={socialLinkSx} target="_blank">
         <FontAwesomeIcon icon={faFacebook} size="2x" />
-      </Link>{" "}
-      <Link color="inherit" href="https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q" sx={{mr: 2}} target="_blank">
+      </Link>
+      <Link color="inherit" href="https://mp.weixin.qq.com/s/iWgFKkEdJR0pDlHgcQHx_Q" sx={socialLinkSx} target="_blank">
         <FontAwesomeIcon icon={faWeixin} size="2x" />
-      </Link>{" "}
+      </Link>
+      <Link color="inherit" href="https://www.xiaohongshu.com/user/profile/61394eb6000000000201a737" sx={socialLinkSx} target="_blank">
+        <XiaohongshuIcon size="3x" />
+      </Link>
     </Typography>
   );
 }

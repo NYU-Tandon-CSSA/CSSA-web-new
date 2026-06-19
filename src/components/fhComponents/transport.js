@@ -138,7 +138,7 @@ export default function Transport() {
               支付方式
           </Typography>
           <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-            一般单程票价$2.90
+            一般单程票价$3.00
           </Typography>
           <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
             选择一：
@@ -191,7 +191,7 @@ export default function Transport() {
               支付方式
           </Typography>
           <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-            一般单程票价$2.90，快车（Express）$7.00
+            一般单程票价$3.00，快车（Express）$7.00
           </Typography>
           <Typography sx={{ lineHeight: 2, mb: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
             与地铁相同，使用MetroCard或OMNY支付。使用同一张MetroCard或OMNY支付，可以在两小时内免费转乘一次地铁或公交车，也就是免费从地铁转巴士，巴士转地铁或进行巴士间的转乘(一些线路除外)。
