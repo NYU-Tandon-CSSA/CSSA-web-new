@@ -10,16 +10,10 @@ import dayjs from 'dayjs';
 // css
 import '../css/about.css'
 
-import {devTeam, advisorTeam, wallOfFame, boardTeam, cabinetTeam}  from "../data/data.js"
 import { eventsData } from "../data/eventsData.js"
 
 
 function Events() {
-    const numOfDuplicates = 10; 
-
-    const allCards = [...devTeam]; // Original set of devTeam
-    const repeatedCards = Array(numOfDuplicates).fill(devTeam).flat();
-
     const [selectedYear, setSelectedYear] = useState(null);
     const [searchText, setSearchText] = useState('');
 

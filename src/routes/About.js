@@ -1,22 +1,32 @@
-import React from "react";
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper} from '@material-ui/core';
-import aboutUs from "../images/AboutUs.jpeg"
+import React, { useEffect, useState } from "react";
+import { Grid, Typography } from '@material-ui/core';
 import Container from '@mui/material/Container';
-import { useEffect, useState } from "react";
 
-// css
 import '../css/about.css'
 
-import IntroOfMembers from '../components/IntroOfMembers.js';
 import IntroOfEboard from '../components/IntroOfEboard.js';
 import IntroOfDevTeam from "../components/IntroOfDevTeam.js";
+import { loadTeams } from "../content/loadTeams";
 
-import {devTeam, advisorTeam, wallOfFame, boardTeam, cabinetTeam}  from "../data/data.js"
+const emptyTeams = {
+  cabinetTeam: [],
+  boardTeam: [],
+  wallOfFame: [],
+  advisorTeam: [],
+  devTeam: [],
+};
 
 export default function About() {
-  const numOfDuplicates = 10; 
+  const numOfDuplicates = 10;
+  const [teams, setTeams] = useState(emptyTeams);
 
-  const allCards = [...devTeam]; // Original set of devTeam
+  useEffect(() => {
+    loadTeams()
+      .then(setTeams)
+      .catch(() => setTeams(emptyTeams));
+  }, []);
+
+  const { cabinetTeam, boardTeam, wallOfFame, advisorTeam, devTeam } = teams;
   const repeatedCards = Array(numOfDuplicates).fill(devTeam).flat();
 
 
@@ -49,7 +59,7 @@ export default function About() {
           </Grid> */}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2024 - 2025</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2026 - 2027</Typography>
             {/* <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography> */}
           </Grid>
 
