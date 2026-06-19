@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7d7eb1c8.css",
-    "main.js": "/static/js/main.fdf2c943.js",
+    "main.js": "/static/js/main.7e930d98.js",
     "static/media/event1.JPG": "/static/media/event1.b8b583bb2fba4f1b07a4.JPG",
     "static/media/event7.JPG": "/static/media/event7.9a7845529dbd90c74a08.JPG",
     "static/media/event13.JPG": "/static/media/event13.bc66f0888500e944cfb2.JPG",
@@ -62,10 +62,10 @@
     "static/media/Walkup_Building.jpg": "/static/media/Walkup_Building.aadd5934e47dcc79021e.jpg",
     "index.html": "/index.html",
     "main.7d7eb1c8.css.map": "/static/css/main.7d7eb1c8.css.map",
-    "main.fdf2c943.js.map": "/static/js/main.fdf2c943.js.map"
+    "main.7e930d98.js.map": "/static/js/main.7e930d98.js.map"
   },
   "entrypoints": [
     "static/css/main.7d7eb1c8.css",
-    "static/js/main.fdf2c943.js"
+    "static/js/main.7e930d98.js"
   ]
 }
