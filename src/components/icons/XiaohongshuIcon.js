@@ -41,8 +41,7 @@ export default function XiaohongshuIcon({ size = "2x", style, className }) {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Xiaohongshu"
-      style={{
-        // 与 FontAwesome .svg-inline--fa 一致：用 font-size 缩放，而非直接设 width/height
+      style={{ // 与 FontAwesome .svg-inline--fa 一致：用 font-size 缩放，而非直接设 width/height
         display: "inline-block",
         fontSize,
         height: "1em",
