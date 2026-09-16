@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7d7eb1c8.css",
-    "main.js": "/static/js/main.7e930d98.js",
+    "main.js": "/static/js/main.582d873e.js",
     "static/media/event1.JPG": "/static/media/event1.b8b583bb2fba4f1b07a4.JPG",
     "static/media/event7.JPG": "/static/media/event7.9a7845529dbd90c74a08.JPG",
     "static/media/event13.JPG": "/static/media/event13.bc66f0888500e944cfb2.JPG",
@@ -47,7 +47,6 @@
     "static/media/rent_cover.jpg": "/static/media/rent_cover.89ac39eae160a72e587b.jpg",
     "static/media/transport_cover.jpg": "/static/media/transport_cover.445553e2766524b2c30c.jpg",
     "static/media/EA.jpg": "/static/media/EA.19fe47f6e28aaefd60b5.jpg",
-    "static/media/event15.jpg": "/static/media/event15.8686cc34114a8d45f7b7.jpg",
     "static/media/event3.JPG": "/static/media/event3.dec38ba56abf2e5edf94.JPG",
     "static/media/bus.jpg": "/static/media/bus.a17a3f3049f5ad8a95ed.jpg",
     "static/media/event11.jpg": "/static/media/event11.ab4f2dd4f4e15d622848.jpg",
@@ -62,10 +61,10 @@
     "static/media/Walkup_Building.jpg": "/static/media/Walkup_Building.aadd5934e47dcc79021e.jpg",
     "index.html": "/index.html",
     "main.7d7eb1c8.css.map": "/static/css/main.7d7eb1c8.css.map",
-    "main.7e930d98.js.map": "/static/js/main.7e930d98.js.map"
+    "main.582d873e.js.map": "/static/js/main.582d873e.js.map"
   },
   "entrypoints": [
     "static/css/main.7d7eb1c8.css",
-    "static/js/main.7e930d98.js"
+    "static/js/main.582d873e.js"
   ]
 }
