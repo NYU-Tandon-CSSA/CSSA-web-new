@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -17,7 +18,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="#FFF" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://www.nyutandoncssa.com">
+      <Link color="inherit" component={RouterLink} to="/">
         NYU Tandon CSSA
       </Link>{" "}
       {new Date().getFullYear()}

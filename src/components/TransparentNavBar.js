@@ -252,10 +252,9 @@ function TransparentNavBar(props) {
                     Instagram
                 </MenuItem>
                 <MenuItem
-                    onClick={() => {
-                        window.open('https://nyutandoncssa.com/#/xiaohongshu', '_blank');
-                        handleContactClose();
-                    }}
+                    component={Link}
+                    to="/xiaohongshu"
+                    onClick={handleContactClose}
                 >
                     <ImportContactsIcon style={{ marginRight: '8px', fontSize: '0.9rem' }} />
                     小红书

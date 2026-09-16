@@ -113,16 +113,18 @@ function Events() {
                                             <Typography variant="body1" paragraph>
                                                 {event.description}
                                             </Typography>
-                                            <Button
-                                                variant="contained"
-                                                color="primary"
-                                                href={event.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                sx={{ backgroundColor: '#4B0082', '&:hover': { backgroundColor: '#3E0071' } }}
-                                            >
-                                                活动回顾
-                                            </Button>
+                                            {event.link && (
+                                                <Button
+                                                    variant="contained"
+                                                    color="primary"
+                                                    href={event.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    sx={{ backgroundColor: '#4B0082', '&:hover': { backgroundColor: '#3E0071' } }}
+                                                >
+                                                    活动回顾
+                                                </Button>
+                                            )}
                                         </CardContent>
 
                                         {/* 右侧活动图片 */}

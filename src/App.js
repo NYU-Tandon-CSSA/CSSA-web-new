@@ -60,9 +60,9 @@ function App() {
                 <Route exact path="/xiaohongshu" component={XiaoHongShu} />
               </div>
             </Switch>
+            <Footer />
           </HashRouter>
         </div>
-        <Footer />
       </div>
     </ThemeProvider>
   );

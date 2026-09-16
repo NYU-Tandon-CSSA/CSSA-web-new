@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import { Link as RouterLink } from 'react-router-dom';
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box, Paper, Link } from '@material-ui/core';
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -346,7 +347,8 @@ function Home() {
             <Button 
               variant="outlined" 
               color="primary"
-              href="https://nyutandoncssa.com/#/about"
+              component={RouterLink}
+              to="/about"
             >
               了解我们
             </Button>

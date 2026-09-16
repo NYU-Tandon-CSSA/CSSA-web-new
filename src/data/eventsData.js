@@ -11,6 +11,7 @@ const importAll = (r) => {
 // 导入 Events 文件夹下所有的图片
 const eventImages = importAll(require.context('../images/Events', false, /event\d+\.(png|jpe?g|svg)$/i));
 
+// link 为可选字段：填了公众号推文地址才会显示「活动回顾」按钮
 export const eventsData = [
     {
         id: 1,
@@ -18,7 +19,6 @@ export const eventsData = [
         date: '2024-09-08',
         description: '在Governors Island畅享秋游！体验丢飞盘、猜歌名、猫捉老鼠等趣味小游戏，在清凉海风中放松身心，更可欣赏曼哈顿绝美天际线，乐趣无限！',
         image: eventImages[1],
-        link: 'https://example.com/event-details',
     },
     {
         id: 2,
@@ -26,7 +26,6 @@ export const eventsData = [
         date: '2024-11-03',
         description: '一站到底，脑力与激情的碰撞！活动为12人的个人赛和观众答题环节，涵盖知识问答、趣味互动等环节。展现你的智慧和应变能力，与朋友一起迎接挑战，争夺"一站到底"桂冠！快来加入，感受智力比拼的乐趣！',
         image: eventImages[2],
-        link: 'https://example.com/event-details-2',
     },
     {
         id: 3,
@@ -34,7 +33,6 @@ export const eventsData = [
         date: '2024-12-08',
         description: '为音乐爱好者搭建的独特平台，通过音乐连接人心，温暖寒冬。无论是抒情慢歌还是激情快歌，都将为冬天增添热度。在心动的声音舞台，人们展示真实的自我，并通过现场表演实现情感碰撞。',
         image: eventImages[3],
-        link: 'https://example.com/event-details-2',
     },
     {
         id: 4,

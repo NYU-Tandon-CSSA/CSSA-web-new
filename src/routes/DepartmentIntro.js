@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import "../css/DepartmentIntro.css"; 
 import { Button } from "@mui/material";
 
@@ -42,9 +43,8 @@ const DepartmentIntro = () => {
                   marginBottom: '16px',
                   display: 'block'
                 }}
-                href="https://nyutandoncssa.com/#/about"
-                target="_blank"
-                rel="noopener noreferrer"
+                component={RouterLink}
+                to="/about"
               >
                 Eboard
           </Button>
