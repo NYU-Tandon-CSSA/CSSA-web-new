@@ -150,9 +150,10 @@
       "name": "张怡然 - Carol",
       "position": "2025-2026 Tandon CSSA主席",
       "year": "2026",
-      "major": "B.S. BTM",
-      "intro": "跳舞/kpop/旅游/甜品，Tag很多的厨子ESFJ，梦想是打卡全世界",
-      "photo": "carol.jpg"
+      "major": "Business & Technology Management (BTM)",
+      "intro": "地球ONLINE探索中……",
+      "photo": "carol.jpg",
+      "linkedinUrl": "https://www.linkedin.com/in/yiranzhang-carol"
     }
   ],
   "advisorTeam": [
@@ -255,6 +256,7 @@
     { "name": "于思畅", "major": "Informatics", "year": "2024-2025", "photo": "sichang.jpg" },
     { "name": "王寅飞", "major": "Computer Engineering", "year": "2024-2025", "photo": "steven.jpg" },
     { "name": "刘泽慧", "major": "Management of Technology", "year": "2024-2025", "photo": "cc.jpg" },
-    { "name": "李裕霖 - Charlie", "major": "Computer Science", "year": "2026-2027", "photo": "Charlie-Li.jpg" }
+    { "name": "李裕霖 - Charlie", "major": "Computer Science", "year": "2026-2027", "photo": "Charlie-Li.jpg" },
+    {"name": "戴相洋 - Andy", "major": "Computer Science", "year": "2026-2027", "photo": "unknow.png"}
   ]
 }
