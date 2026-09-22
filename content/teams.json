@@ -11,102 +11,86 @@
   },
   "cabinetTeam": [
     {
-      "name": "苑林霏 - Helen",
-      "position": "主席",
-      "year": "2026",
-      "major": "B.S. Computer Science",
-      "intro": "目标是改变世界！开开心心; Mathematics Minor + Business Studies Minor",
-      "photo": "helen.jpg"
+      "name": "虞冠霖 - Tony",
+      "position": "对外主席",
+      "year": "2028",
+      "major": "B.S. Biomolecular Science",
+      "intro": "内心丰盈者 独行也出众",
+      "photo": "Tony-Yu.jpg"
     },
     {
-      "name": "赵中泽 - Gerald",
-      "position": "副主席",
-      "year": "2025",
-      "major": "B.S. Computer Science",
-      "intro": "又菜又爱玩儿的，snowboarder, skier, air-softer, baller, boxer, wheel-thrower, mechanic.",
-      "photo": "gerald.jpg"
+      "name": "徐浩宸 - Leo",
+      "position": "对内主席",
+      "year": "2028",
+      "major": "B.S. Electrical Engineering",
+      "intro": "池塘十多莲，我采一朵莲，你们采九朵莲",
+      "photo": "Leo-Xv.jpg"
     },
     {
-      "name": "施皓威 - Max",
-      "position": "秘书",
-      "year": "2025",
-      "major": "B.S. / M.S Computer Science / Financial Engineering",
-      "intro": "喜欢玩游戏和露营的CS自闭秃头宅男",
-      "photo": "max.jpg"
-    },
-    {
-      "name": "缪丝雨 - Mia",
-      "position": "财务",
-      "year": "2025",
-      "major": "M.S. Urban Science",
-      "intro": "ESFJ-In me the tiger sniffs the rose; 考证达人！对Quant/BA方向感兴趣 欢迎与我交流～",
-      "photo": "mia.jpg"
+      "name": "黄子曦 - Alan",
+      "position": "财务秘书",
+      "year": "2028",
+      "major": "B.S. Math",
+      "intro": "睡个好觉",
+      "photo": "Alan-Huang.jpg"
     }
   ],
   "boardTeam": [
     {
-      "name": "吴伟宁 - Winnie",
+      "name": "张倩玉 - Amelia",
       "position": "技术与职业发展部部长",
-      "year": "2025",
-      "major": "M.S. Computer Engineering",
-      "intro": "非常淡人但是喜欢城市",
-      "photo": "winnie.jpg"
-    },
-    {
-      "name": "张怡然 - Carol",
-      "position": "外联部部长",
-      "year": "2026",
-      "major": "B.S. BTM",
-      "intro": "ESFP，烘焙&美食&旅游&跳舞一级爱好者，AKA不会跳舞的KPOP人不是好厨子",
-      "photo": "carol.jpg"
-    },
-    {
-      "name": "王泽宁 - Samuel",
-      "position": "活动部部长",
-      "year": "2025",
-      "major": "B.S. Computer Science",
-      "intro": "ESTP，喜欢踢球; 成为活动部部长",
-      "photo": "samuel.jpg"
-    },
-    {
-      "name": "顾安琪 - Angela",
-      "position": "宣传部部长",
-      "year": "2026",
-      "major": "B.S. Data Science",
-      "intro": "istj/面包脑袋/周杰伦/citywalk/喜欢晒太阳/冰美式选手/努力成为e人",
-      "photo": "angela.jpg"
-    },
-    {
-      "name": "周亦桥 - Yiqiao",
-      "position": "技术与职业发展部副部长",
-      "year": "2026",
-      "major": "B.S. Computer Science",
-      "intro": "事已至此，先吃饭吧",
-      "photo": "yi.jpg"
-    },
-    {
-      "name": "林子童 - Jeremy",
-      "position": "外联部副部长",
-      "year": "2026",
-      "major": "M.S. Management of Technology",
-      "intro": "ENFP是个兴趣爱好很广泛的游戏宅啊，梦想是可以想吃什么吃什么，再开一个猫咖呀",
-      "photo": "jeremy.jpg"
-    },
-    {
-      "name": "梁逸伦 - Daniel",
-      "position": "活动部副部长",
-      "year": "2025",
-      "major": "B.S. Computer Science",
-      "intro": "业余围棋选手; 炉石传说美服前500",
-      "photo": "daniel.jpg"
-    },
-    {
-      "name": "钟雨桐 - Jennifer",
-      "position": "宣传部副部长",
       "year": "2027",
-      "major": "B.A. Computer Science & Data Science",
-      "intro": "ESTJ-跳舞&数学爱好者-非常高兴认识你！",
-      "photo": "jennifer.jpg"
+      "major": "M.S. Electrical Engineering",
+      "intro": "读万卷书明事理，行万里路砺初心，历万般事遇知音",
+      "photo": "Amelia-Zhang.jpg"
+    },
+    {
+      "name": "陆京涛 - Ricardo",
+      "position": "外联部部长",
+      "year": "2027",
+      "major": "M.S. Mathematics",
+      "intro": "梦里不知身是客，一响贪欢。愿大家都可以珍惜当下眼前人",
+      "photo": "Ricardo-Lu.jpg"
+    },
+    {
+      "name": "李裕霖 - Charlie",
+      "position": "活动部部长",
+      "year": "2027",
+      "major": "B.S. Computer Science",
+      "intro": "爱人者 人恒爱之 ",
+      "photo": "Charlie-Li.jpg"
+    },
+    {
+      "name": "高展彧 - Leo",
+      "position": "宣传部部长",
+      "year": "2027",
+      "major": "M.S. Computer Engineering ",
+      "intro": "真爱只有一次樱花只开一季如果只是寂寞请不要说爱我",
+      "photo": "Leo-Gao.jpg"
+    },
+    {
+      "name": "吴子豪 - Michael",
+      "position": "技术与职业发展部副部长",
+      "year": "2029",
+      "major": "B.A. Economics and Math",
+      "intro": "有你的地方才是我的天堂",
+      "photo": "Michael-Wu.jpg"
+    },
+    {
+      "name": "丁清旭 - Andy",
+      "position": "外联部副部长",
+      "year": "2029",
+      "major": "B.S. Business and Finance",
+      "intro": "No matter if the world was ending, I would still hold you tight.",
+      "photo": "Andy-Ding.jpg"
+    },
+    {
+      "name": "赵高畅 - Kate",
+      "position": "活动部副部长",
+      "year": "2027",
+      "major": "M.S. Computer Science",
+      "intro": "知道嘛我家有条新鲜出炉的黄灿灿香喷喷蓬松柔软大面包！！",
+      "photo": "Kate-Zhao.jpg"
     }
   ],
   "wallOfFame": [
