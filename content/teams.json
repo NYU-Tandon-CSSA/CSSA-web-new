@@ -41,7 +41,7 @@
       "position": "技术与职业发展部部长",
       "year": "2027",
       "major": "M.S. Electrical Engineering",
-      "intro": "读万卷书明事理，行万里路砺初心，历万般事遇知音",
+      "intro": "读万卷书明事理，行万里路砺初心，历万般事遇知音✨",
       "photo": "Amelia-Zhang.jpg"
     },
     {
@@ -137,6 +137,22 @@
       "intro": "研究生在哥大读Biostatistics",
       "photo": "mario.jpg",
       "linkedinUrl": "https://www.linkedin.com/in/minghe-wang-510852236/"
+    }
+    {
+      "name": "苑林霏 - Helen",
+      "position": "2024-2025 Tandon CSSA主席",
+      "year": "2025",
+      "major": "B.S. Computer Science",
+      "intro": "Upenn M.S. Robotics",
+      "photo": "helen.jpg",
+    }
+    {
+      "name": "张怡然 - Carol",
+      "position": "2025-2026 Tandon CSSA主席",
+      "year": "2026",
+      "major": "B.S. BTM",
+      "intro": "跳舞/kpop/旅游/甜品，Tag很多的厨子ESFJ，梦想是打卡全世界",
+      "photo": "carol.jpg",
     }
   ],
   "advisorTeam": [
