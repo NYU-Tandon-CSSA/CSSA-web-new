@@ -219,14 +219,6 @@
       "major": "B.S. Computer Science.",
       "intro": "See more at http://alexyan.me ~",
       "photo": "alex.jpg"
-    },
-    {
-      "name": "李裕霖 - Charlie",
-      "position": "26-27 活动部部长",
-      "year": "2027",
-      "major": "B.S. Computer Science.",
-      "intro": "",
-      "photo": "unknow.png"
     }
   ],
   "devTeam": [
@@ -247,6 +239,6 @@
     { "name": "于思畅", "major": "Informatics", "year": "2024-2025", "photo": "sichang.jpg" },
     { "name": "王寅飞", "major": "Computer Engineering", "year": "2024-2025", "photo": "steven.jpg" },
     { "name": "刘泽慧", "major": "Management of Technology", "year": "2024-2025", "photo": "cc.jpg" },
-    { "name": "李裕霖 - Charlie", "major": "Computer Science", "year": "2026-2027", "photo": "unknow.png" }
+    { "name": "李裕霖 - Charlie", "major": "Computer Science", "year": "2026-2027", "photo": "Charlie-Li.jpg" }
   ]
 }
