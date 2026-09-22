@@ -137,22 +137,22 @@
       "intro": "研究生在哥大读Biostatistics",
       "photo": "mario.jpg",
       "linkedinUrl": "https://www.linkedin.com/in/minghe-wang-510852236/"
-    }
+    },
     {
       "name": "苑林霏 - Helen",
       "position": "2024-2025 Tandon CSSA主席",
       "year": "2025",
       "major": "B.S. Computer Science",
       "intro": "Upenn M.S. Robotics",
-      "photo": "helen.jpg",
-    }
+      "photo": "helen.jpg"
+    },
     {
       "name": "张怡然 - Carol",
       "position": "2025-2026 Tandon CSSA主席",
       "year": "2026",
       "major": "B.S. BTM",
       "intro": "跳舞/kpop/旅游/甜品，Tag很多的厨子ESFJ，梦想是打卡全世界",
-      "photo": "carol.jpg",
+      "photo": "carol.jpg"
     }
   ],
   "advisorTeam": [
