@@ -257,6 +257,7 @@
     { "name": "王寅飞", "major": "Computer Engineering", "year": "2024-2025", "photo": "steven.jpg" },
     { "name": "刘泽慧", "major": "Management of Technology", "year": "2024-2025", "photo": "cc.jpg" },
     { "name": "李裕霖 - Charlie", "major": "Computer Science", "year": "2026-2027", "photo": "Charlie-Li.jpg" },
-    {"name": "戴相洋 - Andy", "major": "Computer Science", "year": "2026-2027", "photo": "unknow.png"}
+    {"name": "戴相洋 - Andy", "major": "Computer Science", "year": "2026-2027", "photo": "unknow.png"},
+    {"name": "黄子朔 - Jason", "major": "Computer Science", "year": "2026-2027", "photo": "Jason.jpg"}
   ]
 }
