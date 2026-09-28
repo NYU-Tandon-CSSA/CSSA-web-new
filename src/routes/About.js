@@ -152,7 +152,7 @@ export default function About() {
             }} />
           </Grid>
 
-          {advisorTeam.map(({name, position,year,major,intro,image},index)=>{
+          {advisorTeam.map(({name, position,year,major,intro,image, linkedinUrl},index)=>{
             return (
               <Grid item xs={12} md={3} key={index}>
                 <IntroOfEboard 
@@ -161,7 +161,8 @@ export default function About() {
                     year = {year}
                     major = {major}
                     intro = {intro}
-                    image={image}/>
+                    image={image}
+                    linkedinUrl={linkedinUrl ? linkedinUrl : null}/>
               </Grid>
             )
           })}

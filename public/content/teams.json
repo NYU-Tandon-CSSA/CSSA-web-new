@@ -188,7 +188,8 @@
       "year": "2026",
       "major": "Management of Technology",
       "intro": "前途一片黑暗, 嘿嘿正好天黑好睡觉",
-      "photo": "jeremy.jpg"
+      "photo": "jeremy.jpg",
+      "linkedinUrl": "https://www.linkedin.com/in/jeremy-lin-b9a1711aa/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B05eNANUaTnGtNxTTJn80Jw%3D%3D"
     },
     {
       "name": "张健桁 - Andrew",
@@ -301,6 +302,7 @@
     {"name": "戴相洋 - Andy", "major": "Computer Science", "year": "2026-2027", "photo": "unknow.png"},
     {"name": "黄子朔 - Jason", "major": "Computer Science", "year": "2026-2027", "photo": "Jason.jpg"},
     {"name": "冯劲帆 - Isaac", "major": "Computer Engineering", "year": "2026-2027", "photo": "Isaac-Feng.jpg"},
-    {"name": "张倩玉 - Amelia", "major": "Electrical Engineering", "year": "2026-2027", "photo": "Amelia-Zhang.jpg"}
+    {"name": "张倩玉 - Amelia", "major": "Electrical Engineering", "year": "2026-2027", "photo": "Amelia-Zhang.jpg"},
+    {"name": "吴子豪 - Michael", "major": "B.A Economics and Math", "year": "2026-2027", "photo": "Michael-Wu.jpg"}
   ]
 }
