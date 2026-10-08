@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Event from '../components/Event';
 import EventCarousel from '../components/EventCarousel';
 import EventCard from '../components/EventCard';
+import GoogleDocEmbedment from '../components/GoogleDocEmbedment';
 // import Header from '../components/Header';
 
 // About us import
@@ -17,6 +18,7 @@ import groupPhoto from '../images/Group_Photo_Fall2024.JPG'
 
 //Events import
 import CardActionArea from '@mui/material/CardActionArea';
+import CoffeeChatPoster from '../images/coffee_chat.jpg';
 
 // Section for images of recent posts
 import werewolf from '../images/werewolf2.0.png';
@@ -365,6 +367,49 @@ function Home() {
           </Typography>
         </Grid>
 
+        <Grid item xs={12} className={classes.previewSection}>
+          <Typography variant="h4" className={classes.sectionTitle}>  
+            最新的活动
+          </Typography>
+          
+          <Grid container spacing ={3}>  
+            {/* Item left: Google doc embedment */}
+            <Grid item xs = {12} md = {6}>
+              <Typography className={classes.sectionTitle}>
+                Coffee Chat报名表
+              </Typography>
+              <GoogleDocEmbedment type = "form" docId="1FAIpQLSfETzxuz-ZmwyHHtUhW7eiDFIssslEEdK8KlpOlypUicT7yvQ" width="100%" height="600px" />
+            </Grid>
+            {/* Item right: title and text*/}
+            <Grid item xs = {12} md = {6} 
+            style = {{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${CoffeeChatPoster})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              borderRadius: "8px",
+              padding: "24px",
+              color: "#ffffff"}}>
+              <Typography variant="h2" className={classes.Title} style = {{ marginBottom: 15}}>
+                Coffee Chat 
+              </Typography>
+              <Typography variant="body1" className={classes.paragraph}>
+                Coffee Chat活动是为了提供NYU Tandon及其他同学networking的机会和体验。ITCD作为桥梁，联系寻找优质的教授及各行业经验丰富的嘉宾，开放报名机会给NYU在读学生进行交流和分享。边吃边聊，人脉到手 <br/><br/>
+                ← 可以直接在左边的报名表报名
+              </Typography>
+              <Box style = {{width: "90%", display: "flex", justifyContent: "flex-end"}}>
+                <Button 
+                  variant="contained" 
+                  color="primary"
+                  href="https://mp.weixin.qq.com/s/ZlSlM1atFIvi9F6XOrtUPg"
+                  target="_blank"//在新标签页打开
+                  rel="noopener noreferrer">
+                  了解更多 →
+                </Button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      
         {/* 活动预告部分 */}
         <Grid item xs={12} className={classes.previewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
@@ -374,6 +419,9 @@ function Home() {
             <EventCarousel events={events} />
           </Box>
         </Grid>
+
+        
+        
 
         {/* 活动回顾部分 */}
         <Grid item xs={12} className={classes.reviewSection}>
