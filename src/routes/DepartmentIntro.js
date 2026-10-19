@@ -2,14 +2,17 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import "../css/DepartmentIntro.css"; 
 import { Button } from "@mui/material";
+import { useLanguage } from "../components/UseLanguage";
 
 import teamBuild from "../images/team-build.JPG";
 import EOPhoto from "../images/EO2.jpg";
 import PMPhoto from "../images/PM.png";
 import EAPhoto from "../images/EA.jpg";
 import ITCDPhoto from "../images/ITCD.png";
+import { Typography } from "antd";
 
 const DepartmentIntro = () => {
+  const { t } = useLanguage();
   return (
     <>
       <div className="department-intro-container" style={{ 
@@ -25,15 +28,15 @@ const DepartmentIntro = () => {
         {/* Content */}
         <div className="department-intro-content">
           <h2>
-            我们的社团<br />
+            {t('departmentsIntro.OurClubs')}<br />
             <span className="highlight">
               NYU Tandon <span className="highlight-purple">CSSA</span>
             </span>
           </h2>
           <p>
-              Tandon CSSA作为唯一一个专注于服务Tandon中国学生的官方组织，我们的团队一直在期待并欢迎更多有趣灵魂的加入！
-              <br/>
-              我们时刻关注工院最新趋势，公众平台分享干货，举办针对工院的贴心活动，让大家在异乡也能感受到家的温暖。一届又一届，每一位Tandon CSSA成员都在以自己的努力和热情为Tandon CSSA打造美好的未来。
+            <div style = {{whiteSpace: 'pre-line'}}>
+              {t('departmentsIntro.OurClubsD')}
+            </div>
           </p>
           <Button 
                 variant="contained" 
@@ -46,7 +49,7 @@ const DepartmentIntro = () => {
                 component={RouterLink}
                 to="/about"
               >
-                Eboard
+                {t('departmentsIntro.Buttons.Eboard')}
           </Button>
           <Button 
                 variant="contained" 
@@ -59,7 +62,7 @@ const DepartmentIntro = () => {
                   document.querySelector('.section-title').scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                部门详情
+                {t('departmentsIntro.Buttons.DepartmentsDetails')}
           </Button>
         </div>
       </div>
@@ -77,7 +80,7 @@ const DepartmentIntro = () => {
           fontWeight: '600',
           color: '#000000'
         }}>
-          部门详情
+          {t('departmentsIntro.DepartmentsDetails.Title')}
         </h2>
 
         <div style={{
@@ -110,7 +113,7 @@ const DepartmentIntro = () => {
                 marginBottom: '20px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                活动部 Event Organizer
+                {t('departmentsIntro.DepartmentsDetails.EO')} 
               </h3>
               <p style={{
                 fontSize: '1rem',
@@ -118,7 +121,7 @@ const DepartmentIntro = () => {
                 color: '#4A5568',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                我们是NYU Tandon CSSA 策划、组织和执行活动的部门。从前期brainstorm活动方案、场地人员安排、道具准备，到后期的现场推进与协调，活动部成员一次次地把脑洞变成现实。
+                {t('departmentsIntro.DepartmentsDetails.EOD')}
               </p>
             </div>
           </div>
@@ -147,7 +150,7 @@ const DepartmentIntro = () => {
                 marginBottom: '20px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                外联部 External Affair
+                {t('departmentsIntro.DepartmentsDetails.EA')}
               </h3>
               <p style={{
                 fontSize: '1rem',
@@ -155,7 +158,7 @@ const DepartmentIntro = () => {
                 color: '#4A5568',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                我们主要负责对外联系公司、赞助商以及其他学联，在建立良好沟通、合作的基础上，为Tandon CSSA提供活动和宣传所需要的信息、资源、赞助资金等。              
+                {t('departmentsIntro.DepartmentsDetails.EAD')}
               </p>
             </div>
           </div>
@@ -184,7 +187,7 @@ const DepartmentIntro = () => {
                 marginBottom: '20px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                宣传媒体部 Public Relation & Media
+                {t('departmentsIntro.DepartmentsDetails.PRM')}
               </h3>
               <p style={{
                 fontSize: '1rem',
@@ -192,7 +195,7 @@ const DepartmentIntro = () => {
                 color: '#4A5568',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                我们运营着CSSA各个官方平台，负责各项活动工作的宣传、记录及总结，是搭建起各部门间合作及学联与学生间交流的重要桥梁。我们产出各种活动海报、纪录片和各类干货，还有不定期的原创主题专栏。
+                {t('departmentsIntro.DepartmentsDetails.PRMD')}
               </p>
             </div>
           </div>
@@ -221,7 +224,7 @@ const DepartmentIntro = () => {
                 marginBottom: '20px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                技术和职业发展部 ITCD
+                {t('departmentsIntro.DepartmentsDetails.ITCD')}
               </h3>
               <p style={{
                 fontSize: '1rem',
@@ -229,7 +232,7 @@ const DepartmentIntro = () => {
                 color: '#4A5568',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                我们正在积极运用学校和CSSA的校友资源，为中国学生及学者搭建一个职业发展和交流的平台。我们策划了和行业精英的Coffee Chat活动以及校友网的搭建。同时，我们还为CSSA举办的各种活动提供技术支持。
+                {t('departmentsIntro.DepartmentsDetails.ITCDD')}
               </p>
             </div>
           </div>

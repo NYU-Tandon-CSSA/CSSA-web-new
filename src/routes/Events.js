@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
+import { useLanguage } from "../components/UseLanguage";
 
 import { Box, Typography, TextField, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
@@ -10,15 +11,15 @@ import dayjs from 'dayjs';
 // css
 import '../css/about.css'
 
-import { eventsData } from "../data/eventsData.js"
+import { useEventData } from "../data/eventsData.js"
 
 
 function Events() {
+    const { t } = useLanguage();
     const [selectedYear, setSelectedYear] = useState(null);
     const [searchText, setSearchText] = useState('');
-
     // 过滤并排序活动数据
-    const filteredEvents = eventsData
+    const filteredEvents = useEventData()
         .filter((event) => {
             const eventYear = new Date(event.date).getFullYear();
             return (
@@ -52,7 +53,7 @@ function Events() {
                 <Box sx={{ p: 4 }}>
                     {/* 页面标题 */}
                     <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase', textAlign: "center", fontWeight: 'bold'}}>
-                        我们的活动
+                        {t('Events.OurEvents')}
                     </Typography>
                     
                     <Box
@@ -67,18 +68,18 @@ function Events() {
                         {/* 年份选择器 */}
                         <DatePicker
                             views={['year']}
-                            label="年份"
+                            label={t('Events.SearchBox.Year')}
                             value={selectedYear ? dayjs(`${selectedYear}-01-01`) : null}
                             onChange={(newDate) => setSelectedYear(newDate ? newDate.year() : null)}
                             minDate={dayjs('2000-01-01')}
                             maxDate={dayjs()}
-                            slotProps={{ textField: { placeholder: '选择年份' } }}
+                            slotProps={{ textField: { placeholder: t('Events.SearchBox.Year') } }}
                             clearable={true}  // 允许清除选择
                         />
 
                         {/* 搜索框 */}
                         <TextField
-                            label="活动名称"
+                            label={t('Events.SearchBox.Name')}
                             variant="outlined"
                             fullWidth
                             value={searchText}

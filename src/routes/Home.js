@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Event from '../components/Event';
 import EventCarousel from '../components/EventCarousel';
 import EventCard from '../components/EventCard';
+import { useLanguage } from '../components/UseLanguage';
 // import Header from '../components/Header';
 
 // About us import
@@ -217,6 +218,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Home() {
+  const { t } = useLanguage();
   const classes = useStyles();
   const [isVisible, setIsVisible] = useState(true);
 
@@ -329,10 +331,10 @@ function Home() {
         />
         <Box className={classes.contentContainer}>
           <Typography variant="h2" className={classes.title}>
-            关于我们
+            {t('home.about')}
           </Typography>
           <Typography variant="body1" className={classes.paragraph}>
-            NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。 我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。
+            {t('home.aboutD')}
           </Typography>
           <Box className={classes.buttonContainer}>
             <Button 
@@ -342,7 +344,7 @@ function Home() {
               target="_blank"//在新标签页打开
               rel="noopener noreferrer"
             >
-              加入我们
+              {t('home.Buttons.JoinUs')}
             </Button>
             <Button 
               variant="outlined" 
@@ -350,7 +352,7 @@ function Home() {
               component={RouterLink}
               to="/about"
             >
-              了解我们
+              {t('home.Buttons.KnowUs')} 
             </Button>
           </Box>
         </Box>
@@ -361,14 +363,14 @@ function Home() {
       <Grid container className={classes.eventsSection} spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h2" className={classes.title}>
-            我们的活动
+            {t('home.Events.OurEvents')}
           </Typography>
         </Grid>
 
         {/* 活动预告部分 */}
         <Grid item xs={12} className={classes.previewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
-            活动 · 预告
+            {t('home.Events.UpcomingEvents')}
           </Typography>
           <Box className={classes.carouselWrapper}>
             <EventCarousel events={events} />
@@ -378,15 +380,15 @@ function Home() {
         {/* 活动回顾部分 */}
         <Grid item xs={12} className={classes.reviewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
-            活动 · 回顾
+            {t('home.Events.EventsRecap')}
           </Typography>
           <Grid container spacing={3} className={classes.pastEventsGrid}>
             <Grid item xs={12} md={4}>
               <Box className={classes.eventCard}>
                 <EventCard
                   imageSrc={werewolf}
-                  eventName="周五桌游夜"
-                  eventDescription="游戏开始了，你准备好了吗？"
+                  eventName={t('home.PastEvents.FBN')}
+                  eventDescription={t('home.PastEvents.FBND')}
                   reviewLink="https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA"
                 />
               </Box>
@@ -396,8 +398,8 @@ function Home() {
               <Box className={classes.eventCard}>
                 <EventCard
                   imageSrc={alimni_association}
-                  eventName="校友会"
-                  eventDescription="与优秀校友面对面交流"
+                  eventName={t('home.PastEvents.AA')}
+                  eventDescription={t('home.PastEvents.AAD')}
                   reviewLink="https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA"
                 />
               </Box>
@@ -407,8 +409,8 @@ function Home() {
               <Box className={classes.eventCard}>
                 <EventCard
                   imageSrc={If_you_are_the_one}
-                  eventName="非诚勿扰"
-                  eventDescription="寻找属于你的'The One'"
+                  eventName={t('home.PastEvents.IYATO')}
+                  eventDescription={t('home.PastEvents.IYATOD')}
                   reviewLink="https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g"
                 />
               </Box>
@@ -418,8 +420,8 @@ function Home() {
               <Box className={classes.eventCard}>
                 <EventCard
                   imageSrc={Voice_of_NYC}
-                  eventName="心动的声音"
-                  eventDescription="一起寻找最强之声"
+                  eventName={t('home.PastEvents.VOH')}
+                  eventDescription={t('home.PastEvents.VOHD')}
                   reviewLink="https://mp.weixin.qq.com/s/bcJDCI84PLyek9O63GaJRg"
                 />
               </Box>
@@ -429,8 +431,8 @@ function Home() {
               <Box className={classes.eventCard}>
                 <EventCard
                   imageSrc={coffee_chat}
-                  eventName="Coffee Chat"
-                  eventDescription="与资深嘉宾近距离交流"
+                  eventName={t('home.PastEvents.CC')}
+                  eventDescription={t('home.PastEvents.CCD')}
                   reviewLink="https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw"
                 />
               </Box>
