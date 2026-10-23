@@ -3,16 +3,12 @@ import { Link as RouterLink } from "react-router-dom";
 import "../css/DepartmentIntro.css"; 
 import { Button } from "@mui/material";
 import { useLanguage } from "../components/UseLanguage";
+import { departmentsData } from "../data/departmentsData";
 
 import teamBuild from "../images/team-build.JPG";
-import EOPhoto from "../images/EO2.jpg";
-import PMPhoto from "../images/PM.png";
-import EAPhoto from "../images/EA.jpg";
-import ITCDPhoto from "../images/ITCD.png";
-import { Typography } from "antd";
 
 const DepartmentIntro = () => {
-  const { t } = useLanguage();
+  const { t, pick } = useLanguage();
   return (
     <>
       <div className="department-intro-container" style={{ 
@@ -28,15 +24,13 @@ const DepartmentIntro = () => {
         {/* Content */}
         <div className="department-intro-content">
           <h2>
-            {t('departmentsIntro.OurClubs')}<br />
+            {t('departments.title')}<br />
             <span className="highlight">
               NYU Tandon <span className="highlight-purple">CSSA</span>
             </span>
           </h2>
-          <p>
-            <div style = {{whiteSpace: 'pre-line'}}>
-              {t('departmentsIntro.OurClubsD')}
-            </div>
+          <p style={{ whiteSpace: 'pre-line' }}>
+            {t('departments.description')}
           </p>
           <Button 
                 variant="contained" 
@@ -49,7 +43,7 @@ const DepartmentIntro = () => {
                 component={RouterLink}
                 to="/about"
               >
-                {t('departmentsIntro.Buttons.Eboard')}
+                {t('departments.eboardButton')}
           </Button>
           <Button 
                 variant="contained" 
@@ -62,7 +56,7 @@ const DepartmentIntro = () => {
                   document.querySelector('.section-title').scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                {t('departmentsIntro.Buttons.DepartmentsDetails')}
+                {t('departments.detailsButton')}
           </Button>
         </div>
       </div>
@@ -80,7 +74,7 @@ const DepartmentIntro = () => {
           fontWeight: '600',
           color: '#000000'
         }}>
-          {t('departmentsIntro.DepartmentsDetails.Title')}
+          {t('departments.detailsTitle')}
         </h2>
 
         <div style={{
@@ -89,153 +83,43 @@ const DepartmentIntro = () => {
           gap: '40px',
           padding: '0 40px'
         }}>
-          {/* 活动部 */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '20px'
-          }}>
-            <div style={{ marginBottom: '40px' }}>
-              <img 
-                src={EOPhoto} 
-                alt="活动部" 
-                style={{
-                  width: '100%',
-                  height: '300px',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              />
+          {departmentsData.map((dept) => (
+            <div key={dept.key} style={{
+              display: 'flex',
+              flexDirection: 'column',
+              padding: '20px'
+            }}>
+              <div style={{ marginBottom: '40px' }}>
+                <img 
+                  src={dept.image} 
+                  alt={pick(dept.name)} 
+                  style={{
+                    width: '100%',
+                    height: '300px',
+                    objectFit: 'cover',
+                    borderRadius: '8px'
+                  }}
+                />
+              </div>
+              <div>
+                <h3 style={{
+                  fontSize: '1.8rem',
+                  marginBottom: '20px',
+                  fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                }}>
+                  {pick(dept.name)}
+                </h3>
+                <p style={{
+                  fontSize: '1rem',
+                  lineHeight: '1.6',
+                  color: '#4A5568',
+                  fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                }}>
+                  {pick(dept.description)}
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.8rem',
-                marginBottom: '20px',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.EO')} 
-              </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#4A5568',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.EOD')}
-              </p>
-            </div>
-          </div>
-
-          {/* 外联部 */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '20px'
-          }}>
-            <div style={{ marginBottom: '40px' }}>
-              <img 
-                src={EAPhoto} 
-                alt="外联部" 
-                style={{
-                  width: '100%',
-                  height: '300px',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              />
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.8rem',
-                marginBottom: '20px',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.EA')}
-              </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#4A5568',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.EAD')}
-              </p>
-            </div>
-          </div>
-
-          {/* 宣传媒体部 */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '20px'
-          }}>
-            <div style={{ marginBottom: '40px' }}>
-              <img 
-                src={PMPhoto} 
-                alt="宣传媒体部" 
-                style={{
-                  width: '100%',
-                  height: '300px',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              />
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.8rem',
-                marginBottom: '20px',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.PRM')}
-              </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#4A5568',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.PRMD')}
-              </p>
-            </div>
-          </div>
-
-          {/* 技术和职业发展部 */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '20px'
-          }}>
-            <div style={{ marginBottom: '40px' }}>
-              <img 
-                src={ITCDPhoto} 
-                alt="技术和职业发展部" 
-                style={{
-                  width: '100%',
-                  height: '300px',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              />
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.8rem',
-                marginBottom: '20px',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.ITCD')}
-              </h3>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#4A5568',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}>
-                {t('departmentsIntro.DepartmentsDetails.ITCDD')}
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </>

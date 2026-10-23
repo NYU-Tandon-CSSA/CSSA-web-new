@@ -19,12 +19,7 @@ import groupPhoto from '../images/Group_Photo_Fall2024.JPG'
 //Events import
 import CardActionArea from '@mui/material/CardActionArea';
 
-// Section for images of recent posts
-import werewolf from '../images/werewolf2.0.png';
-import alimni_association from '../images/alumni_association.jpg';
-import If_you_are_the_one from '../images/If_you_are_the_one.png';
-import Voice_of_NYC from '../images/Voice_of_NYC.jpg';
-import coffee_chat from '../images/coffee_chat.jpg';
+import { pastEventHighlights } from '../data/pastEventHighlights';
 import { upcomingEvents } from '../data/upcomingEvents';
 
 const useStyles = makeStyles((theme) => ({
@@ -218,7 +213,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Home() {
-  const { t } = useLanguage();
+  const { t, pick } = useLanguage();
   const classes = useStyles();
   const [isVisible, setIsVisible] = useState(true);
 
@@ -331,10 +326,10 @@ function Home() {
         />
         <Box className={classes.contentContainer}>
           <Typography variant="h2" className={classes.title}>
-            {t('home.about')}
+            {t('home.aboutTitle')}
           </Typography>
           <Typography variant="body1" className={classes.paragraph}>
-            {t('home.aboutD')}
+            {t('home.aboutDescription')}
           </Typography>
           <Box className={classes.buttonContainer}>
             <Button 
@@ -344,7 +339,7 @@ function Home() {
               target="_blank"//在新标签页打开
               rel="noopener noreferrer"
             >
-              {t('home.Buttons.JoinUs')}
+              {t('home.joinUs')}
             </Button>
             <Button 
               variant="outlined" 
@@ -352,7 +347,7 @@ function Home() {
               component={RouterLink}
               to="/about"
             >
-              {t('home.Buttons.KnowUs')} 
+              {t('home.learnMore')}
             </Button>
           </Box>
         </Box>
@@ -363,14 +358,14 @@ function Home() {
       <Grid container className={classes.eventsSection} spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h2" className={classes.title}>
-            {t('home.Events.OurEvents')}
+            {t('home.eventsTitle')}
           </Typography>
         </Grid>
 
         {/* 活动预告部分 */}
         <Grid item xs={12} className={classes.previewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
-            {t('home.Events.UpcomingEvents')}
+            {t('home.upcomingEvents')}
           </Typography>
           <Box className={classes.carouselWrapper}>
             <EventCarousel events={events} />
@@ -380,63 +375,21 @@ function Home() {
         {/* 活动回顾部分 */}
         <Grid item xs={12} className={classes.reviewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
-            {t('home.Events.EventsRecap')}
+            {t('home.pastEvents')}
           </Typography>
           <Grid container spacing={3} className={classes.pastEventsGrid}>
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={werewolf}
-                  eventName={t('home.PastEvents.FBN')}
-                  eventDescription={t('home.PastEvents.FBND')}
-                  reviewLink="https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={alimni_association}
-                  eventName={t('home.PastEvents.AA')}
-                  eventDescription={t('home.PastEvents.AAD')}
-                  reviewLink="https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={If_you_are_the_one}
-                  eventName={t('home.PastEvents.IYATO')}
-                  eventDescription={t('home.PastEvents.IYATOD')}
-                  reviewLink="https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={Voice_of_NYC}
-                  eventName={t('home.PastEvents.VOH')}
-                  eventDescription={t('home.PastEvents.VOHD')}
-                  reviewLink="https://mp.weixin.qq.com/s/bcJDCI84PLyek9O63GaJRg"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={coffee_chat}
-                  eventName={t('home.PastEvents.CC')}
-                  eventDescription={t('home.PastEvents.CCD')}
-                  reviewLink="https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw"
-                />
-              </Box>
-            </Grid>
+            {pastEventHighlights.map((item) => (
+              <Grid item xs={12} md={4} key={item.key}>
+                <Box className={classes.eventCard}>
+                  <EventCard
+                    imageSrc={item.image}
+                    eventName={pick(item.name)}
+                    eventDescription={pick(item.description)}
+                    reviewLink={item.reviewLink}
+                  />
+                </Box>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Grid>

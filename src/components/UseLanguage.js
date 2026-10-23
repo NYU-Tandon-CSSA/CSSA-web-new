@@ -3,21 +3,19 @@ import { translations } from './Translation';
 
 const LanguageContext = createContext();
 
+const lookup = (dict, path) =>
+    path.split('.').reduce((node, key) => (node == null ? undefined : node[key]), dict);
+
 export const LanguageProvider = ({ children }) => {
     const [lang, setLang] = useState('zh');
 
-    const t = (path) => {
-        const keys = path.split('.');
-        let current = translations[lang];
+    // 界面文字：t('home.joinUs')，缺英文时回退到中文
+    const t = (path) => lookup(translations[lang], path) ?? lookup(translations.zh, path) ?? path;
 
-        for (const key of keys) {
-            if (current && current[key] !== undefined) {
-                current = current[key];
-            } else {
-                return path; 
-            }
-        }
-        return current;
+    // 数据里的中英文字段：pick(event.title)，其中 title 为 { zh, en }
+    const pick = (field) => {
+        if (field == null || typeof field === 'string') return field;
+        return field[lang] || field.zh;
     };
 
     const toggleLanguage = () => {
@@ -25,7 +23,7 @@ export const LanguageProvider = ({ children }) => {
     };
 
     return (
-        <LanguageContext.Provider value={{ lang, setLang, toggleLanguage, t }}>
+        <LanguageContext.Provider value={{ lang, setLang, toggleLanguage, t, pick }}>
             {children}
         </LanguageContext.Provider>
     );

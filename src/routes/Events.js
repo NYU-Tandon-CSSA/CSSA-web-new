@@ -11,20 +11,22 @@ import dayjs from 'dayjs';
 // css
 import '../css/about.css'
 
-import { useEventData } from "../data/eventsData.js"
+import { eventsData } from "../data/eventsData.js"
 
 
 function Events() {
-    const { t } = useLanguage();
+    const { t, pick } = useLanguage();
     const [selectedYear, setSelectedYear] = useState(null);
     const [searchText, setSearchText] = useState('');
-    // 过滤并排序活动数据
-    const filteredEvents = useEventData()
+    // 过滤并排序活动数据（搜索同时匹配中英文标题）
+    const query = searchText.toLowerCase();
+    const filteredEvents = eventsData
         .filter((event) => {
             const eventYear = new Date(event.date).getFullYear();
+            const titles = [event.title.zh, event.title.en].filter(Boolean);
             return (
                 (selectedYear === null || eventYear === selectedYear) &&
-                event.title.toLowerCase().includes(searchText.toLowerCase())
+                titles.some((title) => title.toLowerCase().includes(query))
             );
         })
         .sort((a, b) => {
@@ -53,7 +55,7 @@ function Events() {
                 <Box sx={{ p: 4 }}>
                     {/* 页面标题 */}
                     <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase', textAlign: "center", fontWeight: 'bold'}}>
-                        {t('Events.OurEvents')}
+                        {t('events.title')}
                     </Typography>
                     
                     <Box
@@ -68,18 +70,18 @@ function Events() {
                         {/* 年份选择器 */}
                         <DatePicker
                             views={['year']}
-                            label={t('Events.SearchBox.Year')}
+                            label={t('events.searchYear')}
                             value={selectedYear ? dayjs(`${selectedYear}-01-01`) : null}
                             onChange={(newDate) => setSelectedYear(newDate ? newDate.year() : null)}
                             minDate={dayjs('2000-01-01')}
                             maxDate={dayjs()}
-                            slotProps={{ textField: { placeholder: t('Events.SearchBox.Year') } }}
+                            slotProps={{ textField: { placeholder: t('events.searchYearPlaceholder') } }}
                             clearable={true}  // 允许清除选择
                         />
 
                         {/* 搜索框 */}
                         <TextField
-                            label={t('Events.SearchBox.Name')}
+                            label={t('events.searchName')}
                             variant="outlined"
                             fullWidth
                             value={searchText}
@@ -102,7 +104,7 @@ function Events() {
                                         {/* 左侧活动信息 */}
                                         <CardContent sx={{ flex: '1 1 auto', p: 2 }}>
                                             <Typography variant="h5" gutterBottom style={{ fontWeight: 'bold' }}>
-                                                {event.title}
+                                                {pick(event.title)}
                                             </Typography>
                                             <Typography
                                                 variant="body2"
@@ -112,7 +114,7 @@ function Events() {
                                                 {dayjs(event.date).format('YYYY/MM/DD')}
                                             </Typography>
                                             <Typography variant="body1" paragraph>
-                                                {event.description}
+                                                {pick(event.description)}
                                             </Typography>
                                             {event.link && (
                                                 <Button
@@ -139,7 +141,7 @@ function Events() {
                                                 aspectRatio: '16/9', // 强制16:9宽高比
                                             }}
                                             image={event.image}
-                                            alt={event.title}
+                                            alt={pick(event.title)}
                                         />
                                     </Card>
                                 </Grid>

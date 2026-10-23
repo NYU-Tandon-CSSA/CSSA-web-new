@@ -61,12 +61,12 @@ export default function About() {
           </Grid> */}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>{t("AboutUs.LargeTitle")}<br /> 2026 - 2027</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>{t("about.executiveBoard")}<br /> 2026 - 2027</Typography>
             {/* <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography> */}
           </Grid>
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("AboutUs.Title1")}</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.cabinet")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -82,7 +82,7 @@ export default function About() {
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
                 name={name}
-                position={lang === 'en' ? position_en: position_zh}
+                position={(lang === 'en' && position_en) || position_zh}
                 year={year}
                 major={major}
                 intro={intro}
@@ -92,7 +92,7 @@ export default function About() {
           ))}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("AboutUs.Title2")}</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.board")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -107,7 +107,7 @@ export default function About() {
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
                 name={name}
-                position={lang === 'en' ? position_en: position_zh}
+                position={(lang === 'en' && position_en) || position_zh}
                 year={year}
                 major={major}
                 intro={intro}
@@ -117,7 +117,7 @@ export default function About() {
           ))}
         
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("AboutUs.Title3")}</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.wallOfFame")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -132,7 +132,7 @@ export default function About() {
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
                 name={name}
-                position={lang === 'en' ? position_en: position_zh}
+                position={(lang === 'en' && position_en) || position_zh}
                 year={year}
                 major={major}
                 intro={intro}
@@ -143,7 +143,7 @@ export default function About() {
           ))}
           
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("AboutUs.Title4")}</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.advisors")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -158,7 +158,7 @@ export default function About() {
               <Grid item xs={12} md={3} key={index}>
                 <IntroOfEboard 
                     name = {name}
-                    position = {lang === 'en' ? position_en: position_zh}
+                    position = {(lang === 'en' && position_en) || position_zh}
                     year = {year}
                     major = {major}
                     intro = {intro}
@@ -171,7 +171,7 @@ export default function About() {
           
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("AboutUs.Title5")}</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.webTeam")}</Typography>
           </Grid>
             <Grid item xs={12}>
               <hr style={{
