@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, makeStyles, Typography, Box, Drawer, List } from '@material-ui/core';
 import { Link as MuiLink } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from './UseLanguage';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -114,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function TransparentNavBar(props) {
+    const { t, lang, toggleLanguage } = useLanguage();
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     const classes = useStyles({ isHomePage });
@@ -193,14 +195,14 @@ function TransparentNavBar(props) {
                             md={8} 
                             className={classes.desktopMenu}
                         >
-                            <Link to="/about" className={`${classes.navLink} ${classes.mobileMenuItem}`}>关于我们</Link>
-                            <Link to="/departments" className={`${classes.navLink} ${classes.mobileMenuItem}`}>部门介绍</Link>
-                            <Link to="/events" className={`${classes.navLink} ${classes.mobileMenuItem}`}>活动</Link>
-                            <Link to="/gallery" className={`${classes.navLink} ${classes.mobileMenuItem}`}>剪影</Link>
-                            <Link to="/freshmanHandbook" className={`${classes.navLink} ${classes.mobileMenuItem}`}>新生手册</Link>
+                            <Link to="/about" className={`${classes.navLink} ${classes.mobileMenuItem}`}>{t('nav.about')}</Link>
+                            <Link to="/departments" className={`${classes.navLink} ${classes.mobileMenuItem}`}>{t('nav.departments')}</Link>
+                            <Link to="/events" className={`${classes.navLink} ${classes.mobileMenuItem}`}>{t('nav.events')}</Link>
+                            <Link to="/gallery" className={`${classes.navLink} ${classes.mobileMenuItem}`}>{t('nav.gallery')}</Link>
+                            <Link to="/freshmanHandbook" className={`${classes.navLink} ${classes.mobileMenuItem}`}>{t('nav.freshmanHandbook')}</Link>
                             <div className={`${classes.navLink} ${classes.contactLink} ${classes.mobileMenuItem}`} onClick={handleContactClick}>
                                 <span style={{ display: 'flex', alignItems: 'center' }}>
-                                    联系我们
+                                    {t('nav.contactUs')}
                                     <ExpandMoreIcon 
                                         className={classes.expandIcon}
                                         style={{
@@ -211,7 +213,13 @@ function TransparentNavBar(props) {
                                 </span>
                             </div>
                         </Grid>
+                        <Grid item xs={2} md={2} style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <button onClick={toggleLanguage} style={{ cursor: 'pointer', background: 'transparent', color: '#fff', border: '1px solid #fff', borderRadius: '4px', padding: '4px 8px' }}>
+                                {lang === 'zh' ? 'EN' : '中文'}
+                            </button>
+                        </Grid>
                         <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }} />
+
                     </Grid>
                 </Toolbar>
             </AppBar>
@@ -240,7 +248,7 @@ function TransparentNavBar(props) {
                     }}
                 >
                     <FontAwesomeIcon icon={faWeixin} style={{ marginRight: '8px', fontSize: '0.9rem' }} />
-                    微信公众号
+                    {t('nav.weixin')}
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
@@ -249,7 +257,7 @@ function TransparentNavBar(props) {
                     }}
                 >
                     <FontAwesomeIcon icon={faInstagram} style={{ marginRight: '8px', fontSize: '0.9rem' }} />
-                    Instagram
+                    {t('nav.instagram')}
                 </MenuItem>
                 <MenuItem
                     component={Link}
@@ -257,7 +265,7 @@ function TransparentNavBar(props) {
                     onClick={handleContactClose}
                 >
                     <ImportContactsIcon style={{ marginRight: '8px', fontSize: '0.9rem' }} />
-                    小红书
+                    {t('nav.xiaohongshu')}
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
@@ -266,7 +274,7 @@ function TransparentNavBar(props) {
                     }}
                 >
                     <FontAwesomeIcon icon={faFacebook} style={{ marginRight: '8px', fontSize: '0.9rem' }} />
-                    Facebook
+                    {t('nav.facebook')}
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
@@ -275,7 +283,7 @@ function TransparentNavBar(props) {
                     }}
                 >
                     <CalendarTodayIcon style={{ marginRight: '8px', fontSize: '0.9rem' }} />
-                    NYU Engage
+                    NYU Engage 
                 </MenuItem>
             </Menu>
         </Box>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography } from '@material-ui/core';
 import Container from '@mui/material/Container';
+import { useLanguage } from "../components/UseLanguage.js";
 
 import '../css/about.css'
 
@@ -17,6 +18,7 @@ const emptyTeams = {
 };
 
 export default function About() {
+  const { t,lang } = useLanguage()
   const numOfDuplicates = 10;
   const [teams, setTeams] = useState(emptyTeams);
 
@@ -59,12 +61,12 @@ export default function About() {
           </Grid> */}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>Executive board<br /> 2026 - 2027</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"210%", textTransform: 'uppercase'}}>{t("about.executiveBoard")}<br /> 2026 - 2027</Typography>
             {/* <Typography class = 'Silkscreen' style={{fontSize:"170%", textTransform: 'uppercase'}}>2023 - 2024</Typography> */}
           </Grid>
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>CABINET</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.cabinet")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -76,11 +78,11 @@ export default function About() {
           </Grid>
 
           {/* Row 2 */}
-          {cabinetTeam.map(({name,position,year,major,intro,image},index)=> (
+          {cabinetTeam.map(({name,position_zh,position_en,year,major,intro,image},index)=> (
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
                 name={name}
-                position={position}
+                position={(lang === 'en' && position_en) || position_zh}
                 year={year}
                 major={major}
                 intro={intro}
@@ -90,7 +92,7 @@ export default function About() {
           ))}
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>BOARD</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.board")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -101,11 +103,11 @@ export default function About() {
             }} />
           </Grid>
 
-          {boardTeam.map(({name,position,year,major,intro,image},index)=> (
+          {boardTeam.map(({name,position_zh,position_en,year,major,intro,image},index)=> (
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
                 name={name}
-                position={position}
+                position={(lang === 'en' && position_en) || position_zh}
                 year={year}
                 major={major}
                 intro={intro}
@@ -115,7 +117,7 @@ export default function About() {
           ))}
         
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>WALL OF FAME</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.wallOfFame")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -126,11 +128,11 @@ export default function About() {
             }} />
           </Grid>
 
-          {wallOfFame.map(({ name, position, year, major, intro, image, linkedinUrl }, index) => (
+          {wallOfFame.map(({ name, position_zh,position_en, year, major, intro, image, linkedinUrl }, index) => (
             <Grid item xs={12} md={3} key={index}>
               <IntroOfEboard 
                 name={name}
-                position={position}
+                position={(lang === 'en' && position_en) || position_zh}
                 year={year}
                 major={major}
                 intro={intro}
@@ -141,7 +143,7 @@ export default function About() {
           ))}
           
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>ADVISOR COMMITTEE</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.advisors")}</Typography>
           </Grid>
           <Grid item xs={12}>
             <hr style={{
@@ -151,13 +153,12 @@ export default function About() {
               margin: '0 0 10px 0'
             }} />
           </Grid>
-
-          {advisorTeam.map(({name, position,year,major,intro,image, linkedinUrl},index)=>{
+          {advisorTeam.map(({name, position_zh,position_en,year,major,intro,image, linkedinUrl},index)=>{
             return (
               <Grid item xs={12} md={3} key={index}>
                 <IntroOfEboard 
                     name = {name}
-                    position = {position}
+                    position = {(lang === 'en' && position_en) || position_zh}
                     year = {year}
                     major = {major}
                     intro = {intro}
@@ -170,7 +171,7 @@ export default function About() {
           
 
           <Grid item xs={12}>
-            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>Web development team</Typography>
+            <Typography class = 'Silkscreen' style={{fontSize:"200%"}}>{t("about.webTeam")}</Typography>
           </Grid>
             <Grid item xs={12}>
               <hr style={{

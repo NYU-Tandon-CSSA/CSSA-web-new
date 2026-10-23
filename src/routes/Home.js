@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Event from '../components/Event';
 import EventCarousel from '../components/EventCarousel';
 import EventCard from '../components/EventCard';
+import { useLanguage } from '../components/UseLanguage';
 // import Header from '../components/Header';
 
 // About us import
@@ -18,12 +19,7 @@ import groupPhoto from '../images/Group_Photo_Fall2024.JPG'
 //Events import
 import CardActionArea from '@mui/material/CardActionArea';
 
-// Section for images of recent posts
-import werewolf from '../images/werewolf2.0.png';
-import alimni_association from '../images/alumni_association.jpg';
-import If_you_are_the_one from '../images/If_you_are_the_one.png';
-import Voice_of_NYC from '../images/Voice_of_NYC.jpg';
-import coffee_chat from '../images/coffee_chat.jpg';
+import { pastEventHighlights } from '../data/pastEventHighlights';
 import { upcomingEvents } from '../data/upcomingEvents';
 
 const useStyles = makeStyles((theme) => ({
@@ -217,6 +213,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Home() {
+  const { t, pick } = useLanguage();
   const classes = useStyles();
   const [isVisible, setIsVisible] = useState(true);
 
@@ -329,10 +326,10 @@ function Home() {
         />
         <Box className={classes.contentContainer}>
           <Typography variant="h2" className={classes.title}>
-            关于我们
+            {t('home.aboutTitle')}
           </Typography>
           <Typography variant="body1" className={classes.paragraph}>
-            NYU Tandon CSSA（全称Chinese Students and Scholars Association，即中国学生学者联合会）是NYU Tandon School of Engineering大的华人学生团体，同时也是中国驻纽约领事馆注册的学生组织。 我们面向NYU全体中国学生，以广大Tandon中国留学生为中心，致力于通过此平台为大家提供NYU校内及校外的优质资源与服务。
+            {t('home.aboutDescription')}
           </Typography>
           <Box className={classes.buttonContainer}>
             <Button 
@@ -342,7 +339,7 @@ function Home() {
               target="_blank"//在新标签页打开
               rel="noopener noreferrer"
             >
-              加入我们
+              {t('home.joinUs')}
             </Button>
             <Button 
               variant="outlined" 
@@ -350,7 +347,7 @@ function Home() {
               component={RouterLink}
               to="/about"
             >
-              了解我们
+              {t('home.learnMore')}
             </Button>
           </Box>
         </Box>
@@ -361,14 +358,14 @@ function Home() {
       <Grid container className={classes.eventsSection} spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h2" className={classes.title}>
-            我们的活动
+            {t('home.eventsTitle')}
           </Typography>
         </Grid>
 
         {/* 活动预告部分 */}
         <Grid item xs={12} className={classes.previewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
-            活动 · 预告
+            {t('home.upcomingEvents')}
           </Typography>
           <Box className={classes.carouselWrapper}>
             <EventCarousel events={events} />
@@ -378,63 +375,21 @@ function Home() {
         {/* 活动回顾部分 */}
         <Grid item xs={12} className={classes.reviewSection}>
           <Typography variant="h4" className={classes.sectionTitle}>
-            活动 · 回顾
+            {t('home.pastEvents')}
           </Typography>
           <Grid container spacing={3} className={classes.pastEventsGrid}>
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={werewolf}
-                  eventName="周五桌游夜"
-                  eventDescription="游戏开始了，你准备好了吗？"
-                  reviewLink="https://mp.weixin.qq.com/s/aGcqx2f3yRKFcND69erLpA"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={alimni_association}
-                  eventName="校友会"
-                  eventDescription="与优秀校友面对面交流"
-                  reviewLink="https://mp.weixin.qq.com/s/zUUUnodaWAIr6A8ygWayaA"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={If_you_are_the_one}
-                  eventName="非诚勿扰"
-                  eventDescription="寻找属于你的'The One'"
-                  reviewLink="https://mp.weixin.qq.com/s/iKj8NE3CwyO9U-tZ-_eq6g"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={Voice_of_NYC}
-                  eventName="心动的声音"
-                  eventDescription="一起寻找最强之声"
-                  reviewLink="https://mp.weixin.qq.com/s/bcJDCI84PLyek9O63GaJRg"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Box className={classes.eventCard}>
-                <EventCard
-                  imageSrc={coffee_chat}
-                  eventName="Coffee Chat"
-                  eventDescription="与资深嘉宾近距离交流"
-                  reviewLink="https://mp.weixin.qq.com/s/w6_CleHw2INkQqvM9QucMw"
-                />
-              </Box>
-            </Grid>
+            {pastEventHighlights.map((item) => (
+              <Grid item xs={12} md={4} key={item.key}>
+                <Box className={classes.eventCard}>
+                  <EventCard
+                    imageSrc={item.image}
+                    eventName={pick(item.name)}
+                    eventDescription={pick(item.description)}
+                    reviewLink={item.reviewLink}
+                  />
+                </Box>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Grid>

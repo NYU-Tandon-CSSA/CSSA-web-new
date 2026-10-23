@@ -2,7 +2,8 @@
   "_readme": "换届加新人：1) 照片放进 members/  2) 在对应数组里复制 _memberTemplate 加一条  3) git push。离职的人从数组里删掉即可。",
   "_memberTemplate": {
     "name": "姓名 - English",
-    "position": "职位",
+    "position_zh": "职位",
+    "position_en": "Position",
     "year": "2027",
     "major": "专业",
     "intro": "一句话介绍",
@@ -12,7 +13,8 @@
   "cabinetTeam": [
     {
       "name": "虞冠霖 - Tony",
-      "position": "对外主席",
+      "position_zh": "对外主席",
+      "position_en": "External President",
       "year": "2028",
       "major": "B.S. Biomolecular Science",
       "intro": "内心丰盈者 独行也出众",
@@ -20,7 +22,8 @@
     },
     {
       "name": "徐浩宸 - Leo",
-      "position": "对内主席",
+      "position_zh": "对内主席",
+      "position_en": "Internal President",
       "year": "2028",
       "major": "B.S. Electrical Engineering",
       "intro": "池塘十多莲，我采一朵莲，你们采九朵莲",
@@ -28,7 +31,8 @@
     },
     {
       "name": "黄子曦 - Alan",
-      "position": "财务秘书",
+      "position_zh": "财务秘书",
+      "position_en": "Secretary & Treasurer",
       "year": "2028",
       "major": "B.S. Math",
       "intro": "睡个好觉",
@@ -38,7 +42,8 @@
   "boardTeam": [
     {
       "name": "张倩玉 - Amelia",
-      "position": "技术与职业发展部部长",
+      "position_zh": "技术与职业发展部部长",
+      "position_en": "Director of ITCD",
       "year": "2027",
       "major": "M.S. Electrical Engineering",
       "intro": "读万卷书明事理，行万里路砺初心，历万般事遇知音✨",
@@ -46,7 +51,8 @@
     },
     {
       "name": "陆京涛 - Ricardo",
-      "position": "外联部部长",
+      "position_zh": "外联部部长",
+      "position_en": "Director of External Affair",
       "year": "2027",
       "major": "M.S. Mathematics",
       "intro": "梦里不知身是客，一响贪欢。愿大家都可以珍惜当下眼前人",
@@ -54,7 +60,8 @@
     },
     {
       "name": "李裕霖 - Charlie",
-      "position": "活动部部长",
+      "position_zh": "活动部部长",
+      "position_en": "Director of Event Organizer",
       "year": "2027",
       "major": "B.S. Computer Science",
       "intro": "爱人者 人恒爱之 ",
@@ -62,7 +69,8 @@
     },
     {
       "name": "高展彧 - Leo",
-      "position": "宣传部部长",
+      "position_zh": "宣传部部长",
+      "position_en": "Director of Public Relation & Media",
       "year": "2027",
       "major": "M.S. Computer Engineering ",
       "intro": "真爱只有一次樱花只开一季如果只是寂寞请不要说爱我",
@@ -70,7 +78,8 @@
     },
     {
       "name": "吴子豪 - Michael",
-      "position": "技术与职业发展部副部长",
+      "position_zh": "技术与职业发展部副部长",
+      "position_en": "Associate Director of ITCD",
       "year": "2029",
       "major": "B.A. Economics and Math",
       "intro": "有你的地方才是我的天堂",
@@ -78,7 +87,8 @@
     },
     {
       "name": "丁清旭 - Andy",
-      "position": "外联部副部长",
+      "position_zh": "外联部副部长",
+      "position_en": "Associate Director of External Affair",
       "year": "2029",
       "major": "B.S. Business and Finance",
       "intro": "No matter if the world was ending, I would still hold you tight.",
@@ -86,7 +96,8 @@
     },
     {
       "name": "赵高畅 - Kate",
-      "position": "活动部副部长",
+      "position_zh": "活动部副部长",
+      "position_en": "Associate Director of Event Organizer",
       "year": "2027",
       "major": "M.S. Computer Science",
       "intro": "知道嘛我家有条新鲜出炉的黄灿灿香喷喷蓬松柔软大面包！！",
@@ -96,7 +107,8 @@
   "wallOfFame": [
     {
       "name": "曹隽哲",
-      "position": "2018-2019 Tandon CSSA主席",
+      "position_zh": "2018-2019 Tandon CSSA主席",
+      "position_en": "2018-2019 Tandon CSSA President",
       "year": "2019",
       "major": "MFE专业",
       "intro": "目前在中国银联做大数据分析相关的工作",
@@ -105,7 +117,8 @@
     },
     {
       "name": "Sherry Fu",
-      "position": "2019-2020 Tandon CSSA主席",
+      "position_zh": "2019-2020 Tandon CSSA主席",
+      "position_en": "2019-2020 Tandon CSSA President",
       "year": "2020",
       "major": "Business and Technology Management (BTM)",
       "intro": "",
@@ -113,7 +126,8 @@
     },
     {
       "name": "范可欣",
-      "position": "2021-2022 Tandon CSSA主席",
+      "position_zh": "2021-2022 Tandon CSSA主席",
+      "position_en": "2021-2022 Tandon CSSA President",
       "year": "2022",
       "major": "B.A. Economics and Mathematics",
       "intro": "目前在DA行业",
@@ -122,7 +136,8 @@
     },
     {
       "name": "梅依玟 - Cory",
-      "position": "2022-2023 Tandon CSSA主席",
+      "position_zh": "2022-2023 Tandon CSSA主席",
+      "position_en": "2022-2023 Tandon CSSA President",
       "year": "2023",
       "major": "B.S. Mathematics",
       "intro": "put a dent in the universe",
@@ -131,7 +146,8 @@
     },
     {
       "name": "王铭赫 - Mario",
-      "position": "2023-2024 Tandon CSSA主席",
+      "position_zh": "2023-2024 Tandon CSSA主席",
+      "position_en": "2023-2024 Tandon CSSA President",
       "year": "2024",
       "major": "B.S. Applied Mathematics",
       "intro": "研究生在哥大读Biostatistics",
@@ -140,7 +156,8 @@
     },
     {
       "name": "苑林霏 - Helen",
-      "position": "2024-2025 Tandon CSSA主席",
+      "position_zh": "2024-2025 Tandon CSSA主席",
+      "position_en": "2024-2025 Tandon CSSA President",
       "year": "2025",
       "major": "B.S. Computer Science",
       "intro": "Upenn M.S. Robotics",
@@ -148,7 +165,8 @@
     },
     {
       "name": "张怡然 - Carol",
-      "position": "2025-2026 Tandon CSSA主席",
+      "position_zh": "2025-2026 Tandon CSSA主席",
+      "position_en": "2025-2026 Tandon CSSA President",
       "year": "2026",
       "major": "Business & Technology Management (BTM)",
       "intro": "地球ONLINE探索中……",
@@ -159,7 +177,8 @@
   "advisorTeam": [
     {
       "name": "张怡然 - Carol",
-      "position": "2025-2026 Tandon CSSA主席",
+      "position_zh": "2025-2026 Tandon CSSA主席",
+      "position_en": "2025-2026 Tandon CSSA President",
       "year": "2026",
       "major": "Business & Technology Management (BTM)",
       "intro": "地球ONLINE探索中……",
@@ -168,7 +187,8 @@
     },
     {
       "name": "陈铭 - Linda",
-      "position": "25-26 活动部部长",
+      "position_zh": "25-26 活动部部长",
+      "position_en": "25-26 Director of Event Organizer",
       "year": "2026",
       "major": "B.S. Applied Mathematics",
       "intro": "不要成为最好的别人,要成为最好的自己",
@@ -176,7 +196,8 @@
     },
     {
       "name": "顾安琪 - Angela",
-      "position": "25-26 秘书财务",
+      "position_zh": "25-26 秘书财务",
+      "position_en": "25-26 Secretary & Treasurer",
       "year": "2026",
       "major": "Data Science",
       "intro": "estj/面包脑袋/周杰伦/喜欢晒太阳/冰美式选手",
@@ -184,7 +205,8 @@
     },
     {
       "name": "林子童 - Jeremy",
-      "position": "25-26 副主席",
+      "position_zh": "25-26 副主席",
+      "position_en": "25-26 Vice President",
       "year": "2026",
       "major": "Management of Technology",
       "intro": "前途一片黑暗, 嘿嘿正好天黑好睡觉",
@@ -193,7 +215,8 @@
     },
     {
       "name": "张健桁 - Andrew",
-      "position": "25-26 技术部部长",
+      "position_zh": "25-26 技术部部长",
+      "position_en": "25-26 Director of IT",
       "year": "2026",
       "major": "Computer Science",
       "intro": "My brain is blank",
@@ -201,7 +224,8 @@
     },
     {
       "name": "梅依玟 - Cory",
-      "position": "22-23 主席",
+      "position_zh": "22-23 主席",
+      "position_en": "22-23 President",
       "year": "2023",
       "major": "B.S. Mathematics.",
       "intro": "put a dent in the universe",
@@ -209,7 +233,8 @@
     },
     {
       "name": "王铭赫 - Mario",
-      "position": "23-24 主席",
+      "position_zh": "23-24 主席",
+      "position_en": "23-24 President",
       "year": "2024",
       "major": "B.S. Applied Mathematics",
       "intro": "Tandon CSSA四年老粉，坚定的enfp",
@@ -217,7 +242,8 @@
     },
     {
       "name": "荆雨薇 - Christina",
-      "position": "23-24 副主席",
+      "position_zh": "23-24 副主席",
+      "position_en": "23-24 Vice President",
       "year": "2024",
       "major": "B.S / M.S. Mathematics / MFE.",
       "intro": "二月水瓶/永恒ENTJ 喜欢旅行和音乐 爱喝茶/爱咖啡/天天温开水 爱吃饭/爱睡觉/处处易发呆",
@@ -225,7 +251,8 @@
     },
     {
       "name": "宋一荞 - Elaine",
-      "position": "22-24 外联部部长",
+      "position_zh": "22-24 外联部部长",
+      "position_en": "22-24 Director of External Affair",
       "year": "2024",
       "major": "B.S. Mechanical Engineering.",
       "intro": "脑洞比黑洞更大♠️",
@@ -233,7 +260,8 @@
     },
     {
       "name": "姚俊煜 - Tim",
-      "position": "23-24 技术与职业发展部部长",
+      "position_zh": "23-24 技术与职业发展部部长",
+      "position_en": "23-24 Director of ITCD",
       "year": "2024",
       "major": "M.S. Computer Engineering.",
       "intro": "不吃蘑菇！",
@@ -241,7 +269,8 @@
     },
     {
       "name": "曾海琪 - Stephanie",
-      "position": "23-24 宣传部 22-23 外联部副部长",
+      "position_zh": "23-24 宣传部 22-23 外联部副部长",
+      "position_en": "23-24 Public Relation & Media / 22-23 Associate Director of External Affair",
       "year": "2024",
       "major": "B.S. / M.S Business and Technology Management / Financial Engineering",
       "intro": "Trader Joe小粉丝修炼厨艺ing",
@@ -249,7 +278,8 @@
     },
     {
       "name": "林之 - Zoey",
-      "position": "23-24 外联部副部长",
+      "position_zh": "23-24 外联部副部长",
+      "position_en": "23-24 Associate Director of External Affair",
       "year": "2024",
       "major": "M.S. Management of Technology.",
       "intro": "enfj努力进阶中",
@@ -257,7 +287,8 @@
     },
     {
       "name": "张露文 - Luwen",
-      "position": "23-24 活动部副部长",
+      "position_zh": "23-24 活动部副部长",
+      "position_en": "23-24 Associate Director of Event Organizer",
       "year": "2024",
       "major": "M.S. Management of Technology.",
       "intro": "活动部yyds，希望cssa越来越好！",
@@ -265,7 +296,8 @@
     },
     {
       "name": "宋梦雅 - Mia",
-      "position": "23-24 财务",
+      "position_zh": "23-24 财务",
+      "position_en": "23-24 Treasurer",
       "year": "2024",
       "major": "M.S. Biotechnology and Entrepreneurship.",
       "intro": "没什么大愿望，每天开心就好！",
@@ -273,7 +305,8 @@
     },
     {
       "name": "严语 - Alex",
-      "position": "21-24 Tech Lead",
+      "position_zh": "21-24 Tech Lead",
+      "position_en": "21-24 Tech Lead",
       "year": "2024",
       "major": "B.S. Computer Science.",
       "intro": "See more at http://alexyan.me ~",
@@ -281,28 +314,143 @@
     }
   ],
   "devTeam": [
-    { "name": "姚俊煜 - Tim", "major": "Computer Engineering", "year": "2023-2024", "photo": "tim.jpg" },
-    { "name": "苑林霏 - Helen", "major": "Computer Science", "year": "2023-2024", "photo": "helen.jpg" },
-    { "name": "严语 - Alex", "major": "Computer Science", "year": "2023-2024", "photo": "alex.jpg" },
-    { "name": "吴伟宁 - Winnie", "major": "Computer Engineering", "year": "2023-2025", "photo": "winnie.jpg" },
-    { "name": "缪丝雨 - Mia", "major": "Applied Urban Science & Informatics", "year": "2023-2024", "photo": "mia.jpg" },
-    { "name": "李卓伦", "major": "Computer Engineering", "year": "2023-2025", "photo": "unknow.png" },
-    { "name": "胡泽西", "major": "Computer Engineering", "year": "2023-2025", "photo": "xi.jpg" },
-    { "name": "周亦桥", "major": "Computer Science", "year": "2023-2025", "photo": "yi.jpg" },
-    { "name": "张健桁 - Andrew", "major": "Computer Science", "year": "2024-2025", "photo": "andrew.jpg" },
-    { "name": "张丰泽", "major": "Computer Science", "year": "2023-2024", "photo": "unknow.png" },
-    { "name": "Mark", "major": "Computer Science", "year": "2023-2024", "photo": "unknow.png" },
-    { "name": "SJ", "major": "Computer Science", "year": "2024-2025", "photo": "sj.jpg" },
-    { "name": "孟宏道", "major": "Computer Science", "year": "2024-2025", "photo": "unknow.png" },
-    { "name": "刘祈良", "major": "Computer Engineering", "year": "2024-2025", "photo": "unknow.png" },
-    { "name": "于思畅", "major": "Informatics", "year": "2024-2025", "photo": "sichang.jpg" },
-    { "name": "王寅飞", "major": "Computer Engineering", "year": "2024-2025", "photo": "steven.jpg" },
-    { "name": "刘泽慧", "major": "Management of Technology", "year": "2024-2025", "photo": "cc.jpg" },
-    { "name": "李裕霖 - Charlie", "major": "Computer Science", "year": "2026-2027", "photo": "Charlie-Li.jpg" },
-    {"name": "戴相洋 - Andy", "major": "Computer Science", "year": "2026-2027", "photo": "unknow.png"},
-    {"name": "黄子朔 - Jason", "major": "Computer Science", "year": "2026-2027", "photo": "Jason.jpg"},
-    {"name": "冯劲帆 - Isaac", "major": "Computer Engineering", "year": "2026-2027", "photo": "Isaac-Feng.jpg"},
-    {"name": "张倩玉 - Amelia", "major": "Electrical Engineering", "year": "2026-2027", "photo": "Amelia-Zhang.jpg"},
-    {"name": "吴子豪 - Michael", "major": "B.A Economics and Math", "year": "2026-2027", "photo": "Michael-Wu.jpg"}
+    {
+      "name": "姚俊煜 - Tim",
+      "major": "Computer Engineering",
+      "year": "2023-2024",
+      "photo": "tim.jpg"
+    },
+    {
+      "name": "苑林霏 - Helen",
+      "major": "Computer Science",
+      "year": "2023-2024",
+      "photo": "helen.jpg"
+    },
+    {
+      "name": "严语 - Alex",
+      "major": "Computer Science",
+      "year": "2023-2024",
+      "photo": "alex.jpg"
+    },
+    {
+      "name": "吴伟宁 - Winnie",
+      "major": "Computer Engineering",
+      "year": "2023-2025",
+      "photo": "winnie.jpg"
+    },
+    {
+      "name": "缪丝雨 - Mia",
+      "major": "Applied Urban Science & Informatics",
+      "year": "2023-2024",
+      "photo": "mia.jpg"
+    },
+    {
+      "name": "李卓伦",
+      "major": "Computer Engineering",
+      "year": "2023-2025",
+      "photo": "unknow.png"
+    },
+    {
+      "name": "胡泽西",
+      "major": "Computer Engineering",
+      "year": "2023-2025",
+      "photo": "xi.jpg"
+    },
+    {
+      "name": "周亦桥",
+      "major": "Computer Science",
+      "year": "2023-2025",
+      "photo": "yi.jpg"
+    },
+    {
+      "name": "张健桁 - Andrew",
+      "major": "Computer Science",
+      "year": "2024-2025",
+      "photo": "andrew.jpg"
+    },
+    {
+      "name": "张丰泽",
+      "major": "Computer Science",
+      "year": "2023-2024",
+      "photo": "unknow.png"
+    },
+    {
+      "name": "Mark",
+      "major": "Computer Science",
+      "year": "2023-2024",
+      "photo": "unknow.png"
+    },
+    {
+      "name": "SJ",
+      "major": "Computer Science",
+      "year": "2024-2025",
+      "photo": "sj.jpg"
+    },
+    {
+      "name": "孟宏道",
+      "major": "Computer Science",
+      "year": "2024-2025",
+      "photo": "unknow.png"
+    },
+    {
+      "name": "刘祈良",
+      "major": "Computer Engineering",
+      "year": "2024-2025",
+      "photo": "unknow.png"
+    },
+    {
+      "name": "于思畅",
+      "major": "Informatics",
+      "year": "2024-2025",
+      "photo": "sichang.jpg"
+    },
+    {
+      "name": "王寅飞",
+      "major": "Computer Engineering",
+      "year": "2024-2025",
+      "photo": "steven.jpg"
+    },
+    {
+      "name": "刘泽慧",
+      "major": "Management of Technology",
+      "year": "2024-2025",
+      "photo": "cc.jpg"
+    },
+    {
+      "name": "李裕霖 - Charlie",
+      "major": "Computer Science",
+      "year": "2026-2027",
+      "photo": "Charlie-Li.jpg"
+    },
+    {
+      "name": "戴相洋 - Andy",
+      "major": "Computer Science",
+      "year": "2026-2027",
+      "photo": "unknow.png"
+    },
+    {
+      "name": "黄子朔 - Jason",
+      "major": "Computer Science",
+      "year": "2026-2027",
+      "photo": "Jason.jpg"
+    },
+    {
+      "name": "冯劲帆 - Isaac",
+      "major": "Computer Engineering",
+      "year": "2026-2027",
+      "photo": "Isaac-Feng.jpg"
+    },
+    {
+      "name": "张倩玉 - Amelia",
+      "major": "Electrical Engineering",
+      "year": "2026-2027",
+      "photo": "Amelia-Zhang.jpg"
+    },
+    {
+      "name": "吴子豪 - Michael",
+      "major": "B.A Economics and Math",
+      "year": "2026-2027",
+      "photo": "Michael-Wu.jpg"
+    }
   ]
 }
