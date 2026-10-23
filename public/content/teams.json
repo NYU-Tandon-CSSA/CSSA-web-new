@@ -32,7 +32,7 @@
     {
       "name": "黄子曦 - Alan",
       "position_zh": "财务秘书",
-      "position_en": "Financial Secretary",
+      "position_en": "Secretary & Treasurer",
       "year": "2028",
       "major": "B.S. Math",
       "intro": "睡个好觉",
@@ -52,7 +52,7 @@
     {
       "name": "陆京涛 - Ricardo",
       "position_zh": "外联部部长",
-      "position_en": "Director of Public Relations",
+      "position_en": "Director of External Affair",
       "year": "2027",
       "major": "M.S. Mathematics",
       "intro": "梦里不知身是客，一响贪欢。愿大家都可以珍惜当下眼前人",
@@ -61,7 +61,7 @@
     {
       "name": "李裕霖 - Charlie",
       "position_zh": "活动部部长",
-      "position_en": "Director of Events Organizer",
+      "position_en": "Director of Event Organizer",
       "year": "2027",
       "major": "B.S. Computer Science",
       "intro": "爱人者 人恒爱之 ",
@@ -70,7 +70,7 @@
     {
       "name": "高展彧 - Leo",
       "position_zh": "宣传部部长",
-      "position_en": "Director of Public Relations",
+      "position_en": "Director of Public Relation & Media",
       "year": "2027",
       "major": "M.S. Computer Engineering ",
       "intro": "真爱只有一次樱花只开一季如果只是寂寞请不要说爱我",
@@ -88,7 +88,7 @@
     {
       "name": "丁清旭 - Andy",
       "position_zh": "外联部副部长",
-      "position_en": "Associate Director of Public Relations",
+      "position_en": "Associate Director of External Affair",
       "year": "2029",
       "major": "B.S. Business and Finance",
       "intro": "No matter if the world was ending, I would still hold you tight.",
@@ -97,7 +97,7 @@
     {
       "name": "赵高畅 - Kate",
       "position_zh": "活动部副部长",
-      "position_en": "Associate Director of Events Organizer",
+      "position_en": "Associate Director of Event Organizer",
       "year": "2027",
       "major": "M.S. Computer Science",
       "intro": "知道嘛我家有条新鲜出炉的黄灿灿香喷喷蓬松柔软大面包！！",
@@ -188,7 +188,7 @@
     {
       "name": "陈铭 - Linda",
       "position_zh": "25-26 活动部部长",
-      "position_en": "25-26 Director of Events Organizer",
+      "position_en": "25-26 Director of Event Organizer",
       "year": "2026",
       "major": "B.S. Applied Mathematics",
       "intro": "不要成为最好的别人,要成为最好的自己",
@@ -197,7 +197,7 @@
     {
       "name": "顾安琪 - Angela",
       "position_zh": "25-26 秘书财务",
-      "position_en": "25-26 Financial Secretary",
+      "position_en": "25-26 Secretary & Treasurer",
       "year": "2026",
       "major": "Data Science",
       "intro": "estj/面包脑袋/周杰伦/喜欢晒太阳/冰美式选手",
@@ -252,7 +252,7 @@
     {
       "name": "宋一荞 - Elaine",
       "position_zh": "22-24 外联部部长",
-      "position_en": "22-24 Director of External Relations",
+      "position_en": "22-24 Director of External Affair",
       "year": "2024",
       "major": "B.S. Mechanical Engineering.",
       "intro": "脑洞比黑洞更大♠️",
@@ -270,7 +270,7 @@
     {
       "name": "曾海琪 - Stephanie",
       "position_zh": "23-24 宣传部 22-23 外联部副部长",
-      "position_en": "23-24 Public Relations / 22-23 External Relations Associate Director",
+      "position_en": "23-24 Public Relation & Media / 22-23 Associate Director of External Affair",
       "year": "2024",
       "major": "B.S. / M.S Business and Technology Management / Financial Engineering",
       "intro": "Trader Joe小粉丝修炼厨艺ing",
@@ -279,7 +279,7 @@
     {
       "name": "林之 - Zoey",
       "position_zh": "23-24 外联部副部长",
-      "position_en": "23-24 Associate Director of Public Relations",
+      "position_en": "23-24 Associate Director of External Affair",
       "year": "2024",
       "major": "M.S. Management of Technology.",
       "intro": "enfj努力进阶中",
@@ -288,7 +288,7 @@
     {
       "name": "张露文 - Luwen",
       "position_zh": "23-24 活动部副部长",
-      "position_en": "23-24 Associate Director of Events Organizers",
+      "position_en": "23-24 Associate Director of Event Organizer",
       "year": "2024",
       "major": "M.S. Management of Technology.",
       "intro": "活动部yyds，希望cssa越来越好！",
@@ -297,7 +297,7 @@
     {
       "name": "宋梦雅 - Mia",
       "position_zh": "23-24 财务",
-      "position_en": "23-24 Financial Officer",
+      "position_en": "23-24 Treasurer",
       "year": "2024",
       "major": "M.S. Biotechnology and Entrepreneurship.",
       "intro": "没什么大愿望，每天开心就好！",
@@ -305,7 +305,7 @@
     },
     {
       "name": "严语 - Alex",
-      "position_zh": "21-24 技术总监",
+      "position_zh": "21-24 Tech Lead",
       "position_en": "21-24 Tech Lead",
       "year": "2024",
       "major": "B.S. Computer Science.",
